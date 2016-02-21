@@ -1,0 +1,1 @@
+Ä}³V<?php exit; ?>a:1:{s:7:"content";s:172:"a:2:{s:41:"allow-php-in-posts-and-pages/allowphp.php";a:2:{i:0;s:18:"allow_php_in_posts";i:1;s:14:"hook_uninstall";}s:19:"captcha/captcha.php";s:20:"cptch_delete_options";}";}

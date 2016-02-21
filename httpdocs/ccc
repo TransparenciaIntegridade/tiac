@@ -1,0 +1,124 @@
+<?php
+/*
+Template Name: Biografia
+*/
+?>
+<!doctype html>
+<head>
+	<title>Biografia de <?php echo get_the_title();?></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="<?php echo get_site_url();?>/wp-content/themes/wpbootstrap/assets/css/style.css" type="text/css" media="all" >
+    <link rel="stylesheet" href="<?php echo get_site_url();?>/wp-content/themes/wpbootstrap/assets/css/responsive.css" type="text/css" media="all" >
+    <link href="<?php echo get_site_url();?>/wp-content/themes/wpbootstrap/assets/css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="<?php echo get_site_url();?>/wp-content/themes/wpbootstrap/assets/css/lightwindow.css" type="text/css" media="screen" /><link id="fsmlStyleSheet-1-5-1" media="all" type="text/css" href="http://civicrm.tiac.webfactional.com/wp-content/plugins/floating-social-media-links/fsml-base.css?ver=1.5.1" rel="stylesheet">
+ <style type="text/css">
+	.btn_participe {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fed897;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fed897;
+	box-shadow:inset 0px 1px 0px 0px #fed897;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f6b33d), color-stop(1, #d29105) );
+	background:-moz-linear-gradient( center top, #f6b33d 5%, #d29105 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6b33d', endColorstr='#d29105');
+	background-color:#f6b33d;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #eda933;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:40px;
+	line-height:40px;
+	width:100px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #cd8a15;
+	margin-top:20px;
+}
+.btn_participe:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d29105), color-stop(1, #f6b33d) );
+	background:-moz-linear-gradient( center top, #d29105 5%, #f6b33d 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d29105', endColorstr='#f6b33d');
+	background-color:#d29105;
+}.btn_participe:active {
+	position:relative;
+	top:1px;
+}</style> 
+<?php wp_head(); ?> 
+
+
+</head>
+<body>
+<div id="navbar" class="navbar navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#" class="brand"><img src="<?php echo get_site_url();?>/wp-content/themes/wpbootstrap/assets/img/logoc.png" height="60" width="200" alt=""></a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="">
+            <a href="/#about-us" data-target="#about-us"><i class="icon-group"></i>Sobre a TIAC</a>
+          </li>
+          <li class="">
+            <a href="/#services"><i class="icon-flag"></i>Objetivos</a>
+          </li>
+           <li class="">
+            <a href="/#portfolio"><i class="icon-cog"></i>Projetos</a>
+          </li>
+          <li class="">
+            <a href="/#blog"><i class="icon-comments-alt"></i>Noticias</a>
+          </li>
+          <li class="">
+            <a href="/#eventos"><i class="icon-bullhorn"></i>Eventos</a>
+          </li>
+          <li class="">
+            <a href="/#donate"><i class="icon-folder-open"></i>Publicações</a>
+          </li>
+          <li class="">
+            <a href="/#contact"><i class="icon-envelope"></i>Contatos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- end navbar -->
+<div class="row">
+  <div class="span8" style="width:100%;padding-top:85px;">
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<!--<h1><?php the_title(); ?></h1>!-->
+	  	<?php the_content(); ?>
+
+	<?php endwhile; else: ?>
+		<p><?php _e('Sorry, this page does not exist.'); ?></p>
+	<?php endif; ?>
+
+  </div>
+  <div class="span4">
+  </div>
+</div>
+<footer id="footer" style="height:35px;padding-top:10px;position:fixed;bottom:0;width:100%;padding-bottom:10px;text-align:center;">
+	<div class="container">
+		<b>&copy; 2013</b> <a style="color:#0397d6;" href="http://transparencia.pt" target="_blank"><b>TIAC</b></a><b>. Todos os direitos reservados. - Mastered by </b><a style="color:#0397d6;" href="http://dmanlancers.byethost16.com" target="_blank"><b>Dm@nl@ncers</b></a>
+	</div>
+</footer>
+<?php wp_footer(); ?> 
+</body>
+</html>

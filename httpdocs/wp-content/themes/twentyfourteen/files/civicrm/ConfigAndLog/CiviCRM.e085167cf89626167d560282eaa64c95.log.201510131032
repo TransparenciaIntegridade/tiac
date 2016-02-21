@@ -1,0 +1,1473 @@
+Jun 12 11:27:53  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(894): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Failed to send data [SMTP: Invalid response code received from SMTP server wh...", 10006, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(328): PEAR->raiseError("Failed to send data [SMTP: Invalid response code received from SMTP server wh...", 10006)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(707): Mail_smtp->send("TIAC <secretariado@transparencia.pt>", (Array:11), "--=_ca36f860a72e605be0b4e1483a3c62f1\nContent-Transfer-Encoding: 8bit\nConten...", "480")
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(611): CRM_Mailing_BAO_MailingJob->deliverGroup((Array:1), Object(CRM_Mailing_BAO_Mailing), Object(Mail_smtp), "", (Array:0))
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(198): CRM_Mailing_BAO_MailingJob->deliver(Object(Mail_smtp), (Array:12))
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/Mailing.php(643): CRM_Mailing_BAO_MailingJob::runJobs((Array:12))
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_mailing_send_test((Array:10))
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("mailing", "send_test", (Array:10), NULL)
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Subscriber/ChainSubscriber.php(195): civicrm_api("mailing", "send_test", (Array:10))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Subscriber/ChainSubscriber.php(72): Civi\API\Subscriber\ChainSubscriber->callNestedApi((Array:35), (Array:5), "create", "Mailing", 3)
+#14 [internal function](): Civi\API\Subscriber\ChainSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventDispatcher.php(164): call_user_func((Array:2), Object(Civi\API\Event\RespondEvent))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventDispatcher.php(53): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "api.respond", Object(Civi\API\Event\RespondEvent))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(221): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("api.respond", Object(Civi\API\Event\RespondEvent))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(98): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("Mailing", "create", (Array:35), NULL)
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/REST.php(402): civicrm_api("Mailing", "create", (Array:35))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/REST.php(638): CRM_Utils_REST::process((Array:3), (Array:33))
+#22 [internal function](): CRM_Utils_REST::ajax()
+#23 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#27 [internal function](): CiviCRM_For_WordPress->invoke("")
+#28 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#29 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#30 {main}
+
+
+Jun 12 11:28:13  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(894): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Failed to send data [SMTP: Invalid response code received from SMTP server wh...", 10006, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(328): PEAR->raiseError("Failed to send data [SMTP: Invalid response code received from SMTP server wh...", 10006)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(707): Mail_smtp->send("TIAC <secretariado@transparencia.pt>", (Array:11), "--=_3d882ac4c353d74f5c2ca415eabbc33d\nContent-Transfer-Encoding: 8bit\nConten...", "481")
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(611): CRM_Mailing_BAO_MailingJob->deliverGroup((Array:1), Object(CRM_Mailing_BAO_Mailing), Object(Mail_smtp), "", (Array:0))
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(198): CRM_Mailing_BAO_MailingJob->deliver(Object(Mail_smtp), (Array:12))
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/Mailing.php(643): CRM_Mailing_BAO_MailingJob::runJobs((Array:12))
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_mailing_send_test((Array:10))
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("mailing", "send_test", (Array:10), NULL)
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Subscriber/ChainSubscriber.php(195): civicrm_api("mailing", "send_test", (Array:10))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Subscriber/ChainSubscriber.php(72): Civi\API\Subscriber\ChainSubscriber->callNestedApi((Array:35), (Array:5), "create", "Mailing", 3)
+#14 [internal function](): Civi\API\Subscriber\ChainSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventDispatcher.php(164): call_user_func((Array:2), Object(Civi\API\Event\RespondEvent))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventDispatcher.php(53): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "api.respond", Object(Civi\API\Event\RespondEvent))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(221): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("api.respond", Object(Civi\API\Event\RespondEvent))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(98): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("Mailing", "create", (Array:35), NULL)
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/REST.php(402): civicrm_api("Mailing", "create", (Array:35))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/REST.php(638): CRM_Utils_REST::process((Array:3), (Array:33))
+#22 [internal function](): CRM_Utils_REST::ajax()
+#23 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#27 [internal function](): CiviCRM_For_WordPress->invoke("")
+#28 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#29 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#30 {main}
+
+
+Jun 12 11:36:37  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(894): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Failed to send data [SMTP: Invalid response code received from SMTP server wh...", 10006, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(328): PEAR->raiseError("Failed to send data [SMTP: Invalid response code received from SMTP server wh...", 10006)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(707): Mail_smtp->send("=?utf-8?Q?Cl=C3=A1udia_Rodrigues?= <claudia_s_rodrigues@hotmail.com>", (Array:11), "--=_96f7eaed30da353ff997b13f9ceed954\nContent-Transfer-Encoding: 8bit\nConten...", "482")
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(611): CRM_Mailing_BAO_MailingJob->deliverGroup((Array:1), Object(CRM_Mailing_BAO_Mailing), Object(Mail_smtp), "", (Array:0))
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(198): CRM_Mailing_BAO_MailingJob->deliver(Object(Mail_smtp), (Array:12))
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/Mailing.php(643): CRM_Mailing_BAO_MailingJob::runJobs((Array:12))
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_mailing_send_test((Array:10))
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("mailing", "send_test", (Array:10), NULL)
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Subscriber/ChainSubscriber.php(195): civicrm_api("mailing", "send_test", (Array:10))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Subscriber/ChainSubscriber.php(72): Civi\API\Subscriber\ChainSubscriber->callNestedApi((Array:35), (Array:5), "create", "Mailing", 3)
+#14 [internal function](): Civi\API\Subscriber\ChainSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventDispatcher.php(164): call_user_func((Array:2), Object(Civi\API\Event\RespondEvent))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventDispatcher.php(53): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "api.respond", Object(Civi\API\Event\RespondEvent))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(221): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("api.respond", Object(Civi\API\Event\RespondEvent))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(98): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("Mailing", "create", (Array:35), NULL)
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/REST.php(402): civicrm_api("Mailing", "create", (Array:35))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/REST.php(638): CRM_Utils_REST::process((Array:3), (Array:33))
+#22 [internal function](): CRM_Utils_REST::ajax()
+#23 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#27 [internal function](): CiviCRM_For_WordPress->invoke("")
+#28 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#29 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#30 {main}
+
+
+Jun 12 11:36:41  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(894): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Failed to send data [SMTP: Invalid response code received from SMTP server wh...", 10006, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(328): PEAR->raiseError("Failed to send data [SMTP: Invalid response code received from SMTP server wh...", 10006)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(707): Mail_smtp->send("=?utf-8?Q?Cl=C3=A1udia_Rodrigues?= <claudia_s_rodrigues@hotmail.com>", (Array:11), "--=_d0fdc32dafadc0e4b097a8f3a26a32e9\nContent-Transfer-Encoding: 8bit\nConten...", "483")
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(611): CRM_Mailing_BAO_MailingJob->deliverGroup((Array:1), Object(CRM_Mailing_BAO_Mailing), Object(Mail_smtp), "", (Array:0))
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(198): CRM_Mailing_BAO_MailingJob->deliver(Object(Mail_smtp), (Array:12))
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/Mailing.php(643): CRM_Mailing_BAO_MailingJob::runJobs((Array:12))
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_mailing_send_test((Array:10))
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("mailing", "send_test", (Array:10), NULL)
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Subscriber/ChainSubscriber.php(195): civicrm_api("mailing", "send_test", (Array:10))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Subscriber/ChainSubscriber.php(72): Civi\API\Subscriber\ChainSubscriber->callNestedApi((Array:35), (Array:5), "create", "Mailing", 3)
+#14 [internal function](): Civi\API\Subscriber\ChainSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventDispatcher.php(164): call_user_func((Array:2), Object(Civi\API\Event\RespondEvent))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventDispatcher.php(53): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "api.respond", Object(Civi\API\Event\RespondEvent))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(221): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("api.respond", Object(Civi\API\Event\RespondEvent))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(98): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("Mailing", "create", (Array:35), NULL)
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/REST.php(402): civicrm_api("Mailing", "create", (Array:35))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/REST.php(638): CRM_Utils_REST::process((Array:3), (Array:33))
+#22 [internal function](): CRM_Utils_REST::ajax()
+#23 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#27 [internal function](): CiviCRM_For_WordPress->invoke("")
+#28 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#29 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#30 {main}
+
+
+Jun 12 11:36:43  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(894): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Failed to send data [SMTP: Invalid response code received from SMTP server wh...", 10006, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(328): PEAR->raiseError("Failed to send data [SMTP: Invalid response code received from SMTP server wh...", 10006)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(707): Mail_smtp->send("=?utf-8?Q?Cl=C3=A1udia_Rodrigues?= <claudia_s_rodrigues@hotmail.com>", (Array:11), "--=_ba16932da556b1634cd0fed911a1a822\nContent-Transfer-Encoding: 8bit\nConten...", "484")
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(611): CRM_Mailing_BAO_MailingJob->deliverGroup((Array:1), Object(CRM_Mailing_BAO_Mailing), Object(Mail_smtp), "", (Array:0))
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(198): CRM_Mailing_BAO_MailingJob->deliver(Object(Mail_smtp), (Array:12))
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/Mailing.php(643): CRM_Mailing_BAO_MailingJob::runJobs((Array:12))
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_mailing_send_test((Array:10))
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("mailing", "send_test", (Array:10), NULL)
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Subscriber/ChainSubscriber.php(195): civicrm_api("mailing", "send_test", (Array:10))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Subscriber/ChainSubscriber.php(72): Civi\API\Subscriber\ChainSubscriber->callNestedApi((Array:35), (Array:5), "create", "Mailing", 3)
+#14 [internal function](): Civi\API\Subscriber\ChainSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventDispatcher.php(164): call_user_func((Array:2), Object(Civi\API\Event\RespondEvent))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventDispatcher.php(53): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "api.respond", Object(Civi\API\Event\RespondEvent))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(221): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("api.respond", Object(Civi\API\Event\RespondEvent))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(98): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("Mailing", "create", (Array:35), NULL)
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/REST.php(402): civicrm_api("Mailing", "create", (Array:35))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/REST.php(638): CRM_Utils_REST::process((Array:3), (Array:33))
+#22 [internal function](): CRM_Utils_REST::ajax()
+#23 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#27 [internal function](): CiviCRM_For_WordPress->invoke("")
+#28 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#29 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#30 {main}
+
+
+Jun 15 09:29:59  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 111
+    [message] => Connection refused
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="Connection refused" code=111 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Jun 15 09:29:59  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Connection refused", 111, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(156): PEAR->raiseError("Connection refused", 111)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTTP/Request.php(737): Net_Socket->connect("ssl://transparencia.pt", 443, NULL, NULL, NULL)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/System.php(1386): HTTP_Request->sendRequest()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Dashboard.php(326): CRM_Utils_System::getServerResponse("https://transparencia.pt/wp-admin/admin.php?page=CiviCRM&q=civicrm/dashlet/bl...")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Page/AJAX.php(597): CRM_Core_BAO_Dashboard::getDashletInfo("1")
+#9 [internal function](): CRM_Contact_Page_AJAX::dashboard()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#14 [internal function](): CiviCRM_For_WordPress->invoke("")
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#17 {main}
+
+
+Jun 15 09:49:54  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 111
+    [message] => Connection refused
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="Connection refused" code=111 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Jun 15 09:49:54  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Connection refused", 111, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(156): PEAR->raiseError("Connection refused", 111)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTTP/Request.php(737): Net_Socket->connect("ssl://transparencia.pt", 443, NULL, NULL, NULL)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/System.php(1386): HTTP_Request->sendRequest()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Dashboard.php(326): CRM_Utils_System::getServerResponse("https://transparencia.pt/wp-admin/admin.php?page=CiviCRM&q=civicrm/dashlet/bl...")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Page/AJAX.php(597): CRM_Core_BAO_Dashboard::getDashletInfo("1")
+#9 [internal function](): CRM_Contact_Page_AJAX::dashboard()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#14 [internal function](): CiviCRM_For_WordPress->invoke("")
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#17 {main}
+
+
+Jun 15 10:19:17  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 111
+    [message] => Connection refused
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="Connection refused" code=111 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Jun 15 10:19:17  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Connection refused", 111, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(156): PEAR->raiseError("Connection refused", 111)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTTP/Request.php(737): Net_Socket->connect("ssl://transparencia.pt", 443, NULL, NULL, NULL)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/System.php(1386): HTTP_Request->sendRequest()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Dashboard.php(326): CRM_Utils_System::getServerResponse("https://transparencia.pt/wp-admin/admin.php?page=CiviCRM&q=civicrm/dashlet/bl...")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Page/AJAX.php(597): CRM_Core_BAO_Dashboard::getDashletInfo("1")
+#9 [internal function](): CRM_Contact_Page_AJAX::dashboard()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#14 [internal function](): CiviCRM_For_WordPress->invoke("")
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#17 {main}
+
+
+Jun 15 10:31:57  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 111
+    [message] => Connection refused
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="Connection refused" code=111 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Jun 15 10:31:57  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Connection refused", 111, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(156): PEAR->raiseError("Connection refused", 111)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTTP/Request.php(737): Net_Socket->connect("ssl://transparencia.pt", 443, NULL, NULL, NULL)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/System.php(1386): HTTP_Request->sendRequest()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Dashboard.php(326): CRM_Utils_System::getServerResponse("https://transparencia.pt/wp-admin/admin.php?page=CiviCRM&q=civicrm/dashlet/bl...")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Page/AJAX.php(597): CRM_Core_BAO_Dashboard::getDashletInfo("1")
+#9 [internal function](): CRM_Contact_Page_AJAX::dashboard()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#14 [internal function](): CiviCRM_For_WordPress->invoke("")
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#17 {main}
+
+
+Jun 15 13:33:02  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 111
+    [message] => Connection refused
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="Connection refused" code=111 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Jun 15 13:33:02  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Connection refused", 111, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(156): PEAR->raiseError("Connection refused", 111)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTTP/Request.php(737): Net_Socket->connect("ssl://transparencia.pt", 443, NULL, NULL, NULL)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/System.php(1386): HTTP_Request->sendRequest()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Dashboard.php(326): CRM_Utils_System::getServerResponse("https://transparencia.pt/wp-admin/admin.php?page=CiviCRM&q=civicrm/dashlet/bl...")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Page/AJAX.php(597): CRM_Core_BAO_Dashboard::getDashletInfo("1")
+#9 [internal function](): CRM_Contact_Page_AJAX::dashboard()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#14 [internal function](): CiviCRM_For_WordPress->invoke("")
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#17 {main}
+
+
+Jun 15 13:58:44  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 111
+    [message] => Connection refused
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="Connection refused" code=111 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Jun 15 13:58:44  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Connection refused", 111, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(156): PEAR->raiseError("Connection refused", 111)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTTP/Request.php(737): Net_Socket->connect("ssl://transparencia.pt", 443, NULL, NULL, NULL)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/System.php(1386): HTTP_Request->sendRequest()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Dashboard.php(326): CRM_Utils_System::getServerResponse("https://transparencia.pt/wp-admin/admin.php?page=CiviCRM&q=civicrm/dashlet/bl...")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Page/AJAX.php(597): CRM_Core_BAO_Dashboard::getDashletInfo("1")
+#9 [internal function](): CRM_Contact_Page_AJAX::dashboard()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#14 [internal function](): CiviCRM_For_WordPress->invoke("")
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#17 {main}
+
+
+Jun 15 14:42:46  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 111
+    [message] => Connection refused
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="Connection refused" code=111 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Jun 15 14:42:46  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Connection refused", 111, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(156): PEAR->raiseError("Connection refused", 111)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTTP/Request.php(737): Net_Socket->connect("ssl://transparencia.pt", 443, NULL, NULL, NULL)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/System.php(1386): HTTP_Request->sendRequest()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Dashboard.php(326): CRM_Utils_System::getServerResponse("https://transparencia.pt/wp-admin/admin.php?page=CiviCRM&q=civicrm/dashlet/bl...")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Page/AJAX.php(597): CRM_Core_BAO_Dashboard::getDashletInfo("1")
+#9 [internal function](): CRM_Contact_Page_AJAX::dashboard()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#14 [internal function](): CiviCRM_For_WordPress->invoke("")
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#17 {main}
+
+
+Jun 15 14:52:15  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 111
+    [message] => Connection refused
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="Connection refused" code=111 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Jun 15 14:52:15  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Connection refused", 111, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(156): PEAR->raiseError("Connection refused", 111)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTTP/Request.php(737): Net_Socket->connect("ssl://transparencia.pt", 443, NULL, NULL, NULL)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/System.php(1386): HTTP_Request->sendRequest()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Dashboard.php(326): CRM_Utils_System::getServerResponse("https://transparencia.pt/wp-admin/admin.php?page=CiviCRM&q=civicrm/dashlet/bl...")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Page/AJAX.php(597): CRM_Core_BAO_Dashboard::getDashletInfo("1")
+#9 [internal function](): CRM_Contact_Page_AJAX::dashboard()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#14 [internal function](): CiviCRM_For_WordPress->invoke("")
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#17 {main}
+
+
+Jun 15 16:08:23  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 111
+    [message] => Connection refused
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="Connection refused" code=111 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Jun 15 16:08:23  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Connection refused", 111, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(156): PEAR->raiseError("Connection refused", 111)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTTP/Request.php(737): Net_Socket->connect("ssl://transparencia.pt", 443, NULL, NULL, NULL)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/System.php(1386): HTTP_Request->sendRequest()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Dashboard.php(326): CRM_Utils_System::getServerResponse("https://transparencia.pt/wp-admin/admin.php?page=CiviCRM&q=civicrm/dashlet/bl...")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Page/AJAX.php(597): CRM_Core_BAO_Dashboard::getDashletInfo("1")
+#9 [internal function](): CRM_Contact_Page_AJAX::dashboard()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#14 [internal function](): CiviCRM_For_WordPress->invoke("")
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#17 {main}
+
+
+Jun 15 16:19:52  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 111
+    [message] => Connection refused
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="Connection refused" code=111 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Jun 15 16:19:52  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Connection refused", 111, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(156): PEAR->raiseError("Connection refused", 111)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTTP/Request.php(737): Net_Socket->connect("ssl://transparencia.pt", 443, NULL, NULL, NULL)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/System.php(1386): HTTP_Request->sendRequest()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Dashboard.php(326): CRM_Utils_System::getServerResponse("https://transparencia.pt/wp-admin/admin.php?page=CiviCRM&q=civicrm/dashlet/bl...")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Page/AJAX.php(597): CRM_Core_BAO_Dashboard::getDashletInfo("1")
+#9 [internal function](): CRM_Contact_Page_AJAX::dashboard()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#14 [internal function](): CiviCRM_For_WordPress->invoke("")
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#17 {main}
+
+
+Jun 15 16:25:54  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 111
+    [message] => Connection refused
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="Connection refused" code=111 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Jun 15 16:25:54  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Connection refused", 111, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(156): PEAR->raiseError("Connection refused", 111)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTTP/Request.php(737): Net_Socket->connect("ssl://transparencia.pt", 443, NULL, NULL, NULL)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/System.php(1386): HTTP_Request->sendRequest()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Dashboard.php(326): CRM_Utils_System::getServerResponse("https://transparencia.pt/wp-admin/admin.php?page=CiviCRM&q=civicrm/dashlet/bl...")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Page/AJAX.php(597): CRM_Core_BAO_Dashboard::getDashletInfo("1")
+#9 [internal function](): CRM_Contact_Page_AJAX::dashboard()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#14 [internal function](): CiviCRM_For_WordPress->invoke("")
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#17 {main}
+
+
+Jun 18 13:08:28  [info] $Fatal Error Details = Array
+(
+    [message] => Não foi possível encontrar um valor válido para ct
+    [code] => 
+)
+
+
+Jun 18 13:08:28  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(363): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Request.php(95): CRM_Core_Error::fatal("Não foi possível encontrar um valor válido para ct")
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Form/Contact.php(153): CRM_Utils_Request::retrieve("ct", "String", Object(CRM_Contact_Form_Contact), TRUE, NULL, "REQUEST")
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(455): CRM_Contact_Form_Contact->preProcess()
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Display.php(94): CRM_Core_Form->buildForm()
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Display->perform(Object(CRM_Contact_Form_Contact), "display")
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Contact_Form_Contact), "display")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(353): HTML_QuickForm_Page->handle("display")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(115): CRM_Core_Controller->run()
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(286): CRM_Utils_Wrapper->run("CRM_Contact_Form_Contact", "Novo Contacto", (Array:1))
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#13 [internal function](): CiviCRM_For_WordPress->invoke("")
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#16 {main}
+
+
+Jun 19 04:00:06  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(894): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: unknown error", -1, 16, (Array:2), "\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-1, 16, (Array:2), "\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -1, NULL, NULL, "\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-1, NULL, NULL, NULL, "2013 ** Lost connection to MySQL server during query")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(328): DB_mysql->mysqlRaiseError()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1634): DB_DataObject->_query("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(325): DB_DataObject->query("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(1179): CRM_Core_DAO->query("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...", TRUE)
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/ActionSchedule.php(1334): CRM_Core_DAO::executeQuery("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/ActionSchedule.php(1477): CRM_Core_BAO_ActionSchedule::buildRecipientContacts(4, "20150619040003", (Array:2))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/Job.php(186): CRM_Core_BAO_ActionSchedule::processQueue(NULL, (Array:2))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_job_send_reminder((Array:1))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("Job", "send_reminder", (Array:1), NULL)
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(131): civicrm_api("Job", "send_reminder", (Array:1))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(83): CRM_Core_JobManager->executeJob(Object(CRM_Core_ScheduledJob))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/bin/cron.php(42): CRM_Core_JobManager->execute()
+#22 {main}
+
+
+Jun 19 04:00:06  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(894): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: no database selected", -14, 16, (Array:2), "SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' ) [nati...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-14, 16, (Array:2), "SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' ) [nati...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -14, NULL, NULL, "SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' ) [nati...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-14, NULL, NULL, NULL, "2006 ** MySQL server has gone away")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(309): DB_mysql->mysqlRaiseError(-14)
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' )")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' )")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1634): DB_DataObject->_query("SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' )")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(325): DB_DataObject->query("SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' )")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(1221): CRM_Core_DAO->query("SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' )", TRUE)
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Lock.php(120): CRM_Core_DAO::singleValueQuery("SELECT RELEASE_LOCK( %1 )", (Array:1))
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Lock.php(87): CRM_Core_Lock->release()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): CRM_Core_Lock->__destruct()
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_job_send_reminder((Array:1))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("Job", "send_reminder", (Array:1), NULL)
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(131): civicrm_api("Job", "send_reminder", (Array:1))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(83): CRM_Core_JobManager->executeJob(Object(CRM_Core_ScheduledJob))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/bin/cron.php(42): CRM_Core_JobManager->execute()
+#22 {main}
+
+
+Jun 19 04:00:06  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => -14
+    [message] => DB Error: no database selected
+    [mode] => 16
+    [debug_info] => SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]
+    [type] => DB_Error
+    [user_info] => SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]
+    [to_string] => [db_error: message="DB Error: no database selected" code=-14 mode=callback callback=CRM_Core_Error::handle prefix="" info="SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]"]
+)
+
+
+Jun 19 04:00:06  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: no database selected", -14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -14, NULL, NULL, "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-14, NULL, NULL, NULL, "2006 ** MySQL server has gone away")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(309): DB_mysql->mysqlRaiseError(-14)
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("SET NAMES utf8")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("SET NAMES utf8")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1634): DB_DataObject->_query("SET NAMES utf8")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(325): DB_DataObject->query("SET NAMES utf8")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(363): CRM_Core_DAO->query("SET NAMES utf8")
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(86): CRM_Core_DAO->initialize()
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO/JobLog.php(139): CRM_Core_DAO->__construct()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(209): CRM_Core_DAO_JobLog->__construct()
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(136): CRM_Core_JobManager->logEntry("Finished execution of Send Scheduled Mailings with result: Falhou, Error mess...")
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(83): CRM_Core_JobManager->executeJob(Object(CRM_Core_ScheduledJob))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/bin/cron.php(42): CRM_Core_JobManager->execute()
+#19 {main}
+
+
+Jun 19 04:00:06  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => -14
+    [message] => DB Error: no database selected
+    [mode] => 16
+    [debug_info] => SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]
+    [type] => DB_Error
+    [user_info] => SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]
+    [to_string] => [db_error: message="DB Error: no database selected" code=-14 mode=callback callback=CRM_Core_Error::handle prefix="" info="SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]"]
+)
+
+
+Jun 19 04:00:06  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: no database selected", -14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -14, NULL, NULL, "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-14, NULL, NULL, NULL, "2006 ** MySQL server has gone away")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(309): DB_mysql->mysqlRaiseError(-14)
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("SET NAMES utf8")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("SET NAMES utf8")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1634): DB_DataObject->_query("SET NAMES utf8")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(325): DB_DataObject->query("SET NAMES utf8")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(363): CRM_Core_DAO->query("SET NAMES utf8")
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(86): CRM_Core_DAO->initialize()
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/Core/Transaction/Manager.php(60): CRM_Core_DAO->__construct()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Transaction.php(207): Civi\Core\Transaction\Manager::singleton()
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(957): CRM_Core_Transaction::forceRollbackIfEnabled()
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(250): CRM_Core_Error::abend(1)
+#18 [internal function](): CRM_Core_Error::handle(Object(DB_Error))
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: no database selected", -14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#22 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -14, NULL, NULL, "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]", "DB_Error", TRUE)
+#23 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-14, NULL, NULL, NULL, "2006 ** MySQL server has gone away")
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(309): DB_mysql->mysqlRaiseError(-14)
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("SET NAMES utf8")
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("SET NAMES utf8")
+#27 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1634): DB_DataObject->_query("SET NAMES utf8")
+#28 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(325): DB_DataObject->query("SET NAMES utf8")
+#29 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(363): CRM_Core_DAO->query("SET NAMES utf8")
+#30 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(86): CRM_Core_DAO->initialize()
+#31 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO/JobLog.php(139): CRM_Core_DAO->__construct()
+#32 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(209): CRM_Core_DAO_JobLog->__construct()
+#33 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(136): CRM_Core_JobManager->logEntry("Finished execution of Send Scheduled Mailings with result: Falhou, Error mess...")
+#34 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(83): CRM_Core_JobManager->executeJob(Object(CRM_Core_ScheduledJob))
+#35 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/bin/cron.php(42): CRM_Core_JobManager->execute()
+#36 {main}
+
+
+Jun 20 04:00:06  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(894): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: unknown error", -1, 16, (Array:2), "\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-1, 16, (Array:2), "\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -1, NULL, NULL, "\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-1, NULL, NULL, NULL, "2013 ** Lost connection to MySQL server during query")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(328): DB_mysql->mysqlRaiseError()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1634): DB_DataObject->_query("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(325): DB_DataObject->query("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(1179): CRM_Core_DAO->query("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...", TRUE)
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/ActionSchedule.php(1334): CRM_Core_DAO::executeQuery("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/ActionSchedule.php(1477): CRM_Core_BAO_ActionSchedule::buildRecipientContacts(4, "20150620040002", (Array:2))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/Job.php(186): CRM_Core_BAO_ActionSchedule::processQueue(NULL, (Array:2))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_job_send_reminder((Array:1))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("Job", "send_reminder", (Array:1), NULL)
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(131): civicrm_api("Job", "send_reminder", (Array:1))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(83): CRM_Core_JobManager->executeJob(Object(CRM_Core_ScheduledJob))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/bin/cron.php(42): CRM_Core_JobManager->execute()
+#22 {main}
+
+
+Jun 20 04:00:06  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(894): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: no database selected", -14, 16, (Array:2), "SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' ) [nati...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-14, 16, (Array:2), "SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' ) [nati...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -14, NULL, NULL, "SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' ) [nati...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-14, NULL, NULL, NULL, "2006 ** MySQL server has gone away")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(309): DB_mysql->mysqlRaiseError(-14)
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' )")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' )")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1634): DB_DataObject->_query("SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' )")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(325): DB_DataObject->query("SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' )")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(1221): CRM_Core_DAO->query("SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' )", TRUE)
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Lock.php(120): CRM_Core_DAO::singleValueQuery("SELECT RELEASE_LOCK( %1 )", (Array:1))
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Lock.php(87): CRM_Core_Lock->release()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): CRM_Core_Lock->__destruct()
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_job_send_reminder((Array:1))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("Job", "send_reminder", (Array:1), NULL)
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(131): civicrm_api("Job", "send_reminder", (Array:1))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(83): CRM_Core_JobManager->executeJob(Object(CRM_Core_ScheduledJob))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/bin/cron.php(42): CRM_Core_JobManager->execute()
+#22 {main}
+
+
+Jun 20 04:00:06  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => -14
+    [message] => DB Error: no database selected
+    [mode] => 16
+    [debug_info] => SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]
+    [type] => DB_Error
+    [user_info] => SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]
+    [to_string] => [db_error: message="DB Error: no database selected" code=-14 mode=callback callback=CRM_Core_Error::handle prefix="" info="SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]"]
+)
+
+
+Jun 20 04:00:06  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: no database selected", -14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -14, NULL, NULL, "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-14, NULL, NULL, NULL, "2006 ** MySQL server has gone away")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(309): DB_mysql->mysqlRaiseError(-14)
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("SET NAMES utf8")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("SET NAMES utf8")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1634): DB_DataObject->_query("SET NAMES utf8")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(325): DB_DataObject->query("SET NAMES utf8")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(363): CRM_Core_DAO->query("SET NAMES utf8")
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(86): CRM_Core_DAO->initialize()
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO/JobLog.php(139): CRM_Core_DAO->__construct()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(209): CRM_Core_DAO_JobLog->__construct()
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(136): CRM_Core_JobManager->logEntry("Finished execution of Send Scheduled Mailings with result: Falhou, Error mess...")
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(83): CRM_Core_JobManager->executeJob(Object(CRM_Core_ScheduledJob))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/bin/cron.php(42): CRM_Core_JobManager->execute()
+#19 {main}
+
+
+Jun 20 04:00:06  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => -14
+    [message] => DB Error: no database selected
+    [mode] => 16
+    [debug_info] => SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]
+    [type] => DB_Error
+    [user_info] => SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]
+    [to_string] => [db_error: message="DB Error: no database selected" code=-14 mode=callback callback=CRM_Core_Error::handle prefix="" info="SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]"]
+)
+
+
+Jun 20 04:00:06  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: no database selected", -14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -14, NULL, NULL, "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-14, NULL, NULL, NULL, "2006 ** MySQL server has gone away")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(309): DB_mysql->mysqlRaiseError(-14)
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("SET NAMES utf8")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("SET NAMES utf8")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1634): DB_DataObject->_query("SET NAMES utf8")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(325): DB_DataObject->query("SET NAMES utf8")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(363): CRM_Core_DAO->query("SET NAMES utf8")
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(86): CRM_Core_DAO->initialize()
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/Core/Transaction/Manager.php(60): CRM_Core_DAO->__construct()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Transaction.php(207): Civi\Core\Transaction\Manager::singleton()
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(957): CRM_Core_Transaction::forceRollbackIfEnabled()
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(250): CRM_Core_Error::abend(1)
+#18 [internal function](): CRM_Core_Error::handle(Object(DB_Error))
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: no database selected", -14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#22 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -14, NULL, NULL, "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]", "DB_Error", TRUE)
+#23 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-14, NULL, NULL, NULL, "2006 ** MySQL server has gone away")
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(309): DB_mysql->mysqlRaiseError(-14)
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("SET NAMES utf8")
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("SET NAMES utf8")
+#27 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1634): DB_DataObject->_query("SET NAMES utf8")
+#28 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(325): DB_DataObject->query("SET NAMES utf8")
+#29 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(363): CRM_Core_DAO->query("SET NAMES utf8")
+#30 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(86): CRM_Core_DAO->initialize()
+#31 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO/JobLog.php(139): CRM_Core_DAO->__construct()
+#32 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(209): CRM_Core_DAO_JobLog->__construct()
+#33 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(136): CRM_Core_JobManager->logEntry("Finished execution of Send Scheduled Mailings with result: Falhou, Error mess...")
+#34 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(83): CRM_Core_JobManager->executeJob(Object(CRM_Core_ScheduledJob))
+#35 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/bin/cron.php(42): CRM_Core_JobManager->execute()
+#36 {main}
+
+
+Jun 20 16:01:55  [info] Contribution record updated successfully
+
+Jun 20 16:01:56  [info] Receipt sent
+
+Jun 20 16:01:56  [info] Success: Database updated
+
+Jun 21 04:00:06  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(894): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: unknown error", -1, 16, (Array:2), "\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-1, 16, (Array:2), "\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -1, NULL, NULL, "\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-1, NULL, NULL, NULL, "2013 ** Lost connection to MySQL server during query")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(328): DB_mysql->mysqlRaiseError()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1634): DB_DataObject->_query("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(325): DB_DataObject->query("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(1179): CRM_Core_DAO->query("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...", TRUE)
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/ActionSchedule.php(1334): CRM_Core_DAO::executeQuery("\nINSERT INTO civicrm_action_log (contact_id, entity_id, entity_table, action...")
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/ActionSchedule.php(1477): CRM_Core_BAO_ActionSchedule::buildRecipientContacts(4, "20150621040003", (Array:2))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/Job.php(186): CRM_Core_BAO_ActionSchedule::processQueue(NULL, (Array:2))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_job_send_reminder((Array:1))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("Job", "send_reminder", (Array:1), NULL)
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(131): civicrm_api("Job", "send_reminder", (Array:1))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(83): CRM_Core_JobManager->executeJob(Object(CRM_Core_ScheduledJob))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/bin/cron.php(42): CRM_Core_JobManager->execute()
+#22 {main}
+
+
+Jun 21 04:00:06  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(894): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: no database selected", -14, 16, (Array:2), "SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' ) [nati...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-14, 16, (Array:2), "SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' ) [nati...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -14, NULL, NULL, "SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' ) [nati...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-14, NULL, NULL, NULL, "2006 ** MySQL server has gone away")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(309): DB_mysql->mysqlRaiseError(-14)
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' )")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' )")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1634): DB_DataObject->_query("SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' )")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(325): DB_DataObject->query("SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' )")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(1221): CRM_Core_DAO->query("SELECT RELEASE_LOCK( 'tiac_civicrm_fin.1.civimail.job.EmailProcessor' )", TRUE)
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Lock.php(120): CRM_Core_DAO::singleValueQuery("SELECT RELEASE_LOCK( %1 )", (Array:1))
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Lock.php(87): CRM_Core_Lock->release()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): CRM_Core_Lock->__destruct()
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_job_send_reminder((Array:1))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("Job", "send_reminder", (Array:1), NULL)
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(131): civicrm_api("Job", "send_reminder", (Array:1))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(83): CRM_Core_JobManager->executeJob(Object(CRM_Core_ScheduledJob))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/bin/cron.php(42): CRM_Core_JobManager->execute()
+#22 {main}
+
+
+Jun 21 04:00:06  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => -14
+    [message] => DB Error: no database selected
+    [mode] => 16
+    [debug_info] => SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]
+    [type] => DB_Error
+    [user_info] => SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]
+    [to_string] => [db_error: message="DB Error: no database selected" code=-14 mode=callback callback=CRM_Core_Error::handle prefix="" info="SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]"]
+)
+
+
+Jun 21 04:00:06  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: no database selected", -14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -14, NULL, NULL, "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-14, NULL, NULL, NULL, "2006 ** MySQL server has gone away")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(309): DB_mysql->mysqlRaiseError(-14)
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("SET NAMES utf8")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("SET NAMES utf8")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1634): DB_DataObject->_query("SET NAMES utf8")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(325): DB_DataObject->query("SET NAMES utf8")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(363): CRM_Core_DAO->query("SET NAMES utf8")
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(86): CRM_Core_DAO->initialize()
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO/JobLog.php(139): CRM_Core_DAO->__construct()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(209): CRM_Core_DAO_JobLog->__construct()
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(136): CRM_Core_JobManager->logEntry("Finished execution of Send Scheduled Mailings with result: Falhou, Error mess...")
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(83): CRM_Core_JobManager->executeJob(Object(CRM_Core_ScheduledJob))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/bin/cron.php(42): CRM_Core_JobManager->execute()
+#19 {main}
+
+
+Jun 21 04:00:06  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => -14
+    [message] => DB Error: no database selected
+    [mode] => 16
+    [debug_info] => SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]
+    [type] => DB_Error
+    [user_info] => SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]
+    [to_string] => [db_error: message="DB Error: no database selected" code=-14 mode=callback callback=CRM_Core_Error::handle prefix="" info="SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]"]
+)
+
+
+Jun 21 04:00:06  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: no database selected", -14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -14, NULL, NULL, "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-14, NULL, NULL, NULL, "2006 ** MySQL server has gone away")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(309): DB_mysql->mysqlRaiseError(-14)
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("SET NAMES utf8")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("SET NAMES utf8")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1634): DB_DataObject->_query("SET NAMES utf8")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(325): DB_DataObject->query("SET NAMES utf8")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(363): CRM_Core_DAO->query("SET NAMES utf8")
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(86): CRM_Core_DAO->initialize()
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/Core/Transaction/Manager.php(60): CRM_Core_DAO->__construct()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Transaction.php(207): Civi\Core\Transaction\Manager::singleton()
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(957): CRM_Core_Transaction::forceRollbackIfEnabled()
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(250): CRM_Core_Error::abend(1)
+#18 [internal function](): CRM_Core_Error::handle(Object(DB_Error))
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: no database selected", -14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-14, 16, (Array:2), "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]")
+#22 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -14, NULL, NULL, "SET NAMES utf8 [nativecode=2006 ** MySQL server has gone away]", "DB_Error", TRUE)
+#23 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-14, NULL, NULL, NULL, "2006 ** MySQL server has gone away")
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(309): DB_mysql->mysqlRaiseError(-14)
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("SET NAMES utf8")
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("SET NAMES utf8")
+#27 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1634): DB_DataObject->_query("SET NAMES utf8")
+#28 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(325): DB_DataObject->query("SET NAMES utf8")
+#29 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(363): CRM_Core_DAO->query("SET NAMES utf8")
+#30 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(86): CRM_Core_DAO->initialize()
+#31 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO/JobLog.php(139): CRM_Core_DAO->__construct()
+#32 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(209): CRM_Core_DAO_JobLog->__construct()
+#33 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(136): CRM_Core_JobManager->logEntry("Finished execution of Send Scheduled Mailings with result: Falhou, Error mess...")
+#34 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(83): CRM_Core_JobManager->executeJob(Object(CRM_Core_ScheduledJob))
+#35 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/bin/cron.php(42): CRM_Core_JobManager->execute()
+#36 {main}
+
+
+Jul 14 14:12:32  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(894): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Failed to set sender: b.491.31025.3d3d5c8c3c22367c@ [SMTP: Invalid response c...", 10004, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(295): PEAR->raiseError("Failed to set sender: b.491.31025.3d3d5c8c3c22367c@ [SMTP: Invalid response c...", 10004)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(707): Mail_smtp->send("Celso Rodrigues <celso.r.n.rodrigues@gmail.com>", (Array:11), "--=_ff51395b49bab26d20e42b7750837165\nContent-Transfer-Encoding: 8bit\nConten...", "491")
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(611): CRM_Mailing_BAO_MailingJob->deliverGroup((Array:1), Object(CRM_Mailing_BAO_Mailing), Object(Mail_smtp), "", (Array:0))
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(198): CRM_Mailing_BAO_MailingJob->deliver(Object(Mail_smtp), (Array:12))
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/Mailing.php(643): CRM_Mailing_BAO_MailingJob::runJobs((Array:12))
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_mailing_send_test((Array:10))
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("mailing", "send_test", (Array:10), NULL)
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Subscriber/ChainSubscriber.php(195): civicrm_api("mailing", "send_test", (Array:10))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Subscriber/ChainSubscriber.php(72): Civi\API\Subscriber\ChainSubscriber->callNestedApi((Array:35), (Array:5), "create", "Mailing", 3)
+#14 [internal function](): Civi\API\Subscriber\ChainSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventDispatcher.php(164): call_user_func((Array:2), Object(Civi\API\Event\RespondEvent))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventDispatcher.php(53): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "api.respond", Object(Civi\API\Event\RespondEvent))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(221): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("api.respond", Object(Civi\API\Event\RespondEvent))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(98): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("Mailing", "create", (Array:35), NULL)
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/REST.php(404): civicrm_api("Mailing", "create", (Array:35))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/REST.php(640): CRM_Utils_REST::process((Array:3), (Array:33))
+#22 [internal function](): CRM_Utils_REST::ajax()
+#23 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#27 [internal function](): CiviCRM_For_WordPress->invoke("")
+#28 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#29 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#30 {main}
+
+
+Jul 17 10:51:52  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => -1
+    [message] => DB Error: unknown error
+    [mode] => 16
+    [debug_info] => UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = 'rui.vinhas@mail.telepac.pt' , is_primary = 1 , is_billing = 0 , on_hold = 0 , is_bulkmail = 0   WHERE (  civicrm_email.id = 137 )   [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]
+    [type] => DB_Error
+    [user_info] => UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = 'rui.vinhas@mail.telepac.pt' , is_primary = 1 , is_billing = 0 , on_hold = 0 , is_bulkmail = 0   WHERE (  civicrm_email.id = 137 )   [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]
+    [to_string] => [db_error: message="DB Error: unknown error" code=-1 mode=callback callback=CRM_Core_Error::handle prefix="" info="UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = 'rui.vinhas@mail.telepac.pt' , is_primary = 1 , is_billing = 0 , on_hold = 0 , is_bulkmail = 0   WHERE (  civicrm_email.id = 137 )   [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]"]
+)
+
+
+Jul 17 10:51:52  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: unknown error", -1, 16, (Array:2), "UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = ...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-1, 16, (Array:2), "UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = ...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -1, NULL, NULL, "UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = ...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-1, NULL, NULL, NULL, "1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(328): DB_mysql->mysqlRaiseError()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = ...")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = ...")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1345): DB_DataObject->_query("UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = ...")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(444): DB_DataObject->update()
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Email.php(102): CRM_Core_DAO->save()
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Block.php(378): CRM_Core_BAO_Email::add((Array:8))
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Form/Inline/Email.php(185): CRM_Core_BAO_Block::create("email", (Array:9))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(345): CRM_Contact_Form_Inline_Email->postProcess()
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Upload.php(166): CRM_Core_Form->mainProcess()
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Upload.php(133): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Contact_Form_Inline_Email), "upload")
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Contact_Form_Inline_Email), "upload")
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Contact_Form_Inline_Email), "upload")
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(353): HTML_QuickForm_Page->handle("upload")
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(115): CRM_Core_Controller->run()
+#22 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Page/AJAX.php(81): CRM_Utils_Wrapper->run("CRM_Contact_Form_Inline_Email")
+#23 [internal function](): CRM_Core_Page_AJAX::run()
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#27 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#28 [internal function](): CiviCRM_For_WordPress->invoke("")
+#29 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#30 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#31 {main}
+
+
+Jul 17 11:25:23  [info] $Fatal Error Details = Array
+(
+    [message] => Your database has already been upgraded to CiviCRM 4.6.4
+    [code] => 
+)
+
+
+Jul 17 11:25:23  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(363): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Upgrade/Page/Upgrade.php(89): CRM_Core_Error::fatal("Your database has already been upgraded to CiviCRM 4.6.4")
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Upgrade/Page/Upgrade.php(64): CRM_Upgrade_Page_Upgrade->runIntro()
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(312): CRM_Upgrade_Page_Upgrade->run((Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:2))
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:2))
+#7 [internal function](): CiviCRM_For_WordPress->invoke("")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#10 {main}
+
+
+Jul 17 11:26:02  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => -1
+    [message] => DB Error: unknown error
+    [mode] => 16
+    [debug_info] => UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = 'rui.vinhas@mail.telepac.pt' , is_primary = 1 , is_billing = 0 , on_hold = 0 , is_bulkmail = 0   WHERE (  civicrm_email.id = 137 )   [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]
+    [type] => DB_Error
+    [user_info] => UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = 'rui.vinhas@mail.telepac.pt' , is_primary = 1 , is_billing = 0 , on_hold = 0 , is_bulkmail = 0   WHERE (  civicrm_email.id = 137 )   [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]
+    [to_string] => [db_error: message="DB Error: unknown error" code=-1 mode=callback callback=CRM_Core_Error::handle prefix="" info="UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = 'rui.vinhas@mail.telepac.pt' , is_primary = 1 , is_billing = 0 , on_hold = 0 , is_bulkmail = 0   WHERE (  civicrm_email.id = 137 )   [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]"]
+)
+
+
+Jul 17 11:26:02  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: unknown error", -1, 16, (Array:2), "UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = ...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-1, 16, (Array:2), "UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = ...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -1, NULL, NULL, "UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = ...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-1, NULL, NULL, NULL, "1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(328): DB_mysql->mysqlRaiseError()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = ...")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = ...")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1345): DB_DataObject->_query("UPDATE  civicrm_email  SET contact_id = 138 , location_type_id = 5 , email = ...")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(444): DB_DataObject->update()
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Email.php(102): CRM_Core_DAO->save()
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Block.php(378): CRM_Core_BAO_Email::add((Array:8))
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Form/Inline/Email.php(185): CRM_Core_BAO_Block::create("email", (Array:9))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(345): CRM_Contact_Form_Inline_Email->postProcess()
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Upload.php(166): CRM_Core_Form->mainProcess()
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Upload.php(133): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Contact_Form_Inline_Email), "upload")
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Contact_Form_Inline_Email), "upload")
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Contact_Form_Inline_Email), "upload")
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(353): HTML_QuickForm_Page->handle("upload")
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(115): CRM_Core_Controller->run()
+#22 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Page/AJAX.php(81): CRM_Utils_Wrapper->run("CRM_Contact_Form_Inline_Email")
+#23 [internal function](): CRM_Core_Page_AJAX::run()
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#27 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#28 [internal function](): CiviCRM_For_WordPress->invoke("")
+#29 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#30 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#31 {main}
+
+
+Jul 17 11:29:29  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => -1
+    [message] => DB Error: unknown error
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary , is_billing , on_hold , is_bulkmail ) VALUES ( 107 ,  5 , 'testests@gmail.com' ,  1 ,  0 ,  0 ,  0 )  [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary , is_billing , on_hold , is_bulkmail ) VALUES ( 107 ,  5 , 'testests@gmail.com' ,  1 ,  0 ,  0 ,  0 )  [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]
+    [to_string] => [db_error: message="DB Error: unknown error" code=-1 mode=callback callback=CRM_Core_Error::handle prefix="" info="INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary , is_billing , on_hold , is_bulkmail ) VALUES ( 107 ,  5 , 'testests@gmail.com' ,  1 ,  0 ,  0 ,  0 )  [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]"]
+)
+
+
+Jul 17 11:29:29  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: unknown error", -1, 16, (Array:2), "INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-1, 16, (Array:2), "INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -1, NULL, NULL, "INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-1, NULL, NULL, NULL, "1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(328): DB_mysql->mysqlRaiseError()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1060): DB_DataObject->_query("INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(450): DB_DataObject->insert()
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Email.php(102): CRM_Core_DAO->save()
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Block.php(378): CRM_Core_BAO_Email::add((Array:8))
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Form/Inline/Email.php(185): CRM_Core_BAO_Block::create("email", (Array:9))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(345): CRM_Contact_Form_Inline_Email->postProcess()
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Upload.php(166): CRM_Core_Form->mainProcess()
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Upload.php(133): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Contact_Form_Inline_Email), "upload")
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Contact_Form_Inline_Email), "upload")
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Contact_Form_Inline_Email), "upload")
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(353): HTML_QuickForm_Page->handle("upload")
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(115): CRM_Core_Controller->run()
+#22 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Page/AJAX.php(81): CRM_Utils_Wrapper->run("CRM_Contact_Form_Inline_Email")
+#23 [internal function](): CRM_Core_Page_AJAX::run()
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#27 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#28 [internal function](): CiviCRM_For_WordPress->invoke("")
+#29 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#30 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#31 {main}
+
+
+Jul 17 11:29:56  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => -1
+    [message] => DB Error: unknown error
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary , is_billing , on_hold , is_bulkmail ) VALUES ( 107 ,  5 , 'testests@gmail.com' ,  1 ,  0 ,  0 ,  0 )  [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary , is_billing , on_hold , is_bulkmail ) VALUES ( 107 ,  5 , 'testests@gmail.com' ,  1 ,  0 ,  0 ,  0 )  [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]
+    [to_string] => [db_error: message="DB Error: unknown error" code=-1 mode=callback callback=CRM_Core_Error::handle prefix="" info="INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary , is_billing , on_hold , is_bulkmail ) VALUES ( 107 ,  5 , 'testests@gmail.com' ,  1 ,  0 ,  0 ,  0 )  [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]"]
+)
+
+
+Jul 17 11:29:56  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: unknown error", -1, 16, (Array:2), "INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-1, 16, (Array:2), "INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -1, NULL, NULL, "INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-1, NULL, NULL, NULL, "1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(328): DB_mysql->mysqlRaiseError()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1060): DB_DataObject->_query("INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(450): DB_DataObject->insert()
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Email.php(102): CRM_Core_DAO->save()
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Block.php(378): CRM_Core_BAO_Email::add((Array:8))
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Form/Inline/Email.php(185): CRM_Core_BAO_Block::create("email", (Array:9))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(345): CRM_Contact_Form_Inline_Email->postProcess()
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Upload.php(166): CRM_Core_Form->mainProcess()
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Upload.php(133): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Contact_Form_Inline_Email), "upload")
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Contact_Form_Inline_Email), "upload")
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Contact_Form_Inline_Email), "upload")
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(353): HTML_QuickForm_Page->handle("upload")
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(115): CRM_Core_Controller->run()
+#22 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Page/AJAX.php(81): CRM_Utils_Wrapper->run("CRM_Contact_Form_Inline_Email")
+#23 [internal function](): CRM_Core_Page_AJAX::run()
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#27 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#28 [internal function](): CiviCRM_For_WordPress->invoke("")
+#29 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#30 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#31 {main}
+
+
+Jul 17 11:30:00  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => -1
+    [message] => DB Error: unknown error
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary , is_billing , on_hold , is_bulkmail ) VALUES ( 107 ,  5 , 'testests@gmail.com' ,  1 ,  0 ,  0 ,  0 )  [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary , is_billing , on_hold , is_bulkmail ) VALUES ( 107 ,  5 , 'testests@gmail.com' ,  1 ,  0 ,  0 ,  0 )  [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]
+    [to_string] => [db_error: message="DB Error: unknown error" code=-1 mode=callback callback=CRM_Core_Error::handle prefix="" info="INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary , is_billing , on_hold , is_bulkmail ) VALUES ( 107 ,  5 , 'testests@gmail.com' ,  1 ,  0 ,  0 ,  0 )  [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]"]
+)
+
+
+Jul 17 11:30:00  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: unknown error", -1, 16, (Array:2), "INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-1, 16, (Array:2), "INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -1, NULL, NULL, "INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-1, NULL, NULL, NULL, "1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(328): DB_mysql->mysqlRaiseError()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1060): DB_DataObject->_query("INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(450): DB_DataObject->insert()
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Email.php(102): CRM_Core_DAO->save()
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Block.php(378): CRM_Core_BAO_Email::add((Array:8))
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Form/Inline/Email.php(185): CRM_Core_BAO_Block::create("email", (Array:9))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(345): CRM_Contact_Form_Inline_Email->postProcess()
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Upload.php(166): CRM_Core_Form->mainProcess()
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Upload.php(133): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Contact_Form_Inline_Email), "upload")
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Contact_Form_Inline_Email), "upload")
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Contact_Form_Inline_Email), "upload")
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(353): HTML_QuickForm_Page->handle("upload")
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(115): CRM_Core_Controller->run()
+#22 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Page/AJAX.php(81): CRM_Utils_Wrapper->run("CRM_Contact_Form_Inline_Email")
+#23 [internal function](): CRM_Core_Page_AJAX::run()
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#27 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#28 [internal function](): CiviCRM_For_WordPress->invoke("")
+#29 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#30 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#31 {main}
+
+
+Jul 17 11:30:06  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => -1
+    [message] => DB Error: unknown error
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary , is_billing , on_hold , is_bulkmail ) VALUES ( 107 ,  5 , 'testests@gmail.com' ,  1 ,  0 ,  0 ,  0 )  [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary , is_billing , on_hold , is_bulkmail ) VALUES ( 107 ,  5 , 'testests@gmail.com' ,  1 ,  0 ,  0 ,  0 )  [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]
+    [to_string] => [db_error: message="DB Error: unknown error" code=-1 mode=callback callback=CRM_Core_Error::handle prefix="" info="INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary , is_billing , on_hold , is_bulkmail ) VALUES ( 107 ,  5 , 'testests@gmail.com' ,  1 ,  0 ,  0 ,  0 )  [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]"]
+)
+
+
+Jul 17 11:30:06  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: unknown error", -1, 16, (Array:2), "INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-1, 16, (Array:2), "INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -1, NULL, NULL, "INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-1, NULL, NULL, NULL, "1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(328): DB_mysql->mysqlRaiseError()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1060): DB_DataObject->_query("INSERT INTO civicrm_email (contact_id , location_type_id , email , is_primary...")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(450): DB_DataObject->insert()
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Email.php(102): CRM_Core_DAO->save()
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Block.php(378): CRM_Core_BAO_Email::add((Array:8))
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Form/Inline/Email.php(185): CRM_Core_BAO_Block::create("email", (Array:9))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(345): CRM_Contact_Form_Inline_Email->postProcess()
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Upload.php(166): CRM_Core_Form->mainProcess()
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Upload.php(133): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Contact_Form_Inline_Email), "upload")
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Contact_Form_Inline_Email), "upload")
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Contact_Form_Inline_Email), "upload")
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(353): HTML_QuickForm_Page->handle("upload")
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(115): CRM_Core_Controller->run()
+#22 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Page/AJAX.php(81): CRM_Utils_Wrapper->run("CRM_Contact_Form_Inline_Email")
+#23 [internal function](): CRM_Core_Page_AJAX::run()
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#27 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#28 [internal function](): CiviCRM_For_WordPress->invoke("")
+#29 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#30 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#31 {main}
+
+
+Jul 17 11:32:24  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => -1
+    [message] => DB Error: unknown error
+    [mode] => 16
+    [debug_info] => UPDATE  civicrm_email  SET contact_id = 2 , location_type_id = 5 , email = 'celso.r.n.rodrigues@gmail.com' , is_primary = 1 , is_billing = 0 , on_hold = 0 , is_bulkmail = 0   WHERE (  civicrm_email.id = 866 )   [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]
+    [type] => DB_Error
+    [user_info] => UPDATE  civicrm_email  SET contact_id = 2 , location_type_id = 5 , email = 'celso.r.n.rodrigues@gmail.com' , is_primary = 1 , is_billing = 0 , on_hold = 0 , is_bulkmail = 0   WHERE (  civicrm_email.id = 866 )   [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]
+    [to_string] => [db_error: message="DB Error: unknown error" code=-1 mode=callback callback=CRM_Core_Error::handle prefix="" info="UPDATE  civicrm_email  SET contact_id = 2 , location_type_id = 5 , email = 'celso.r.n.rodrigues@gmail.com' , is_primary = 1 , is_billing = 0 , on_hold = 0 , is_bulkmail = 0   WHERE (  civicrm_email.id = 866 )   [nativecode=1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist]"]
+)
+
+
+Jul 17 11:32:24  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: unknown error", -1, 16, (Array:2), "UPDATE  civicrm_email  SET contact_id = 2 , location_type_id = 5 , email = 'c...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-1, 16, (Array:2), "UPDATE  civicrm_email  SET contact_id = 2 , location_type_id = 5 , email = 'c...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -1, NULL, NULL, "UPDATE  civicrm_email  SET contact_id = 2 , location_type_id = 5 , email = 'c...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(899): DB_common->raiseError(-1, NULL, NULL, NULL, "1449 ** The user specified as a definer ('backup_0Mp4jU4'@'%') does not exist")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(328): DB_mysql->mysqlRaiseError()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("UPDATE  civicrm_email  SET contact_id = 2 , location_type_id = 5 , email = 'c...")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2442): DB_common->query("UPDATE  civicrm_email  SET contact_id = 2 , location_type_id = 5 , email = 'c...")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1345): DB_DataObject->_query("UPDATE  civicrm_email  SET contact_id = 2 , location_type_id = 5 , email = 'c...")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(444): DB_DataObject->update()
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Email.php(102): CRM_Core_DAO->save()
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/Block.php(378): CRM_Core_BAO_Email::add((Array:8))
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contact/Form/Inline/Email.php(185): CRM_Core_BAO_Block::create("email", (Array:9))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(345): CRM_Contact_Form_Inline_Email->postProcess()
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Upload.php(166): CRM_Core_Form->mainProcess()
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Upload.php(133): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Contact_Form_Inline_Email), "upload")
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Contact_Form_Inline_Email), "upload")
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Contact_Form_Inline_Email), "upload")
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(353): HTML_QuickForm_Page->handle("upload")
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(115): CRM_Core_Controller->run()
+#22 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Page/AJAX.php(81): CRM_Utils_Wrapper->run("CRM_Contact_Form_Inline_Email")
+#23 [internal function](): CRM_Core_Page_AJAX::run()
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(278): call_user_func((Array:2))
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:12))
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#27 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#28 [internal function](): CiviCRM_For_WordPress->invoke("")
+#29 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(496): call_user_func_array((Array:2), (Array:1))
+#30 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(226): do_action("toplevel_page_CiviCRM")
+#31 {main}
+
+

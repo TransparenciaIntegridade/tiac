@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><unity-one:key xmlns:unity-one="http://parallels.com/schemas/keys/products/unity-one" core:format="openfusion-3" xmlns:core="http://parallels.com/schemas/keys/core/3">
+   <!--Unique product Key number-->
+   <core:key-number core:type="string">APS.03256021</core:key-number>
+   <!--Key version-->
+   <core:key-version core:type="string">0002</core:key-version>
+   <!--Key description-->
+   <core:description>
+      <core:keytype>UNITY One, 2 Domains (PowerPack for Plesk)</core:keytype>
+   </core:description>
+   <!--Product which this license is intended to work on-->
+   <core:product core:type="string">unity-mobile-unified</core:product>
+   <!--Supported product version-->
+   <core:version core:type="string">1.0</core:version>
+   <!--Date after which this license becomes usable (inclusive)-->
+   <core:start-date core:type="date">instant</core:start-date>
+   <!--Date before which this license is usable (exclusive)-->
+   <core:expiration-date core:type="date">2015-07-22</core:expiration-date>
+   <!--URL of the service endpoint to use when performing an autoupdate-->
+   <core:license-server-url core:type="string">https://ka.odin.com:5224/xmlrpc</core:license-server-url>
+   <!--Date when product will try to perform an autoupdate-->
+   <core:update-date core:type="date">2015-07-12</core:update-date>
+   <core:update-ticket core:hidden="true" core:type="string">wavz972bblgpc45aku-gcwst2ji0p2y1</core:update-ticket>
+   <!--Mobile Websites-->
+   <unity-one:um_sites core:type="integer">2</unity-one:um_sites>
+   <!--Key body-->
+   <unity-one:key-body core:encoding="base64" core:type="binary">MDAwMzI1NjAyMTpRMm5JdXpSTU1PZzR5RUJrTk9rSDNjQXRaQ1hhVlI6VU8tMi1QUC1NX19fX19fX19fX19fX19fX19fX19f</unity-one:key-body>
+   <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://parallels.com/schemas/keys/core/3#canonicalize"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<ds:Reference URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/>
+<ds:Transform Algorithm="http://parallels.com/schemas/keys/core/3#transform"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>ydyNYBa6ulvSESfyTF7/1gc2LFcXrGvz8HqsMludclQ=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+X3MfknQWP3GwiQsDH5Io+rIvqM6KUf0A2u+9eFyx29yQeVKY/AawNqk4i3MVEVwWQ5lXoJRYeIPs
+guZn/Q5X6++Wc6gxaWN9rWRUtHgOGZVXyUYFyvHBKPb+8pU5JbiWVMHOvqwqXNXUETv8YV6FgxR1
+a8rPbiw1NzguYhdoAyluSPXUpW4uXxkGz4p1M98DMeUwoh1eH7Ajey4b+d49VttPRZ0IiyLXo6FY
+7TyIO4ZSG3HvwdiFBaxosk3CDyZ4fnAelNutaEBUA3RsHWQIUyCxtgDb7k6GjvO5yiW6MV2n0QVw
+SQp4wW3orVr7+cZ3MBQv7pAWTURP97GzdrfKNQ==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIEpTCCAo0CATQwDQYJKoZIhvcNAQEFBQAwgaYxCzAJBgNVBAYTAkJNMQswCQYDVQQIEwJITTER
+MA8GA1UEBxMISGFtaWx0b24xHDAaBgNVBAoTE1NXc29mdCBIb2xkaW5ncyBMdGQxHTAbBgNVBAsT
+FEludGVybmFsIERldmVsb3BtZW50MRwwGgYDVQQDExNLQSByb290IGNlcnRpZmljYXRlMRwwGgYJ
+KoZIhvcNAQkBFg1rYUBzd3NvZnQuY29tMB4XDTE0MDQyODAyNTk0M1oXDTQxMDkxMzAyNTk0M1ow
+gYkxHTAbBgNVBAMTFHVuaXR5LW1vYmlsZS11bmlmaWVkMR0wGwYDVQQLExRJbnRlcm5hbCBEZXZl
+bG9wbWVudDEcMBoGA1UEChMTU1dzb2Z0IEhvbGRpbmdzIEx0ZDERMA8GA1UEBxMISGFtaWx0b24x
+CzAJBgNVBAgTAkhNMQswCQYDVQQGEwJCTTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+AIJ4XliNrv+mXlHLdJjJ9+okB23nosHGBvYeGO1TvasRGsjVUqC/IoxL20ZCBFdofr1GulQM/vBB
+ZuF4HeMa/66cuzxd3hX7NrpoG1lMlRo4msKIxRMRNXOFCTUmyttoYUMXY5kB8e/EWIiX9fw2xpan
+B2Y8ihZtKmwrxc53bsEvsnVltAGIxqU8GxZIQMhONymzVP+rUcnH0Kuz8v0IuhesKVpG8FUszxJR
+mtE6AGPswafpWRE6FwKU+IWTauM8aC2Vy/tiYigF0SiF3ZQLllb70FAoNEnnMRs1nqT5HBXgarpy
+hDCQfhXME/ZSZ+OX5OmgGKh3Kr4ieo0S0ekA8XkCAwEAATANBgkqhkiG9w0BAQUFAAOCAgEAi2GO
+PXhTbD8V4TtCBrhOqIji94djbhiy0K4Rc1B6DmM5WQ2W9IYpqekdt5t5/LSdbUjMyj/e5JnCj2qD
+4slHyIOCcHOzauFrEoZw77IbxePIdSIgRfT4j4UY14xe7IPN7B71viSIPCLVDrECGBjnwZIWNRie
+ldYITaR6TRcd2vXlzfPRQnhS88owADiQSYt2cq3Nl2xBcDTHfEzh5p7BRY/gd6Hayhq9hQLCe8UW
+JbEvWPAM+OEKaFyTED8K8x6ePyFqut941yVu4xYMdJWBTuiq2dvzUeAXdBEU8y+zaV6dTSR9+WDE
+4C671evQQGA74+ZnCugConZCO7W3VQLt9JQM/FbY4p5r8ZpVWw75r2EmRFlg4uXkJJ4S1HJ60Ki+
+biaY8jMHVUOTDVan27VXpGzwdL4bywF7vJDaCZ6fosqgarZUShVI5Rw4qFlc9RK/haR6acHRIo0g
+x9D6tIbpZB2tmu4qWpmrGyp6hGYFgNgmqhM2vu66otnKaSMW6dbNCQXMgilNm9drE97DI39rMmD+
+8U1WeSQlJvAC6SlSjIdTPXSsjA9d/8urluDRFcp9RilYQ0IoVQP6v7WENmXAxTCLmxWwTvQcLgbx
+CDkS31ToXIhVJqNNKCw+uXdNejFsKkT2hYqwckeMpTXvxmwhQzbvPXDMtbAgDPwPS7EhB+E=
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</ds:Signature>
+</unity-one:key>

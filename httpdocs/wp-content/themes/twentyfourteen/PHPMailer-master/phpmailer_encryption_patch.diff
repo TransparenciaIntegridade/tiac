@@ -1,0 +1,166 @@
+--- class.phpmailer.php.orig	Thu Jul 17 04:10:51 2003
++++ class.phpmailer.php	Wed Sep 24 17:51:38 2003
+@@ -41,6 +41,12 @@
+      */
+     var $ContentType        = "text/plain";
+ 
++   /**
++     * Is this message encrypted?
++     * @var boolean
++     */
++    var $IsEncrypted        = false;
++
+     /**
+      * Sets the Encoding of the message. Options for this are "8bit",
+      * "7bit", "binary", "base64", and "quoted-printable".
+@@ -257,6 +263,22 @@
+     }
+ 
+     /**
++     * Sets Mailer to return body only (with all MIME parts)
++     * @return void
++     */
++    function IsMIME() {
++        $this->Mailer = "mime";
++    }
++
++   /**
++     * Sets Mailer to dump an array of header and body
++     * @return void
++     */
++    function IsDump() {
++        $this->Mailer = "dump";
++    }
++    
++    /**
+      * Sets Mailer to send message using the $Sendmail program.
+      * @return void
+      */
+@@ -345,7 +367,7 @@
+         $header = "";
+         $body = "";
+ 
+-        if((count($this->to) + count($this->cc) + count($this->bcc)) < 1)
++        if($this->Mailer != "mime" && (count($this->to) + count($this->cc) + count($this->bcc)) < 1)
+         {
+             $this->SetError($this->Lang("provide_address"));
+             return false;
+@@ -377,6 +399,31 @@
+           if(!$this->SmtpSend($header, $body))
+               return false;
+         }
++        elseif($this->Mailer == "mime")
++        {
++            // if there are attachments, then specify the boundary
++            if($this->message_type == "attachments")
++            {
++                $smallheader = $this->HeaderLine("Content-Type","multipart/mixed;");
++                $smallheader .= $this->TextLine("\tboundary=\"" . $this->boundary[1] . '"');
++            }
++            // if there is an alternative part, then specify the boundary as well
++            elseif($this->message_type == "alt" || $this->message_type == "alt_attachments")
++            {
++                $smallheader = $this->HeaderLine("Content-Type","multipart/alternative;");
++                $smallheader .= $this->TextLine("\tboundary=\"" . $this->boundary[1] . '"');
++            }
++            else
++            {
++                $smallheader = $this->HeaderLine("Content-Type",$this->ContentType);
++            }
++            // return small header with body
++            return $smallheader.$this->LE.$body;
++        }
++        elseif($this->Mailer == "dump")
++        {
++            return array($header,$body);
++        }
+         else
+         {
+             $this->SetError($this->Mailer . $this->Lang("mailer_not_supported"));
+@@ -743,7 +790,7 @@
+         {
+            case "alt":
+               // fall through
+-           case "alt_attachment":
++           case "alt_attachments":
+               $this->AltBody = $this->WrapText($this->AltBody, $this->WordWrap);
+               break;
+            default:
+@@ -835,7 +882,15 @@
+                 }
+                 else
+                 {
+-                    $result .= $this->HeaderLine("Content-Type", "multipart/mixed;");
++                    // if this is an encrypted mail, set the content type accordingly
++                    if($this->IsEncrypted)
++                    {
++                        $result .= $this->HeaderLine("Content-Type", "multipart/encrypted; protocol=\"".$this->ContentType."\";");										
++                    }
++                    else
++                    {
++                        $result .= $this->HeaderLine("Content-Type", "multipart/mixed;");
++                    }
+                     $result .= $this->TextLine("\tboundary=\"" . $this->boundary[1] . '"');
+                 }
+                 break;
+@@ -995,10 +1050,11 @@
+      * @param string $name Overrides the attachment name.
+      * @param string $encoding File encoding (see $Encoding).
+      * @param string $type File extension (MIME) type.
++     * @param string $disposition set to '' for no disposition, defaults to 'attachment'
+      * @return bool
+      */
+     function AddAttachment($path, $name = "", $encoding = "base64", 
+-                           $type = "application/octet-stream") {
++                           $type = "application/octet-stream",$disposition="attachment") {
+         if(!@is_file($path))
+         {
+             $this->SetError($this->Lang("file_access") . $path);
+@@ -1016,7 +1072,7 @@
+         $this->attachment[$cur][3] = $encoding;
+         $this->attachment[$cur][4] = $type;
+         $this->attachment[$cur][5] = false; // isStringAttachment
+-        $this->attachment[$cur][6] = "attachment";
++        $this->attachment[$cur][6] = $disposition;
+         $this->attachment[$cur][7] = 0;
+ 
+         return true;
+@@ -1056,8 +1112,16 @@
+             if($disposition == "inline")
+                 $mime[] = sprintf("Content-ID: <%s>%s", $cid, $this->LE);
+ 
++            if($disposition != '')
++            {
+             $mime[] = sprintf("Content-Disposition: %s; filename=\"%s\"%s", 
+                               $disposition, $name, $this->LE.$this->LE);
++            }
++            else 
++            {
++                // why is this needed??
++               $mime[] = $this->LE;
++            }
+ 
+             // Encode as string attachment
+             if($bString)
+@@ -1243,10 +1307,11 @@
+      * @param string $filename Name of the attachment.
+      * @param string $encoding File encoding (see $Encoding).
+      * @param string $type File extension (MIME) type.
++     * @param string $disposition set to '' for no disposition, defaults to 'attachment'
+      * @return void
+      */
+     function AddStringAttachment($string, $filename, $encoding = "base64", 
+-                                 $type = "application/octet-stream") {
++                                 $type = "application/octet-stream", $disposition="attachment") {
+         // Append to $attachment array
+         $cur = count($this->attachment);
+         $this->attachment[$cur][0] = $string;
+@@ -1255,7 +1320,7 @@
+         $this->attachment[$cur][3] = $encoding;
+         $this->attachment[$cur][4] = $type;
+         $this->attachment[$cur][5] = true; // isString
+-        $this->attachment[$cur][6] = "attachment";
++        $this->attachment[$cur][6] = $disposition;
+         $this->attachment[$cur][7] = 0;
+     }
+     

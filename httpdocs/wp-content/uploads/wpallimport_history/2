@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+		<internalcontactid><![CDATA[1]]></internalcontactid>
+		<contacttype><![CDATA[Organization]]></contacttype>
+		<contactsubtype><![CDATA[]]></contactsubtype>
+		<donotemail><![CDATA[]]></donotemail>
+		<donotphone><![CDATA[]]></donotphone>
+		<donotmail><![CDATA[]]></donotmail>
+		<donotsms><![CDATA[]]></donotsms>
+		<donottrade><![CDATA[]]></donottrade>
+		<nobulkemailsuseroptout><![CDATA[]]></nobulkemailsuseroptout>
+		<legalidentifier><![CDATA[]]></legalidentifier>
+		<externalidentifier><![CDATA[]]></externalidentifier>
+		<sortname><![CDATA[Transparência e Integridade, Associação Cívica]]></sortname>
+		<displayname><![CDATA[Transparência e Integridade, Associação Cívica]]></displayname>
+		<nickname><![CDATA[]]></nickname>
+		<legalname><![CDATA[Transparência e Integridade, Associação Cívica]]></legalname>
+		<imageurl><![CDATA[]]></imageurl>
+		<preferredcommunicationmethod><![CDATA[]]></preferredcommunicationmethod>
+		<preferredlanguage><![CDATA[]]></preferredlanguage>
+		<preferredmailformat><![CDATA[Both]]></preferredmailformat>
+		<contacthash><![CDATA[]]></contacthash>
+		<sourceofcontactdata><![CDATA[]]></sourceofcontactdata>
+		<firstname><![CDATA[]]></firstname>
+		<middlename><![CDATA[]]></middlename>
+		<lastname><![CDATA[]]></lastname>
+		<individualprefix><![CDATA[]]></individualprefix>
+		<individualsuffix><![CDATA[]]></individualsuffix>
+		<jobtitle><![CDATA[]]></jobtitle>
+		<gender><![CDATA[]]></gender>
+		<birthdate><![CDATA[]]></birthdate>
+		<isdeceased><![CDATA[]]></isdeceased>
+		<deceaseddate><![CDATA[]]></deceaseddate>
+		<householdname><![CDATA[]]></householdname>
+		<organizationname><![CDATA[Transparência e Integridade, Associação Cívica]]></organizationname>
+		<siccode><![CDATA[]]></siccode>
+		<uniqueidopenid><![CDATA[]]></uniqueidopenid>
+		<currentemployerid><![CDATA[]]></currentemployerid>
+		<contactisintrash><![CDATA[]]></contactisintrash>
+		<addressee><![CDATA[]]></addressee>
+		<emailgreeting><![CDATA[]]></emailgreeting>
+		<postalgreeting><![CDATA[]]></postalgreeting>
+		<currentemployer><![CDATA[]]></currentemployer>
+		<locationtype><![CDATA[Home]]></locationtype>
+		<streetaddress><![CDATA[Rua Leopoldo de Almeida, 9B -Lumiar]]></streetaddress>
+		<streetnumber><![CDATA[]]></streetnumber>
+		<streetnumbersuffix><![CDATA[]]></streetnumbersuffix>
+		<streetname><![CDATA[]]></streetname>
+		<streetunit><![CDATA[]]></streetunit>
+		<supplementaladdress1><![CDATA[]]></supplementaladdress1>
+		<supplementaladdress2><![CDATA[]]></supplementaladdress2>
+		<city><![CDATA[Lisboa]]></city>
+		<postalcodesuffix><![CDATA[137]]></postalcodesuffix>
+		<postalcode><![CDATA[1750]]></postalcode>
+		<geocode1><![CDATA[]]></geocode1>
+		<geocode2><![CDATA[]]></geocode2>
+		<addressname><![CDATA[]]></addressname>
+		<masteraddressbelongsto><![CDATA[]]></masteraddressbelongsto>
+		<county><![CDATA[]]></county>
+		<state><![CDATA[]]></state>
+		<country><![CDATA[Portugal]]></country>
+		<phone><![CDATA[]]></phone>
+		<phoneextension><![CDATA[]]></phoneextension>
+		<email><![CDATA[celso.rodrigues@transparencia.pt]]></email>
+		<onhold><![CDATA[]]></onhold>
+		<useforbulkmail><![CDATA[]]></useforbulkmail>
+		<signaturetext><![CDATA[]]></signaturetext>
+		<signaturehtml><![CDATA[]]></signaturehtml>
+		<improvider><![CDATA[]]></improvider>
+		<imscreenname><![CDATA[]]></imscreenname>
+		<openid><![CDATA[]]></openid>
+		<worldregion><![CDATA[Europe and Central Asia]]></worldregion>
+		<website><![CDATA[]]></website>
+		<groups><![CDATA[]]></groups>
+		<tags><![CDATA[]]></tags>
+		<notes><![CDATA[]]></notes>
+		<phonetype><![CDATA[]]></phonetype>
+		<imserviceprovider><![CDATA[]]></imserviceprovider>
+	</node>

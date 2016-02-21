@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head><link rel="stylesheet" type="text/css" href="https://transparencia.pt/wp-content/cache/minify/000000/fcvBDYAgDEDRhUxLvTiPYk0wlhpaYnB6B5Bwfv8H9Iezt0NrceaM0Qw3VTcv6w2S8hR6iXm7mPoWVURHnw3sT6eh6M4lp7dArOYqsMxEBKd9.css" media="all" />
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+<meta name="robots" content="all" />
+    <meta name="keywords" content="Corrupção,TIAC,Transparência,Associação,Cívica,ONG,Governo,ITM,CPI" />
+    <meta property="fb:admins" content="546830996" />
+    <meta property="og:title" content="TIAC – TRANSPARÊNCIA E INTEGRIDADE, ASSOCIAÇÃO CÍVICA"/>
+    <meta property="og:url" content="https://transparencia.pt"/>
+    <meta property="og:description" content="A TIAC – TRANSPARÊNCIA E INTEGRIDADE, ASSOCIAÇÃO CÍVICA é uma organização não governamental que tem como missão combater a corrupção. A TIAC é a representante em Portugal da rede global anti-corrupção Transparency International." />
+    <meta name="Author" content="Transparência e Integridade, Associação Cívica" />
+    <meta property="og:image" content="https://transparencia.pt/wp-content/themes/twentyfourteen/assets/img/thumb.png" />
+    <meta name="revisit-after" content="2" />
+    <meta name="doc-class" content="Living Document" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <meta http-equiv="imagetoolbar" content="no" />
+
+
+
+    <title>TIAC – TRANSPARÊNCIA E INTEGRIDADE, ASSOCIAÇÃO CÍVICA</title>
+    <meta name="generator" content="Transparência e Integridade, Associação Cívica" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+   
+     <!-- <link href="https://transparencia.pt/wp-content/themes/wpbootstrap/css/demo.css" rel="stylesheet">-->
+        
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+ 
+      
+      
+        
+          
+        
+          <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <style type="text/css">
+
+
+
+
+
+    ul.rig li {
+
+margin: 1px 0 2.5% -6.5%;
+
+    }
+
+.navbar-brand {
+
+margin-left: 5px;
+margin-top: -26px;
+
+
+}
+@media screen and (max-width: 768px) {
+
+.navbar-brand {
+
+margin-left: 5px;
+margin-top: -10px;
+
+
+}
+
+
+
+
+}
+
+    .navbar-default .navbar-toggle {
+
+margin-right: 7%;
+margin-top: 10px;
+
+}
+
+.entry-title{
+
+color:#fff;*/
+
+
+
+}
+
+.entry-author-link,
+.entry-permalink,
+.entry-date,
+.entry-meta {
+	display: none;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 90px;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+/*@media screen and (max-width: 368px) {
+    img.smallResolution{
+        min-height: 150px;
+    }
+
+}
+*/
+
+ /*.wrapper { float: left; clear: left; display: table; table-layout: fixed; }
+    img.img-responsive { display: table-cell; max-width: 100%; }
+
+*/
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.textarea1{
+	 /* background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px; */
+    width: 276px;
+    height: 65px;
+    border: 1px solid rgba(255,255,255,.6);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; 
+    display:block;
+    
+    font-size:18px;
+    color:#fff;
+    padding-left:45px;
+    padding-right:20px;
+    padding-top:12px;
+    margin-bottom:20px;
+    overflow:hidden;
+}
+
+
+
+.form1 {
+    margin-left:auto;
+    margin-right:auto;
+    width: 343px;
+    height: 353px;
+    padding:30px;
+    border: 1px solid rgba(0,0,0,.2);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: rgba(190, 190, 197, 0.5); 
+    -moz-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    overflow: hidden; 
+}
+
+
+
+   
+#button-blue{
+	
+	float:left;
+	width: 100%;
+	border: #fbfbfb solid 4px;
+	cursor:pointer;
+	background-color: #3498db;
+	color:white;
+	font-size:24px;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: #0493bd;
+}
+	
+.submit:hover {
+	color: #3498db;
+}
+	
+.ease {
+	width: 0px;
+	height: 74px;
+	background-color: #fbfbfb;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.submit:hover .ease{
+  width:100%;
+  background-color:white;
+}
+
+@media only screen and (max-width: 580px) {
+	#form-div{
+		left: 3%;
+		margin-right: 3%;
+		width: 88%;
+		margin-left: 0;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}
+
+
+
+.promos {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  clear: left; }
+  .promos h2 {
+    text-align: center;
+    color: #3695d8; }
+    .promos h2 strong {
+     
+      font-weight: normal; }
+  .promos div.item {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 30px; }
+    @media (min-width: 768px) {
+      .promos div.item {
+        float: left;
+        width: 50%; } }
+    @media (min-width: 992px) {
+      .promos div.item {
+        float: left;
+        width: 25%; } }
+    @media (min-width: 992px) {
+      .promos div.item {
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 0px; } }
+  .promos h3 {
+    font-size: 18px;
+
+    margin-top: 20px; }
+    @media (min-width: 992px) {
+      .promos h3 {
+        height: 60px; } }
+  @media (min-width: 992px) {
+    .promos p {
+      height: 110px; }
+      .promos p.tall {
+        height: 190px; } }
+
+
+button, a.button {
+    background-color: #9dba5a;;
+    border-radius: 3px;
+    
+    color: #FFF;
+    padding: 5px 10px 5px 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.btn-primary_donativo {
+    color: #fff;
+    background-color: #ffa500;
+    border-color: #357ebd;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+	/*margin-left: 35%;*/
+  width: 90px;
+  height: 90px;
+  padding: 30px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 55px;
+}
+
+
+
+
+
+.row li {
+  /*width: 33.3%;
+  float: left;*/
+}
+
+img {
+  border: 0 none;
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.5); }
+
+
+
+.lead{
+margin-left: 5%;
+margin-right: 5%;
+text-align: justify;
+
+}
+
+.head{
+ 
+margin-left: 5%;
+text-align: justify;
+font-size:2.4rem;
+
+}
+
+
+/* ----- Image grids ----- */
+ul.rig {
+  list-style: none;
+  font-size: 0px;
+  /*margin-left: -2.5%; /* should match li left margin */
+}
+ul.rig li {
+  display: inline-block;
+  padding: 10px;
+  margin: 0 0 2.5% 2.5%;
+  background: #fff;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  font-size: 1rem;
+  vertical-align: top;
+  box-shadow: 0 0 5px #ddd;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+ul.rig li img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 10px;
+}
+ul.rig li h3 {
+  margin: 0 0 5px;
+}
+ul.rig li p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  color: #999;
+}
+/* class for 2 columns */
+ul.rig.columns-2 li {
+  width: 43.5%; /* this value + 2.5 should = 50% */
+  height:410px; 
+}
+/* class for 3 columns */
+ul.rig.columns-3 li {
+  width: 30.83%; /* this value + 2.5 should = 33% */
+}
+/* class for 4 columns */
+ul.rig.columns-4 li {
+  width: 22.5%; /* this value + 2.5 should = 25% */
+  height:340px; 
+}
+
+@media (max-width: 1199px) {
+  .container {
+    width: auto;
+    padding: 0 10px;
+  }
+}
+
+/*@media (max-width: 1199px) {
+  .container {
+    display: block;
+    margin-left: 5%;
+  }
+  }*/
+
+@media (max-width: 480px) {
+  ul.grid-nav li {
+    display: block;
+    margin: 0 0 5px;
+  }
+  ul.grid-nav li a {
+    display: block;
+  }
+  ul.rig {
+    margin-left: 0;
+  }
+  ul.rig li {
+    width: 85% !important; /* over-ride all li styles */
+    margin: 0 0 20px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+h5{
+font-size: 1.2rem;
+
+}
+}
+
+
+.list
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+ 
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+    .list__item
+    {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    
+@media only screen and (max-width: 991px) {
+.mapa, .inf_contactos{
+text-align: center;
+
+}
+}
+.social-links {
+    text-align:center;
+}
+
+.social-links a{
+    display: inline-block;
+    width:100px;
+    height: 100px;
+    border: 2px solid #909090;
+    border-radius: 90px;
+    margin-right: 15px;
+   background-color: #428bca;
+
+}
+.social-links a i{
+    padding: 22px 11px;
+    font-size: 75px;
+    color: #fff;
+}
+
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+  width: 100%;
+}
+.span_3_of_4 {
+  width: 74.6%;
+}
+.span_2_of_4 {
+  width: 49.2%;
+}
+.span_1_of_4 {
+  width: 23.8%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {  margin: 1% 0 1% 0%; }
+  .span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+}
+
+
+
+
+
+a#example
+{
+ background: #444;
+ border: 2px solid #444;
+ padding: 5px 5px 5px 5px;
+ font-family: arial, sans-serif;
+ font-size: 12px;
+ font-weight: bold;
+ color: #fff; 
+}
+#example_obj
+{
+ background: #444;
+ border: 2px solid #444;
+ padding: 5px 5px 5px 5px;
+ font-family: arial, sans-serif;
+ font-size: 12px;
+ font-weight: bold;
+ color: #fff;
+ display: none;
+}
+
+
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.35);
+}
+.carousel-caption {
+    top: 0;
+    bottom: auto;
+
+}
+
+
+
+ /*import font awesome css icon library*/
+           /* @import url("https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css");*/
+input, select, textarea {
+                background: none repeat scroll 0 0 #3695d8;
+                border: 1px solid #CCC;
+                color: #5e5e5e;
+                display: block;
+                font-family: arial, sans-serif;
+                font-size: inherit;
+                padding: 10px;
+                /*width: 100%;*/
+                box-sizing: border-box;
+                font-size: 16px;
+                margin: 0;
+                height: 40px;
+            }
+            
+            #searchtext {
+                overflow: hidden;
+            }
+            
+            a.search-submit-button {
+                background: none repeat scroll 0 0 #fafafa;
+                border-bottom: 1px solid #eeeeee;
+                border-right: 1px solid #eeeeee;
+                border-top: 1px solid #eeeeee;
+                color: #5e5e5e !important;
+                display: block;
+                float: right;
+                font-family: inherit;
+                font-size: 20px;
+                padding: 8px 10px;
+                text-align: center;
+                width: 45px;
+                box-sizing: border-box;
+                height: 40px;
+            }
+            
+            #form-container {
+                /* width: 60%; */
+            }
+            
+
+
+
+    
+  
+  
+
+@media (min-width: 992px){
+
+  .carousel-controls {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 2;
+}
+}
+
+
+@media (min-width: 1200px){
+div.form-container {
+  /*background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 2;*/
+
+  margin-top: 30px;
+}
+}
+
+
+@media (max-width: 991px){
+div.form-container {
+  /*background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 2;*/
+
+  display: none;
+}
+}
+
+@media (min-width: 991px) and (max-width: 1200px){
+div.form-container {
+  /*background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 2;*/
+
+  margin-top: 35px;
+}
+}
+
+
+@media (min-width: 992px) {
+.input-group {
+  position: relative;
+ 
+  margin-top: 10px;
+}
+
+}
+
+
+
+
+
+
+@media (min-width: 992px) and (max-width: 1200px){
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 15px 5px;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  margin-top: 0px;
+}
+
+}
+
+@media (min-width: 1200px) and (max-width: 1319px){
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 15px 5px;
+ 
+}
+
+}
+@media (min-width: 1320px) {
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 15px 15px;
+  font-size: 1.5rem;
+ 
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 15px 5px;
+  margin-top: 0px;
+  font-size: 0.8rem;
+}
+
+}
+@media (min-width: 768px) and (max-width: 991px){
+.input-group {
+  position: relative;
+ 
+  margin-top: 10px;
+}
+
+}
+
+
+@media (min-width: 768px){
+    .navbar-nav{
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+        float:none;
+    }
+}
+
+
+
+body {
+  /*padding-top: 40px; // same as header height*/
+}
+
+
+@media only screen and (min-width: 840px) {
+  .hidden-desktop{
+   display: none;
+   }
+}
+
+
+@media only screen and (min-width: 840px) {
+  .hidden-desktop{
+   display: none;
+   }
+}
+
+
+.verticalLine {
+    border-left: thick solid #CCC;
+    border-right: thick solid #CCC;
+}
+
+.scoopit-embed-post {
+    width: auto !important;
+}
+
+.tales {
+  width: 100%;
+}
+.carousel-inner{
+  width:100%;
+  max-height: 800px !important;
+}
+
+
+.imgHolder{
+    display:inline-block;
+    background:#000;
+}
+.item-fade{
+    vertical-align:top;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+.opacidade{
+    opacity:0.3;
+     transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+
+}
+.sem_opacidade{
+    opacity:100%;
+}
+.teste
+{
+
+/*background-color: #CCC;*/
+  opacity:100%;
+
+}
+
+.navbar-nav>li>.dropdown-menu {
+  /*margin-top: 9px;*/
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+
+}
+
+
+.dropdown-menu > li > a {
+  border-bottom: 1px solid #cacaca;
+  padding: 0 0 6px;
+  margin: 0 25px;
+  color: #878787;
+  font-size: 14px;
+margin-top: 8px;
+}
+
+
+
+
+    </style>
+
+
+<!--FOOTER-->
+
+<style type="text/css">
+
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+          text-align: center;
+          padding-bottom: 10px;
+
+        }
+      }
+
+       @media (max-width: 900px) {
+        h3.titulo_ferramentas {
+          margin-left: -29px;
+        }
+      }
+
+      section#connect {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: #cccccc;
+  clear: left;
+}
+
+
+@media (min-width: 992px){
+section#connect form {
+  text-align: center;
+}
+
+
+}
+
+section#connect .container > div input[type=text] {
+  float: left;
+  padding: 5px;
+  /*width: 60%;
+  margin-left: auto;
+  margin-right: auto;*/
+}
+
+input[type=text] {
+  /*float: left;*/
+  width: 160px;
+  height: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  padding: 3px;
+  border: 1px solid #878787;
+  border-radius: 3px;
+  color: #555;
+  background: #FFF;
+  
+  font-size: 14px;
+}
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+
+section#connect .container > div button {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  width: 30%;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+
+button {
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3px 10px 3px 10px;
+  border: 0;
+  text-transform: uppercase;
+  color: #FFF;
+  border-radius: 3px;
+ 
+  background-color: #3695d8;
+}
+
+input[type=text] {
+  /*float: left;*/
+  width: 160px;
+  height: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  padding: 3px;
+  border: 1px solid #878787;
+  border-radius: 3px;
+  color: #555;
+  background: #FFF;
+  
+  font-size: 1.2rem;
+}
+
+.subscribeMe{
+  float: left;
+  width: 100px;
+  height: 30px;
+  /*margin-right: 10px;*/
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 3px;
+  border: 1px solid #878787;
+  border-radius: 3px;
+  color: #555;
+  background: #FFF;
+
+  
+  font-size: 0.8rem;
+}
+footer div.container div ul {
+  margin-left: 0;
+  margin-top: 5px;
+  padding-left: 0;
+  font-size: 12px;
+  line-height: 14px;
+  list-style-type: none;
+}
+
+hr {
+    width: 96%;
+    color: #FFFF00;
+    height: 1px;F
+}
+
+
+#line {
+    float: left;
+    width: 731px;
+    height: 10px;
+}
+
+.page .headline {
+    display: none;
+}
+
+ .page.page-id-7625 #masthead,
+.page.page-id-7625 #footer-area {
+  display: none;
+}
+
+
+</style>
+
+
+
+<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"Este site utiliza cookies para ajudar a disponibilizar os respetivos serviços, para personalizar anúncios e analisar o tráfego. As informações sobre a sua utilização deste site são partilhadas com a Google. Ao utilizar este site, concorda que o mesmo utilize cookies.","dismiss":"Entendi!","learnMore":"Saber mais","link":"https://transparencia.pt/politica-de-privacidade/","theme":"dark-bottom"};
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+<!-- End Cookie Consent plugin -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72358457-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </head>
+  <body >
+
+    
+
+
+
+
+<nav id="primary-navbar" class="navbar navbar-default navbar-fixed-top" data-backdrop="#primary-navbar-backdrop">
+   <div class="a" style="background-color:#3695d8;width:100%;height: 28px;">
+
+
+
+
+         
+       
+        <div class="container">
+          
+    
+          <span style="border: 1px solid rgba(0, 0, 0, 0.2);
+  border-width: 0 1px;
+  padding: 2px 25px 2px;">
+
+          
+            <a href="//transparencia.pt/wp-admin/"><i style="color:#000000"><strong>INICIAR SESSÂO</strong></i></a><!-- -->
+
+</span>
+
+          <div class="rw-words rw-words-1" >
+
+
+            <span style="color:#fff"><a href="//transparencia.pt/novo-registo-associado/" style="color:#fff">JUNTA-TE A NÓS</a></span>
+            <span style="color:#fff"><a href="//transparencia.pt/novo-registo-associado/" style="color:#fff">JUNTA-TE A NÓS</a></span>
+            <span style="color:#fff"><a href="//transparencia.pt/novo-registo-associado/" style="color:#fff">JUNTA-TE A NÓS</a></span>
+            <span style="color:#fff"><a href="//transparencia.pt/novo-registo-associado/" style="color:#fff">JUNTA-TE A NÓS</a></span>
+            <span style="color:#fff"><a href="//transparencia.pt/novo-registo-associado/" style="color:#fff">JUNTA-TE A NÓS</a></span>
+            <span style="color:#fff"><a href="//transparencia.pt/novo-registo-associado/" style="color:#fff">JUNTA-TE A NÓS</a></span>
+            
+          </div>
+
+
+<p class="navbar-social navbar-right navbar-collapse collapse" style="  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-width: 0 1px;
+  padding: 2px 15px 2px;" >
+        <a href="https://www.facebook.com/transparenciapt" target="_blank"><i class="fa fa-facebook-square" style="font-size:1.5em;color:#FFFAFA; vertical-align: text-top;"></i></a>
+        <a href="https://twitter.com/transparenciapt" target="_blank"><i class="fa fa-twitter-square" style="font-size:1.5em;color:#FFFAFA; vertical-align: text-top;"></i></a>
+        <a href="https://pt.linkedin.com/company/transparencia-e-integridade-associacao-civica" target="_blank"><i class="fa fa-linkedin-square" style="font-size:1.5em;color:#FFFAFA; vertical-align: text-top;"></i></a>
+        <a href="https://www.youtube.com/user/transparenciapt" target="_blank"><i class="fa fa-youtube-square" style="font-size:1.5em;color:#FFFAFA; vertical-align: text-top;"></i></a>
+      </p>
+
+
+
+   </div>
+   
+      </div>
+      
+      <div class="container">
+        <div class="navbar-header">
+          <button id="primary-navbar-toggle" type="button" class="navbar-toggle labeled collapsed" data-toggle="collapse" data-parent="#primary-navbar" data-target="#primary-navbar .navbar-main" aria-expanded="false" aria-controls="navbar">
+            <span class="club-sandwich"></span>
+            <label>MENU</label>
+          </button>
+          <!--<button id="primary-navbar-toggle-search" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-parent="#primary-navbar" data-target="#primary-navbar .navbar-search" aria-expaded="false" aria-controls="navbar-search" aria-expanded="false">
+            <span class="sr-only">Toggle Search</span>
+            <span class="glyphicon glyphicon-search"></span>
+          </button>-->
+          <a class="navbar-brand" href="/" ><img alt="" src="//transparencia.pt/wp-content/themes/twentyfourteen/assets/img/logoRodape.png?de23aa"  ></a>
+        </div>
+        <ul class="nav navbar-main navbar-nav navbar-collapse collapse" data-toggler="#primary-navbar-toggle" aria-expanded="false" style="height: 1px;">
+          <!--<li class="active"><a href="/">Home</a></li>-->
+          <li class="dropdown">
+            <a href="#"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">QUEM SOMOS<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+              <li><a href="https://transparencia.pt/sobre" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Sobre Nós</a></li>
+              <li><a href="https://transparencia.pt/sobre#organizacao" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Organização</a></li>
+              <li><a href="https://transparencia.pt/sobre#contas" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Prestação de Contas</a></li>
+              <li><a href="https://transparencia.pt/sobre#estatutos" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Estatutos e Normas Internas</a></li>
+              <li><a class="fecha" href="/#contactos" style="border-bottom:none;" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Contactos</a></li>
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">O QUE FAZEMOS<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+            <li><a href="https://transparencia.pt/o-que-fazemos" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">O que é a corrupção?</a></li>
+              <li><a href="https://transparencia.pt/o-que-fazemos#custos" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Quais os custos da corrupção?</a></li>
+              <li><a href="https://transparencia.pt/o-que-fazemos#trabalho" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Como trabalhamos</a></li>
+   <li><a href="https://transparencia.pt/o-que-fazemos#provedoria" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'" >Provedoria TIAC - Alerta Anticorrupção</a></li>
+              <li><a href="https://transparencia.pt/o-que-fazemos#projetos"  onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'" >Temas e projetos</a></li>
+   <li><a href="https://transparencia.pt/o-que-fazemos#publicacoes"  onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'" style="border-bottom:none;">Publicações</a></li>
+   
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">NOTÍCIAS<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              
+              <!--<li><a href="//transparencia.pt/noticias#ultimas" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Últimas</a></li>-->
+              <li><a href="//transparencia.pt/noticias#noticias_tiac" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Notícias TIAC</a></li>
+              <li><a href="//transparencia.pt/noticias#opiniao" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Opinião</a></li>
+              <li><a href="//transparencia.pt/noticias#newsletters" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Newsletters</a></li>
+              <li><a href="//transparencia.pt/noticias#videos" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'" style="border-bottom:none;">Vídeos</a></li>
+              
+              
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">PARTICIPA<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="https://transparencia.pt/participa#info" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Informa-te</a></li>
+              <li><a href="https://transparencia.pt/participa#membro" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Torna-te Membro</a></li>
+              <li><a href="https://transparencia.pt/participa#provedoria" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Reporta um Caso</a></li>
+              <li style="display:none"><a href="https://transparencia.pt/participa#voluntario" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Voluntaria-te</a></li>
+              <li><a href="https://transparencia.pt/participa#evento" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Organiza um evento</a></li>
+              <li><a href="https://transparencia.pt/participa#apoio" style="border-bottom:none;" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Apoia-nos</a></li>
+              
+            </ul>
+          </li>
+          <li><a href="//transparencia.pt/seletor-pagamento" style="color:#FFA500"onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#FFA500'"><strong>DONATIVO</strong></a></li>
+       <form action="https://transparencia.pt/" method="get" class="form-inline">
+    <fieldset>
+   <div class="input-group">
+      <input type="text" name="s" id="search" placeholder="Procurar" value="" class="form-control" />
+      <span class="input-group-btn">
+        <button  style="border: none" type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search form-control-feedback" style="float:left;  "></i></button>
+      </span>
+    </div>
+<!--
+<form role="search" method="get" id="searchform" class="searchform" action="https://transparencia.pt/"> 
+<label class="screen-reader-text" for="s">Search for:</label> 
+<input type="text" value="" name="s" id="s" /> 
+<input type="submit" id="searchsubmit" value="Search" /> 
+</form>-->
+
+    </fieldset>
+</form>
+          
+        </ul>
+
+        
+
+
+      </div>
+    </nav>
+
+
+<div id="semFade">
+<div class="teste">
+  
+
+
+
+
+
+
+	<section id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+
+			
+			<header class="archive-header">
+				<h1 class="archive-title">Arquivo de etiquetas: ranking</h1>
+
+							</header><!-- .archive-header -->
+
+			
+<article id="post-7407" class="post-7407 post type-post status-publish format-chat hentry category-noticias tag-527 tag-indicadores tag-indice-de-transparencia-municipal tag-itm tag-municipios tag-ranking post_format-post-format-chat">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="https://transparencia.pt/category/noticias/" rel="category tag">noticias</a></span>
+		</div>
+		<h1 class="entry-title"><a href="https://transparencia.pt/2016/01/12/municipios-portugueses-melhoram-na-transparencia/" rel="bookmark">Municípios portugueses melhoram na transparência</a></h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="https://transparencia.pt/2016/01/12/municipios-portugueses-melhoram-na-transparencia/" rel="bookmark"><time class="entry-date" datetime="2016-01-12T10:49:26+00:00">12 Janeiro, 2016</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://transparencia.pt/author/tiac/" rel="author">tiac</a></span></span>		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<div class="container" align="center">
+<p>	<img src="//transparencia.pt/wp-content/themes/twentyfourteen/assets/img/itm_noticia.png?de23aa"/></p>
+<h4 class="lead">
+		Alfândega da Fé, Arcos de Valdevez e Carregal do Sal no pódio do Índice de Transparência Municipal 2015</p>
+</h4>
+<p class="lead">Lisboa, 10 de Dezembro de 2015 – Os municípios portugueses fizeram ganhos assinaláveis na disponibilização de informação de interesse público nos seus websites, revela a terceira edição do Índice de Transparência Municipal publicado hoje pela Transparência e Integridade, Associação Cívica (TIAC) – representante portuguesa da ONG global anticorrupção Transparency International. O índice, que anualmente mede a disponibilização de informação nos websites dos 308 municípios portugueses, pode ser consultado em <a href="http://poderlocal.transparencia.pt/">http://poderlocal.transparencia.pt/</a>
+	</p>
+<p class="lead">As Câmaras Municipais de Alfândega da Fé (com um score de 94,23 numa escala de 0-100), Arcos de Valdevez (score de 89,84) e Carregal do Sal (88,97) são as três primeiras colocadas no Índice de Transparência Municipal 2015. <i>«Este ano assistimos a um aumento muito significativo da informação disponibilizada pelas Câmaras Municipais. O score médio subiu dez pontos, de apenas 34 em 2014 para 44,3 este ano. É um sinal encorajador de que as autarquias se estão a esforçar para aumentar a informação disponibilizada aos seus munícipes. O facto de o score médio continuar abaixo dos 50 pontos mostra que há ainda muito trabalho a fazer, mas o<br />
+desempenho dos municípios mais bem colocados também revela que existem já vários casos de sucesso na comunicação entre eleitos e eleitores a nível local»</i>, diz o Presidente da TIAC e um dos coordenadores científicos do Índice, Luís de Sousa.</p>
+<p class="lead">As conclusões
+	</p>
+<p class="lead">Da análise dos resultados de 2015, e à semelhança dos anos anteriores, a dimensão em que os municípios portugueses publicam mais informação é a da Transparência Económico-financeira, com um score médio de 79,43. A dimensão da contratação pública está no extremo oposto, sendo a área com menos informação publicada, com um score médio de apenas 22,91.</p>
+<p class="lead">Também significativo é o aumento do número de autarquias que este ano participaram no Índice, exercendo o direito de contraditório à recolha de dados feita pela equipa da TIAC. Em 2013, na primeira edição do Índice, apenas 29 autarquias haviam exercido o direito ao contraditório. Na segunda edição, em 2014, esse número subiu para 129, tendo este ano crescido até às 227 autarquias participantes na elaboração do Índice.</p>
+<p class="lead"><i>«As autarquias perceberam que este Índice é uma oportunidade de diálogo com a sociedade civil e têm-no usado como um guião para melhorarem os seus websites e alargarem a partilha de informação com os cidadãos. Temos tido um contacto regular com centenas de autarquias e é precisamente esse o objetivo do Índice: criar parcerias para a transparência»</i>, diz o Presidente da TIAC, Luís de Sousa.
+	</p>
+<p class="lead"><b>O que o ITM não mede</b>
+	</p>
+<p class="lead">Avaliando a disponibilização de informação, o Índice de Transparência Municipal não faz uma avaliação de outros elementos relevantes, como a acessibilidade, a qualidade ou a facilidade de leitura da informação disponibilizada. Do mesmo modo, o Índice é um indicador de transparência, não uma medida de corrupção ou vulnerabilidade à corrupção. Se é certo que a disponibilização de informação estimula a participação pública e convida a um maior escrutínio da atividade das instituições, a existência de um website bem apetrechado não impede todos os riscos de corrupção, má administração ou abuso.
+	</p>
+<p class="lead"><i>«Em última análise, um exercício de avaliação global como este Índice nunca se pode substituir ao trabalho da sociedade civil local e dos partidos e movimentos da oposição na discussão de outros aspetos fundamentais da transparência. Este Índice é um diagnóstico, não uma sentença.<br />
+É uma ferramenta para que os cidadãos, em todos os concelhos do país, possam interpelar os seus autarcas eleitos e iniciar um diálogo sobre a melhor forma de aumentar a transparência e a participação cívica a nível local»</i>, explica Luís de Sousa.</p>
+<p class="lead"><b>Sobre o Índice de Transparência Municipal:</b></p>
+<p class="lead">O Índice de Transparência Municipal é uma avaliação dos websites das 308 Câmaras Municipais.<br />
+A equipa científica do projeto, assessorada por um grupo de aconselhamento composto por especialistas na área do poder local, criou uma lista de 76 indicadores que correspondem a informação de importância pública que, na ótica destes peritos, deve ser disponibilizada online<br />
+pelos municípios. A equipa do projeto, composta por dois investigadores e nove voluntários, faz depois a verificação de cada um dos 308 websites num processo que, este ano, decorreu entre março e julho de 2015. Os resultados foram enviados às autarquias, que tiveram um prazo de contraditório até 2 de Outubro para proporem correções ou revisões.</p>
+<p class="lead">O ranking agora publicado lista as autarquias de acordo com a disponibilização ou nãodisponibilização das 76 elementos de informação definidos nos indicadores, organizados em sete dimensões:</p>
+<p class="lead">A. Informação sobre a organização, composição social e funcionamento do município (18 indicadores);</p>
+<p class="lead">B. Planos e Relatórios (13 indicadores);</p>
+<p class="lead">C. Impostos, Taxas, Tarifas, Preços e Regulamentos (5 indicadores);</p>
+<p class="lead">D. Relação com a sociedade (8 indicadores);</p>
+<p class="lead">E. Transparência na Contratação Pública (10 indicadores);</p>
+<p class="lead">F. Transparência Económico-financeira (12 indicadores);</p>
+<p class="lead">G. Transparência na área do Urbanismo (10 indicadores).</p>
+<p class="lead">Os resultados do Índice podem ser consultados no site <a href="http://poderlocal.transparencia.pt/"></a>http://poderlocal.transparencia.pt/</p>
+</p></div>
+	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="https://transparencia.pt/tag/2015/" rel="tag">2015</a><a href="https://transparencia.pt/tag/indicadores/" rel="tag">indicadores</a><a href="https://transparencia.pt/tag/indice-de-transparencia-municipal/" rel="tag">Índice de Transparência Municipal</a><a href="https://transparencia.pt/tag/itm/" rel="tag">ITM</a><a href="https://transparencia.pt/tag/municipios/" rel="tag">Municípios</a><a href="https://transparencia.pt/tag/ranking/" rel="tag">ranking</a></span></footer></article><!-- #post-## -->
+
+<article id="post-7401" class="post-7401 post type-post status-publish format-chat hentry category-noticias tag-desmacarar-corruptos tag-ranking tag-ti tag-unmaskthecorrupt-org post_format-post-format-chat">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="https://transparencia.pt/category/noticias/" rel="category tag">noticias</a></span>
+		</div>
+		<h1 class="entry-title"><a href="https://transparencia.pt/2016/01/12/grande-corrupcao-a-votos-em-unmaskthecorrupt-org/" rel="bookmark">Grande corrupção a votos em unmaskthecorrupt.org</a></h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="https://transparencia.pt/2016/01/12/grande-corrupcao-a-votos-em-unmaskthecorrupt-org/" rel="bookmark"><time class="entry-date" datetime="2016-01-12T10:34:13+00:00">12 Janeiro, 2016</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://transparencia.pt/author/tiac/" rel="author">tiac</a></span></span>		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<div class="container" align="center">
+<p>	<img src="//transparencia.pt/wp-content/themes/twentyfourteen/assets/img/UnmaskTheCorrupt.jpg?de23aa"/></p>
+<h4 class="lead">
+		Grande corrupção a votos em unmaskthecorrupt.org</p>
+</h4>
+<p class="lead"><b>Berlim, 9 de Dezembro de 2016 &#8211;</b> A Transparency International abriu hoje a fase de votação da sua campanha Unmask the Corrupt para destacar os casos mais simbólicos de grande corrupção em todo o mundo.</p>
+<p class="lead">A grande corrupção é o abuso do poder de alto nível que beneficia poucos em detrimento de muitos e causa um prejuízo grave e generalizado aos cidadãos e à sociedade. Demasiadas vezes, fica impune. Trata-se de milhões de vítimas em todo o mundo.
+	</p>
+<p class="lead"><i>«Junte-se a nós neste esforço para travar a grande corrupção e vote no caso que acha mais emblemático», disse o presidente da Transparency International, José Ugaz. «O seu voto é importante. Juntos, podemos fazer os governos entendem a urgência de agir e parar esta doença»</i>.
+	</p>
+<p class="lead">Os casos identificados em <b><a href="http://unmaskthecorrupt.org" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://unmaskthecorrupt.org', 'unmaskthecorrupt.org');">unmaskthecorrupt.org</a></b> foram escolhidos a partir de 383 submissões do público. Dos 15 casos selecionados para a votação, quatro têm ligações a Portugal e aos países de língua portuguesa – o Banco Espírito Santo, a brasileira Petrobrás, a filha do Presidente angolano Isabel dos Santos e o filho do Presidente da Guiné Equatorial, Teodoro Nguema Obiang.
+	</p>
+<p class="lead"><i>«Durante demasiado tempo, os corruptos passaram impunes nos seus abusos sistemáticos do poder, nas suas terríveis violações dos direitos humanos e na destruição geral do quotidiano das pessoas. Esta impunidade tem de acabar. Agora que identificámos os maiores símbolos mundiais de grande corrupção, vamos exigir as sanções sociais e legais para punir as suas ações contra as pessoas, especialmente os mais pobres»</i>, disse José Ugaz.</p>
+<p class="lead">A votação decorre até 9 de Fevereiro de 2016. A Transparency International analisará então os casos mais votados lançará um debate público sobre as melhores formas de punir os corruptos.
+	</p>
+<p class="lead"><i>«Queremos que tantas pessoas quanto possível se empenhem no combate à corrupção. Nós vamos ajudar a concentrar esses esforços por mostrar o que precisa de ser feito por governos e cidadãos. Convocamos todos a serem parte desta luta para acabar com a grande corrupção e trazer os corruptos à justiça»</i>, disse Ugaz.
+	</p>
+<p class="lead">Aqui está a lista dos casos que simbolizam a grande corrupção:
+	</p>
+<p class="lead">&#8211; Banco Espírito Santo, de Portugal</p>
+<p class="lead">&#8211; Senador Felix Bautista, da República Dominicana</p>
+<p class="lead">&#8211; Zine Al Abidine Ben Ali, ex-Presidente da Tunísia</p>
+<p class="lead">&#8211; China Communications Construction Company</p>
+<p class="lead">&#8211; Delaware, Estado dos EUA que permite o registo de empresas anónimas</p>
+<p class="lead">&#8211; Isabel dos Santos, de Angola</p>
+<p class="lead">&#8211; FIFA</p>
+<p class="lead">&#8211; Fundação Ahmed Kadyrov, da Chechénia</p>
+<p class="lead">&#8211; Corrupção sistémica do governo, autoridades e instituições no Líbano</p>
+<p class="lead">&#8211; Ricardo Martinelli, ex-Presidente do Panamá, e seus comparsas</p>
+<p class="lead">&#8211; Hosni Mubarak, ex-Presidente do Egipto</p>
+<p class="lead">&#8211; Comério de jade de Myanmar</p>
+<p class="lead">&#8211; Teodoro Obiang, da Guiné Equatorial</p>
+<p class="lead">&#8211; Petrobrás</p>
+<p class="lead">&#8211; Viktor Yanukovych, ex-Presidente da Ucrânia</p>
+<p class="lead">As pessoas podem escolher entre os 15 casos acima e votar a partir de 09 de dezembro de 2015 até 09 de fevereiro de 2016 em <a href="http://www.unmaskthecorrupt.org" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.unmaskthecorrupt.org', 'www.unmaskthecorrupt.org');">www.unmaskthecorrupt.org</a> </p>
+<p class="lead">Os casos foram selecionados por um painel de especialistas das 383 candidaturas recebidas entre 08 de outubro e 30 de novembro através de um conjunto de critérios, incluindo o uso de propriedade beneficiária ou empresas anónimas, abusos de direitos humanos, e a escala da corrupção envolvida. </p>
+<p class="lead">A maioria dos casos correspondem a um trabalho apoiado pelos capítulos nacionais ou parceiros da Transparency International. Em alguns casos, a Transparency International decidiu não publicar um caso quando havia perigo claro para capítulo nacional no país em questão.
+	</p>
+</p></div>
+	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="https://transparencia.pt/tag/desmacarar-corruptos/" rel="tag">Desmacarar corruptos</a><a href="https://transparencia.pt/tag/ranking/" rel="tag">ranking</a><a href="https://transparencia.pt/tag/ti/" rel="tag">TI</a><a href="https://transparencia.pt/tag/unmaskthecorrupt-org/" rel="tag">unmaskthecorrupt.org</a></span></footer></article><!-- #post-## -->
+
+<article id="post-6833" class="post-6833 post type-post status-publish format-standard hentry category-noticias tag-cpi tag-forum-economico-mundial tag-indice-de-percecoes-de-corrupcao tag-ranking">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="https://transparencia.pt/category/noticias/" rel="category tag">noticias</a></span>
+		</div>
+		<h1 class="entry-title"><a href="https://transparencia.pt/2014/12/03/portugal-estagnou-no-combate-a-corrupcao-revela-ranking-global-de-transparencia/" rel="bookmark">Portugal estagnou no combate à corrupção,  revela ranking global de transparência</a></h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="https://transparencia.pt/2014/12/03/portugal-estagnou-no-combate-a-corrupcao-revela-ranking-global-de-transparencia/" rel="bookmark"><time class="entry-date" datetime="2014-12-03T19:28:05+00:00">3 Dezembro, 2014</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://transparencia.pt/author/tiac/" rel="author">tiac</a></span></span>		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<div class="container" style="margin-top:100px">
+<h2>
+<p>Portugal estagnou no combate à corrupção, revela ranking global de transparência<br />
+</h2>
+<p><i>Índice de Perceções de Corrupção lançado hoje pela Transparency International</i></p>
+<p style="text-align:center">Lisboa, 3 de Dezembro de 2014</p>
+<p>Portugal alcançou a 31ª posição, com 63 pontos, no Índice de Perceções de Corrupção publicado hoje pela Transparency International, rede global de ONG anticorrupção representada em Portugal pela Transparência e Integridade, Associação Cívica (TIAC). Portugal melhora um ponto em comparação com o ano passado, recuperando o mesmo score que havia obtido em 2012. No que toca à posição no ranking, o nosso país passa de 33º para 31º, embora o Índice deste ano inclua menos dois países (175, ao todo) do que no ano passado.</p>
+<p><strong>«Os resultados deste ano confirmam um cenário de estagnação de Portugal no combate à corrupção. Depois de uma década de queda abrupta neste ranking, as boas notícias são que Portugal deixou de depreciar a sua situação no Índice de Perceções de Corrupção. As más notícias é que não estamos a recuperar. Portugal mantém-se no limbo e, claramente, não conseguiremos melhorar neste índice global enquanto não aplicarmos de forma determinada uma estratégia nacional de combate à corrupção»«Os resultados deste ano confirmam um cenário de estagnação de Portugal no combate à corrupção. Depois de uma década de queda abrupta neste ranking, as boas notícias são que Portugal deixou de depreciar a sua situação no Índice de Perceções de Corrupção. As más notícias é que não estamos a recuperar. Portugal mantém-se no limbo e, claramente, não conseguiremos melhorar neste índice global enquanto não aplicarmos de forma determinada uma estratégia nacional de combate à corrupção»</strong>, diz o diretor executivo da TIAC, João Paulo Batalha.</p>
+<p>A falta de transparência tem um custo económico para Portugal. No Índice de Competitividade do Fórum Económico Mundial, divulgado em setembro deste ano, o bom desempenho de Portugal – uma subida de 15 posições, para o 36º lugar – não esconde que os indicadores de combate à corrupção são precisamente aqueles em que o país continua mais frágil. Falta de ética e de confiança nos decisores públicos, problemas de mau uso de fundos públicos, favoritismo ou influência indevida continuam a pesar negativamente nas avaliações do Fórum Económico Mundial. Também neste índice de competitividade global Portugal teve uma queda acentuada na última década – estava na 23ª posição em 2002.</p>
+<p><strong>«À medida que caía em matéria de transparência, Portugal caiu em matéria de competitividade. Felizmente começámos a recuperar lugares no Índice de Competitividade, graças a algumas melhorias em áreas como o acesso a tecnologias de informação ou o setor educativo, mas o que uma leitura cruzada destes índices revela é que não teremos esperanças de nos tornarmos uma economia mais competitiva e atrativa para o investimento estrangeiro enquanto não pusermos o combate à corrupção no centro da agenda»</strong>, aponta João Paulo Batalha.</p>
+<p>Os dados para o Índice de Perceções de Corrupção 2014 foram recolhidos antes da revelação de grandes escândalos de corrupção em Portugal – como o BES, Vistos Gold ou o caso Sócrates – pelo que é impossível medir o impacto destes casos junto de especialistas mundiais.<strong>«Quando juntamos a estes escândalos recentes a nossa falta de progressos no ranking global da corrupção, percebe-se que Portugal chegou ao limite daquilo que pode progredir sem atacar de frente a corrupção. Precisamos de um sistema de justiça capacitado, com especialização e meios suficientes para atuar; e precisamos de um sistema político imune a conflitos de interesses e promiscuidades com os grandes grupos privados que continuam a gozar de acesso desproporcionado às decisões públicas e aos recursos do Estado»</strong>, diz o diretor executivo da TIAC.</p>
+<p><strong>Angola entre os que mais desceram</strong></p>
+<p>Em termos globais, mais de dois terços dos países analisados têm um score abaixo de 50, numa escala de 0 (visto como muito corrupto) a 100 (visto como muito transparente). A Dinamarca é o primeiro colocado, com um score de 92, com a Coreia do Norte e Somália nas últimas posições, com apenas 8 pontos. Entre os países que mais caíram conta-se Angola, que perdeu quatro pontos em relação ao ano passado – está agora em 161º lugar, com apenas 19 pontos, empatada com a Guiné Bissau, Haiti, Venezuela e Iemen.</p>
+<p><strong>Resultados dos países de língua oficial portuguesa:</strong></p>
+<ul>
+<li>Portugal: 31º lugar (33ª em 2013), com 63 pontos (62 em 2013)</li>
+<li>Cabo Verde: 42º lugar (41º em 2013), com 57 pontos (58 em 2013)</li>
+<li>Brasil: 69º lugar (72º em 2013), com 43 pontos (42 em 2013)</li>
+<li>São Tomé e Príncipe: 76ª lugar (72º em 2013), com 42 pontos (os mesmos 42 em 2013)</li>
+<li>Moçambique: 119º lugar (119º em 2013), com 31 pontos (30 em 2013)</li>
+<li>Timor-Leste: 133º lugar (119º em 2013), com 28 pontos (30 em 2013)</li>
+<li>Angola: 161º lugar (153º em 2013), com 19 pontos (23 em 2013)</li>
+<li>Guiné-Bissau: 161º lugar (163º em 2013), com 19 pontos (os mesmos 19 em 2013)</li>
+</ul>
+<p>A Guiné Equatorial, que em 2013 surgiu em 163º lugar com 19 pontos, não foi incluída no CPI2014 por falta de indicadores fiáveis.</p>
+</p></div>
+	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="https://transparencia.pt/tag/cpi/" rel="tag">CPI</a><a href="https://transparencia.pt/tag/forum-economico-mundial/" rel="tag">Fórum Económico Mundial</a><a href="https://transparencia.pt/tag/indice-de-percecoes-de-corrupcao/" rel="tag">Índice de Perceções de Corrupção</a><a href="https://transparencia.pt/tag/ranking/" rel="tag">ranking</a></span></footer></article><!-- #post-## -->
+
+<article id="post-6842" class="post-6842 post type-post status-publish format-standard hentry category-noticias tag-indicadores tag-itm tag-municipios tag-poder-local tag-ranking tag-resultados">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="https://transparencia.pt/category/noticias/" rel="category tag">noticias</a></span>
+		</div>
+		<h1 class="entry-title"><a href="https://transparencia.pt/2014/11/07/transparencia-financeira-dos-municipios-regrediu-no-ultimo-ano-revela-indice-da-tiac/" rel="bookmark">Transparência financeira dos municípios regrediu no último ano, revela Índice da TIAC</a></h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="https://transparencia.pt/2014/11/07/transparencia-financeira-dos-municipios-regrediu-no-ultimo-ano-revela-indice-da-tiac/" rel="bookmark"><time class="entry-date" datetime="2014-11-07T20:05:17+00:00">7 Novembro, 2014</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://transparencia.pt/author/tiac/" rel="author">tiac</a></span></span>		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<div class="container" style="margin-top:100px">
+<h2>
+<p>Transparência financeira dos municípios regrediu no último ano, revela Índice da TIAC<br />
+</h2>
+<p><i>Índice de Transparência Municipal 2014 publicado esta sexta-feira faz um ranking dos municípios que revelam mais informação online</i></p>
+<p style="text-align:center">Lisboa, 7 de novembro de 2014</p>
+<p>Os municípios portugueses registaram poucos avanços em matéria de transparência, revela a segunda edição do Índice de Transparência Municipal (ITM) da TIAC, divulgado esta sexta-feira pela Transparência e Integridade, Associação Cívica, representante portuguesa da rede global de ONG anticorrupção Transparency International. Alfândega da Fé, Carregal do Sal e Torres Novas são os municípios que surgem nas três primeiras posições do ITM 2014. </p>
+<p>O Índice, que faz um ranking dos 308 municípios portugueses segundo a informação de interesse público disponibilizada nos seus websites, é publicado pela TIAC pelo segundo ano consecutivo. Em termos comparativos, os resultados revelam uma ligeira melhoria no score médio dos municípios portugueses – de 33, em 2013, para 34 em 2014 (numa escala de 0 a 100). A melhoria mais acentuada verificou-se nos indicadores relativos à relação dos municípios com a sociedade, dimensão que subiu de uma média nacional de 29, em 2013, para 43 este ano. No entanto, houve quedas em dimensões importantes, como a da Transparência Económico-Financeira (de 67 para 62); Impostos, Taxas, Tarifas, Preços e Regulamentos (de 38 para 33); e Contratação Pública (de 15, em 2013, para 12, em 2014).</p>
+<p><strong>«Os resultados do Índice mostram que nas áreas mais sensíveis da atividade municipal, que envolvem a gestão financeira e a contratação de bens ou serviços, continua a haver uma persistente falta de transparência. É especialmente preocupante que estes indicadores tenham registado um retrocesso, precisamente numa altura em que devia ter havido um esforço para aumentar a informação disponível aos munícipes e aos investidores»</strong>, diz Luís de Sousa, presidente da TIAC e coordenador do estudo.</p>
+<p>Uma nota positiva é o facto de o número de municípios que participaram no exercício de contraditório – comentando e apontando correções à recolha de dados da TIAC antes da publicação do Índice – ter aumentado de forma muito substancial. Este ano foram 126 os municípios que contribuíram com comentários e correções à análise da TIAC – tinham sido apenas 29 no ano inaugural do ITM.</p>
+<p><strong>«É bom sinal que os municípios se tenham envolvido mais na produção do índice, porque isso demonstra uma preocupação em dialogar com a sociedade civil e melhorar o seu desempenho. Vários municípios disseram-nos inclusivamente que estão a remodelar os seus websites e que integrarão os indicadores do ITM entre a informação a disponibilizar no futuro. Porém, importa recordar que o Índice mede apenas o patamar mínimo de transparência, isto é, a disponibilização de informação de interesse público através dos websites dos municípios. Existem outros patamares de transparência e outras dimensões do desempenho da democracia local que extravasam aquilo que é medido no Índice. Por exemplo, o facto de um município publicar no seu website o relatório de avaliação do grau de observância dos direitos da Oposição, não significa que esses sejam efetivamente respeitados pelos Executivos camarários no dia-à-dia da política municipal; o facto de um município publicitar o relatório de contas no website, não significa que a câmara esteja a ser bem gerida; o facto de os processos de licenciamento de obras, compras ou de concessões serem publicados online, também não é por si só uma garantia de isenção e integridade na forma como essas decisões foram tomadas. Contudo, como já referi, sem informação não há responsabilização política, daí a importância deste índice anual.»</strong>, aponta Luís de Sousa.</p>
+<p><strong>Sobre o ITM:</strong></p>
+<p>Lançado em 2013, o Índice de Transparência Municipal é um projeto inovador da TIAC que, todos os anos, avalia o nível de transparência do poder local, através de uma análise da informação disponibilizada nos websites das câmaras municipais, criando assim um ranking dos municípios, de acordo com os seus níveis de prestação de contas e acesso à informação relevante para moradores e investidores.</p>
+<p>A) Informação sobre a Organização, Composição Social e Funcionamento do Município;</p>
+<p>B) Planos e Relatórios;</p>
+<p>C) Impostos, Taxas, Tarifas, Preços e Regulamentos;</p>
+<p>D) Relação com a Sociedade;</p>
+<p>E) Contratação Pública;</p>
+<p>F) Transparência Económico-Financeira;</p>
+<p>G) Transparência na área do Urbanismo.</p>
+<p>O Índice de Transparência Municipal é um projeto da TIAC, desenvolvido em parceria com a Unidade de Investigação em Governança, Competitividade e Políticas Públicas da Universidade de Aveiro (GOVCOPP-UA), o Núcleo de Estudos em Administração e Políticas Públicas da Universidade do Minho (NEAPP-UM), a Faculdade de Economia da Universidade de Coimbra (FEUC-UC), o Centro de Estudos Sociais da Universidade de Coimbra (CES-UC), o Instituto de Ciências Sociais da Universidade de Lisboa (ICS-UL) e o Instituto Superior Técnico da Universidade de Lisboa (IST-UL).</p>
+<p>Os resultados, indicadores, metodologia e outros dados técnicos do ITM podem ser consultados em <a href="http://poderlocal.transparencia.pt" target="_blank">poderlocal.transparencia.pt</a></p>
+</p></div>
+	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="https://transparencia.pt/tag/indicadores/" rel="tag">indicadores</a><a href="https://transparencia.pt/tag/itm/" rel="tag">ITM</a><a href="https://transparencia.pt/tag/municipios/" rel="tag">Municípios</a><a href="https://transparencia.pt/tag/poder-local/" rel="tag">Poder Local</a><a href="https://transparencia.pt/tag/ranking/" rel="tag">ranking</a><a href="https://transparencia.pt/tag/resultados/" rel="tag">Resultados</a></span></footer></article><!-- #post-## -->
+
+<article id="post-6767" class="post-6767 post type-post status-publish format-standard hentry category-noticias tag-bpn tag-combate-a-corrupcao tag-huguette-labelle tag-indice-de-percecao-da-corrupcao tag-mariano-rajoy tag-ranking tag-rede-global-de-ong tag-transparency-international">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="https://transparencia.pt/category/noticias/" rel="category tag">noticias</a></span>
+		</div>
+		<h1 class="entry-title"><a href="https://transparencia.pt/2013/12/03/portugal-sem-melhorias-no-indice-de-percecao-da-corrupcao/" rel="bookmark">Portugal sem melhorias no  Índice de Perceção da Corrupção</a></h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="https://transparencia.pt/2013/12/03/portugal-sem-melhorias-no-indice-de-percecao-da-corrupcao/" rel="bookmark"><time class="entry-date" datetime="2013-12-03T13:03:30+00:00">3 Dezembro, 2013</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://transparencia.pt/author/tiac/" rel="author">tiac</a></span></span>		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<div class="container" style="margin-top:100px">
+<h2>Portugal sem melhorias no Índice de Perceção da Corrupção<br />
+	</h2>
+<h4>Estudo da Transparency International mede o impacto da corrupção em 177 países a nível global </h4>
+<p style="text-align:center">Lisboa, 3 de Dezembro de 2013</p>
+<p>Os níveis de corrupção percecionada em Portugal continuam a não abrandar, revela o Índice de Perceção da Corrupção publicado hoje pela Transparency International, rede global de ONG dedicadas ao combate à corrupção, representada no nosso país pela Transparência e Integridade, Associação Cívica. O índice, que lista 177 países de acordo com a perceção de corrupção registada por observadores externos, mantém Portugal na 33ª posição, com 62 pontos em 100 (sendo 0 muito corrupto e 100 absolutamente transparente).
+</p>
+<p>Em relação a 2012, o nosso país continua no mesmo lugar no ranking, embora tenha perdido um ponto, dos 63 registados em 2012 para os 62 este ano. <strong>Esta quebra de um ponto não é especialmente relevante, do ponto de vista estatístico, mas indicia a tendência de queda que Portugal vem revelando neste índice na última década. Em 2003 estávamos em 25º lugar; agora vamos no 33º, o que significa que enquanto inúmeros países têm feito esforços com bons resultados no combate à corrupção, Portugal está preso entre a estagnação e o declínio»</strong>,diz o presidente da TIAC, Luís de Sousa.</p>
+<p>
+	Entre os países europeus, é digno de registo, no Índice deste ano, a queda abrupta registada pela Espanha, que perdeu 6 pontos e caiu 10 lugares no ranking, em comparação com 2012. Está agora, com 59 pontos, em 40º lugar, o que poderá ser explicado com o impacto negativo de escândalos que vieram a público este ano, como o caso Bárcenas, que diz respeito a suspeitas de corrupção na atribuição de obras públicas e financiamento partidário ilegal envolvendo o primeiro-ministro Mariano Rajoy.
+	</p>
+<p><strong>«O caso de Espanha mostra como a complacência com a corrupção pode ter efeitos desastrosos na credibilidade de um país e devia servir de aviso para as autoridades portuguesas investigarem a fundo e levarem até ao fim, sem mais delongas, casos como o da compra dos submarinos, do BPN ou de privatizações, como a da EDP, que estão na mira da Justiça. Enquanto deixarmos estas suspeitas a pairar sem resolução, é a credibilidade das instituições perante a opinião pública e os investidores internacionais que está posta em causa»</strong>,diz o presidente da TIAC, Luís de Sousa.</p>
+<p>
+	A nível global, mais de dois terços dos 177 países abrangidos pelo Índice tem um score abaixo de 50, o que mostra que há ainda muito a fazer para combater a corrupção à escala global. A Dinamarca e a Nova Zelândia, com 91 pontos, surgem empatadas na primeira posição, seguidas da Finlândia, com 89 pontos. No fim da tabela surgem o Afeganistão, a Coreia do Norte e a Somália, com apenas 8 pontos cada.
+	</p>
+<p><strong> «Os países mais bem classificados mostram como a transparência e a responsabilização funcionam como um travão à corrupção. Ainda assim, mesmo os países com melhores pontuações enfrentam problemas como a captura do Estado por interesses privados, o financiamento partidário ilegal e a falta de fiscalização dos grandes contratos públicos. Estas continuam a ser grandes áreas de risco de corrupção»</strong>,diz a presidente da Transparency International, Huguette Labelle. </p>
+<p>O Índice de Perceção da Corrupção, originalmente lançado em 1995 e publicado anualmente pela Transparency International, é considerado o mais fidedigno índice de corrupção em todo o mundo. Trata-se de um índice compósito que recolhe e organiza indicadores de organizações como o Banco Mundial, o Fórum Económico Mundial e outras, para traçar o retrato da corrupção em cada país, a partir de fontes externas e distanciadas.</p>
+<p>Sabe mais em: <a href="http://www.transparency.org/cpi2013/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.transparency.org/cpi2013/', 'http://www.transparency.org/cpi2013/');">http://www.transparency.org/cpi2013/</a> </p>
+</p></div>
+	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="https://transparencia.pt/tag/bpn/" rel="tag">BPN</a><a href="https://transparencia.pt/tag/combate-a-corrupcao/" rel="tag">combate à corrupção</a><a href="https://transparencia.pt/tag/huguette-labelle/" rel="tag">Huguette Labelle</a><a href="https://transparencia.pt/tag/indice-de-percecao-da-corrupcao/" rel="tag">Índice de Perceção da Corrupção</a><a href="https://transparencia.pt/tag/mariano-rajoy/" rel="tag">Mariano Rajoy</a><a href="https://transparencia.pt/tag/ranking/" rel="tag">ranking</a><a href="https://transparencia.pt/tag/rede-global-de-ong/" rel="tag">rede global de ONG</a><a href="https://transparencia.pt/tag/transparency-international/" rel="tag">Transparency International</a></span></footer></article><!-- #post-## -->
+
+<article id="post-6824" class="post-6824 post type-post status-publish format-standard hentry category-noticias tag-475 tag-cpi tag-indice-de-percecao-da-corrupcao tag-medio-oriente tag-ranking">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="https://transparencia.pt/category/noticias/" rel="category tag">noticias</a></span>
+		</div>
+		<h1 class="entry-title"><a href="https://transparencia.pt/2012/12/04/governos-devem-responder-a-vontade-de-acao-contra-a-corrupcao/" rel="bookmark">Governos devem responder à vontade de ação  contra a corrupção</a></h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="https://transparencia.pt/2012/12/04/governos-devem-responder-a-vontade-de-acao-contra-a-corrupcao/" rel="bookmark"><time class="entry-date" datetime="2012-12-04T18:56:25+00:00">4 Dezembro, 2012</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://transparencia.pt/author/tiac/" rel="author">tiac</a></span></span>		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<div class="container" style="margin-top:100px">
+<h4>Índice de Perceção da Corrupção 2012</h4>
+<h2>
+<p>	Líderes do G20: Exponham os corruptos<br />
+</h2>
+<h4>Portugal continua sem progressos visíveis</h4>
+<p style="text-align:center">Lisboa, 4 de Dezembro de 2012</p>
+<p>Uma reivindicação crescente contra governos corruptos forçou vários líderes a abandonar os seus cargos no ano passado. Contudo, os níveis de corrupção, abuso de poder e relações secretas ainda são muito altos em muitos países. O Índice de Perceção da Corrupção da Transparency International de 2012 mostra que a corrupção continua a assolar as sociedades em todo o mundo.</p>
+<p>Dois terços dos 176 países classificados no índice de 2012 obtiveram uma pontuação abaixo de 50, numa escala de 0 (perceção de ser altamente corrupto) a 100 (percebida como muito limpo), mostrando que as instituições públicas precisam de ser mais transparentes e que os agentes públicos poderosos devem mais responsáveis.</p>
+<p><strong>&#8220;Os governos precisam de integrar as suas ações de combate à corrupção em todos os processos públicos de tomada de decisão. As prioridades devem incluir melhores regras para o lobby e financiamento político, tornando mais transparentes os gastos e a contratação pública, assim como tornando os órgãos públicos mais responsáveis perante as pessoas&#8221;</strong>, diz Huguette Labelle, presidente da Transparency International.<strong>&#8220;Depois de um ano de enfoque na corrupção, esperamos que os governos tomem uma posição mais dura contra o abuso de poder. Os resultados do Índice de Perceção da Corrupção de 2012 demonstram que as sociedades continuam a pagar o alto custo da corrupção&#8221;</strong>, diz Labelle. </p>
+<p>Muitos dos países onde os cidadãos desafiaram os seus líderes a acabar com a corrupção – do Médio Oriente à Ásia e à Europa &#8211; têm visto as suas posições no índice a estagnar ou piorar.
+</p>
+<p><strong>Índice de Perceção da Corrupção 2012: Os resultados</strong></p>
+<p>No Índice de Perceção da Corrupção de 2012, a Dinamarca, a Finlândia e a Nova Zelândia empatam no primeiro lugar com uma pontuação de 90. Não por acaso, estas são sociedades que estão apoiadas num elevado nível de acesso a sistemas de informação e em regras claras que regem o comportamento dos agentes em cargos públicos.</p>
+<p>Afeganistão, Coreia do Norte e Somália continuam no degrau mais baixo do índice. Nestes países, a falta de uma liderança responsável e de instituições públicas eficazes realçam a necessidade de se tomar uma posição muito mais forte contra a corrupção.</p>
+<p>Portugal apresenta um ‘score’ de 63, ocupando a 33ª posição no ranking, ex-aequo com o Butão e Porto Rico. Em termos de União Europeia, está no 15º lugar, tendo atrás de si Malta, Grécia, Itália e países de Leste.</p>
+<p>
+		<strong>“Os investidores e observadores estrangeiros que compõem o Índice de Perceção da Corrupção continuam a não ver progressos visíveis em Portugal. A tendência de estagnação – e até de retrocesso – é a imagem de marca do nosso país no combate à corrupção e isso tem reflexos negativos na nossa capacidade de atrair investimento estrangeiro que nos ajude a sair da crise”</strong>, aponta Paulo Morais, vice-presidente da Transparência e Integridade, Associação Cívica, correspondente em Portugal da Transparency International.<strong>“Depois de uma década sem progressos, é altura de mudar as regras do jogo. Temos de garantir que os próximos dez anos serão anos de progresso no combate à corrupção. E cabe à sociedade civil fazer pressão sobre os nossos líderes nesse sentido”.</strong></p>
+<p>O baixo desempenho no Índice de Perceção de Corrupção de 2012 é um ponto em comum entre os países da zona euro mais afetados pela crise financeira e económica. A Transparency International tem constantemente alertado a Europa para a necessidade de enfrentar os riscos de corrupção no setor público de forma a fazer face à crise financeira, exigindo esforços acrescidos na criação de instituições públicas à prova de corrupção.</p>
+<p><strong>Metodologia</strong></p>
+<p>Este ano, a Transparency International atualiza a metodologia do Índice de Perceção da Corrupção 2012. Para refletir esta atualização, o índice é apresentado numa escala de 0 (muito corrupto) a 100 (muito limpo).</p>
+<p>Sabe mais em <a href="http://www.transparency.org/cpi2012/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.transparency.org/cpi2012/', ' http://www.transparency.org/cpi2012/ ');"> http://www.transparency.org/cpi2012/ </a></p>
+</p></div>
+	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="https://transparencia.pt/tag/2012/" rel="tag">2012</a><a href="https://transparencia.pt/tag/cpi/" rel="tag">CPI</a><a href="https://transparencia.pt/tag/indice-de-percecao-da-corrupcao/" rel="tag">Índice de Perceção da Corrupção</a><a href="https://transparencia.pt/tag/medio-oriente/" rel="tag">Médio Oriente</a><a href="https://transparencia.pt/tag/ranking/" rel="tag">ranking</a></span></footer></article><!-- #post-## -->
+		</div><!-- #content -->
+	</section><!-- #primary -->
+
+<div id="secondary">
+	
+	
+	</div><!-- #secondary -->
+﻿
+
+
+
+
+<style type="text/css">
+	
+@media (max-width: 844px){
+	 
+	.col-sm-6{
+
+text-align: center;
+
+
+	}
+}
+@media (max-width: 844px){
+	 
+	.subscribeMe{
+
+margin-left: 13%;
+
+
+	}
+}
+@media (max-width: 1090px){
+	 
+	footer {
+
+/*text-align: center;*/
+
+
+	}
+}
+
+</style>
+
+<section id="connect">
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+      <div align="center">
+        <h3>SEGUE-NOS NAS REDES SOCIAIS</h3>
+        
+        <a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-single synved-social-provider-facebook nolightbox" data-provider="facebook" target="_blank" rel="nofollow" title="Follow us on Facebook" href="http://www.facebook.com/MyAvatarName" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="facebook" title="Follow us on Facebook" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://transparencia.pt/wp-content/plugins/social-media-feather/synved-social/image/social/regular/64x64/facebook.png?de23aa" /></a><a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-single synved-social-provider-twitter nolightbox" data-provider="twitter" target="_blank" rel="nofollow" title="Follow us on Twitter" href="http://twitter.com/MyAvatarName" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Follow us on Twitter" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://transparencia.pt/wp-content/plugins/social-media-feather/synved-social/image/social/regular/64x64/twitter.png?de23aa" /></a><a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-single synved-social-provider-google_plus nolightbox" data-provider="google_plus" target="_blank" rel="nofollow" title="Follow us on Google+" href="http://plus.google.com/needlessly_long_google_plus_id" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="google_plus" title="Follow us on Google+" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://transparencia.pt/wp-content/plugins/social-media-feather/synved-social/image/social/regular/64x64/google_plus.png?de23aa" /></a><a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-single synved-social-provider-linkedin nolightbox" data-provider="linkedin" target="_blank" rel="nofollow" title="Find us on Linkedin" href="http://www.linkedin.com/in/yourid" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Find us on Linkedin" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://transparencia.pt/wp-content/plugins/social-media-feather/synved-social/image/social/regular/64x64/linkedin.png?de23aa" /></a><a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-single synved-social-provider-youtube nolightbox" data-provider="youtube" target="_blank" rel="nofollow" title="Find us on YouTube" href="http://www.youtube.com/MyYouTubeName" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;"><img alt="youtube" title="Find us on YouTube" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://transparencia.pt/wp-content/plugins/social-media-feather/synved-social/image/social/regular/64x64/youtube.png?de23aa" /></a>        </div>
+      </div>
+     <div class="col-sm-6">
+        <h3>SUBSCREVE A NOSSA NEWSLETTER</h3>
+        <div align="center">
+        <form id="NewsletterForm" method="post">
+          <input width="30" type="text" class="subscribeMe" id="email" name="email" placeholder="Introduz o teu e-mail">
+          <button role="submit" name="submit" id="submit">SUBSCREVER </button>
+          <ul style="list-style-type: none;">
+          <!--<li class="col-sm-12 col-md-6">
+          <input type="checkbox" name="dcn" value="true" checked="checked"  width="20%"><label>Newsletter Semanal</label></li>
+          <li class="col-sm-12 col-md-6"><input type="checkbox" name="tipr" value="true" width="20%"><label>Newsletter Mensal</label></li>
+       -->
+          </ul>
+        </form>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+
+
+ 
+
+
+<footer style="background-color:#e0e0e0">
+    <div class="container site-map" style="text-align:center">
+    <div class="row">
+      <div class="col-md-3">
+        <h4>FAQ</h4>
+        <ul>
+       
+	    <li style="list-style: none;"><a href="https://transparencia.pt/faq/#corrupcao" class="fancybox">O que é a corrupção?</a></li>
+						<li style="list-style: none;"><a href="https://transparencia.pt/faq/#transparencia" class="fancybox">O que é a transparência?</a></li>
+						<li style="list-style: none;"><a href="https://transparencia.pt/faq/#custos" class="fancybox">Quais são os custos da corrupção?</a></li>
+						<li style="list-style: none;"><a href="https://transparencia.pt/faq/#quantificar" class="fancybox">É possível quantificar os custos da corrupção?</a></li>
+                        <li style="list-style: none;"><a href="https://transparencia.pt/faq/#niveis" class="fancybox">Em que contextos existem maiores níveis de corrupção?</a></li>
+                        <li style="list-style: none;"><a href="https://transparencia.pt/faq/#sociedades" class="fancybox">A corrupção não é uma prática normal ou tradicional em<br /> determinadas sociedades?</a></li>
+                        <li style="list-style: none;"><a href="https://transparencia.pt/faq/#democracia" class="fancybox">Democracia e corrupção: realidades (irre)conciliáveis?</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h4>FERRAMENTAS</h4>
+        <ul>
+	    <li style="list-style: none;"><a href="https://transparencia.pt/faq/#toolkit" class="fancybox">Toolkit de Combate à Corrupção</a></li>
+						<li style="list-style: none;"><a href="http://www.trust.org/?show=trustlawcorruption" target="_blank">Anti-Corruption Views</a></li>
+						<li style="list-style: none;"><a href="http://blog.transparency.org/" target="_blank">Space for Transparency</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h4>CONTACTOS</h4>
+        <ul>
+	    <li style="list-style: none;"><b>Endereço:</b><br><b style="color: #428bca;">Rua Leopoldo de Almeida,9B 
+1750-137 Lumiar,Lisboa</b></li>
+						<li style="list-style: none;"><b>Telefone:</b><br><b style="color: #428bca;">217522075</b></li>
+						<li style="list-style: none;"><b>Email:</b><br><a style="color: #1A497F;" href="mailto:secretariado&#64;transparencia&#46;pt?Subject=Comentário%20no%20site" target="_top"><b <b style="color: #428bca;">Contactar</b></a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h4 >LINKS</h4>
+        <ul>
+	    <li style="list-style: none;"><a href="http://ancorage-net.transparencia.pt" target="_blank">Ancorage-Net</a></li>
+						<li style="list-style: none;"><a href="http://corruptionresearchnetwork.org/" target="_blank">Anti-Corruption Research Network</a></li>
+						<li style="list-style: none;"><a href="http://www.business-anti-corruption.com/" target="_blank">Business Anti-Corruption Portal</a></li>
+						<li style="list-style: none;"><a href="http://www.oecd.org/corruption/oecdantibriberyconvention.htm" target="_blank">OECD Convention on Combating Bribery of Foreign Public Officials<br /> in International Business Transactions</a></li>
+                          <li style="list-style: none;"><a href="http://integridade.transparencia.pt/" target="_blank">Sistema Nacional de Integridade</a></li>
+                        <li style="list-style: none;"><a href="http://www.transparency.org/" target="_blank">Transparency International</a></li>
+                        <li style="list-style: none;"><a href="http://www.unodc.org/unodc/en/treaties/CAC/" target="_blank">United Nations Convention Against Corruption</a></li>
+                        <li style="list-style: none;"><a href="http://www.u4.no/helpdesk/" target="_blank">U4 Anti-Corruption Resource Centre</a></li>
+                       
+        </ul>
+      </div>
+     
+    </div>
+    </div>
+
+  </footer>
+
+<div class="container" align="center" style="margin-top:20px">
+		<b>&copy; 2010-2016</b> <a style="color:#0397d6;" href="https://transparencia.pt" target="_blank"><b>TIAC</b></a><b>. Todos os direitos reservados.
+	</div>
+
+</div>
+
+
+
+<script>window.jQuery || document.write('<script type="text/javascript" src="https://transparencia.pt/wp-content/cache/minify/000000/nYvRCYAwDAUXkjz9dJxWojTYRpuIdntRnMDPO-6AIOGiRXVZOWzJaNL8OqwpGmQ_uDYMNNLwAeVUSKzD_7WHn1y8zXpUZy4QQ1R18xq2J7oB.js"></script>
+<script src='https://www.google.com/recaptcha/api.js?hl=pt'></script>
+<script type="text/javascript" src="https://transparencia.pt/wp-content/cache/minify/000000/M9AvKU_NK6lMyy8tKklNzdNPLi7WzyrWL8kvTc5ITUtLTS4pBgA.js"></script>
+<script src="//transparencia.pt/wp-content/themes/twentyfourteen/css/js/modernizr-1.7.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+        $('.carousel').carousel({
+            interval: 5000,
+            cycle: true
+        });
+    });
+
+
+
+function projeto_desenvolvimento() {
+    alert("Projeto em desenvolvimento!");
+}
+
+
+var removeClass = true;
+$(".dropdown-toggle").click(function () {
+    $(".teste").toggleClass('opacidade');
+    removeClass = false;
+});
+
+
+
+$('.container,#semFade').click(function () {
+    if (removeClass) {
+        $(".teste").removeClass('opacidade');
+    }
+    removeClass = true;
+});
+
+
+
+
+
+
+
+
+
+
+    function showOrHide() 
+    {
+        var div = document.getElementById("showOrHideDiv");
+        if (div.style.display == "block") 
+        {
+            div.style.display = "none";
+        }
+        else 
+        {
+            div.style.display = "block";
+        }
+    } 
+     function showOrHide1() 
+    {
+        var div = document.getElementById("showOrHideDiv1");
+        if (div.style.display == "block") 
+        {
+            div.style.display = "none";
+        }
+        else 
+        {
+            div.style.display = "block";
+        }
+    } 
+     function showOrHide2() 
+    {
+        var div = document.getElementById("showOrHideDiv2");
+        if (div.style.display == "block") 
+        {
+            div.style.display = "none";
+        }
+        else 
+        {
+            div.style.display = "block";
+        }
+    } 
+     function showOrHide3() 
+    {
+        var div = document.getElementById("showOrHideDiv3");
+        if (div.style.display == "block") 
+        {
+            div.style.display = "none";
+        }
+        else 
+        {
+            div.style.display = "block";
+        }
+    } 
+     function showOrHide4() 
+    {
+        var div = document.getElementById("showOrHideDiv4");
+        if (div.style.display == "block") 
+        {
+            div.style.display = "none";
+        }
+        else 
+        {
+            div.style.display = "block";
+        }
+    } 
+     function showOrHide5() 
+    {
+        var div = document.getElementById("showOrHideDiv5");
+        if (div.style.display == "block") 
+        {
+            div.style.display = "none";
+        }
+        else 
+        {
+            div.style.display = "block";
+        }
+    } 
+
+ 
+
+function toggle() {
+  var ele = document.getElementById("toggleText");
+  var text = document.getElementById("displayText");
+  if(ele.style.display == "block") {
+        ele.style.display = "none";
+    text.innerHTML = "Mostrar";
+    }
+  else {
+    ele.style.display = "block";
+    text.innerHTML = "Esconder";
+  }
+} 
+
+  
+$(window).scroll(function(){
+  if($(document).scrollTop() > 380){//Here 200 may be not be exactly 200px
+    $('.a').hide();
+  }
+  
+   if($(document).scrollTop() < 380){//Here 200 may be not be exactly 200px
+    $('.a').show();
+  }
+  
+});
+
+
+
+
+
+  
+ $(document).ready(function () {
+  $(".navbar-nav li ul li a").click(function(event) {
+    $(".navbar-collapse").collapse('hide');
+  });
+});
+
+$(function() {
+  $('a[href*=#]:not([href=#myCarousel])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 900);
+        return false;
+      }
+    }
+  });
+});
+
+</script>
+
+
+ 
+
+
+</body>
+
+
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Object Caching 744/840 objects using disk
+
+ Served from: transparencia.pt @ 2016-02-04 11:42:43 by W3 Total Cache -->
+
+<!-- W3 Total Cache: Db cache debug info:
+Engine:             disk
+Total queries:      9
+Cached queries:     0
+Total query time:   0.0031
+SQL info:
+    # | Time (s) |    Caching (Reject reason)     |   Status   | Data size (b) | Query
+    1 |   0.0004 |            enabled             | not cached |           706 | SELECT wp_term_taxonomy.term_taxonomy_id
+					FROM wp_term_taxonomy
+					INNER JOIN wp_terms USING (term_id)
+					WHERE taxonomy = 'post_tag'
+					AND wp_terms.slug IN ('ranking')
+    2 |   0.0002 |            enabled             | not cached |          3464 | SELECT t.*, tt.* FROM wp_terms AS t INNER JOIN wp_term_taxonomy AS tt ON t.term_id = tt.term_id WHERE t.slug = 'ranking' AND tt.taxonomy = 'post_tag' LIMIT 1
+    3 |   0.0003 |        disabled (query)        | not cached |             0 | SELECT SQL_CALC_FOUND_ROWS  wp_posts.ID FROM wp_posts  INNER JOIN wp_term_relationships ON (wp_posts.ID = wp_term_relationships.object_id) WHERE 1=1  AND ( 
+  wp_term_relationships.term_taxonomy_id IN (434)
+) AND wp_posts.post_type = 'post' AND (wp_posts.post_status = 'publish') GROUP BY wp_posts.ID ORDER BY wp_posts.post_date DESC LIMIT 0, 10
+    4 |   0.0001 |        disabled (query)        | not cached |             0 | SELECT FOUND_ROWS()
+    5 |   0.0003 |            enabled             | not cached |         43775 | SELECT wp_posts.* FROM wp_posts WHERE ID IN (7407,7401,6833,6842,6767,6824)
+    6 |    0.001 |            enabled             | not cached |         15762 | SELECT t.*, tt.*, tr.object_id FROM wp_terms AS t INNER JOIN wp_term_taxonomy AS tt ON tt.term_id = t.term_id INNER JOIN wp_term_relationships AS tr ON tr.term_taxonomy_id = tt.term_taxonomy_id  WHERE tt.taxonomy IN ('category', 'post_tag', 'post_format') AND tr.object_id IN (6767, 6824, 6833, 6842, 7401, 7407) ORDER BY t.name ASC
+    7 |   0.0002 |            enabled             | not cached |          2537 | SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN (6767,6824,6833,6842,7401,7407) ORDER BY meta_id ASC
+    8 |   0.0004 |            enabled             | not cached |          4759 | SELECT  t.*, tt.* FROM wp_terms AS t  INNER JOIN wp_term_taxonomy AS tt ON t.term_id = tt.term_id WHERE tt.taxonomy IN ('category') ORDER BY t.name ASC
+    9 |   0.0002 |            enabled             | not cached |          1159 | SELECT term_id, meta_key, meta_value FROM wp_termmeta WHERE term_id IN (5,8,6,1,10,374) ORDER BY meta_id ASC
+-->
+
+<!-- W3 Total Cache: Minify debug info:
+Engine:             disk
+Theme:              60eac
+Template:           tag
+Errors:             JSMin: Unterminated String at byte 238: '<script type="text/javascript" src="https://transparencia.pt/wp-content/cache/minify/000000/nYvRCYAwDAUXkjz9dJxWojTYRpuIdntRnMDPO-6AIOGiRXVZOWzJaNL8OqwpGmQ_uDYMNNLwAeVUSKzD_7WHn1y8zXpUZy4QQ1R18xq2J7oB.js">
+
+Replaced CSS files:
+1. wp-content/themes/twentyfourteen/css/bootstrap.min.css
+2. wp-content/themes/twentyfourteen/css/style1.css
+3. wp-content/themes/twentyfourteen/css/common.css
+4. wp-content/themes/twentyfourteen/css/styles.css
+5. wp-content/themes/twentyfourteen/css/style.css
+6. wp-content/themes/twentyfourteen/js/modernizr.custom.72111.js
+
+Replaced JavaScript files:
+1. //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
+2. //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
+3. wp-content/themes/twentyfourteen/js/bootstrap.min.js
+4. wp-content/themes/twentyfourteen/css/js/toucheffects.js
+-->

@@ -1,0 +1,14 @@
+�̲V<?php exit; ?>a:1:{s:7:"content";O:8:"stdClass":24:{s:2:"ID";i:6051;s:11:"post_author";s:1:"1";s:9:"post_date";s:19:"2015-10-22 16:38:14";s:13:"post_date_gmt";s:19:"2015-10-22 16:38:14";s:12:"post_content";s:1807:"<div class="box effect5" style="font-family: Merriweather, arial, sans-serif;margin-bottom:100px;margin-top:100px"><br/>
+<img width="195" height="195" alt="team 1" src="[php]echo get_site_url();[/php]/wp-content/themes/twentyfourteen/assets/img/armando-ferreira.png" class="img-circle" style="margin-right:auto;display:block;margin-left:auto;">
+   <h3 style="text-align:center;font-size:26px;">José Armando Martins Ferreira</h3>
+   <p class="muted" style="text-align:center;">Presidente do Conselho de Jurisdição</p><br/>
+   <h3 style="text-align:center;font-size:26px;">Biografia</h3>
+  <p class="lead">Armando Ferreira nasceu na freguesia do Rossio ao Sul do Tejo, concelho de Abrantes, em 1966. É advogado desde 1991 e sócio da Abreu Advogados, onde ingressou em 2000, tendo atualmente funções de coordenação na área de prática de Direito Europeu, Concorrência e Regulação. Foi advogado associado da Veiga Gomes, Bessa Monteiro, Marques Bom – Sociedade de Advogados e consultor sénior da Carlos Olavo &amp; Associados de 1989 a 1999. Licenciou-se em Direito em 1989, pela Faculdade de Direito da Universidade de Lisboa. Possui estudos em Direito Europeu pelo SQTE e o diploma de especialização em Política da Concorrência pelo INA. É autor de diversos estudos e artigos e participa regularmente em conferências e seminários sobre temas jurídicos. É membro da IBA International Bar Association.</p><br/>
+<h3 style="text-align:center;font-size:26px;">Anexos</h3>
+<p class="doc_bio" style="text-align:center;line-height:21px; "><a href="[php]echo get_site_url();[/php]/wp-content/themes/twentyfourteen/Declaracoes/Armando_Ferreira.pdf" class="doc_bio" target="_blank">Formulário de Registo de Interesses</a></p><br/>
+
+<p><div style="height:90px;"></div></p>
+</div>
+
+
+";s:10:"post_title";s:16:"Armando Ferreira";s:12:"post_excerpt";s:0:"";s:11:"post_status";s:7:"publish";s:14:"comment_status";s:4:"open";s:11:"ping_status";s:4:"open";s:13:"post_password";s:0:"";s:9:"post_name";s:16:"armando-ferreira";s:7:"to_ping";s:0:"";s:6:"pinged";s:0:"";s:13:"post_modified";s:19:"2016-01-12 20:08:29";s:17:"post_modified_gmt";s:19:"2016-01-12 20:08:29";s:21:"post_content_filtered";s:0:"";s:11:"post_parent";i:0;s:4:"guid";s:38:"https://transparencia.pt/?page_id=6051";s:10:"menu_order";i:0;s:9:"post_type";s:4:"page";s:14:"post_mime_type";s:0:"";s:13:"comment_count";s:1:"0";s:6:"filter";s:3:"raw";}}

@@ -1,0 +1,284 @@
+@charset "utf-8";
+/* CSS Document */
+
+<!--
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+#bigcontainer {
+	position:absolute;
+	left:0px;
+	z-index:1;
+	width:20000px;
+}
+.conttop {
+	top:120px;
+}
+.contzero {
+	top:0px;
+}
+.contbottom {
+	bottom:30px;
+}
+
+
+#container {
+float:left;
+display:block;
+	left:0px;
+	top:0px;
+	z-index:1;
+
+}
+.floater {
+float:left;
+
+margin-right:2px;
+
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #FFFFFF;
+width:20000px;
+
+}
+
+
+#projectholder {
+	position:relative;
+	left:0px;
+	top:0px;
+	z-index:2;
+}
+.infotext {
+position:absolute;
+	left:0px;
+	bottom:0px;
+	width:350px;
+	height:350px;
+	z-index:10;
+background-color:#FFFFFF;
+display:none;
+line-height:1.1em;
+overflow:auto;
+
+}
+.infotext p{
+margin-left:20px;
+margin-top:20px;
+width:300px;
+}
+
+#headertext {
+position:absolute;
+	left:0px;
+	top:605px;
+	width:90%;
+	height:20px;
+	z-index:10;
+
+font-weight:bold;
+padding-left:20px;
+font-size:11px;
+font-weight:normal;
+
+}
+#headertext a {
+font-weight:normal;
+}
+
+
+
+body,td,th {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	color: #939598;
+letter-spacing:-.2px;
+}
+.carousel-controls {
+display:none;
+}
+.jcarousel-scroll {
+display:none;
+}
+.carousel-gallery {
+height:600px;
+overflow:hidden;
+}
+.example {
+font-weight:bold;
+}
+#menu {
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:120px;
+	z-index:30;
+	background-color:#FFFFFF;
+}
+
+#menu ul {
+
+line-height:1em;
+float:left;
+width:145px;
+margin-right: 20px;
+}
+#menu li {
+font-weight:bold;
+
+}
+#menu p {
+font-weight:normal;
+
+
+}
+#menu img {
+margin-left:20px;
+margin-top:16px;
+margin-bottom:12px;
+}
+.menu_main {
+text-transform:uppercase;
+/*margin-bottom:2px;
+padding-bottom:2px;*/
+}
+#menu_text {
+	width:1200px;
+	clear:both;
+	position:absolute;
+	top:22px;
+	left:185px;
+	line-height:.9em;
+}
+
+
+/*.topBorder {
+border-top:2px #939598 solid;
+margin-top:10px;
+padding-top:2px;
+}*/
+a:link {
+	color:#939598;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color:#939598;
+}
+a:hover {
+	text-decoration: none;
+	color:#333333;
+}
+a:active {
+	text-decoration: none;
+	color:#939598;
+}
+.title {
+font-size:15px;
+font-weight:bold;
+}
+.column {
+float: left;
+width: 145px;
+line-height:1em;
+margin-right: 20px;
+
+}
+.makecolumns {
+height:70px;
+max-height:70px;
+float:left;
+line-height:.9em;
+
+}
+
+.style1 {text-transform: uppercase; color: #333333; }
+.yes {
+display:none;
+}
+#fullholder {
+top:0px;
+left:0px;
+position:absolute;
+height:100%;
+min-height:630px;
+}
+-->
+
+
+
+.jcarousel-container, .jcarousel-list li, .jcarousel-item, .jcarousel-clip
+		{
+			height: 600px !important;
+		}
+		
+		.jcarousel-list li,
+		.jcarousel-item {
+			/* We set the width/height explicitly. No width/height causes infinite loops. */
+			width: 1200px;
+			height: 600px;
+		}
+		.jcarousel-skin-neat .jcarousel-clip-horizontal {
+			width: 1200px;
+			height: 600px;
+		}
+		
+h2.cgj_title { display: none; }
+
+.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}

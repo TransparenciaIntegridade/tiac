@@ -1,0 +1,3056 @@
+Feb 09 23:00:18  [info] Creating canary table
+
+Feb 09 23:02:18  [info] $Fatal Error Details = Array
+(
+    [message] => Your database has already been upgraded to CiviCRM 4.7.1
+    [code] => 
+)
+
+
+Feb 09 23:02:18  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(366): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Upgrade/Page/Upgrade.php(98): CRM_Core_Error::fatal("Your database has already been upgraded to CiviCRM 4.7.1")
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Upgrade/Page/Upgrade.php(73): CRM_Upgrade_Page_Upgrade->runIntro()
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(312): CRM_Upgrade_Page_Upgrade->run((Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:2))
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:2))
+#7 [internal function](): CiviCRM_For_WordPress->invoke("")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#10 {main}
+
+
+Feb 10 15:50:17  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(892): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: no such field", -19, 16, (Array:2), "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-19, 16, (Array:2), "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -19, NULL, NULL, "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(895): DB_common->raiseError(-19, NULL, NULL, NULL, "1054 ** Unknown column 'a.payment_instrument_id' in 'field list'")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(328): DB_mysql->mysqlRaiseError()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2435): DB_common->query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1627): DB_DataObject->_query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(334): DB_DataObject->query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(1267): CRM_Core_DAO->query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...", TRUE)
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/SelectQuery.php(290): CRM_Core_DAO::executeQuery("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/utils.php(1338): Civi\API\SelectQuery->run()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/PaymentProcessor.php(88): _civicrm_api3_basic_get("CRM_Financial_BAO_PaymentProcessor", (Array:5))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_payment_processor_get((Array:5))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("payment_processor", "get", (Array:5), NULL)
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(43): civicrm_api("payment_processor", "get", (Array:5))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php(293): civicrm_api3("payment_processor", "get", (Array:4))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php(349): CRM_Financial_BAO_PaymentProcessor::getAllPaymentProcessors("all")
+#22 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php(394): CRM_Financial_BAO_PaymentProcessor::getPaymentProcessors((Array:1))
+#23 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Config.php(439): CRM_Financial_BAO_PaymentProcessor::hasPaymentProcessorSupporting((Array:1))
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contribute/Page/Tab.php(280): CRM_Core_Config::isEnabledBackOfficeCreditCardPayments()
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(312): CRM_Contribute_Page_Tab->run((Array:4), NULL)
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#27 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#28 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#29 [internal function](): CiviCRM_For_WordPress->invoke("")
+#30 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#31 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#32 {main}
+
+
+Feb 10 15:50:17  [info] 
+$Fatal Error Details = array(3) {
+  ["message"]=>
+  string(23) "DB Error: no such field"
+  ["code"]=>
+  NULL
+  ["exception"]=>
+  object(CiviCRM_API3_Exception)#5116 (8) {
+    ["extraParams":"CiviCRM_API3_Exception":private]=>
+    array(6) {
+      ["error_code"]=>
+      string(13) "no such field"
+      ["sql"]=>
+      string(852) "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.description as `description`, a.payment_processor_type_id as `payment_processor_type_id`, a.is_active as `is_active`, a.is_default as `is_default`, a.is_test as `is_test`, a.user_name as `user_name`, a.password as `password`, a.signature as `signature`, a.url_site as `url_site`, a.url_api as `url_api`, a.url_recur as `url_recur`, a.url_button as `url_button`, a.subject as `subject`, a.class_name as `class_name`, a.billing_mode as `billing_mode`, a.is_recur as `is_recur`, a.payment_type as `payment_type`, a.payment_instrument_id as `payment_instrument_id`
+FROM civicrm_payment_processor a
+WHERE (`a`.`is_active` = "1") AND (`a`.`domain_id` = "1")
+ORDER BY a.is_default DESC, a.name
+LIMIT 25
+OFFSET 0
+ [nativecode=1054 ** Unknown column 'a.payment_instrument_id' in 'field list']"
+      ["tip"]=>
+      string(62) "add debug=1 to your API call to have more info about the error"
+      ["is_error"]=>
+      int(1)
+      ["error_message"]=>
+      string(23) "DB Error: no such field"
+      ["debug_information"]=>
+      string(852) "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.description as `description`, a.payment_processor_type_id as `payment_processor_type_id`, a.is_active as `is_active`, a.is_default as `is_default`, a.is_test as `is_test`, a.user_name as `user_name`, a.password as `password`, a.signature as `signature`, a.url_site as `url_site`, a.url_api as `url_api`, a.url_recur as `url_recur`, a.url_button as `url_button`, a.subject as `subject`, a.class_name as `class_name`, a.billing_mode as `billing_mode`, a.is_recur as `is_recur`, a.payment_type as `payment_type`, a.payment_instrument_id as `payment_instrument_id`
+FROM civicrm_payment_processor a
+WHERE (`a`.`is_active` = "1") AND (`a`.`domain_id` = "1")
+ORDER BY a.is_default DESC, a.name
+LIMIT 25
+OFFSET 0
+ [nativecode=1054 ** Unknown column 'a.payment_instrument_id' in 'field list']"
+    }
+    ["message":protected]=>
+    string(23) "DB Error: no such field"
+    ["string":"Exception":private]=>
+    string(0) ""
+    ["code":protected]=>
+    int(0)
+    ["file":protected]=>
+    string(88) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php"
+    ["line":protected]=>
+    int(45)
+    ["trace":"Exception":private]=>
+    array(12) {
+      [0]=>
+      array(4) {
+        ["file"]=>
+        string(115) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php"
+        ["line"]=>
+        int(293)
+        ["function"]=>
+        string(12) "civicrm_api3"
+        ["args"]=>
+        array(3) {
+          [0]=>
+          &string(17) "payment_processor"
+          [1]=>
+          &string(3) "get"
+          [2]=>
+          &array(4) {
+            ["is_active"]=>
+            bool(true)
+            ["domain_id"]=>
+            int(1)
+            ["options"]=>
+            array(1) {
+              ["sort"]=>
+              string(21) "is_default DESC, name"
+            }
+            ["api.payment_processor_type.getsingle"]=>
+            int(1)
+          }
+        }
+      }
+      [1]=>
+      array(6) {
+        ["file"]=>
+        string(115) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php"
+        ["line"]=>
+        int(349)
+        ["function"]=>
+        string(23) "getAllPaymentProcessors"
+        ["class"]=>
+        string(34) "CRM_Financial_BAO_PaymentProcessor"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &string(3) "all"
+        }
+      }
+      [2]=>
+      array(6) {
+        ["file"]=>
+        string(115) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php"
+        ["line"]=>
+        int(394)
+        ["function"]=>
+        string(20) "getPaymentProcessors"
+        ["class"]=>
+        string(34) "CRM_Financial_BAO_PaymentProcessor"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(1) {
+            [0]=>
+            string(10) "BackOffice"
+          }
+        }
+      }
+      [3]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Config.php"
+        ["line"]=>
+        int(439)
+        ["function"]=>
+        string(29) "hasPaymentProcessorSupporting"
+        ["class"]=>
+        string(34) "CRM_Financial_BAO_PaymentProcessor"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(1) {
+            [0]=>
+            string(10) "BackOffice"
+          }
+        }
+      }
+      [4]=>
+      array(6) {
+        ["file"]=>
+        string(104) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contribute/Page/Tab.php"
+        ["line"]=>
+        int(280)
+        ["function"]=>
+        string(37) "isEnabledBackOfficeCreditCardPayments"
+        ["class"]=>
+        string(15) "CRM_Core_Config"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(0) {
+        }
+      }
+      [5]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php"
+        ["line"]=>
+        int(312)
+        ["function"]=>
+        string(3) "run"
+        ["class"]=>
+        string(23) "CRM_Contribute_Page_Tab"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &array(4) {
+            [0]=>
+            string(7) "civicrm"
+            [1]=>
+            string(7) "contact"
+            [2]=>
+            string(4) "view"
+            [3]=>
+            string(12) "contribution"
+          }
+          [1]=>
+          &NULL
+        }
+      }
+      [6]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php"
+        ["line"]=>
+        int(86)
+        ["function"]=>
+        string(7) "runItem"
+        ["class"]=>
+        string(15) "CRM_Core_Invoke"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(13) {
+            ["id"]=>
+            string(3) "296"
+            ["domain_id"]=>
+            string(1) "1"
+            ["path"]=>
+            string(33) "civicrm/contact/view/contribution"
+            ["title"]=>
+            string(13) "Contributions"
+            ["access_callback"]=>
+            array(2) {
+              [0]=>
+              string(19) "CRM_Core_Permission"
+              [1]=>
+              string(9) "checkMenu"
+            }
+            ["access_arguments"]=>
+            array(2) {
+              [0]=>
+              array(3) {
+                [0]=>
+                string(14) "access CiviCRM"
+                [1]=>
+                string(15) "edit my contact"
+                [2]=>
+                string(15) "view my contact"
+              }
+              [1]=>
+              string(2) "or"
+            }
+            ["page_callback"]=>
+            string(23) "CRM_Contribute_Page_Tab"
+            ["breadcrumb"]=>
+            array(2) {
+              [0]=>
+              array(2) {
+                ["title"]=>
+                string(7) "CiviCRM"
+                ["url"]=>
+                string(58) "/wp-admin/admin.php?page=CiviCRM&amp;q=civicrm&amp;reset=1"
+              }
+              [1]=>
+              array(2) {
+                ["title"]=>
+                string(15) "Contact Summary"
+                ["url"]=>
+                string(87) "/wp-admin/admin.php?page=CiviCRM&amp;q=civicrm/contact/view&amp;reset=1&amp;cid=%%cid%%"
+              }
+            }
+            ["is_ssl"]=>
+            string(1) "0"
+            ["weight"]=>
+            string(1) "1"
+            ["type"]=>
+            string(1) "1"
+            ["page_type"]=>
+            string(1) "0"
+            ["page_arguments"]=>
+            bool(false)
+          }
+        }
+      }
+      [7]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php"
+        ["line"]=>
+        int(54)
+        ["function"]=>
+        string(7) "_invoke"
+        ["class"]=>
+        string(15) "CRM_Core_Invoke"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(4) {
+            [0]=>
+            string(7) "civicrm"
+            [1]=>
+            string(7) "contact"
+            [2]=>
+            string(4) "view"
+            [3]=>
+            string(12) "contribution"
+          }
+        }
+      }
+      [8]=>
+      array(6) {
+        ["file"]=>
+        string(80) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php"
+        ["line"]=>
+        int(1214)
+        ["function"]=>
+        string(6) "invoke"
+        ["class"]=>
+        string(15) "CRM_Core_Invoke"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(4) {
+            [0]=>
+            string(7) "civicrm"
+            [1]=>
+            string(7) "contact"
+            [2]=>
+            string(4) "view"
+            [3]=>
+            string(12) "contribution"
+          }
+        }
+      }
+      [9]=>
+      array(4) {
+        ["function"]=>
+        string(6) "invoke"
+        ["class"]=>
+        string(21) "CiviCRM_For_WordPress"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &string(0) ""
+        }
+      }
+      [10]=>
+      array(4) {
+        ["file"]=>
+        string(64) "/var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php"
+        ["line"]=>
+        int(525)
+        ["function"]=>
+        string(20) "call_user_func_array"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &array(2) {
+            [0]=>
+            object(CiviCRM_For_WordPress)#279 (8) {
+              ["shortcodes"]=>
+              object(CiviCRM_For_WordPress_Shortcodes)#277 (4) {
+                ["civi"]=>
+                *RECURSION*
+                ["shortcodes"]=>
+                array(0) {
+                }
+                ["shortcode_markup"]=>
+                array(0) {
+                }
+                ["shortcode_in_post"]=>
+                array(0) {
+                }
+              }
+              ["modal"]=>
+              object(CiviCRM_For_WordPress_Shortcodes_Modal)#276 (1) {
+                ["civi"]=>
+                *RECURSION*
+              }
+              ["basepage"]=>
+              object(CiviCRM_For_WordPress_Basepage)#275 (1) {
+                ["civi"]=>
+                *RECURSION*
+              }
+              ["users"]=>
+              object(CiviCRM_For_WordPress_Users)#278 (1) {
+                ["civi"]=>
+                *RECURSION*
+              }
+              ["wp_get"]=>
+              array(9) {
+                ["page"]=>
+                string(7) "CiviCRM"
+                ["q"]=>
+                string(33) "civicrm/contact/view/contribution"
+                ["reset"]=>
+                string(1) "1"
+                ["action"]=>
+                string(6) "update"
+                ["id"]=>
+                string(8) "11572448"
+                ["cid"]=>
+                string(3) "728"
+                ["context"]=>
+                string(12) "contribution"
+                ["snippet"]=>
+                string(4) "json"
+                ["noheader"]=>
+                string(1) "1"
+              }
+              ["wp_post"]=>
+              array(0) {
+              }
+              ["wp_cookie"]=>
+              array(6) {
+                ["wordpress_sec_41820d7a219b98836c296bd767a061c3"]=>
+                string(124) "tiac|1455726905|khUYwpiPrGZo8UkPMpoCMwEnALtdhkVGGkOKkepFWrA|66e5502fc63ac5c74c90aa82e17d819c35f87b1af3fc1bb1f5cdd6b00b9b4a62"
+                ["wp-settings-1"]=>
+                string(164) "hidetb=1&libraryContent=browse&editor=html&urlbutton=none&align=none&imgsize=large&ed_size=360&post_dfw=off&posts_list_mode=list&editor_expand=on&advImgDetails=hide"
+                ["wp-settings-time-1"]=>
+                string(10) "1454083617"
+                ["wordpress_logged_in_41820d7a219b98836c296bd767a061c3"]=>
+                string(124) "tiac|1455726905|khUYwpiPrGZo8UkPMpoCMwEnALtdhkVGGkOKkepFWrA|c20ceae6418bc025eb62c660afe19f68597c64a8c3f783706a0552fa54288124"
+                ["PHPSESSID"]=>
+                string(26) "j32dca7pt7k5255ti94r0crlf3"
+                ["_ga"]=>
+                string(26) "GA1.2.577911908.1454082371"
+              }
+              ["wp_request"]=>
+              array(9) {
+                ["page"]=>
+                string(7) "CiviCRM"
+                ["q"]=>
+                string(33) "civicrm/contact/view/contribution"
+                ["reset"]=>
+                string(1) "1"
+                ["action"]=>
+                string(6) "update"
+                ["id"]=>
+                string(8) "11572448"
+                ["cid"]=>
+                string(3) "728"
+                ["context"]=>
+                string(12) "contribution"
+                ["snippet"]=>
+                string(4) "json"
+                ["noheader"]=>
+                string(1) "1"
+              }
+            }
+            [1]=>
+            string(6) "invoke"
+          }
+          [1]=>
+          &array(1) {
+            [0]=>
+            string(0) ""
+          }
+        }
+      }
+      [11]=>
+      array(4) {
+        ["file"]=>
+        string(60) "/var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php"
+        ["line"]=>
+        int(236)
+        ["function"]=>
+        string(9) "do_action"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &string(21) "toplevel_page_CiviCRM"
+        }
+      }
+    }
+    ["previous":"Exception":private]=>
+    NULL
+  }
+}
+
+
+Feb 10 15:50:17  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(444): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(57): CRM_Core_Error::handleUnhandledException(Object(CiviCRM_API3_Exception))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#3 [internal function](): CiviCRM_For_WordPress->invoke("")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#6 {main}
+
+
+Feb 10 15:51:02  [info] Ignoring exception thrown by nullHandler: 0, fsockopen(): unable to connect to ssl://smtp.transparencia.pt:465 (Unknown error)
+
+Feb 10 15:51:02  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(906): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::nullHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("fsockopen(): unable to connect to ssl://smtp.transparencia.pt:465 (Unknown er...", 0, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(156): PEAR->raiseError("fsockopen(): unable to connect to ssl://smtp.transparencia.pt:465 (Unknown er...", 0)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(451): Net_Socket->connect("ssl://smtp.transparencia.pt", "465", FALSE, 30, NULL)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(372): Net_SMTP->connect(30)
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(255): Mail_smtp->getSMTPObject()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Admin/Form/Setting/Smtp.php(167): Mail_smtp->send("celso.rodrigues@transparencia.pt", (Array:3), "SMTP settings are correct.")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(423): CRM_Admin_Form_Setting_Smtp->postProcess()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Refresh.php(75): CRM_Core_Form->mainProcess()
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Refresh->perform(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("refresh")
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(286): CRM_Utils_Wrapper->run("CRM_Admin_Form_Setting_Smtp", "Outbound Email Settings", NULL)
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#19 [internal function](): CiviCRM_For_WordPress->invoke("")
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#22 {main}
+
+
+Feb 10 15:51:02  [info] Ignoring exception thrown by nullHandler: , Failed to connect socket: fsockopen(): unable to connect to ssl://smtp.transparencia.pt:465 (Unknown error)
+
+Feb 10 15:51:02  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(906): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::nullHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Failed to connect socket: fsockopen(): unable to connect to ssl://smtp.transp...", NULL, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(454): PEAR->raiseError("Failed to connect socket: fsockopen(): unable to connect to ssl://smtp.transp...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(372): Net_SMTP->connect(30)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(255): Mail_smtp->getSMTPObject()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Admin/Form/Setting/Smtp.php(167): Mail_smtp->send("celso.rodrigues@transparencia.pt", (Array:3), "SMTP settings are correct.")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(423): CRM_Admin_Form_Setting_Smtp->postProcess()
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Refresh.php(75): CRM_Core_Form->mainProcess()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Refresh->perform(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("refresh")
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(286): CRM_Utils_Wrapper->run("CRM_Admin_Form_Setting_Smtp", "Outbound Email Settings", NULL)
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#18 [internal function](): CiviCRM_For_WordPress->invoke("")
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#21 {main}
+
+
+Feb 10 15:51:02  [info] Ignoring exception thrown by nullHandler: 10001, Failed to connect to ssl://smtp.transparencia.pt:465 [SMTP: Failed to connect socket: fsockopen(): unable to connect to ssl://smtp.transparencia.pt:465 (Unknown error) (code: -1, response: )]
+
+Feb 10 15:51:02  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(906): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::nullHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Failed to connect to ssl://smtp.transparencia.pt:465 [SMTP: Failed to connect...", 10001, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(376): PEAR->raiseError("Failed to connect to ssl://smtp.transparencia.pt:465 [SMTP: Failed to connect...", 10001)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(255): Mail_smtp->getSMTPObject()
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Admin/Form/Setting/Smtp.php(167): Mail_smtp->send("celso.rodrigues@transparencia.pt", (Array:3), "SMTP settings are correct.")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(423): CRM_Admin_Form_Setting_Smtp->postProcess()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Refresh.php(75): CRM_Core_Form->mainProcess()
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Refresh->perform(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("refresh")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(286): CRM_Utils_Wrapper->run("CRM_Admin_Form_Setting_Smtp", "Outbound Email Settings", NULL)
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#17 [internal function](): CiviCRM_For_WordPress->invoke("")
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#20 {main}
+
+
+Feb 10 15:51:02  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 
+    [message] => not connected
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="not connected" code=0 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Feb 10 15:51:02  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("not connected", NULL, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(327): PEAR->raiseError("not connected")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(264): Net_Socket->write("QUIT\r\n")
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(302): Net_SMTP->_send("QUIT\r\n")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(493): Net_SMTP->_put("QUIT")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(421): Net_SMTP->disconnect()
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(218): Mail_smtp->disconnect()
+#10 [internal function](): Mail_smtp->_Mail_smtp()
+#11 {main}
+
+
+Feb 10 15:51:34  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(892): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: no such field", -19, 16, (Array:2), "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-19, 16, (Array:2), "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -19, NULL, NULL, "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(895): DB_common->raiseError(-19, NULL, NULL, NULL, "1054 ** Unknown column 'a.payment_instrument_id' in 'field list'")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(328): DB_mysql->mysqlRaiseError()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2435): DB_common->query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1627): DB_DataObject->_query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(334): DB_DataObject->query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(1267): CRM_Core_DAO->query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...", TRUE)
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/SelectQuery.php(290): CRM_Core_DAO::executeQuery("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/utils.php(1338): Civi\API\SelectQuery->run()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/PaymentProcessor.php(88): _civicrm_api3_basic_get("CRM_Financial_BAO_PaymentProcessor", (Array:5))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_payment_processor_get((Array:5))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("payment_processor", "get", (Array:5), NULL)
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(43): civicrm_api("payment_processor", "get", (Array:5))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php(293): civicrm_api3("payment_processor", "get", (Array:4))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php(349): CRM_Financial_BAO_PaymentProcessor::getAllPaymentProcessors("all")
+#22 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php(394): CRM_Financial_BAO_PaymentProcessor::getPaymentProcessors((Array:1))
+#23 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Config.php(439): CRM_Financial_BAO_PaymentProcessor::hasPaymentProcessorSupporting((Array:1))
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contribute/Page/Tab.php(280): CRM_Core_Config::isEnabledBackOfficeCreditCardPayments()
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(312): CRM_Contribute_Page_Tab->run((Array:4), NULL)
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#27 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#28 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#29 [internal function](): CiviCRM_For_WordPress->invoke("")
+#30 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#31 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#32 {main}
+
+
+Feb 10 15:51:34  [info] 
+$Fatal Error Details = array(3) {
+  ["message"]=>
+  string(23) "DB Error: no such field"
+  ["code"]=>
+  NULL
+  ["exception"]=>
+  object(CiviCRM_API3_Exception)#5116 (8) {
+    ["extraParams":"CiviCRM_API3_Exception":private]=>
+    array(6) {
+      ["error_code"]=>
+      string(13) "no such field"
+      ["sql"]=>
+      string(852) "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.description as `description`, a.payment_processor_type_id as `payment_processor_type_id`, a.is_active as `is_active`, a.is_default as `is_default`, a.is_test as `is_test`, a.user_name as `user_name`, a.password as `password`, a.signature as `signature`, a.url_site as `url_site`, a.url_api as `url_api`, a.url_recur as `url_recur`, a.url_button as `url_button`, a.subject as `subject`, a.class_name as `class_name`, a.billing_mode as `billing_mode`, a.is_recur as `is_recur`, a.payment_type as `payment_type`, a.payment_instrument_id as `payment_instrument_id`
+FROM civicrm_payment_processor a
+WHERE (`a`.`is_active` = "1") AND (`a`.`domain_id` = "1")
+ORDER BY a.is_default DESC, a.name
+LIMIT 25
+OFFSET 0
+ [nativecode=1054 ** Unknown column 'a.payment_instrument_id' in 'field list']"
+      ["tip"]=>
+      string(62) "add debug=1 to your API call to have more info about the error"
+      ["is_error"]=>
+      int(1)
+      ["error_message"]=>
+      string(23) "DB Error: no such field"
+      ["debug_information"]=>
+      string(852) "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.description as `description`, a.payment_processor_type_id as `payment_processor_type_id`, a.is_active as `is_active`, a.is_default as `is_default`, a.is_test as `is_test`, a.user_name as `user_name`, a.password as `password`, a.signature as `signature`, a.url_site as `url_site`, a.url_api as `url_api`, a.url_recur as `url_recur`, a.url_button as `url_button`, a.subject as `subject`, a.class_name as `class_name`, a.billing_mode as `billing_mode`, a.is_recur as `is_recur`, a.payment_type as `payment_type`, a.payment_instrument_id as `payment_instrument_id`
+FROM civicrm_payment_processor a
+WHERE (`a`.`is_active` = "1") AND (`a`.`domain_id` = "1")
+ORDER BY a.is_default DESC, a.name
+LIMIT 25
+OFFSET 0
+ [nativecode=1054 ** Unknown column 'a.payment_instrument_id' in 'field list']"
+    }
+    ["message":protected]=>
+    string(23) "DB Error: no such field"
+    ["string":"Exception":private]=>
+    string(0) ""
+    ["code":protected]=>
+    int(0)
+    ["file":protected]=>
+    string(88) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php"
+    ["line":protected]=>
+    int(45)
+    ["trace":"Exception":private]=>
+    array(12) {
+      [0]=>
+      array(4) {
+        ["file"]=>
+        string(115) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php"
+        ["line"]=>
+        int(293)
+        ["function"]=>
+        string(12) "civicrm_api3"
+        ["args"]=>
+        array(3) {
+          [0]=>
+          &string(17) "payment_processor"
+          [1]=>
+          &string(3) "get"
+          [2]=>
+          &array(4) {
+            ["is_active"]=>
+            bool(true)
+            ["domain_id"]=>
+            int(1)
+            ["options"]=>
+            array(1) {
+              ["sort"]=>
+              string(21) "is_default DESC, name"
+            }
+            ["api.payment_processor_type.getsingle"]=>
+            int(1)
+          }
+        }
+      }
+      [1]=>
+      array(6) {
+        ["file"]=>
+        string(115) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php"
+        ["line"]=>
+        int(349)
+        ["function"]=>
+        string(23) "getAllPaymentProcessors"
+        ["class"]=>
+        string(34) "CRM_Financial_BAO_PaymentProcessor"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &string(3) "all"
+        }
+      }
+      [2]=>
+      array(6) {
+        ["file"]=>
+        string(115) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php"
+        ["line"]=>
+        int(394)
+        ["function"]=>
+        string(20) "getPaymentProcessors"
+        ["class"]=>
+        string(34) "CRM_Financial_BAO_PaymentProcessor"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(1) {
+            [0]=>
+            string(10) "BackOffice"
+          }
+        }
+      }
+      [3]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Config.php"
+        ["line"]=>
+        int(439)
+        ["function"]=>
+        string(29) "hasPaymentProcessorSupporting"
+        ["class"]=>
+        string(34) "CRM_Financial_BAO_PaymentProcessor"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(1) {
+            [0]=>
+            string(10) "BackOffice"
+          }
+        }
+      }
+      [4]=>
+      array(6) {
+        ["file"]=>
+        string(104) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contribute/Page/Tab.php"
+        ["line"]=>
+        int(280)
+        ["function"]=>
+        string(37) "isEnabledBackOfficeCreditCardPayments"
+        ["class"]=>
+        string(15) "CRM_Core_Config"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(0) {
+        }
+      }
+      [5]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php"
+        ["line"]=>
+        int(312)
+        ["function"]=>
+        string(3) "run"
+        ["class"]=>
+        string(23) "CRM_Contribute_Page_Tab"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &array(4) {
+            [0]=>
+            string(7) "civicrm"
+            [1]=>
+            string(7) "contact"
+            [2]=>
+            string(4) "view"
+            [3]=>
+            string(12) "contribution"
+          }
+          [1]=>
+          &NULL
+        }
+      }
+      [6]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php"
+        ["line"]=>
+        int(86)
+        ["function"]=>
+        string(7) "runItem"
+        ["class"]=>
+        string(15) "CRM_Core_Invoke"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(13) {
+            ["id"]=>
+            string(3) "296"
+            ["domain_id"]=>
+            string(1) "1"
+            ["path"]=>
+            string(33) "civicrm/contact/view/contribution"
+            ["title"]=>
+            string(13) "Contributions"
+            ["access_callback"]=>
+            array(2) {
+              [0]=>
+              string(19) "CRM_Core_Permission"
+              [1]=>
+              string(9) "checkMenu"
+            }
+            ["access_arguments"]=>
+            array(2) {
+              [0]=>
+              array(3) {
+                [0]=>
+                string(14) "access CiviCRM"
+                [1]=>
+                string(15) "edit my contact"
+                [2]=>
+                string(15) "view my contact"
+              }
+              [1]=>
+              string(2) "or"
+            }
+            ["page_callback"]=>
+            string(23) "CRM_Contribute_Page_Tab"
+            ["breadcrumb"]=>
+            array(2) {
+              [0]=>
+              array(2) {
+                ["title"]=>
+                string(7) "CiviCRM"
+                ["url"]=>
+                string(58) "/wp-admin/admin.php?page=CiviCRM&amp;q=civicrm&amp;reset=1"
+              }
+              [1]=>
+              array(2) {
+                ["title"]=>
+                string(15) "Contact Summary"
+                ["url"]=>
+                string(87) "/wp-admin/admin.php?page=CiviCRM&amp;q=civicrm/contact/view&amp;reset=1&amp;cid=%%cid%%"
+              }
+            }
+            ["is_ssl"]=>
+            string(1) "0"
+            ["weight"]=>
+            string(1) "1"
+            ["type"]=>
+            string(1) "1"
+            ["page_type"]=>
+            string(1) "0"
+            ["page_arguments"]=>
+            bool(false)
+          }
+        }
+      }
+      [7]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php"
+        ["line"]=>
+        int(54)
+        ["function"]=>
+        string(7) "_invoke"
+        ["class"]=>
+        string(15) "CRM_Core_Invoke"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(4) {
+            [0]=>
+            string(7) "civicrm"
+            [1]=>
+            string(7) "contact"
+            [2]=>
+            string(4) "view"
+            [3]=>
+            string(12) "contribution"
+          }
+        }
+      }
+      [8]=>
+      array(6) {
+        ["file"]=>
+        string(80) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php"
+        ["line"]=>
+        int(1214)
+        ["function"]=>
+        string(6) "invoke"
+        ["class"]=>
+        string(15) "CRM_Core_Invoke"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(4) {
+            [0]=>
+            string(7) "civicrm"
+            [1]=>
+            string(7) "contact"
+            [2]=>
+            string(4) "view"
+            [3]=>
+            string(12) "contribution"
+          }
+        }
+      }
+      [9]=>
+      array(4) {
+        ["function"]=>
+        string(6) "invoke"
+        ["class"]=>
+        string(21) "CiviCRM_For_WordPress"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &string(0) ""
+        }
+      }
+      [10]=>
+      array(4) {
+        ["file"]=>
+        string(64) "/var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php"
+        ["line"]=>
+        int(525)
+        ["function"]=>
+        string(20) "call_user_func_array"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &array(2) {
+            [0]=>
+            object(CiviCRM_For_WordPress)#279 (8) {
+              ["shortcodes"]=>
+              object(CiviCRM_For_WordPress_Shortcodes)#277 (4) {
+                ["civi"]=>
+                *RECURSION*
+                ["shortcodes"]=>
+                array(0) {
+                }
+                ["shortcode_markup"]=>
+                array(0) {
+                }
+                ["shortcode_in_post"]=>
+                array(0) {
+                }
+              }
+              ["modal"]=>
+              object(CiviCRM_For_WordPress_Shortcodes_Modal)#276 (1) {
+                ["civi"]=>
+                *RECURSION*
+              }
+              ["basepage"]=>
+              object(CiviCRM_For_WordPress_Basepage)#275 (1) {
+                ["civi"]=>
+                *RECURSION*
+              }
+              ["users"]=>
+              object(CiviCRM_For_WordPress_Users)#278 (1) {
+                ["civi"]=>
+                *RECURSION*
+              }
+              ["wp_get"]=>
+              array(9) {
+                ["page"]=>
+                string(7) "CiviCRM"
+                ["q"]=>
+                string(33) "civicrm/contact/view/contribution"
+                ["reset"]=>
+                string(1) "1"
+                ["action"]=>
+                string(6) "update"
+                ["id"]=>
+                string(8) "11572448"
+                ["cid"]=>
+                string(3) "728"
+                ["context"]=>
+                string(12) "contribution"
+                ["snippet"]=>
+                string(4) "json"
+                ["noheader"]=>
+                string(1) "1"
+              }
+              ["wp_post"]=>
+              array(0) {
+              }
+              ["wp_cookie"]=>
+              array(6) {
+                ["wordpress_sec_41820d7a219b98836c296bd767a061c3"]=>
+                string(124) "tiac|1455726905|khUYwpiPrGZo8UkPMpoCMwEnALtdhkVGGkOKkepFWrA|66e5502fc63ac5c74c90aa82e17d819c35f87b1af3fc1bb1f5cdd6b00b9b4a62"
+                ["wp-settings-1"]=>
+                string(164) "hidetb=1&libraryContent=browse&editor=html&urlbutton=none&align=none&imgsize=large&ed_size=360&post_dfw=off&posts_list_mode=list&editor_expand=on&advImgDetails=hide"
+                ["wp-settings-time-1"]=>
+                string(10) "1454083617"
+                ["wordpress_logged_in_41820d7a219b98836c296bd767a061c3"]=>
+                string(124) "tiac|1455726905|khUYwpiPrGZo8UkPMpoCMwEnALtdhkVGGkOKkepFWrA|c20ceae6418bc025eb62c660afe19f68597c64a8c3f783706a0552fa54288124"
+                ["PHPSESSID"]=>
+                string(26) "j32dca7pt7k5255ti94r0crlf3"
+                ["_ga"]=>
+                string(26) "GA1.2.577911908.1454082371"
+              }
+              ["wp_request"]=>
+              array(9) {
+                ["page"]=>
+                string(7) "CiviCRM"
+                ["q"]=>
+                string(33) "civicrm/contact/view/contribution"
+                ["reset"]=>
+                string(1) "1"
+                ["action"]=>
+                string(6) "update"
+                ["id"]=>
+                string(8) "11572448"
+                ["cid"]=>
+                string(3) "728"
+                ["context"]=>
+                string(12) "contribution"
+                ["snippet"]=>
+                string(4) "json"
+                ["noheader"]=>
+                string(1) "1"
+              }
+            }
+            [1]=>
+            string(6) "invoke"
+          }
+          [1]=>
+          &array(1) {
+            [0]=>
+            string(0) ""
+          }
+        }
+      }
+      [11]=>
+      array(4) {
+        ["file"]=>
+        string(60) "/var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php"
+        ["line"]=>
+        int(236)
+        ["function"]=>
+        string(9) "do_action"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &string(21) "toplevel_page_CiviCRM"
+        }
+      }
+    }
+    ["previous":"Exception":private]=>
+    NULL
+  }
+}
+
+
+Feb 10 15:51:34  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(444): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(57): CRM_Core_Error::handleUnhandledException(Object(CiviCRM_API3_Exception))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#3 [internal function](): CiviCRM_For_WordPress->invoke("")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#6 {main}
+
+
+Feb 10 15:51:35  [info] Ignoring exception thrown by nullHandler: 0, fsockopen(): unable to connect to ssl://smtp.transparencia.pt:25 (Unknown error)
+
+Feb 10 15:51:35  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(906): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::nullHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("fsockopen(): unable to connect to ssl://smtp.transparencia.pt:25 (Unknown error)", 0, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(156): PEAR->raiseError("fsockopen(): unable to connect to ssl://smtp.transparencia.pt:25 (Unknown error)", 0)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(451): Net_Socket->connect("ssl://smtp.transparencia.pt", "25", FALSE, 30, NULL)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(372): Net_SMTP->connect(30)
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(255): Mail_smtp->getSMTPObject()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Admin/Form/Setting/Smtp.php(167): Mail_smtp->send("celso.rodrigues@transparencia.pt", (Array:3), "SMTP settings are correct.")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(423): CRM_Admin_Form_Setting_Smtp->postProcess()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Refresh.php(75): CRM_Core_Form->mainProcess()
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Refresh->perform(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("refresh")
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(286): CRM_Utils_Wrapper->run("CRM_Admin_Form_Setting_Smtp", "Outbound Email Settings", NULL)
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#19 [internal function](): CiviCRM_For_WordPress->invoke("")
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#22 {main}
+
+
+Feb 10 15:51:35  [info] Ignoring exception thrown by nullHandler: , Failed to connect socket: fsockopen(): unable to connect to ssl://smtp.transparencia.pt:25 (Unknown error)
+
+Feb 10 15:51:35  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(906): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::nullHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Failed to connect socket: fsockopen(): unable to connect to ssl://smtp.transp...", NULL, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(454): PEAR->raiseError("Failed to connect socket: fsockopen(): unable to connect to ssl://smtp.transp...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(372): Net_SMTP->connect(30)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(255): Mail_smtp->getSMTPObject()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Admin/Form/Setting/Smtp.php(167): Mail_smtp->send("celso.rodrigues@transparencia.pt", (Array:3), "SMTP settings are correct.")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(423): CRM_Admin_Form_Setting_Smtp->postProcess()
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Refresh.php(75): CRM_Core_Form->mainProcess()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Refresh->perform(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("refresh")
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(286): CRM_Utils_Wrapper->run("CRM_Admin_Form_Setting_Smtp", "Outbound Email Settings", NULL)
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#18 [internal function](): CiviCRM_For_WordPress->invoke("")
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#21 {main}
+
+
+Feb 10 15:51:35  [info] Ignoring exception thrown by nullHandler: 10001, Failed to connect to ssl://smtp.transparencia.pt:25 [SMTP: Failed to connect socket: fsockopen(): unable to connect to ssl://smtp.transparencia.pt:25 (Unknown error) (code: -1, response: )]
+
+Feb 10 15:51:35  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(906): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::nullHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Failed to connect to ssl://smtp.transparencia.pt:25 [SMTP: Failed to connect ...", 10001, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(376): PEAR->raiseError("Failed to connect to ssl://smtp.transparencia.pt:25 [SMTP: Failed to connect ...", 10001)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(255): Mail_smtp->getSMTPObject()
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Admin/Form/Setting/Smtp.php(167): Mail_smtp->send("celso.rodrigues@transparencia.pt", (Array:3), "SMTP settings are correct.")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(423): CRM_Admin_Form_Setting_Smtp->postProcess()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Refresh.php(75): CRM_Core_Form->mainProcess()
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Refresh->perform(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("refresh")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(286): CRM_Utils_Wrapper->run("CRM_Admin_Form_Setting_Smtp", "Outbound Email Settings", NULL)
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#17 [internal function](): CiviCRM_For_WordPress->invoke("")
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#20 {main}
+
+
+Feb 10 15:51:35  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 
+    [message] => not connected
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="not connected" code=0 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Feb 10 15:51:35  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("not connected", NULL, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(327): PEAR->raiseError("not connected")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(264): Net_Socket->write("QUIT\r\n")
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(302): Net_SMTP->_send("QUIT\r\n")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(493): Net_SMTP->_put("QUIT")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(421): Net_SMTP->disconnect()
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(218): Mail_smtp->disconnect()
+#10 [internal function](): Mail_smtp->_Mail_smtp()
+#11 {main}
+
+
+Feb 10 15:51:51  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(892): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: no such field", -19, 16, (Array:2), "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-19, 16, (Array:2), "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -19, NULL, NULL, "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(895): DB_common->raiseError(-19, NULL, NULL, NULL, "1054 ** Unknown column 'a.payment_instrument_id' in 'field list'")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(328): DB_mysql->mysqlRaiseError()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2435): DB_common->query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1627): DB_DataObject->_query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(334): DB_DataObject->query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(1267): CRM_Core_DAO->query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...", TRUE)
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/SelectQuery.php(290): CRM_Core_DAO::executeQuery("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/utils.php(1338): Civi\API\SelectQuery->run()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/PaymentProcessor.php(88): _civicrm_api3_basic_get("CRM_Financial_BAO_PaymentProcessor", (Array:5))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_payment_processor_get((Array:5))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("payment_processor", "get", (Array:5), NULL)
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(43): civicrm_api("payment_processor", "get", (Array:5))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php(293): civicrm_api3("payment_processor", "get", (Array:4))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php(349): CRM_Financial_BAO_PaymentProcessor::getAllPaymentProcessors("all")
+#22 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php(394): CRM_Financial_BAO_PaymentProcessor::getPaymentProcessors((Array:1))
+#23 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Config.php(439): CRM_Financial_BAO_PaymentProcessor::hasPaymentProcessorSupporting((Array:1))
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contribute/Page/Tab.php(280): CRM_Core_Config::isEnabledBackOfficeCreditCardPayments()
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(312): CRM_Contribute_Page_Tab->run((Array:4), NULL)
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#27 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#28 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#29 [internal function](): CiviCRM_For_WordPress->invoke("")
+#30 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#31 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#32 {main}
+
+
+Feb 10 15:51:51  [info] 
+$Fatal Error Details = array(3) {
+  ["message"]=>
+  string(23) "DB Error: no such field"
+  ["code"]=>
+  NULL
+  ["exception"]=>
+  object(CiviCRM_API3_Exception)#5116 (8) {
+    ["extraParams":"CiviCRM_API3_Exception":private]=>
+    array(6) {
+      ["error_code"]=>
+      string(13) "no such field"
+      ["sql"]=>
+      string(852) "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.description as `description`, a.payment_processor_type_id as `payment_processor_type_id`, a.is_active as `is_active`, a.is_default as `is_default`, a.is_test as `is_test`, a.user_name as `user_name`, a.password as `password`, a.signature as `signature`, a.url_site as `url_site`, a.url_api as `url_api`, a.url_recur as `url_recur`, a.url_button as `url_button`, a.subject as `subject`, a.class_name as `class_name`, a.billing_mode as `billing_mode`, a.is_recur as `is_recur`, a.payment_type as `payment_type`, a.payment_instrument_id as `payment_instrument_id`
+FROM civicrm_payment_processor a
+WHERE (`a`.`is_active` = "1") AND (`a`.`domain_id` = "1")
+ORDER BY a.is_default DESC, a.name
+LIMIT 25
+OFFSET 0
+ [nativecode=1054 ** Unknown column 'a.payment_instrument_id' in 'field list']"
+      ["tip"]=>
+      string(62) "add debug=1 to your API call to have more info about the error"
+      ["is_error"]=>
+      int(1)
+      ["error_message"]=>
+      string(23) "DB Error: no such field"
+      ["debug_information"]=>
+      string(852) "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.description as `description`, a.payment_processor_type_id as `payment_processor_type_id`, a.is_active as `is_active`, a.is_default as `is_default`, a.is_test as `is_test`, a.user_name as `user_name`, a.password as `password`, a.signature as `signature`, a.url_site as `url_site`, a.url_api as `url_api`, a.url_recur as `url_recur`, a.url_button as `url_button`, a.subject as `subject`, a.class_name as `class_name`, a.billing_mode as `billing_mode`, a.is_recur as `is_recur`, a.payment_type as `payment_type`, a.payment_instrument_id as `payment_instrument_id`
+FROM civicrm_payment_processor a
+WHERE (`a`.`is_active` = "1") AND (`a`.`domain_id` = "1")
+ORDER BY a.is_default DESC, a.name
+LIMIT 25
+OFFSET 0
+ [nativecode=1054 ** Unknown column 'a.payment_instrument_id' in 'field list']"
+    }
+    ["message":protected]=>
+    string(23) "DB Error: no such field"
+    ["string":"Exception":private]=>
+    string(0) ""
+    ["code":protected]=>
+    int(0)
+    ["file":protected]=>
+    string(88) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php"
+    ["line":protected]=>
+    int(45)
+    ["trace":"Exception":private]=>
+    array(12) {
+      [0]=>
+      array(4) {
+        ["file"]=>
+        string(115) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php"
+        ["line"]=>
+        int(293)
+        ["function"]=>
+        string(12) "civicrm_api3"
+        ["args"]=>
+        array(3) {
+          [0]=>
+          &string(17) "payment_processor"
+          [1]=>
+          &string(3) "get"
+          [2]=>
+          &array(4) {
+            ["is_active"]=>
+            bool(true)
+            ["domain_id"]=>
+            int(1)
+            ["options"]=>
+            array(1) {
+              ["sort"]=>
+              string(21) "is_default DESC, name"
+            }
+            ["api.payment_processor_type.getsingle"]=>
+            int(1)
+          }
+        }
+      }
+      [1]=>
+      array(6) {
+        ["file"]=>
+        string(115) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php"
+        ["line"]=>
+        int(349)
+        ["function"]=>
+        string(23) "getAllPaymentProcessors"
+        ["class"]=>
+        string(34) "CRM_Financial_BAO_PaymentProcessor"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &string(3) "all"
+        }
+      }
+      [2]=>
+      array(6) {
+        ["file"]=>
+        string(115) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php"
+        ["line"]=>
+        int(394)
+        ["function"]=>
+        string(20) "getPaymentProcessors"
+        ["class"]=>
+        string(34) "CRM_Financial_BAO_PaymentProcessor"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(1) {
+            [0]=>
+            string(10) "BackOffice"
+          }
+        }
+      }
+      [3]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Config.php"
+        ["line"]=>
+        int(439)
+        ["function"]=>
+        string(29) "hasPaymentProcessorSupporting"
+        ["class"]=>
+        string(34) "CRM_Financial_BAO_PaymentProcessor"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(1) {
+            [0]=>
+            string(10) "BackOffice"
+          }
+        }
+      }
+      [4]=>
+      array(6) {
+        ["file"]=>
+        string(104) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contribute/Page/Tab.php"
+        ["line"]=>
+        int(280)
+        ["function"]=>
+        string(37) "isEnabledBackOfficeCreditCardPayments"
+        ["class"]=>
+        string(15) "CRM_Core_Config"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(0) {
+        }
+      }
+      [5]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php"
+        ["line"]=>
+        int(312)
+        ["function"]=>
+        string(3) "run"
+        ["class"]=>
+        string(23) "CRM_Contribute_Page_Tab"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &array(4) {
+            [0]=>
+            string(7) "civicrm"
+            [1]=>
+            string(7) "contact"
+            [2]=>
+            string(4) "view"
+            [3]=>
+            string(12) "contribution"
+          }
+          [1]=>
+          &NULL
+        }
+      }
+      [6]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php"
+        ["line"]=>
+        int(86)
+        ["function"]=>
+        string(7) "runItem"
+        ["class"]=>
+        string(15) "CRM_Core_Invoke"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(13) {
+            ["id"]=>
+            string(3) "296"
+            ["domain_id"]=>
+            string(1) "1"
+            ["path"]=>
+            string(33) "civicrm/contact/view/contribution"
+            ["title"]=>
+            string(13) "Contributions"
+            ["access_callback"]=>
+            array(2) {
+              [0]=>
+              string(19) "CRM_Core_Permission"
+              [1]=>
+              string(9) "checkMenu"
+            }
+            ["access_arguments"]=>
+            array(2) {
+              [0]=>
+              array(3) {
+                [0]=>
+                string(14) "access CiviCRM"
+                [1]=>
+                string(15) "edit my contact"
+                [2]=>
+                string(15) "view my contact"
+              }
+              [1]=>
+              string(2) "or"
+            }
+            ["page_callback"]=>
+            string(23) "CRM_Contribute_Page_Tab"
+            ["breadcrumb"]=>
+            array(2) {
+              [0]=>
+              array(2) {
+                ["title"]=>
+                string(7) "CiviCRM"
+                ["url"]=>
+                string(58) "/wp-admin/admin.php?page=CiviCRM&amp;q=civicrm&amp;reset=1"
+              }
+              [1]=>
+              array(2) {
+                ["title"]=>
+                string(15) "Contact Summary"
+                ["url"]=>
+                string(87) "/wp-admin/admin.php?page=CiviCRM&amp;q=civicrm/contact/view&amp;reset=1&amp;cid=%%cid%%"
+              }
+            }
+            ["is_ssl"]=>
+            string(1) "0"
+            ["weight"]=>
+            string(1) "1"
+            ["type"]=>
+            string(1) "1"
+            ["page_type"]=>
+            string(1) "0"
+            ["page_arguments"]=>
+            bool(false)
+          }
+        }
+      }
+      [7]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php"
+        ["line"]=>
+        int(54)
+        ["function"]=>
+        string(7) "_invoke"
+        ["class"]=>
+        string(15) "CRM_Core_Invoke"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(4) {
+            [0]=>
+            string(7) "civicrm"
+            [1]=>
+            string(7) "contact"
+            [2]=>
+            string(4) "view"
+            [3]=>
+            string(12) "contribution"
+          }
+        }
+      }
+      [8]=>
+      array(6) {
+        ["file"]=>
+        string(80) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php"
+        ["line"]=>
+        int(1214)
+        ["function"]=>
+        string(6) "invoke"
+        ["class"]=>
+        string(15) "CRM_Core_Invoke"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(4) {
+            [0]=>
+            string(7) "civicrm"
+            [1]=>
+            string(7) "contact"
+            [2]=>
+            string(4) "view"
+            [3]=>
+            string(12) "contribution"
+          }
+        }
+      }
+      [9]=>
+      array(4) {
+        ["function"]=>
+        string(6) "invoke"
+        ["class"]=>
+        string(21) "CiviCRM_For_WordPress"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &string(0) ""
+        }
+      }
+      [10]=>
+      array(4) {
+        ["file"]=>
+        string(64) "/var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php"
+        ["line"]=>
+        int(525)
+        ["function"]=>
+        string(20) "call_user_func_array"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &array(2) {
+            [0]=>
+            object(CiviCRM_For_WordPress)#279 (8) {
+              ["shortcodes"]=>
+              object(CiviCRM_For_WordPress_Shortcodes)#277 (4) {
+                ["civi"]=>
+                *RECURSION*
+                ["shortcodes"]=>
+                array(0) {
+                }
+                ["shortcode_markup"]=>
+                array(0) {
+                }
+                ["shortcode_in_post"]=>
+                array(0) {
+                }
+              }
+              ["modal"]=>
+              object(CiviCRM_For_WordPress_Shortcodes_Modal)#276 (1) {
+                ["civi"]=>
+                *RECURSION*
+              }
+              ["basepage"]=>
+              object(CiviCRM_For_WordPress_Basepage)#275 (1) {
+                ["civi"]=>
+                *RECURSION*
+              }
+              ["users"]=>
+              object(CiviCRM_For_WordPress_Users)#278 (1) {
+                ["civi"]=>
+                *RECURSION*
+              }
+              ["wp_get"]=>
+              array(9) {
+                ["page"]=>
+                string(7) "CiviCRM"
+                ["q"]=>
+                string(33) "civicrm/contact/view/contribution"
+                ["reset"]=>
+                string(1) "1"
+                ["action"]=>
+                string(6) "update"
+                ["id"]=>
+                string(8) "11572448"
+                ["cid"]=>
+                string(3) "728"
+                ["context"]=>
+                string(12) "contribution"
+                ["snippet"]=>
+                string(4) "json"
+                ["noheader"]=>
+                string(1) "1"
+              }
+              ["wp_post"]=>
+              array(0) {
+              }
+              ["wp_cookie"]=>
+              array(6) {
+                ["wordpress_sec_41820d7a219b98836c296bd767a061c3"]=>
+                string(124) "tiac|1455726905|khUYwpiPrGZo8UkPMpoCMwEnALtdhkVGGkOKkepFWrA|66e5502fc63ac5c74c90aa82e17d819c35f87b1af3fc1bb1f5cdd6b00b9b4a62"
+                ["wp-settings-1"]=>
+                string(164) "hidetb=1&libraryContent=browse&editor=html&urlbutton=none&align=none&imgsize=large&ed_size=360&post_dfw=off&posts_list_mode=list&editor_expand=on&advImgDetails=hide"
+                ["wp-settings-time-1"]=>
+                string(10) "1454083617"
+                ["wordpress_logged_in_41820d7a219b98836c296bd767a061c3"]=>
+                string(124) "tiac|1455726905|khUYwpiPrGZo8UkPMpoCMwEnALtdhkVGGkOKkepFWrA|c20ceae6418bc025eb62c660afe19f68597c64a8c3f783706a0552fa54288124"
+                ["PHPSESSID"]=>
+                string(26) "j32dca7pt7k5255ti94r0crlf3"
+                ["_ga"]=>
+                string(26) "GA1.2.577911908.1454082371"
+              }
+              ["wp_request"]=>
+              array(9) {
+                ["page"]=>
+                string(7) "CiviCRM"
+                ["q"]=>
+                string(33) "civicrm/contact/view/contribution"
+                ["reset"]=>
+                string(1) "1"
+                ["action"]=>
+                string(6) "update"
+                ["id"]=>
+                string(8) "11572448"
+                ["cid"]=>
+                string(3) "728"
+                ["context"]=>
+                string(12) "contribution"
+                ["snippet"]=>
+                string(4) "json"
+                ["noheader"]=>
+                string(1) "1"
+              }
+            }
+            [1]=>
+            string(6) "invoke"
+          }
+          [1]=>
+          &array(1) {
+            [0]=>
+            string(0) ""
+          }
+        }
+      }
+      [11]=>
+      array(4) {
+        ["file"]=>
+        string(60) "/var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php"
+        ["line"]=>
+        int(236)
+        ["function"]=>
+        string(9) "do_action"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &string(21) "toplevel_page_CiviCRM"
+        }
+      }
+    }
+    ["previous":"Exception":private]=>
+    NULL
+  }
+}
+
+
+Feb 10 15:51:51  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(444): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(57): CRM_Core_Error::handleUnhandledException(Object(CiviCRM_API3_Exception))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#3 [internal function](): CiviCRM_For_WordPress->invoke("")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#6 {main}
+
+
+Feb 10 15:52:00  [info] Ignoring exception thrown by nullHandler: , STARTTLS failed
+
+Feb 10 15:52:00  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(906): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::nullHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("STARTTLS failed", NULL, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(615): PEAR->raiseError("STARTTLS failed")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(385): Net_SMTP->auth("secretariado@transparencia.pt", "���@(4�M���U��-����n�_�k�>5", "")
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(255): Mail_smtp->getSMTPObject()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Admin/Form/Setting/Smtp.php(167): Mail_smtp->send("celso.rodrigues@transparencia.pt", (Array:3), "SMTP settings are correct.")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(423): CRM_Admin_Form_Setting_Smtp->postProcess()
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Refresh.php(75): CRM_Core_Form->mainProcess()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Refresh->perform(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("refresh")
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(286): CRM_Utils_Wrapper->run("CRM_Admin_Form_Setting_Smtp", "Outbound Email Settings", NULL)
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#18 [internal function](): CiviCRM_For_WordPress->invoke("")
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#21 {main}
+
+
+Feb 10 15:52:00  [info] Ignoring exception thrown by nullHandler: 10002,  authentication failure [SMTP: STARTTLS failed (code: 220, response: 2.0.0 Ready to start TLS)]
+
+Feb 10 15:52:00  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(906): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::nullHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error(" authentication failure [SMTP: STARTTLS failed (code: 220, response: 2.0.0 Re...", 10002, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(389): PEAR->raiseError(" authentication failure [SMTP: STARTTLS failed (code: 220, response: 2.0.0 Re...", 10002)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(255): Mail_smtp->getSMTPObject()
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Admin/Form/Setting/Smtp.php(167): Mail_smtp->send("celso.rodrigues@transparencia.pt", (Array:3), "SMTP settings are correct.")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(423): CRM_Admin_Form_Setting_Smtp->postProcess()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Refresh.php(75): CRM_Core_Form->mainProcess()
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Refresh->perform(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("refresh")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(286): CRM_Utils_Wrapper->run("CRM_Admin_Form_Setting_Smtp", "Outbound Email Settings", NULL)
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#17 [internal function](): CiviCRM_For_WordPress->invoke("")
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#20 {main}
+
+
+Feb 10 15:52:23  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(892): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: no such field", -19, 16, (Array:2), "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-19, 16, (Array:2), "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -19, NULL, NULL, "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(895): DB_common->raiseError(-19, NULL, NULL, NULL, "1054 ** Unknown column 'a.payment_instrument_id' in 'field list'")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(328): DB_mysql->mysqlRaiseError()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2435): DB_common->query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1627): DB_DataObject->_query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(334): DB_DataObject->query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(1267): CRM_Core_DAO->query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...", TRUE)
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/SelectQuery.php(290): CRM_Core_DAO::executeQuery("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/utils.php(1338): Civi\API\SelectQuery->run()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/PaymentProcessor.php(88): _civicrm_api3_basic_get("CRM_Financial_BAO_PaymentProcessor", (Array:5))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_payment_processor_get((Array:5))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("payment_processor", "get", (Array:5), NULL)
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(43): civicrm_api("payment_processor", "get", (Array:5))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php(293): civicrm_api3("payment_processor", "get", (Array:4))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php(349): CRM_Financial_BAO_PaymentProcessor::getAllPaymentProcessors("all")
+#22 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php(394): CRM_Financial_BAO_PaymentProcessor::getPaymentProcessors((Array:1))
+#23 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Config.php(439): CRM_Financial_BAO_PaymentProcessor::hasPaymentProcessorSupporting((Array:1))
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contribute/Page/Tab.php(280): CRM_Core_Config::isEnabledBackOfficeCreditCardPayments()
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(312): CRM_Contribute_Page_Tab->run((Array:4), NULL)
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#27 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#28 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#29 [internal function](): CiviCRM_For_WordPress->invoke("")
+#30 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#31 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#32 {main}
+
+
+Feb 10 15:52:23  [info] 
+$Fatal Error Details = array(3) {
+  ["message"]=>
+  string(23) "DB Error: no such field"
+  ["code"]=>
+  NULL
+  ["exception"]=>
+  object(CiviCRM_API3_Exception)#5116 (8) {
+    ["extraParams":"CiviCRM_API3_Exception":private]=>
+    array(6) {
+      ["error_code"]=>
+      string(13) "no such field"
+      ["sql"]=>
+      string(852) "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.description as `description`, a.payment_processor_type_id as `payment_processor_type_id`, a.is_active as `is_active`, a.is_default as `is_default`, a.is_test as `is_test`, a.user_name as `user_name`, a.password as `password`, a.signature as `signature`, a.url_site as `url_site`, a.url_api as `url_api`, a.url_recur as `url_recur`, a.url_button as `url_button`, a.subject as `subject`, a.class_name as `class_name`, a.billing_mode as `billing_mode`, a.is_recur as `is_recur`, a.payment_type as `payment_type`, a.payment_instrument_id as `payment_instrument_id`
+FROM civicrm_payment_processor a
+WHERE (`a`.`is_active` = "1") AND (`a`.`domain_id` = "1")
+ORDER BY a.is_default DESC, a.name
+LIMIT 25
+OFFSET 0
+ [nativecode=1054 ** Unknown column 'a.payment_instrument_id' in 'field list']"
+      ["tip"]=>
+      string(62) "add debug=1 to your API call to have more info about the error"
+      ["is_error"]=>
+      int(1)
+      ["error_message"]=>
+      string(23) "DB Error: no such field"
+      ["debug_information"]=>
+      string(852) "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.description as `description`, a.payment_processor_type_id as `payment_processor_type_id`, a.is_active as `is_active`, a.is_default as `is_default`, a.is_test as `is_test`, a.user_name as `user_name`, a.password as `password`, a.signature as `signature`, a.url_site as `url_site`, a.url_api as `url_api`, a.url_recur as `url_recur`, a.url_button as `url_button`, a.subject as `subject`, a.class_name as `class_name`, a.billing_mode as `billing_mode`, a.is_recur as `is_recur`, a.payment_type as `payment_type`, a.payment_instrument_id as `payment_instrument_id`
+FROM civicrm_payment_processor a
+WHERE (`a`.`is_active` = "1") AND (`a`.`domain_id` = "1")
+ORDER BY a.is_default DESC, a.name
+LIMIT 25
+OFFSET 0
+ [nativecode=1054 ** Unknown column 'a.payment_instrument_id' in 'field list']"
+    }
+    ["message":protected]=>
+    string(23) "DB Error: no such field"
+    ["string":"Exception":private]=>
+    string(0) ""
+    ["code":protected]=>
+    int(0)
+    ["file":protected]=>
+    string(88) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php"
+    ["line":protected]=>
+    int(45)
+    ["trace":"Exception":private]=>
+    array(12) {
+      [0]=>
+      array(4) {
+        ["file"]=>
+        string(115) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php"
+        ["line"]=>
+        int(293)
+        ["function"]=>
+        string(12) "civicrm_api3"
+        ["args"]=>
+        array(3) {
+          [0]=>
+          &string(17) "payment_processor"
+          [1]=>
+          &string(3) "get"
+          [2]=>
+          &array(4) {
+            ["is_active"]=>
+            bool(true)
+            ["domain_id"]=>
+            int(1)
+            ["options"]=>
+            array(1) {
+              ["sort"]=>
+              string(21) "is_default DESC, name"
+            }
+            ["api.payment_processor_type.getsingle"]=>
+            int(1)
+          }
+        }
+      }
+      [1]=>
+      array(6) {
+        ["file"]=>
+        string(115) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php"
+        ["line"]=>
+        int(349)
+        ["function"]=>
+        string(23) "getAllPaymentProcessors"
+        ["class"]=>
+        string(34) "CRM_Financial_BAO_PaymentProcessor"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &string(3) "all"
+        }
+      }
+      [2]=>
+      array(6) {
+        ["file"]=>
+        string(115) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php"
+        ["line"]=>
+        int(394)
+        ["function"]=>
+        string(20) "getPaymentProcessors"
+        ["class"]=>
+        string(34) "CRM_Financial_BAO_PaymentProcessor"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(1) {
+            [0]=>
+            string(10) "BackOffice"
+          }
+        }
+      }
+      [3]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Config.php"
+        ["line"]=>
+        int(439)
+        ["function"]=>
+        string(29) "hasPaymentProcessorSupporting"
+        ["class"]=>
+        string(34) "CRM_Financial_BAO_PaymentProcessor"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(1) {
+            [0]=>
+            string(10) "BackOffice"
+          }
+        }
+      }
+      [4]=>
+      array(6) {
+        ["file"]=>
+        string(104) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contribute/Page/Tab.php"
+        ["line"]=>
+        int(280)
+        ["function"]=>
+        string(37) "isEnabledBackOfficeCreditCardPayments"
+        ["class"]=>
+        string(15) "CRM_Core_Config"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(0) {
+        }
+      }
+      [5]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php"
+        ["line"]=>
+        int(312)
+        ["function"]=>
+        string(3) "run"
+        ["class"]=>
+        string(23) "CRM_Contribute_Page_Tab"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &array(4) {
+            [0]=>
+            string(7) "civicrm"
+            [1]=>
+            string(7) "contact"
+            [2]=>
+            string(4) "view"
+            [3]=>
+            string(12) "contribution"
+          }
+          [1]=>
+          &NULL
+        }
+      }
+      [6]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php"
+        ["line"]=>
+        int(86)
+        ["function"]=>
+        string(7) "runItem"
+        ["class"]=>
+        string(15) "CRM_Core_Invoke"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(13) {
+            ["id"]=>
+            string(3) "296"
+            ["domain_id"]=>
+            string(1) "1"
+            ["path"]=>
+            string(33) "civicrm/contact/view/contribution"
+            ["title"]=>
+            string(13) "Contributions"
+            ["access_callback"]=>
+            array(2) {
+              [0]=>
+              string(19) "CRM_Core_Permission"
+              [1]=>
+              string(9) "checkMenu"
+            }
+            ["access_arguments"]=>
+            array(2) {
+              [0]=>
+              array(3) {
+                [0]=>
+                string(14) "access CiviCRM"
+                [1]=>
+                string(15) "edit my contact"
+                [2]=>
+                string(15) "view my contact"
+              }
+              [1]=>
+              string(2) "or"
+            }
+            ["page_callback"]=>
+            string(23) "CRM_Contribute_Page_Tab"
+            ["breadcrumb"]=>
+            array(2) {
+              [0]=>
+              array(2) {
+                ["title"]=>
+                string(7) "CiviCRM"
+                ["url"]=>
+                string(58) "/wp-admin/admin.php?page=CiviCRM&amp;q=civicrm&amp;reset=1"
+              }
+              [1]=>
+              array(2) {
+                ["title"]=>
+                string(15) "Contact Summary"
+                ["url"]=>
+                string(87) "/wp-admin/admin.php?page=CiviCRM&amp;q=civicrm/contact/view&amp;reset=1&amp;cid=%%cid%%"
+              }
+            }
+            ["is_ssl"]=>
+            string(1) "0"
+            ["weight"]=>
+            string(1) "1"
+            ["type"]=>
+            string(1) "1"
+            ["page_type"]=>
+            string(1) "0"
+            ["page_arguments"]=>
+            bool(false)
+          }
+        }
+      }
+      [7]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php"
+        ["line"]=>
+        int(54)
+        ["function"]=>
+        string(7) "_invoke"
+        ["class"]=>
+        string(15) "CRM_Core_Invoke"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(4) {
+            [0]=>
+            string(7) "civicrm"
+            [1]=>
+            string(7) "contact"
+            [2]=>
+            string(4) "view"
+            [3]=>
+            string(12) "contribution"
+          }
+        }
+      }
+      [8]=>
+      array(6) {
+        ["file"]=>
+        string(80) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php"
+        ["line"]=>
+        int(1214)
+        ["function"]=>
+        string(6) "invoke"
+        ["class"]=>
+        string(15) "CRM_Core_Invoke"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(4) {
+            [0]=>
+            string(7) "civicrm"
+            [1]=>
+            string(7) "contact"
+            [2]=>
+            string(4) "view"
+            [3]=>
+            string(12) "contribution"
+          }
+        }
+      }
+      [9]=>
+      array(4) {
+        ["function"]=>
+        string(6) "invoke"
+        ["class"]=>
+        string(21) "CiviCRM_For_WordPress"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &string(0) ""
+        }
+      }
+      [10]=>
+      array(4) {
+        ["file"]=>
+        string(64) "/var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php"
+        ["line"]=>
+        int(525)
+        ["function"]=>
+        string(20) "call_user_func_array"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &array(2) {
+            [0]=>
+            object(CiviCRM_For_WordPress)#279 (8) {
+              ["shortcodes"]=>
+              object(CiviCRM_For_WordPress_Shortcodes)#277 (4) {
+                ["civi"]=>
+                *RECURSION*
+                ["shortcodes"]=>
+                array(0) {
+                }
+                ["shortcode_markup"]=>
+                array(0) {
+                }
+                ["shortcode_in_post"]=>
+                array(0) {
+                }
+              }
+              ["modal"]=>
+              object(CiviCRM_For_WordPress_Shortcodes_Modal)#276 (1) {
+                ["civi"]=>
+                *RECURSION*
+              }
+              ["basepage"]=>
+              object(CiviCRM_For_WordPress_Basepage)#275 (1) {
+                ["civi"]=>
+                *RECURSION*
+              }
+              ["users"]=>
+              object(CiviCRM_For_WordPress_Users)#278 (1) {
+                ["civi"]=>
+                *RECURSION*
+              }
+              ["wp_get"]=>
+              array(7) {
+                ["page"]=>
+                string(7) "CiviCRM"
+                ["q"]=>
+                string(33) "civicrm/contact/view/contribution"
+                ["reset"]=>
+                string(1) "1"
+                ["force"]=>
+                string(1) "1"
+                ["cid"]=>
+                string(3) "728"
+                ["snippet"]=>
+                string(4) "json"
+                ["noheader"]=>
+                string(1) "1"
+              }
+              ["wp_post"]=>
+              array(0) {
+              }
+              ["wp_cookie"]=>
+              array(6) {
+                ["wordpress_sec_41820d7a219b98836c296bd767a061c3"]=>
+                string(124) "tiac|1455726905|khUYwpiPrGZo8UkPMpoCMwEnALtdhkVGGkOKkepFWrA|66e5502fc63ac5c74c90aa82e17d819c35f87b1af3fc1bb1f5cdd6b00b9b4a62"
+                ["wp-settings-1"]=>
+                string(164) "hidetb=1&libraryContent=browse&editor=html&urlbutton=none&align=none&imgsize=large&ed_size=360&post_dfw=off&posts_list_mode=list&editor_expand=on&advImgDetails=hide"
+                ["wp-settings-time-1"]=>
+                string(10) "1454083617"
+                ["wordpress_logged_in_41820d7a219b98836c296bd767a061c3"]=>
+                string(124) "tiac|1455726905|khUYwpiPrGZo8UkPMpoCMwEnALtdhkVGGkOKkepFWrA|c20ceae6418bc025eb62c660afe19f68597c64a8c3f783706a0552fa54288124"
+                ["PHPSESSID"]=>
+                string(26) "j32dca7pt7k5255ti94r0crlf3"
+                ["_ga"]=>
+                string(26) "GA1.2.577911908.1454082371"
+              }
+              ["wp_request"]=>
+              array(7) {
+                ["page"]=>
+                string(7) "CiviCRM"
+                ["q"]=>
+                string(33) "civicrm/contact/view/contribution"
+                ["reset"]=>
+                string(1) "1"
+                ["force"]=>
+                string(1) "1"
+                ["cid"]=>
+                string(3) "728"
+                ["snippet"]=>
+                string(4) "json"
+                ["noheader"]=>
+                string(1) "1"
+              }
+            }
+            [1]=>
+            string(6) "invoke"
+          }
+          [1]=>
+          &array(1) {
+            [0]=>
+            string(0) ""
+          }
+        }
+      }
+      [11]=>
+      array(4) {
+        ["file"]=>
+        string(60) "/var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php"
+        ["line"]=>
+        int(236)
+        ["function"]=>
+        string(9) "do_action"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &string(21) "toplevel_page_CiviCRM"
+        }
+      }
+    }
+    ["previous":"Exception":private]=>
+    NULL
+  }
+}
+
+
+Feb 10 15:52:23  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(444): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(57): CRM_Core_Error::handleUnhandledException(Object(CiviCRM_API3_Exception))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#3 [internal function](): CiviCRM_For_WordPress->invoke("")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#6 {main}
+
+
+Feb 10 15:53:52  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(892): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB.php(976): PEAR_Error->PEAR_Error("DB Error: no such field", -19, 16, (Array:2), "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-19, 16, (Array:2), "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -19, NULL, NULL, "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...", "DB_Error", TRUE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(895): DB_common->raiseError(-19, NULL, NULL, NULL, "1054 ** Unknown column 'a.payment_instrument_id' in 'field list'")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(328): DB_mysql->mysqlRaiseError()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2435): DB_common->query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(1627): DB_DataObject->_query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(334): DB_DataObject->query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(1267): CRM_Core_DAO->query("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...", TRUE)
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/SelectQuery.php(290): CRM_Core_DAO::executeQuery("SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.descript...")
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/utils.php(1338): Civi\API\SelectQuery->run()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/PaymentProcessor.php(88): _civicrm_api3_basic_get("CRM_Financial_BAO_PaymentProcessor", (Array:5))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_payment_processor_get((Array:5))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("payment_processor", "get", (Array:5), NULL)
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(43): civicrm_api("payment_processor", "get", (Array:5))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php(293): civicrm_api3("payment_processor", "get", (Array:4))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php(349): CRM_Financial_BAO_PaymentProcessor::getAllPaymentProcessors("all")
+#22 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php(394): CRM_Financial_BAO_PaymentProcessor::getPaymentProcessors((Array:1))
+#23 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Config.php(439): CRM_Financial_BAO_PaymentProcessor::hasPaymentProcessorSupporting((Array:1))
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Member/Page/Tab.php(333): CRM_Core_Config::isEnabledBackOfficeCreditCardPayments()
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(312): CRM_Member_Page_Tab->run((Array:4), NULL)
+#26 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:14))
+#27 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#28 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#29 [internal function](): CiviCRM_For_WordPress->invoke("")
+#30 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#31 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#32 {main}
+
+
+Feb 10 15:53:52  [info] 
+$Fatal Error Details = array(3) {
+  ["message"]=>
+  string(23) "DB Error: no such field"
+  ["code"]=>
+  NULL
+  ["exception"]=>
+  object(CiviCRM_API3_Exception)#5116 (8) {
+    ["extraParams":"CiviCRM_API3_Exception":private]=>
+    array(6) {
+      ["error_code"]=>
+      string(13) "no such field"
+      ["sql"]=>
+      string(852) "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.description as `description`, a.payment_processor_type_id as `payment_processor_type_id`, a.is_active as `is_active`, a.is_default as `is_default`, a.is_test as `is_test`, a.user_name as `user_name`, a.password as `password`, a.signature as `signature`, a.url_site as `url_site`, a.url_api as `url_api`, a.url_recur as `url_recur`, a.url_button as `url_button`, a.subject as `subject`, a.class_name as `class_name`, a.billing_mode as `billing_mode`, a.is_recur as `is_recur`, a.payment_type as `payment_type`, a.payment_instrument_id as `payment_instrument_id`
+FROM civicrm_payment_processor a
+WHERE (`a`.`is_active` = "1") AND (`a`.`domain_id` = "1")
+ORDER BY a.is_default DESC, a.name
+LIMIT 25
+OFFSET 0
+ [nativecode=1054 ** Unknown column 'a.payment_instrument_id' in 'field list']"
+      ["tip"]=>
+      string(62) "add debug=1 to your API call to have more info about the error"
+      ["is_error"]=>
+      int(1)
+      ["error_message"]=>
+      string(23) "DB Error: no such field"
+      ["debug_information"]=>
+      string(852) "SELECT a.id as `id`, a.domain_id as `domain_id`, a.name as `name`, a.description as `description`, a.payment_processor_type_id as `payment_processor_type_id`, a.is_active as `is_active`, a.is_default as `is_default`, a.is_test as `is_test`, a.user_name as `user_name`, a.password as `password`, a.signature as `signature`, a.url_site as `url_site`, a.url_api as `url_api`, a.url_recur as `url_recur`, a.url_button as `url_button`, a.subject as `subject`, a.class_name as `class_name`, a.billing_mode as `billing_mode`, a.is_recur as `is_recur`, a.payment_type as `payment_type`, a.payment_instrument_id as `payment_instrument_id`
+FROM civicrm_payment_processor a
+WHERE (`a`.`is_active` = "1") AND (`a`.`domain_id` = "1")
+ORDER BY a.is_default DESC, a.name
+LIMIT 25
+OFFSET 0
+ [nativecode=1054 ** Unknown column 'a.payment_instrument_id' in 'field list']"
+    }
+    ["message":protected]=>
+    string(23) "DB Error: no such field"
+    ["string":"Exception":private]=>
+    string(0) ""
+    ["code":protected]=>
+    int(0)
+    ["file":protected]=>
+    string(88) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php"
+    ["line":protected]=>
+    int(45)
+    ["trace":"Exception":private]=>
+    array(12) {
+      [0]=>
+      array(4) {
+        ["file"]=>
+        string(115) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php"
+        ["line"]=>
+        int(293)
+        ["function"]=>
+        string(12) "civicrm_api3"
+        ["args"]=>
+        array(3) {
+          [0]=>
+          &string(17) "payment_processor"
+          [1]=>
+          &string(3) "get"
+          [2]=>
+          &array(4) {
+            ["is_active"]=>
+            bool(true)
+            ["domain_id"]=>
+            int(1)
+            ["options"]=>
+            array(1) {
+              ["sort"]=>
+              string(21) "is_default DESC, name"
+            }
+            ["api.payment_processor_type.getsingle"]=>
+            int(1)
+          }
+        }
+      }
+      [1]=>
+      array(6) {
+        ["file"]=>
+        string(115) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php"
+        ["line"]=>
+        int(349)
+        ["function"]=>
+        string(23) "getAllPaymentProcessors"
+        ["class"]=>
+        string(34) "CRM_Financial_BAO_PaymentProcessor"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &string(3) "all"
+        }
+      }
+      [2]=>
+      array(6) {
+        ["file"]=>
+        string(115) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Financial/BAO/PaymentProcessor.php"
+        ["line"]=>
+        int(394)
+        ["function"]=>
+        string(20) "getPaymentProcessors"
+        ["class"]=>
+        string(34) "CRM_Financial_BAO_PaymentProcessor"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(1) {
+            [0]=>
+            string(10) "BackOffice"
+          }
+        }
+      }
+      [3]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Config.php"
+        ["line"]=>
+        int(439)
+        ["function"]=>
+        string(29) "hasPaymentProcessorSupporting"
+        ["class"]=>
+        string(34) "CRM_Financial_BAO_PaymentProcessor"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(1) {
+            [0]=>
+            string(10) "BackOffice"
+          }
+        }
+      }
+      [4]=>
+      array(6) {
+        ["file"]=>
+        string(100) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Member/Page/Tab.php"
+        ["line"]=>
+        int(333)
+        ["function"]=>
+        string(37) "isEnabledBackOfficeCreditCardPayments"
+        ["class"]=>
+        string(15) "CRM_Core_Config"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(0) {
+        }
+      }
+      [5]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php"
+        ["line"]=>
+        int(312)
+        ["function"]=>
+        string(3) "run"
+        ["class"]=>
+        string(19) "CRM_Member_Page_Tab"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &array(4) {
+            [0]=>
+            string(7) "civicrm"
+            [1]=>
+            string(7) "contact"
+            [2]=>
+            string(4) "view"
+            [3]=>
+            string(10) "membership"
+          }
+          [1]=>
+          &NULL
+        }
+      }
+      [6]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php"
+        ["line"]=>
+        int(86)
+        ["function"]=>
+        string(7) "runItem"
+        ["class"]=>
+        string(15) "CRM_Core_Invoke"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(14) {
+            ["id"]=>
+            string(3) "323"
+            ["domain_id"]=>
+            string(1) "1"
+            ["path"]=>
+            string(31) "civicrm/contact/view/membership"
+            ["path_arguments"]=>
+            string(19) "force=1,cid=%%cid%%"
+            ["title"]=>
+            string(11) "Memberships"
+            ["access_callback"]=>
+            array(2) {
+              [0]=>
+              string(19) "CRM_Core_Permission"
+              [1]=>
+              string(9) "checkMenu"
+            }
+            ["access_arguments"]=>
+            array(2) {
+              [0]=>
+              array(3) {
+                [0]=>
+                string(14) "access CiviCRM"
+                [1]=>
+                string(15) "edit my contact"
+                [2]=>
+                string(15) "view my contact"
+              }
+              [1]=>
+              string(2) "or"
+            }
+            ["page_callback"]=>
+            string(19) "CRM_Member_Page_Tab"
+            ["breadcrumb"]=>
+            array(2) {
+              [0]=>
+              array(2) {
+                ["title"]=>
+                string(7) "CiviCRM"
+                ["url"]=>
+                string(58) "/wp-admin/admin.php?page=CiviCRM&amp;q=civicrm&amp;reset=1"
+              }
+              [1]=>
+              array(2) {
+                ["title"]=>
+                string(15) "Contact Summary"
+                ["url"]=>
+                string(87) "/wp-admin/admin.php?page=CiviCRM&amp;q=civicrm/contact/view&amp;reset=1&amp;cid=%%cid%%"
+              }
+            }
+            ["is_ssl"]=>
+            string(1) "0"
+            ["weight"]=>
+            string(1) "2"
+            ["type"]=>
+            string(1) "1"
+            ["page_type"]=>
+            string(1) "0"
+            ["page_arguments"]=>
+            bool(false)
+          }
+        }
+      }
+      [7]=>
+      array(6) {
+        ["file"]=>
+        string(96) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php"
+        ["line"]=>
+        int(54)
+        ["function"]=>
+        string(7) "_invoke"
+        ["class"]=>
+        string(15) "CRM_Core_Invoke"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(4) {
+            [0]=>
+            string(7) "civicrm"
+            [1]=>
+            string(7) "contact"
+            [2]=>
+            string(4) "view"
+            [3]=>
+            string(10) "membership"
+          }
+        }
+      }
+      [8]=>
+      array(6) {
+        ["file"]=>
+        string(80) "/var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php"
+        ["line"]=>
+        int(1214)
+        ["function"]=>
+        string(6) "invoke"
+        ["class"]=>
+        string(15) "CRM_Core_Invoke"
+        ["type"]=>
+        string(2) "::"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &array(4) {
+            [0]=>
+            string(7) "civicrm"
+            [1]=>
+            string(7) "contact"
+            [2]=>
+            string(4) "view"
+            [3]=>
+            string(10) "membership"
+          }
+        }
+      }
+      [9]=>
+      array(4) {
+        ["function"]=>
+        string(6) "invoke"
+        ["class"]=>
+        string(21) "CiviCRM_For_WordPress"
+        ["type"]=>
+        string(2) "->"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &string(0) ""
+        }
+      }
+      [10]=>
+      array(4) {
+        ["file"]=>
+        string(64) "/var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php"
+        ["line"]=>
+        int(525)
+        ["function"]=>
+        string(20) "call_user_func_array"
+        ["args"]=>
+        array(2) {
+          [0]=>
+          &array(2) {
+            [0]=>
+            object(CiviCRM_For_WordPress)#279 (8) {
+              ["shortcodes"]=>
+              object(CiviCRM_For_WordPress_Shortcodes)#277 (4) {
+                ["civi"]=>
+                *RECURSION*
+                ["shortcodes"]=>
+                array(0) {
+                }
+                ["shortcode_markup"]=>
+                array(0) {
+                }
+                ["shortcode_in_post"]=>
+                array(0) {
+                }
+              }
+              ["modal"]=>
+              object(CiviCRM_For_WordPress_Shortcodes_Modal)#276 (1) {
+                ["civi"]=>
+                *RECURSION*
+              }
+              ["basepage"]=>
+              object(CiviCRM_For_WordPress_Basepage)#275 (1) {
+                ["civi"]=>
+                *RECURSION*
+              }
+              ["users"]=>
+              object(CiviCRM_For_WordPress_Users)#278 (1) {
+                ["civi"]=>
+                *RECURSION*
+              }
+              ["wp_get"]=>
+              array(7) {
+                ["page"]=>
+                string(7) "CiviCRM"
+                ["q"]=>
+                string(31) "civicrm/contact/view/membership"
+                ["reset"]=>
+                string(1) "1"
+                ["force"]=>
+                string(1) "1"
+                ["cid"]=>
+                string(3) "728"
+                ["snippet"]=>
+                string(4) "json"
+                ["noheader"]=>
+                string(1) "1"
+              }
+              ["wp_post"]=>
+              array(0) {
+              }
+              ["wp_cookie"]=>
+              array(6) {
+                ["wordpress_sec_41820d7a219b98836c296bd767a061c3"]=>
+                string(124) "tiac|1455726905|khUYwpiPrGZo8UkPMpoCMwEnALtdhkVGGkOKkepFWrA|66e5502fc63ac5c74c90aa82e17d819c35f87b1af3fc1bb1f5cdd6b00b9b4a62"
+                ["wp-settings-1"]=>
+                string(164) "hidetb=1&libraryContent=browse&editor=html&urlbutton=none&align=none&imgsize=large&ed_size=360&post_dfw=off&posts_list_mode=list&editor_expand=on&advImgDetails=hide"
+                ["wp-settings-time-1"]=>
+                string(10) "1454083617"
+                ["wordpress_logged_in_41820d7a219b98836c296bd767a061c3"]=>
+                string(124) "tiac|1455726905|khUYwpiPrGZo8UkPMpoCMwEnALtdhkVGGkOKkepFWrA|c20ceae6418bc025eb62c660afe19f68597c64a8c3f783706a0552fa54288124"
+                ["PHPSESSID"]=>
+                string(26) "j32dca7pt7k5255ti94r0crlf3"
+                ["_ga"]=>
+                string(26) "GA1.2.577911908.1454082371"
+              }
+              ["wp_request"]=>
+              array(7) {
+                ["page"]=>
+                string(7) "CiviCRM"
+                ["q"]=>
+                string(31) "civicrm/contact/view/membership"
+                ["reset"]=>
+                string(1) "1"
+                ["force"]=>
+                string(1) "1"
+                ["cid"]=>
+                string(3) "728"
+                ["snippet"]=>
+                string(4) "json"
+                ["noheader"]=>
+                string(1) "1"
+              }
+            }
+            [1]=>
+            string(6) "invoke"
+          }
+          [1]=>
+          &array(1) {
+            [0]=>
+            string(0) ""
+          }
+        }
+      }
+      [11]=>
+      array(4) {
+        ["file"]=>
+        string(60) "/var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php"
+        ["line"]=>
+        int(236)
+        ["function"]=>
+        string(9) "do_action"
+        ["args"]=>
+        array(1) {
+          [0]=>
+          &string(21) "toplevel_page_CiviCRM"
+        }
+      }
+    }
+    ["previous":"Exception":private]=>
+    NULL
+  }
+}
+
+
+Feb 10 15:53:52  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(444): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(57): CRM_Core_Error::handleUnhandledException(Object(CiviCRM_API3_Exception))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#3 [internal function](): CiviCRM_For_WordPress->invoke("")
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#6 {main}
+
+
+Feb 10 15:56:46  [info] Ignoring exception thrown by nullHandler: 0, fsockopen(): unable to connect to ssl://smtp.transparencia.pt:465 (Unknown error)
+
+Feb 10 15:56:46  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(906): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::nullHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("fsockopen(): unable to connect to ssl://smtp.transparencia.pt:465 (Unknown er...", 0, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(156): PEAR->raiseError("fsockopen(): unable to connect to ssl://smtp.transparencia.pt:465 (Unknown er...", 0)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(451): Net_Socket->connect("ssl://smtp.transparencia.pt", "465", FALSE, 30, NULL)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(372): Net_SMTP->connect(30)
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(255): Mail_smtp->getSMTPObject()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Admin/Form/Setting/Smtp.php(167): Mail_smtp->send("celso.rodrigues@transparencia.pt", (Array:3), "SMTP settings are correct.")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(423): CRM_Admin_Form_Setting_Smtp->postProcess()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Refresh.php(75): CRM_Core_Form->mainProcess()
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Refresh->perform(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("refresh")
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(286): CRM_Utils_Wrapper->run("CRM_Admin_Form_Setting_Smtp", "Outbound Email Settings", NULL)
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#19 [internal function](): CiviCRM_For_WordPress->invoke("")
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#22 {main}
+
+
+Feb 10 15:56:46  [info] Ignoring exception thrown by nullHandler: , Failed to connect socket: fsockopen(): unable to connect to ssl://smtp.transparencia.pt:465 (Unknown error)
+
+Feb 10 15:56:46  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(906): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::nullHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Failed to connect socket: fsockopen(): unable to connect to ssl://smtp.transp...", NULL, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(454): PEAR->raiseError("Failed to connect socket: fsockopen(): unable to connect to ssl://smtp.transp...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(372): Net_SMTP->connect(30)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(255): Mail_smtp->getSMTPObject()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Admin/Form/Setting/Smtp.php(167): Mail_smtp->send("celso.rodrigues@transparencia.pt", (Array:3), "SMTP settings are correct.")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(423): CRM_Admin_Form_Setting_Smtp->postProcess()
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Refresh.php(75): CRM_Core_Form->mainProcess()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Refresh->perform(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("refresh")
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(286): CRM_Utils_Wrapper->run("CRM_Admin_Form_Setting_Smtp", "Outbound Email Settings", NULL)
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#18 [internal function](): CiviCRM_For_WordPress->invoke("")
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#21 {main}
+
+
+Feb 10 15:56:46  [info] Ignoring exception thrown by nullHandler: 10001, Failed to connect to ssl://smtp.transparencia.pt:465 [SMTP: Failed to connect socket: fsockopen(): unable to connect to ssl://smtp.transparencia.pt:465 (Unknown error) (code: -1, response: )]
+
+Feb 10 15:56:46  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(906): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::nullHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Failed to connect to ssl://smtp.transparencia.pt:465 [SMTP: Failed to connect...", 10001, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(376): PEAR->raiseError("Failed to connect to ssl://smtp.transparencia.pt:465 [SMTP: Failed to connect...", 10001)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(255): Mail_smtp->getSMTPObject()
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Admin/Form/Setting/Smtp.php(167): Mail_smtp->send("celso.rodrigues@transparencia.pt", (Array:3), "SMTP settings are correct.")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(423): CRM_Admin_Form_Setting_Smtp->postProcess()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Refresh.php(75): CRM_Core_Form->mainProcess()
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Refresh->perform(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("refresh")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(286): CRM_Utils_Wrapper->run("CRM_Admin_Form_Setting_Smtp", "Outbound Email Settings", NULL)
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#17 [internal function](): CiviCRM_For_WordPress->invoke("")
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#20 {main}
+
+
+Feb 10 15:56:46  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 
+    [message] => not connected
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="not connected" code=0 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Feb 10 15:56:46  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("not connected", NULL, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(327): PEAR->raiseError("not connected")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(264): Net_Socket->write("QUIT\r\n")
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(302): Net_SMTP->_send("QUIT\r\n")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(493): Net_SMTP->_put("QUIT")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(421): Net_SMTP->disconnect()
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(218): Mail_smtp->disconnect()
+#10 [internal function](): Mail_smtp->_Mail_smtp()
+#11 {main}
+
+
+Feb 10 16:11:07  [info] Ignoring exception thrown by nullHandler: 0, fsockopen(): unable to connect to ssl://smtp.transparencia.pt:465 (Unknown error)
+
+Feb 10 16:11:07  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(906): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::nullHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("fsockopen(): unable to connect to ssl://smtp.transparencia.pt:465 (Unknown er...", 0, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(156): PEAR->raiseError("fsockopen(): unable to connect to ssl://smtp.transparencia.pt:465 (Unknown er...", 0)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(451): Net_Socket->connect("ssl://smtp.transparencia.pt", "465", FALSE, 30, NULL)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(372): Net_SMTP->connect(30)
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(255): Mail_smtp->getSMTPObject()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Admin/Form/Setting/Smtp.php(167): Mail_smtp->send("celso.rodrigues@transparencia.pt", (Array:3), "SMTP settings are correct.")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(423): CRM_Admin_Form_Setting_Smtp->postProcess()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Refresh.php(75): CRM_Core_Form->mainProcess()
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Refresh->perform(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("refresh")
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(286): CRM_Utils_Wrapper->run("CRM_Admin_Form_Setting_Smtp", "Outbound Email Settings", NULL)
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#19 [internal function](): CiviCRM_For_WordPress->invoke("")
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#21 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#22 {main}
+
+
+Feb 10 16:11:07  [info] Ignoring exception thrown by nullHandler: , Failed to connect socket: fsockopen(): unable to connect to ssl://smtp.transparencia.pt:465 (Unknown error)
+
+Feb 10 16:11:07  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(906): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::nullHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Failed to connect socket: fsockopen(): unable to connect to ssl://smtp.transp...", NULL, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(454): PEAR->raiseError("Failed to connect socket: fsockopen(): unable to connect to ssl://smtp.transp...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(372): Net_SMTP->connect(30)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(255): Mail_smtp->getSMTPObject()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Admin/Form/Setting/Smtp.php(167): Mail_smtp->send("celso.rodrigues@transparencia.pt", (Array:3), "SMTP settings are correct.")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(423): CRM_Admin_Form_Setting_Smtp->postProcess()
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Refresh.php(75): CRM_Core_Form->mainProcess()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Refresh->perform(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("refresh")
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(286): CRM_Utils_Wrapper->run("CRM_Admin_Form_Setting_Smtp", "Outbound Email Settings", NULL)
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#18 [internal function](): CiviCRM_For_WordPress->invoke("")
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#21 {main}
+
+
+Feb 10 16:11:07  [info] Ignoring exception thrown by nullHandler: 10001, Failed to connect to ssl://smtp.transparencia.pt:465 [SMTP: Failed to connect socket: fsockopen(): unable to connect to ssl://smtp.transparencia.pt:465 (Unknown error) (code: -1, response: )]
+
+Feb 10 16:11:07  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(906): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::nullHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Failed to connect to ssl://smtp.transparencia.pt:465 [SMTP: Failed to connect...", 10001, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(376): PEAR->raiseError("Failed to connect to ssl://smtp.transparencia.pt:465 [SMTP: Failed to connect...", 10001)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(255): Mail_smtp->getSMTPObject()
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Admin/Form/Setting/Smtp.php(167): Mail_smtp->send("celso.rodrigues@transparencia.pt", (Array:3), "SMTP settings are correct.")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(423): CRM_Admin_Form_Setting_Smtp->postProcess()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Refresh.php(75): CRM_Core_Form->mainProcess()
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Refresh->perform(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Admin_Form_Setting_Smtp), "refresh")
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("refresh")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(286): CRM_Utils_Wrapper->run("CRM_Admin_Form_Setting_Smtp", "Outbound Email Settings", NULL)
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:13))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:4))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1214): CRM_Core_Invoke::invoke((Array:4))
+#17 [internal function](): CiviCRM_For_WordPress->invoke("")
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(525): call_user_func_array((Array:2), (Array:1))
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-admin/admin.php(236): do_action("toplevel_page_CiviCRM")
+#20 {main}
+
+
+Feb 10 16:11:07  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 
+    [message] => not connected
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="not connected" code=0 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Feb 10 16:11:07  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(235): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("not connected", NULL, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/Socket.php(327): PEAR->raiseError("not connected")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(264): Net_Socket->write("QUIT\r\n")
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(302): Net_SMTP->_send("QUIT\r\n")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Net/SMTP.php(493): Net_SMTP->_put("QUIT")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(421): Net_SMTP->disconnect()
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(218): Mail_smtp->disconnect()
+#10 [internal function](): Mail_smtp->_Mail_smtp()
+#11 {main}
+
+
+Feb 10 22:08:01  [info] Ignoring exception thrown by nullHandler: 10004, Failed to set sender: b.870.37706.278f92d1c02b5742@ [SMTP: Invalid response code received from SMTP server while sending email.  This is often caused by a misconfiguration in Outbound Email settings. Please verify the settings at Administer CiviCRM >> Global Settings >> Outbound Email (SMTP). (code: 501, response: 5.1.7 Bad sender address syntax)]
+
+Feb 10 22:08:01  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(906): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::nullHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Failed to set sender: b.870.37706.278f92d1c02b5742@ [SMTP: Invalid response c...", 10004, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(295): PEAR->raiseError("Failed to set sender: b.870.37706.278f92d1c02b5742@ [SMTP: Invalid response c...", 10004)
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(708): Mail_smtp->send("Celso Rodrigues <celso.r.n.rodrigues@gmail.com>", (Array:11), "--=_a85a4d6df43e6c45c9aed625b4c1780d\nContent-Transfer-Encoding: 8bit\nConten...", "870")
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(612): CRM_Mailing_BAO_MailingJob->deliverGroup((Array:1), Object(CRM_Mailing_BAO_Mailing), Object(Mail_smtp), "20160210220538", (Array:0))
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/MailingJob.php(192): CRM_Mailing_BAO_MailingJob->deliver(Object(Mail_smtp), NULL)
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/BAO/Mailing.php(2905): CRM_Mailing_BAO_MailingJob::runJobs(NULL, NULL)
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/v3/Job.php(317): CRM_Mailing_BAO_Mailing::processQueue()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_job_process_mailing((Array:1))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/Civi/API/Kernel.php(96): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/api/api.php(23): Civi\API\Kernel->run("Job", "process_mailing", (Array:1), NULL)
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(134): civicrm_api("Job", "process_mailing", (Array:1))
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/JobManager.php(79): CRM_Core_JobManager->executeJob(Object(CRM_Core_ScheduledJob))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/bin/cron.php(42): CRM_Core_JobManager->execute()
+#16 {main}
+
+
+Feb 10 22:08:01  [info] SMTP Socket Error or failed to set sender error. Message: Failed to set sender: b.870.37706.278f92d1c02b5742@ [SMTP: Invalid response code received from SMTP server while sending email.  This is often caused by a misconfiguration in Outbound Email settings. Please verify the settings at Administer CiviCRM >> Global Settings >> Outbound Email (SMTP). (code: 501, response: 5.1.7 Bad sender address syntax)], Code: 10004
+
+Feb 14 14:09:27  [info] Could not find payment processor for contribution record: 34424849
+
+Feb 20 13:48:59  [info] Could not find payment processor for contribution record: 1703
+

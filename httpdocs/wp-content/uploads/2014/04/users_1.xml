@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<url><![CDATA[]]></url>
+		<email><![CDATA[celso.r.n.rodrigues@gmail.com]]></email>
+		<displayname><![CDATA[admin]]></displayname>
+		<registrationdate><![CDATA[2013-08-16 21:19:24]]></registrationdate>
+		<firstname><![CDATA[]]></firstname>
+		<lastname><![CDATA[]]></lastname>
+		<nickname><![CDATA[admin]]></nickname>
+	</node>
+	<node>
+		<url><![CDATA[]]></url>
+		<email><![CDATA[celso.rodrigues@transparencia.pt]]></email>
+		<displayname><![CDATA[teste]]></displayname>
+		<registrationdate><![CDATA[2014-04-10 14:03:22]]></registrationdate>
+		<firstname><![CDATA[]]></firstname>
+		<lastname><![CDATA[]]></lastname>
+		<nickname><![CDATA[teste]]></nickname>
+	</node>
+	<node>
+		<url><![CDATA[]]></url>
+		<email><![CDATA[a@hotmail.com]]></email>
+		<displayname><![CDATA[rocks]]></displayname>
+		<registrationdate><![CDATA[2014-04-10 14:11:20]]></registrationdate>
+		<firstname><![CDATA[]]></firstname>
+		<lastname><![CDATA[]]></lastname>
+		<nickname><![CDATA[rocks]]></nickname>
+	</node>
+</data>

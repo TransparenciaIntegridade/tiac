@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head><link rel="stylesheet" type="text/css" href="https://transparencia.pt/wp-content/cache/minify/000000/fcvBDYAgDEDRhUxLvTiPYk0wlhpaYnB6B5Bwfv8H9Iezt0NrceaM0Qw3VTcv6w2S8hR6iXm7mPoWVURHnw3sT6eh6M4lp7dArOYqsMxEBKd9.css" media="all" />
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+<meta name="robots" content="all" />
+    <meta name="keywords" content="Corrupção,TIAC,Transparência,Associação,Cívica,ONG,Governo,ITM,CPI" />
+    <meta property="fb:admins" content="546830996" />
+    <meta property="og:title" content="TIAC – TRANSPARÊNCIA E INTEGRIDADE, ASSOCIAÇÃO CÍVICA"/>
+    <meta property="og:url" content="https://transparencia.pt"/>
+    <meta property="og:description" content="A TIAC – TRANSPARÊNCIA E INTEGRIDADE, ASSOCIAÇÃO CÍVICA é uma organização não governamental que tem como missão combater a corrupção. A TIAC é a representante em Portugal da rede global anti-corrupção Transparency International." />
+    <meta name="Author" content="Transparência e Integridade, Associação Cívica" />
+    <meta property="og:image" content="https://transparencia.pt/wp-content/themes/twentyfourteen/assets/img/thumb.png" />
+    <meta name="revisit-after" content="2" />
+    <meta name="doc-class" content="Living Document" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <meta http-equiv="imagetoolbar" content="no" />
+
+
+
+    <title>TIAC – TRANSPARÊNCIA E INTEGRIDADE, ASSOCIAÇÃO CÍVICA</title>
+    <meta name="generator" content="Transparência e Integridade, Associação Cívica" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+   
+     <!-- <link href="https://transparencia.pt/wp-content/themes/wpbootstrap/css/demo.css" rel="stylesheet">-->
+        
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+ 
+      
+      
+        
+          
+        
+          <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <style type="text/css">
+
+
+
+
+
+    ul.rig li {
+
+margin: 1px 0 2.5% -6.5%;
+
+    }
+
+.navbar-brand {
+
+margin-left: 5px;
+margin-top: -26px;
+
+
+}
+@media screen and (max-width: 768px) {
+
+.navbar-brand {
+
+margin-left: 5px;
+margin-top: -10px;
+
+
+}
+
+
+
+
+}
+
+    .navbar-default .navbar-toggle {
+
+margin-right: 7%;
+margin-top: 10px;
+
+}
+
+.entry-title{
+
+color:#fff;*/
+
+
+
+}
+
+.entry-author-link,
+.entry-permalink,
+.entry-date,
+.entry-meta {
+	display: none;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 90px;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+/*@media screen and (max-width: 368px) {
+    img.smallResolution{
+        min-height: 150px;
+    }
+
+}
+*/
+
+ /*.wrapper { float: left; clear: left; display: table; table-layout: fixed; }
+    img.img-responsive { display: table-cell; max-width: 100%; }
+
+*/
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.textarea1{
+	 /* background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px; */
+    width: 276px;
+    height: 65px;
+    border: 1px solid rgba(255,255,255,.6);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; 
+    display:block;
+    
+    font-size:18px;
+    color:#fff;
+    padding-left:45px;
+    padding-right:20px;
+    padding-top:12px;
+    margin-bottom:20px;
+    overflow:hidden;
+}
+
+
+
+.form1 {
+    margin-left:auto;
+    margin-right:auto;
+    width: 343px;
+    height: 353px;
+    padding:30px;
+    border: 1px solid rgba(0,0,0,.2);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: rgba(190, 190, 197, 0.5); 
+    -moz-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    overflow: hidden; 
+}
+
+
+
+   
+#button-blue{
+	
+	float:left;
+	width: 100%;
+	border: #fbfbfb solid 4px;
+	cursor:pointer;
+	background-color: #3498db;
+	color:white;
+	font-size:24px;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: #0493bd;
+}
+	
+.submit:hover {
+	color: #3498db;
+}
+	
+.ease {
+	width: 0px;
+	height: 74px;
+	background-color: #fbfbfb;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.submit:hover .ease{
+  width:100%;
+  background-color:white;
+}
+
+@media only screen and (max-width: 580px) {
+	#form-div{
+		left: 3%;
+		margin-right: 3%;
+		width: 88%;
+		margin-left: 0;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}
+
+
+
+.promos {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  clear: left; }
+  .promos h2 {
+    text-align: center;
+    color: #3695d8; }
+    .promos h2 strong {
+     
+      font-weight: normal; }
+  .promos div.item {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 30px; }
+    @media (min-width: 768px) {
+      .promos div.item {
+        float: left;
+        width: 50%; } }
+    @media (min-width: 992px) {
+      .promos div.item {
+        float: left;
+        width: 25%; } }
+    @media (min-width: 992px) {
+      .promos div.item {
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 0px; } }
+  .promos h3 {
+    font-size: 18px;
+
+    margin-top: 20px; }
+    @media (min-width: 992px) {
+      .promos h3 {
+        height: 60px; } }
+  @media (min-width: 992px) {
+    .promos p {
+      height: 110px; }
+      .promos p.tall {
+        height: 190px; } }
+
+
+button, a.button {
+    background-color: #9dba5a;;
+    border-radius: 3px;
+    
+    color: #FFF;
+    padding: 5px 10px 5px 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.btn-primary_donativo {
+    color: #fff;
+    background-color: #ffa500;
+    border-color: #357ebd;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+	/*margin-left: 35%;*/
+  width: 90px;
+  height: 90px;
+  padding: 30px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 55px;
+}
+
+
+
+
+
+.row li {
+  /*width: 33.3%;
+  float: left;*/
+}
+
+img {
+  border: 0 none;
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.5); }
+
+
+
+.lead{
+margin-left: 5%;
+margin-right: 5%;
+text-align: justify;
+
+}
+
+.head{
+ 
+margin-left: 5%;
+text-align: justify;
+font-size:2.4rem;
+
+}
+
+
+/* ----- Image grids ----- */
+ul.rig {
+  list-style: none;
+  font-size: 0px;
+  /*margin-left: -2.5%; /* should match li left margin */
+}
+ul.rig li {
+  display: inline-block;
+  padding: 10px;
+  margin: 0 0 2.5% 2.5%;
+  background: #fff;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  font-size: 1rem;
+  vertical-align: top;
+  box-shadow: 0 0 5px #ddd;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+ul.rig li img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 10px;
+}
+ul.rig li h3 {
+  margin: 0 0 5px;
+}
+ul.rig li p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  color: #999;
+}
+/* class for 2 columns */
+ul.rig.columns-2 li {
+  width: 43.5%; /* this value + 2.5 should = 50% */
+  height:410px; 
+}
+/* class for 3 columns */
+ul.rig.columns-3 li {
+  width: 30.83%; /* this value + 2.5 should = 33% */
+}
+/* class for 4 columns */
+ul.rig.columns-4 li {
+  width: 22.5%; /* this value + 2.5 should = 25% */
+  height:340px; 
+}
+
+@media (max-width: 1199px) {
+  .container {
+    width: auto;
+    padding: 0 10px;
+  }
+}
+
+/*@media (max-width: 1199px) {
+  .container {
+    display: block;
+    margin-left: 5%;
+  }
+  }*/
+
+@media (max-width: 480px) {
+  ul.grid-nav li {
+    display: block;
+    margin: 0 0 5px;
+  }
+  ul.grid-nav li a {
+    display: block;
+  }
+  ul.rig {
+    margin-left: 0;
+  }
+  ul.rig li {
+    width: 85% !important; /* over-ride all li styles */
+    margin: 0 0 20px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+h5{
+font-size: 1.2rem;
+
+}
+}
+
+
+.list
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+ 
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+    .list__item
+    {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    
+@media only screen and (max-width: 991px) {
+.mapa, .inf_contactos{
+text-align: center;
+
+}
+}
+.social-links {
+    text-align:center;
+}
+
+.social-links a{
+    display: inline-block;
+    width:100px;
+    height: 100px;
+    border: 2px solid #909090;
+    border-radius: 90px;
+    margin-right: 15px;
+   background-color: #428bca;
+
+}
+.social-links a i{
+    padding: 22px 11px;
+    font-size: 75px;
+    color: #fff;
+}
+
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+  width: 100%;
+}
+.span_3_of_4 {
+  width: 74.6%;
+}
+.span_2_of_4 {
+  width: 49.2%;
+}
+.span_1_of_4 {
+  width: 23.8%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {  margin: 1% 0 1% 0%; }
+  .span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+}
+
+
+
+
+
+a#example
+{
+ background: #444;
+ border: 2px solid #444;
+ padding: 5px 5px 5px 5px;
+ font-family: arial, sans-serif;
+ font-size: 12px;
+ font-weight: bold;
+ color: #fff; 
+}
+#example_obj
+{
+ background: #444;
+ border: 2px solid #444;
+ padding: 5px 5px 5px 5px;
+ font-family: arial, sans-serif;
+ font-size: 12px;
+ font-weight: bold;
+ color: #fff;
+ display: none;
+}
+
+
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.35);
+}
+.carousel-caption {
+    top: 0;
+    bottom: auto;
+
+}
+
+
+
+ /*import font awesome css icon library*/
+           /* @import url("https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css");*/
+input, select, textarea {
+                background: none repeat scroll 0 0 #3695d8;
+                border: 1px solid #CCC;
+                color: #5e5e5e;
+                display: block;
+                font-family: arial, sans-serif;
+                font-size: inherit;
+                padding: 10px;
+                /*width: 100%;*/
+                box-sizing: border-box;
+                font-size: 16px;
+                margin: 0;
+                height: 40px;
+            }
+            
+            #searchtext {
+                overflow: hidden;
+            }
+            
+            a.search-submit-button {
+                background: none repeat scroll 0 0 #fafafa;
+                border-bottom: 1px solid #eeeeee;
+                border-right: 1px solid #eeeeee;
+                border-top: 1px solid #eeeeee;
+                color: #5e5e5e !important;
+                display: block;
+                float: right;
+                font-family: inherit;
+                font-size: 20px;
+                padding: 8px 10px;
+                text-align: center;
+                width: 45px;
+                box-sizing: border-box;
+                height: 40px;
+            }
+            
+            #form-container {
+                /* width: 60%; */
+            }
+            
+
+
+
+    
+  
+  
+
+@media (min-width: 992px){
+
+  .carousel-controls {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 2;
+}
+}
+
+
+@media (min-width: 1200px){
+div.form-container {
+  /*background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 2;*/
+
+  margin-top: 30px;
+}
+}
+
+
+@media (max-width: 991px){
+div.form-container {
+  /*background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 2;*/
+
+  display: none;
+}
+}
+
+@media (min-width: 991px) and (max-width: 1200px){
+div.form-container {
+  /*background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 2;*/
+
+  margin-top: 35px;
+}
+}
+
+
+@media (min-width: 992px) {
+.input-group {
+  position: relative;
+ 
+  margin-top: 10px;
+}
+
+}
+
+
+
+
+
+
+@media (min-width: 992px) and (max-width: 1200px){
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 15px 5px;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  margin-top: 0px;
+}
+
+}
+
+@media (min-width: 1200px) and (max-width: 1319px){
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 15px 5px;
+ 
+}
+
+}
+@media (min-width: 1320px) {
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 15px 15px;
+  font-size: 1.5rem;
+ 
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 15px 5px;
+  margin-top: 0px;
+  font-size: 0.8rem;
+}
+
+}
+@media (min-width: 768px) and (max-width: 991px){
+.input-group {
+  position: relative;
+ 
+  margin-top: 10px;
+}
+
+}
+
+
+@media (min-width: 768px){
+    .navbar-nav{
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+        float:none;
+    }
+}
+
+
+
+body {
+  /*padding-top: 40px; // same as header height*/
+}
+
+
+@media only screen and (min-width: 840px) {
+  .hidden-desktop{
+   display: none;
+   }
+}
+
+
+@media only screen and (min-width: 840px) {
+  .hidden-desktop{
+   display: none;
+   }
+}
+
+
+.verticalLine {
+    border-left: thick solid #CCC;
+    border-right: thick solid #CCC;
+}
+
+.scoopit-embed-post {
+    width: auto !important;
+}
+
+.tales {
+  width: 100%;
+}
+.carousel-inner{
+  width:100%;
+  max-height: 800px !important;
+}
+
+
+.imgHolder{
+    display:inline-block;
+    background:#000;
+}
+.item-fade{
+    vertical-align:top;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+.opacidade{
+    opacity:0.3;
+     transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+
+}
+.sem_opacidade{
+    opacity:100%;
+}
+.teste
+{
+
+/*background-color: #CCC;*/
+  opacity:100%;
+
+}
+
+.navbar-nav>li>.dropdown-menu {
+  /*margin-top: 9px;*/
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+
+}
+
+
+.dropdown-menu > li > a {
+  border-bottom: 1px solid #cacaca;
+  padding: 0 0 6px;
+  margin: 0 25px;
+  color: #878787;
+  font-size: 14px;
+margin-top: 8px;
+}
+
+
+
+
+    </style>
+
+
+<!--FOOTER-->
+
+<style type="text/css">
+
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+          text-align: center;
+          padding-bottom: 10px;
+
+        }
+      }
+
+       @media (max-width: 900px) {
+        h3.titulo_ferramentas {
+          margin-left: -29px;
+        }
+      }
+
+      section#connect {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: #cccccc;
+  clear: left;
+}
+
+
+@media (min-width: 992px){
+section#connect form {
+  text-align: center;
+}
+
+
+}
+
+section#connect .container > div input[type=text] {
+  float: left;
+  padding: 5px;
+  /*width: 60%;
+  margin-left: auto;
+  margin-right: auto;*/
+}
+
+input[type=text] {
+  /*float: left;*/
+  width: 160px;
+  height: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  padding: 3px;
+  border: 1px solid #878787;
+  border-radius: 3px;
+  color: #555;
+  background: #FFF;
+  
+  font-size: 14px;
+}
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+
+section#connect .container > div button {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  width: 30%;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+
+button {
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3px 10px 3px 10px;
+  border: 0;
+  text-transform: uppercase;
+  color: #FFF;
+  border-radius: 3px;
+ 
+  background-color: #3695d8;
+}
+
+input[type=text] {
+  /*float: left;*/
+  width: 160px;
+  height: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  padding: 3px;
+  border: 1px solid #878787;
+  border-radius: 3px;
+  color: #555;
+  background: #FFF;
+  
+  font-size: 1.2rem;
+}
+
+.subscribeMe{
+  float: left;
+  width: 100px;
+  height: 30px;
+  /*margin-right: 10px;*/
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 3px;
+  border: 1px solid #878787;
+  border-radius: 3px;
+  color: #555;
+  background: #FFF;
+
+  
+  font-size: 0.8rem;
+}
+footer div.container div ul {
+  margin-left: 0;
+  margin-top: 5px;
+  padding-left: 0;
+  font-size: 12px;
+  line-height: 14px;
+  list-style-type: none;
+}
+
+hr {
+    width: 96%;
+    color: #FFFF00;
+    height: 1px;F
+}
+
+
+#line {
+    float: left;
+    width: 731px;
+    height: 10px;
+}
+
+.page .headline {
+    display: none;
+}
+
+ .page.page-id-7625 #masthead,
+.page.page-id-7625 #footer-area {
+  display: none;
+}
+
+
+</style>
+
+
+
+<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"Este site utiliza cookies para ajudar a disponibilizar os respetivos serviços, para personalizar anúncios e analisar o tráfego. As informações sobre a sua utilização deste site são partilhadas com a Google. Ao utilizar este site, concorda que o mesmo utilize cookies.","dismiss":"Entendi!","learnMore":"Saber mais","link":"https://transparencia.pt/politica-de-privacidade/","theme":"dark-bottom"};
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+<!-- End Cookie Consent plugin -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72358457-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </head>
+  <body >
+
+    
+
+
+
+
+<nav id="primary-navbar" class="navbar navbar-default navbar-fixed-top" data-backdrop="#primary-navbar-backdrop">
+   <div class="a" style="background-color:#3695d8;width:100%;height: 28px;">
+
+
+
+
+         
+       
+        <div class="container">
+          
+    
+          <span style="border: 1px solid rgba(0, 0, 0, 0.2);
+  border-width: 0 1px;
+  padding: 2px 25px 2px;">
+
+          
+            <a href="//transparencia.pt/wp-admin/"><i style="color:#000000"><strong>INICIAR SESSÂO</strong></i></a><!-- -->
+
+</span>
+
+          <div class="rw-words rw-words-1" >
+
+
+            <span style="color:#fff"><a href="//transparencia.pt/novo-registo-associado/" style="color:#fff">JUNTA-TE A NÓS</a></span>
+            <span style="color:#fff"><a href="//transparencia.pt/novo-registo-associado/" style="color:#fff">JUNTA-TE A NÓS</a></span>
+            <span style="color:#fff"><a href="//transparencia.pt/novo-registo-associado/" style="color:#fff">JUNTA-TE A NÓS</a></span>
+            <span style="color:#fff"><a href="//transparencia.pt/novo-registo-associado/" style="color:#fff">JUNTA-TE A NÓS</a></span>
+            <span style="color:#fff"><a href="//transparencia.pt/novo-registo-associado/" style="color:#fff">JUNTA-TE A NÓS</a></span>
+            <span style="color:#fff"><a href="//transparencia.pt/novo-registo-associado/" style="color:#fff">JUNTA-TE A NÓS</a></span>
+            
+          </div>
+
+
+<p class="navbar-social navbar-right navbar-collapse collapse" style="  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-width: 0 1px;
+  padding: 2px 15px 2px;" >
+        <a href="https://www.facebook.com/transparenciapt" target="_blank"><i class="fa fa-facebook-square" style="font-size:1.5em;color:#FFFAFA; vertical-align: text-top;"></i></a>
+        <a href="https://twitter.com/transparenciapt" target="_blank"><i class="fa fa-twitter-square" style="font-size:1.5em;color:#FFFAFA; vertical-align: text-top;"></i></a>
+        <a href="https://pt.linkedin.com/company/transparencia-e-integridade-associacao-civica" target="_blank"><i class="fa fa-linkedin-square" style="font-size:1.5em;color:#FFFAFA; vertical-align: text-top;"></i></a>
+        <a href="https://www.youtube.com/user/transparenciapt" target="_blank"><i class="fa fa-youtube-square" style="font-size:1.5em;color:#FFFAFA; vertical-align: text-top;"></i></a>
+      </p>
+
+
+
+   </div>
+   
+      </div>
+      
+      <div class="container">
+        <div class="navbar-header">
+          <button id="primary-navbar-toggle" type="button" class="navbar-toggle labeled collapsed" data-toggle="collapse" data-parent="#primary-navbar" data-target="#primary-navbar .navbar-main" aria-expanded="false" aria-controls="navbar">
+            <span class="club-sandwich"></span>
+            <label>MENU</label>
+          </button>
+          <!--<button id="primary-navbar-toggle-search" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-parent="#primary-navbar" data-target="#primary-navbar .navbar-search" aria-expaded="false" aria-controls="navbar-search" aria-expanded="false">
+            <span class="sr-only">Toggle Search</span>
+            <span class="glyphicon glyphicon-search"></span>
+          </button>-->
+          <a class="navbar-brand" href="/" ><img alt="" src="//transparencia.pt/wp-content/themes/twentyfourteen/assets/img/logoRodape.png?de23aa"  ></a>
+        </div>
+        <ul class="nav navbar-main navbar-nav navbar-collapse collapse" data-toggler="#primary-navbar-toggle" aria-expanded="false" style="height: 1px;">
+          <!--<li class="active"><a href="/">Home</a></li>-->
+          <li class="dropdown">
+            <a href="#"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">QUEM SOMOS<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+              <li><a href="https://transparencia.pt/sobre" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Sobre Nós</a></li>
+              <li><a href="https://transparencia.pt/sobre#organizacao" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Organização</a></li>
+              <li><a href="https://transparencia.pt/sobre#contas" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Prestação de Contas</a></li>
+              <li><a href="https://transparencia.pt/sobre#estatutos" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Estatutos e Normas Internas</a></li>
+              <li><a class="fecha" href="/#contactos" style="border-bottom:none;" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Contactos</a></li>
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">O QUE FAZEMOS<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+            <li><a href="https://transparencia.pt/o-que-fazemos" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">O que é a corrupção?</a></li>
+              <li><a href="https://transparencia.pt/o-que-fazemos#custos" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Quais os custos da corrupção?</a></li>
+              <li><a href="https://transparencia.pt/o-que-fazemos#trabalho" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Como trabalhamos</a></li>
+   <li><a href="https://transparencia.pt/o-que-fazemos#provedoria" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'" >Provedoria TIAC - Alerta Anticorrupção</a></li>
+              <li><a href="https://transparencia.pt/o-que-fazemos#projetos"  onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'" >Temas e projetos</a></li>
+   <li><a href="https://transparencia.pt/o-que-fazemos#publicacoes"  onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'" style="border-bottom:none;">Publicações</a></li>
+   
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">NOTÍCIAS<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              
+              <!--<li><a href="//transparencia.pt/noticias#ultimas" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Últimas</a></li>-->
+              <li><a href="//transparencia.pt/noticias#noticias_tiac" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Notícias TIAC</a></li>
+              <li><a href="//transparencia.pt/noticias#opiniao" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Opinião</a></li>
+              <li><a href="//transparencia.pt/noticias#newsletters" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Newsletters</a></li>
+              <li><a href="//transparencia.pt/noticias#videos" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'" style="border-bottom:none;">Vídeos</a></li>
+              
+              
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">PARTICIPA<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="https://transparencia.pt/participa#info" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Informa-te</a></li>
+              <li><a href="https://transparencia.pt/participa#membro" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Torna-te Membro</a></li>
+              <li><a href="https://transparencia.pt/participa#provedoria" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Reporta um Caso</a></li>
+              <li style="display:none"><a href="https://transparencia.pt/participa#voluntario" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Voluntaria-te</a></li>
+              <li><a href="https://transparencia.pt/participa#evento" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Organiza um evento</a></li>
+              <li><a href="https://transparencia.pt/participa#apoio" style="border-bottom:none;" onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#999'">Apoia-nos</a></li>
+              
+            </ul>
+          </li>
+          <li><a href="//transparencia.pt/seletor-pagamento" style="color:#FFA500"onMouseOver="this.style.color='#3695d8'"
+   onMouseOut="this.style.color='#FFA500'"><strong>DONATIVO</strong></a></li>
+       <form action="https://transparencia.pt/" method="get" class="form-inline">
+    <fieldset>
+   <div class="input-group">
+      <input type="text" name="s" id="search" placeholder="Procurar" value="" class="form-control" />
+      <span class="input-group-btn">
+        <button  style="border: none" type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search form-control-feedback" style="float:left;  "></i></button>
+      </span>
+    </div>
+<!--
+<form role="search" method="get" id="searchform" class="searchform" action="https://transparencia.pt/"> 
+<label class="screen-reader-text" for="s">Search for:</label> 
+<input type="text" value="" name="s" id="s" /> 
+<input type="submit" id="searchsubmit" value="Search" /> 
+</form>-->
+
+    </fieldset>
+</form>
+          
+        </ul>
+
+        
+
+
+      </div>
+    </nav>
+
+
+<div id="semFade">
+<div class="teste">
+  
+
+
+
+
+
+
+	<section id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+
+			
+			<header class="archive-header">
+				<h1 class="archive-title">Arquivo de etiquetas: Limitação de Mandatos</h1>
+
+							</header><!-- .archive-header -->
+
+			
+<article id="post-1497" class="post-1497 post type-post status-publish format-standard hentry category-blog tag-autarcas tag-autarquias tag-limitacao-de-mandatos tag-marcelo-moriconi">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="https://transparencia.pt/category/blog/" rel="category tag">blog</a></span>
+		</div>
+		<h1 class="entry-title"><a href="https://transparencia.pt/2013/03/15/medo-dos-politicos-medo-dos-cidadaos/" rel="bookmark">Medo dos políticos, medo dos cidadãos</a></h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="https://transparencia.pt/2013/03/15/medo-dos-politicos-medo-dos-cidadaos/" rel="bookmark"><time class="entry-date" datetime="2013-03-15T13:55:20+00:00">15 Março, 2013</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://transparencia.pt/author/tiac/" rel="author">tiac</a></span></span>			<span class="comments-link"><a href="https://transparencia.pt/2013/03/15/medo-dos-politicos-medo-dos-cidadaos/#comments">3 comentários</a></span>
+					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<div class="container">
+<strong><img class="alignnone size-medium wp-image-1498" alt="Parlamento Manif" src="//transparencia.pt/wp-content/themes/wpbootstrap/assets/img/Parlamento-Manif.jpg?de23aa" width="100%" /></strong></p>
+<p><strong>Por Marcelo Moriconi, Investigador do CIES-IUL e membro da TIAC</strong></p>
+<p>De ou Da. Lá, Mi, ou Dó. Como se fosse uma questão de notas musicais, agora o problema da Lei de Limitação dos Mantados virou linguístico. Qualquer que seja a melodia, enquanto sectores da sociedade civil questionam a legalidade de certas candidaturas, os partidos defendem que os seus membros procurem reeleições numa localidade vizinha. Por trás da discussão sobre se a limitação deve ser de três mandatos num único município ou em geral esconde-se mais um problema da democracia portuguesa.</p>
+<p>Paradoxalmente, a lei entra em vigor no meio de uma forte crise e da deslegitimação da classe política, o que acentua as críticas. Freud sublinhou que só uma pessoa que sofreu de dor de dente sabe como é importante ter dentes saudáveis. Caso contrário, os dentes estão lá, despercebidos pelos seus proprietários. O mesmo sucede com a democracia e a qualidade dos governantes: as queixas são maiores quando o rumo negativo afeta a qualidade de vida dos cidadãos. Se não, tolera-se tudo&#8230; inclusive o buraco da Madeira ou a corrupção (prescrita) de Oeiras.</p>
+<p>É neste ponto que importa incorporar a cidadania ao problema, lembrando-nos de que os políticos, os juízes, os banqueiros são também cidadãos que, depois de serem educados por outros cidadãos, decidiram exercer essas tarefas profissionais. São cidadãos imersos num imaginário social, em valores hegemónicos. E que valores são esses? A corrupção é uma questão de incentivos: as instituições são estas porque as pessoas são estas. E os cidadãos são estes porque as instituições são estas. É um processo recursivo. Rousseau advertiu que os problemas da sociedade começaram com o primeiro homem que cercou a sua terra e proclamou &#8220;isto é meu&#8221;. Mas, para que a terra fosse sua, os seus concidadãos tiveram de aceitar consensualmente que “isso é dele” (provavelmente porque eles também iam poder cercar). O que isto significa é que é impossível que um problema social se perpetue no tempo sem o que Gramsci chamou consenso tácito, ou seja, com o apoio – por ação ou omissão – de uma grande maioria de cidadãos.</p>
+<p>Qual é a relação disto com a perpetuação dos dinossauros no poder? Só podem continuar à frente duma Câmara se o povo os escolher. Como entendem os eleitores a necessidade de alternância na democracia? Temos medo dos políticos ou dos cidadãos? Embora a sociedade civil portuguesa esteja a dar mostras de querer mudar, ainda há muito por fazer.</p>
+<p>Não há caciques sem tribo. Os autarcas que procuram uma nova candidatura após três mandatos fazem-no numa cidade vizinha, nunca a 300 quilómetros da sua antiga Câmara. Querem ficar perto, ao lado, para manter a sua tribo.</p>
+<p>A Democracia é o que foi corrompido. Os seus principais atores institucionais não podem ficar fora do negócio: chegam para ficar. A política tornou-se um negócio partidário; os partidos um ninho de irracionalidade onde se procura emprego, se aceita o que vem da cúpula e se critica tudo o que venha da oposição (mesmo seja a paz e a bonança).</p>
+<p>Nem o Estado nem a política existem. São metonímias criadas para a comunicação do Poder. O que realmente existem são práticas culturais que materializam a sua existência. Um edifício não é uma escola porque sim, mas pelas atividades que os indivíduos realizam dentro dele. O mesmo sucede com um país. E as ações dos indivíduos que compõem essas metonímias são marcadas por crenças, valores, mitos e&#8230; fraternidades. E essas fraternidades podem ser inclusivas ou exclusivas, elitistas ou não, favoráveis ou prejudiciais para o desenvolvimento de uma vida melhor para todos.</p>
+<p>O voto deve ser uma arma para incentivar a justiça, punir, e melhorar a qualidade de vida. Mas, pelo individualismo extremo, muito políticos e muitos cidadãos não pensam na sociedade quando vão a eleições. Assim, a democracia torna-se num conflito de egoísmos a ser manipulados para continuar no negócio&#8230; embora seja na Câmara mais próxima.
+	</p></div>
+	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="https://transparencia.pt/tag/autarcas/" rel="tag">Autarcas</a><a href="https://transparencia.pt/tag/autarquias/" rel="tag">Autarquias</a><a href="https://transparencia.pt/tag/limitacao-de-mandatos/" rel="tag">Limitação de Mandatos</a><a href="https://transparencia.pt/tag/marcelo-moriconi/" rel="tag">Marcelo Moriconi</a></span></footer></article><!-- #post-## -->
+
+<article id="post-1473" class="post-1473 post type-post status-publish format-standard hentry category-sem-categoria tag-autarquias tag-limitacao-de-mandatos tag-luis-de-sousa tag-tiac tag-transparencia-e-integridade">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="https://transparencia.pt/category/sem-categoria/" rel="category tag">Sem categoria</a></span>
+		</div>
+		<h1 class="entry-title"><a href="https://transparencia.pt/2013/03/03/limitacao-de-mandatos-uma-batalha-pela-democracia/" rel="bookmark">Limitação de mandatos: uma batalha pela democracia</a></h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="https://transparencia.pt/2013/03/03/limitacao-de-mandatos-uma-batalha-pela-democracia/" rel="bookmark"><time class="entry-date" datetime="2013-03-03T09:37:00+00:00">3 Março, 2013</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://transparencia.pt/author/tiac/" rel="author">tiac</a></span></span>			<span class="comments-link"><a href="https://transparencia.pt/2013/03/03/limitacao-de-mandatos-uma-batalha-pela-democracia/#comments">1 comentário</a></span>
+					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<style type="text/css"><!--
+P { margin-bottom: 0.21cm; }
+--></style>
+<p align="JUSTIFY"><strong><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><a href="http://blogues.publico.pt/asclaras/files/2012/06/LuisSousa_1.jpg" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://blogues.publico.pt/asclaras/files/2012/06/LuisSousa_1.jpg', '');"><img class="alignnone size-medium wp-image-935" alt="Luís de Sousa" src="http://blogues.publico.pt/asclaras/files/2012/06/LuisSousa_1-300x241.jpg" width="300" height="241" /></a></span></span></strong></p>
+<p align="JUSTIFY"><strong><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Por Luís de Sousa, Politólogo ICS-UL </span></span><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">e Presidente da TIAC</span></span></strong></p>
+<p align="JUSTIFY"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Nos últimos meses tem corrido muita tinta sobre a aplicação da Lei 46/2005 de 29 de Agosto, que estabelece limites à renovação sucessiva de mandatos dos presidentes dos órgãos executivos das autarquias locais.</span></span></p>
+<p align="JUSTIFY"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Estamos perante uma batalha de valores histórica para a nossa democracia que opõe populistas, defensores de que a democracia é a vontade popular expressa através do voto e republicanos, que acreditam que a democracia não se constrói apenas através de eleições, mas também de um conjunto de valores fundamentais e de regras, algumas das quais com efeitos restritivos das vontades das maiorias.</span></span></p>
+<p align="JUSTIFY"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">O debate tem sido rico de declarações que visam lançar a confusão sobre a aplicação da lei:</span></span></p>
+<p align="JUSTIFY"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">&#8211; Diz-se que “a lei está mal feita”. Se está ou não é irrelevante para o seu cumprimento. De facto o impedimento poderia ter ido mais longe. Poderia ter limitado o exercício a dois mandatos consecutivos; ou, tendo em conta a natureza tendencialmente presidencialista das eleições autárquicas, poderia inclusive ter obrigado à convocação de eleições intercalares nas situações em que os candidatos em limite de mandatos saem antecipadamente para passar o ceptro ao “Nº 2” e desta forma garantir a continuidade do seu partido no poder;</span></span></p>
+<p align="JUSTIFY"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">&#8211; Diz-se que “a lei é restritiva da capacidade eleitoral passiva”, mas o art.118.º da Constituição estabelece que “Ninguém pode exercer a título vitalício qualquer cargo político de âmbito nacional, regional ou local” e que “A lei pode determinar limites à renovação sucessiva de mandatos dos titulares de cargos políticos executivos”;</span></span></p>
+<p align="JUSTIFY"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">&#8211; Diz-se que “a lei é inconstitucional”, no entanto a constitucionalidade da lei nunca foi levantada pela legislatura que a aprovou, pelo Presidente da República que a promulgou; nem nunca houve nenhum pedido de verificação da inconstitucionalidade da lei ao Tribunal Constitucional por parte do anterior e actual Primeiro-Ministro, pelo anterior e actual Procurador Geral da República e pelo Provedor de Justiça. Também não deixa de ser curioso que todo este “garantismo” constitucional se tenha mobilizado apenas para defender uma prática de poder lesiva do bom desempenho do poder local democrático e nunca se tenha feito sentir em relação a um conjunto de aberrações jurídicas que persistem no poder local, entre outras, a situação singular na Europa de haver candidatos a órgãos autárquicos que não podem votar neles próprios ou a persistência de candidatos condenados por crimes de abuso de funções;</span></span></p>
+<p align="JUSTIFY"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">&#8211; Diz-se que “a limitação de mandatos que incida sobre cada um só pode incidir sobre os seus próprios mandatos e não evidentemente sobre os mandatos dos outros”. Embora exposto de uma forma tautológica, aquilo que se pretende dizer é que a limitação da renovação sucessiva de mandatos só se aplica aos mandatos exercidos (no mesmo município) e não aos que se vão exercer (noutro município). Por outras palavras, o candidato ao propor-se a outro município está a fazer um reset dos mandatos já exercidos na qualidade de presidente de câmara e a começar uma nova contagem. Pode portanto saltitar de um município para outro, ou melhor, entre municípios limítrofes, até ao resto dos seus dias sem que isso seja considerado, segundo esta interpretação, um exercício vitalício de um cargo local. Ora, do ponto de vista jurídico, a limitação de mandatos é uma restrição eleitoral, portanto, actua sobre o agente eleitoral retirando-lhe, temporariamente e em função de uma situação específica, a capacidade eleitoral passiva. Por outras palavras, o candidato nem sequer se pode propor a outro município para fazer um reset do número de mandatos exercidos, porque ao propor-se já está a violar a lei.</span></span></p>
+<p align="JUSTIFY"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">A esta cacofonia veio adicionar-se o recente </span></span><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><i>fait divers</i></span></span><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"> levantado pelo Presidente da República de que a lei teria sido publicada diversamente daquela promulgada pelo seu antecessor. Diz-se que a lei então aprovada pela AR utilizara a contracção da preposição “de” e o artigo “a” e que a publicada só continha a preposição “de”, alteração essa que foi desvalorizada pela Casa da Moeda, responsável pela edição e publicação do Diário da República, como tratando-se de uma normal operação de revisão de texto de acordo com as regras do bom português e do </span></span><span style="color: #2d2d2d;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">livro de estilo adoptado pela própria </span></span></span><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">AR. </span></span></p>
+<p align="JUSTIFY"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Para os apressados que de imediato deram vivas na Assembleia, e para aqueles jornalistas </span></span><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><i>engagés</i></span></span><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"> que prestam serviço às causas de poucos, adverte-se que nada muda no que diz respeito à substância do argumento, até porque o prazo para proceder a rectificações de erros materiais provenientes entre o texto original e o texto publicado já foi ultrapassado (art. 5º da Lei 74/98 alterada e republicada pela Lei 42 /2007), mas o mesmo já não se poderá dizer do ponto de vista político. Os partidos, com excepção do Bloco de Esquerda, terão que assumir a responsabilidade de rectificar a lei para permitir a eternização de autarcas no poder, como da sua vontade e assumir os custos políticos dessa sua decisão ou calarem-se de uma vez por todas e deixar que os tribunais façam o seu trabalho. Têm em mãos o presente envenenado que sempre evitaram.</span></span></p>
+<p align="JUSTIFY"><em>Uma versão condensada deste artigo foi publicada na edição de 27 de fevereiro de 2013 do jornal Público. Desde então, os partidos representados na Assembleia da República manifestaram um consenso em torno da visão de que a lei de limitação de mandatos não necessita de clarificações ou retificações. Caberá aos tribunais apreciá-la.</em></p>
+	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="https://transparencia.pt/tag/autarquias/" rel="tag">Autarquias</a><a href="https://transparencia.pt/tag/limitacao-de-mandatos/" rel="tag">Limitação de Mandatos</a><a href="https://transparencia.pt/tag/luis-de-sousa/" rel="tag">Luís de Sousa</a><a href="https://transparencia.pt/tag/tiac/" rel="tag">TIAC</a><a href="https://transparencia.pt/tag/transparencia-e-integridade/" rel="tag">Transparência e Integridade</a></span></footer></article><!-- #post-## -->
+
+<article id="post-1441" class="post-1441 post type-post status-publish format-standard hentry category-blog tag-autarcas tag-autarquias tag-joao-paulo-batalha tag-limitacao-de-mandatos">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="https://transparencia.pt/category/blog/" rel="category tag">blog</a></span>
+		</div>
+		<h1 class="entry-title"><a href="https://transparencia.pt/2013/02/27/de-do-do-do-de-da-da-da/" rel="bookmark">De do do do, de da da da</a></h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="https://transparencia.pt/2013/02/27/de-do-do-do-de-da-da-da/" rel="bookmark"><time class="entry-date" datetime="2013-02-27T08:28:46+00:00">27 Fevereiro, 2013</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://transparencia.pt/author/tiac/" rel="author">tiac</a></span></span>			<span class="comments-link"><a href="https://transparencia.pt/2013/02/27/de-do-do-do-de-da-da-da/#comments">2 comentários</a></span>
+					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<div class="container">
+<p lang="pt-PT"><b><img class="alignnone size-medium wp-image-1444" alt="Parlamento" src="//transparencia.pt/wp-content/themes/wpbootstrap/assets/img/Parlamento.jpg?de23aa" width="100%"  /></b></p>
+<p lang="pt-PT"><b>Por João Paulo Batalha, membro da Direção da TIAC</b></p>
+<p>Há canções estranhas na banda sonora da República. “Grândola, Vila Morena” não é uma delas. A senha iniciadora do regime democrático, cuja letra e música o Conselho de Ministros vai a contragosto aprendendo por estes dias, tem um lugar natural e indiscutível no repertório republicano – ou tinha, até se colocar a urgente questão de Estado de saber se cantar o “Grândola” é exercer a liberdade de expressão, ou negá-la.</p>
+<p lang="pt-PT">Como se esta vital matéria não fosse suficiente para cumprir as quotas do ridículo que parecem obrigatórias no debate político em Portugal, eis que ninguém menos que o Presidente da República junta outro clássico à <i>playlist.</i> A descoberta inusitada de uma gralha na lei de limitação de mandatos (oito anos depois de entrar em vigor e a escassos meses de produzir um efeito de limpeza sobre os dinossauros autárquicos!) eletrizou de repente a vida pública: afinal um presidente <i>da</i> Câmara tem direito a uma carreira caciquista a que um presidente <i>de</i> Câmara não teria? De repente a regra muda se for <i>da</i>, em vez de <i>de</i>? Vai ser uma vogal a resolver a questão que mistificava políticos, juristas e comentadores? Já tínhamos tido o caso de uma vírgula providencial inserida nunca se percebeu por quem. Agora animamos-nos com o <i>vogalgate</i>. Uma festa.</p>
+<p lang="pt-PT">Pontos nos ii: se é de leis que falamos, existe uma (a Lei 74/98, alterada e republicada pela Lei 42/2007), que diz claramente como, e quando, se podem corrigir gralhas e erros nas leis publicadas em Diário da República. Vale a pena citar o art. 5º, pontos 2 e 3:</p>
+<p lang="pt-PT">«2 — As declarações de rectificação devem ser publicadas até 60 dias após a publicação do texto rectificando.<br />
+3 — A não observância do prazo previsto no número anterior determina a nulidade do acto de rectificação.»</p>
+<p>Ou seja, é dois meses (e não oito anos!) depois que vamos a tempo de descobrir vogais e asteriscos nas leis da República. Passado esse prazo, vale o que está publicado. E ainda bem que assim é; de outro modo, não poderíamos acreditar no que lemos no jornal oficial. Cidadãos, empresas e investidores teriam de viver e trabalhar num país em que as leis podiam ser umas, mas logo a seguir transformar-se noutras quaisquer, por alguém de repente se lembrar que lhes falta uma errata. Belém, que suscitou a pífia questão da vogal, devia saber que já não vem a tempo, nos termos da lei. Do Presidente da República espera-se uma intervenção serena e esclarecedora. Cavaco Silva serviu-nos precisamente o contrário.</p>
+<p>A fome com que os políticos (e alguns comentadores úteis) se agarraram à jangada da vogal diz-nos também outra coisa, igualmente deprimente: qualquer noção de interesse público, de ética republicana ou mesmo de sentido do ridículo está hoje ausente do debate político. Dizem que grandes mentes discutem ideias; pequenas mentes discutem pessoas. Nem me atrevo a medir as mentes que discutem vogais.</p>
+<p>Menos nobre do que o “Grândola, Vila Morena”, é certo, há uma canção que fala dos truques de linguagem e do chico-espertismo dos políticos. Lembrei-me dela de imediato. Talvez as elites da República devessem começar a aprender a letra e música dos Police, bem apropriada à qualidade desta conversa – e da fauna que a dinamiza: <i>“When their eloquence escapes you/ Their logic ties you up and rapes you/ De do do do, de da da da/ Is all I want to say to you”</i>.</p>
+<p lang="pt-PT"><i>[Quando a eloquência deles nos escapa/ e a sua lógica nos ata e violenta/ De do do do, de da da da/ é tudo o que tenho para lhes dizer]</i></p>
+</p></div>
+	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="https://transparencia.pt/tag/autarcas/" rel="tag">Autarcas</a><a href="https://transparencia.pt/tag/autarquias/" rel="tag">Autarquias</a><a href="https://transparencia.pt/tag/joao-paulo-batalha/" rel="tag">João Paulo Batalha</a><a href="https://transparencia.pt/tag/limitacao-de-mandatos/" rel="tag">Limitação de Mandatos</a></span></footer></article><!-- #post-## -->
+
+<article id="post-1324" class="post-1324 post type-post status-publish format-standard hentry category-blog tag-autarcas tag-autarquias tag-limitacao-de-mandatos tag-orlando-nascimento">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="https://transparencia.pt/category/blog/" rel="category tag">blog</a></span>
+		</div>
+		<h1 class="entry-title"><a href="https://transparencia.pt/2012/11/26/os-insubstituiveis-ou-a-democracia-exagerada/" rel="bookmark">Os Insubstituíveis (ou a democracia exagerada)</a></h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="https://transparencia.pt/2012/11/26/os-insubstituiveis-ou-a-democracia-exagerada/" rel="bookmark"><time class="entry-date" datetime="2012-11-26T15:45:45+00:00">26 Novembro, 2012</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://transparencia.pt/author/tiac/" rel="author">tiac</a></span></span>			<span class="comments-link"><a href="https://transparencia.pt/2012/11/26/os-insubstituiveis-ou-a-democracia-exagerada/#comments">4 comentários</a></span>
+					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<div class="container">
+<strong><img class="alignnone  wp-image-1326" title="Suit" src="//transparencia.pt/wp-content/themes/wpbootstrap/assets/img/Suit.jpg?de23aa" alt="" width="100%"  /></strong></p>
+<p><strong>Por Orlando Nascimento, Juiz Desembargador e último Inspector-Geral da IGAL (Inspecção-Geral da Administração Local)<br />
+</strong></p>
+<p>Aproximando-se o dia mundial contra a corrupção é meu dever lembrar uma área que tanto por ela (a corrupção) tem feito, porfiando por continuar… perfilando-se para continuar…</p>
+<p>É minha convicção, na experiência formada, que urge alterar, por a todos os níveis insustentável, o estado actual das coisas.</p>
+<p>No meu trabalho, há muitos anos, recordo-me de ter passado por um município e de muitas vezes me ter deitado cedo, com um comprimido para enganar o cansaço, e sem jantar.</p>
+<p>Mudei para melhor, para um outro onde percorria a rua principal, em direcção a casa, pela uma hora da manhã.</p>
+<p>Cansado destas “noitadas”, passei para outro em que retirava os processos (atrasados) das prateleiras ao fim-de-semana.</p>
+<p>No outro a seguir, um sítio arejado de Lisboa, trabalhei nas férias de verão dos dois anos que aí passei.</p>
+<p>Cansado de andar de metro, mudei para mais perto; passei a andar a pé, abrir a porta ao porteiro e sair no final do dia, melhor, no princípio da noite, com os trabalhadores da limpeza.</p>
+<p>Em todos eles fui substituído.</p>
+<p>Para melhor ou para pior.</p>
+<p>Por um parafuso à medida ou por um arame no seu lugar.</p>
+<p>E todos continuaram a funcionar.</p>
+<p>Ainda que a alguns custe, qualquer de nós é substituível, muitas vezes por outro melhor.</p>
+<p>Mas há os <strong>insubstituíveis</strong>.</p>
+<p>Nunca os vi, mas já ouvi falar.</p>
+<p>Também já ouvi dizer que, deles, está o cemitério cheio.</p>
+<p>Mas não é destes mortais, comuns, que neste importante dia reza a insubstituição.</p>
+<p>É dos <strong>presidentes</strong>!</p>
+<p>Os nossos insubstituíveis e, por isso, eternos, presidentes.</p>
+<p>Uma vez eleitos e aconchegados e aconchegados e logo eleitos, tornaram-se insubstituíveis.</p>
+<p>Esqueceram a profissão.</p>
+<p>Alguns nem disso precisam.</p>
+<p>Trabalharam, uns bem, outros assim-assim, outros mal e outros, até, com escândalo público, sendo tão amigos dos juízes que não lhes faltam com trabalho; ainda o juiz não despachou um requerimento e já lá tem mais cinco; prisão é que não.</p>
+<p>Mas, todos eles são…. <strong>insubstituíveis</strong>.</p>
+<p>Não vale a pena dizer-lhes que ser eleito não é profissão.</p>
+<p>Que profissão é outra coisa.</p>
+<p>Ser eleito é ter um projecto, apresentá-lo aos cidadãos, executá-lo quando mandatado e…prestar contas!</p>
+<p>A quem o fez, e muitos são, a minha homenagem.</p>
+<p>Mas não é destes que falo; é dos outros.</p>
+<p>Os dos projectos de “santa Engrácia”, da técnica do sem-fim; os anos passam e nem para trás, nem para a frente, nem para a democracia, nem para os cidadãos, nem para os jovens, nem para os velhos.</p>
+<p>E vive-se bem (vivem eles).</p>
+<p>Os velhos, os de boa cepa, gostam de se ver continuados.</p>
+<p>Os velhos que não gostam de se ver continuados são os <strong>insubstituíveis</strong>.</p>
+<p>Eles são únicos.</p>
+<p>Destroem as próprias sombras e até os delfins, qual grupo de coelhos, tão preocupados em castrar a virilidade dos outros, que acabam por fazer perigar a própria descendência.</p>
+<p>E destes temos.</p>
+<p>Eles aí estão.</p>
+<p>Inconformados com a limitação de mandatos, que exagero de democracia, logo lhes ocorreu o “desenrascanço” (ou não fossem eles, na falta de outro, desenrascados).</p>
+<p>Concorrer ao “condado” do lado.</p>
+<p>Afinal é perto, os automóveis são bons, chega-se depressa.</p>
+<p>E a corte pode ser a mesma; vai também.</p>
+<p>O Estado continuará a enviar o dinheiro, que todos pagamos, ou até nem pagamos, assim ele venha.</p>
+<p>Se alguém se queixar, isso é ofensa; ofensa pessoal.</p>
+<p>Pensar diferente, dizer diferente, é ofensivo da …matriz.<em></em></p>
+<p><em>“Livrar de alcaide quando entra e quando sai”</em>; também será ofensivo?!</p>
+<p>Pois, sem ofensa, assim como assim, onde estava também não fazia falta nenhuma.</p>
+<p>E para onde vai nem aquece nem arrefece.</p>
+<p>Mas, e o projecto? Tem projecto?</p>
+<p>Mas alguma vez teve projecto?</p>
+<p>Para ser presidente é preciso ter projecto?</p>
+<p>Ser presidente é uma profissão.</p>
+<p>É profissão velha, conhecida, batida.</p>
+<p>Estar no poder.</p>
+<p>Viver do poder.</p>
+<p>Manter-se no poder.</p>
+<p>Não perder o poder.</p>
+<p>Muito menos para os jovens.</p>
+<p>Não vão eles trazer projectos, fazer melhor, apostar em valores…</p>
+<p>Os jovens são perigosos!</p>
+<p>Todos.</p>
+<p>Convém não lhes dar hipóteses.</p>
+<p>Não lhes abrir o lugar; não abrir mão do lugar.</p>
+<p>Distraí-los com noitadas (que acenem com bandeirinhas!).</p>
+<p>Afogá-los em mestrados.</p>
+<p>Fazê-los emigrar (e agora sem regresso; que não voltem).</p>
+<p>Mas, onde é que já ouvimos isto?</p>
+<p>À falta de melhor, o oráculo augura para si próprio; é o “desenrascanço”.</p>
+<p>Se os lugares estão ocupados, são nossos, pois emigrem!</p>
+<p>Mandem dinheiro, mas não votem.</p>
+<p>Paguem cá, mas não contem.</p>
+<p>Tenham sucesso, mas lá longe.</p>
+<p>Concorrência não.</p>
+<p>Senhores presidentes tenham vergonha!</p>
+<p>E se a não têm, criem-na.</p>
+<p>Vão trabalhar.</p>
+<p>Reformem-se.</p>
+<p>Dediquem-se ao turismo.</p>
+<p>Aproveitem, até, para estudar.</p>
+<p>Emigrem vocês mesmos.</p>
+<p>Mas, libertem os jovens.</p>
+<p>Não da sua juventude, não da sua cidadania.</p>
+<p>Mas da vossa presença e das vossas habilidades.</p>
+<p>Pois tenham vossas excelências, senhores presidentes, a certeza que: <strong>não são insubstituíveis</strong>!</p>
+<p>&nbsp;</p>
+<p><em>O autor escreve segundo a antiga ortografia</em>
+	</div>
+	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="https://transparencia.pt/tag/autarcas/" rel="tag">Autarcas</a><a href="https://transparencia.pt/tag/autarquias/" rel="tag">Autarquias</a><a href="https://transparencia.pt/tag/limitacao-de-mandatos/" rel="tag">Limitação de Mandatos</a><a href="https://transparencia.pt/tag/orlando-nascimento/" rel="tag">Orlando Nascimento</a></span></footer></article><!-- #post-## -->
+
+<article id="post-1170" class="post-1170 post type-post status-publish format-standard hentry category-blog tag-autarquias tag-cds tag-limitacao-de-mandatos tag-luis-de-sousa tag-ps tag-psd tag-transparencia">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="https://transparencia.pt/category/blog/" rel="category tag">blog</a></span>
+		</div>
+		<h1 class="entry-title"><a href="https://transparencia.pt/2012/08/31/a-limitacao-de-mandatos-o-que-esta-em-jogo/" rel="bookmark">A limitação de mandatos: o que está em jogo?</a></h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="https://transparencia.pt/2012/08/31/a-limitacao-de-mandatos-o-que-esta-em-jogo/" rel="bookmark"><time class="entry-date" datetime="2012-08-31T07:59:38+00:00">31 Agosto, 2012</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://transparencia.pt/author/tiac/" rel="author">tiac</a></span></span>			<span class="comments-link"><a href="https://transparencia.pt/2012/08/31/a-limitacao-de-mandatos-o-que-esta-em-jogo/#comments">1 comentário</a></span>
+					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<div class="container">
+<strong><img class="alignnone size-medium wp-image-1173" title="CML" src="//transparencia.pt/wp-content/themes/wpbootstrap/assets/img/CML.jpg?de23aa" alt="" width="100%" /></strong></p>
+<p><strong>Por Luís de Sousa, Presidente da TIAC</strong></p>
+<p>No próximo dia 3, os partidos do arco do Governo apresentarão uma proposta para a alteração da Lei n.º 46/2005, de 29 de agosto &#8211; Estabelece limites à renovação sucessiva de mandatos dos presidentes dos órgãos executivos das autarquias locais. Esta iniciativa configura um retrocesso na qualidade da democracia.</p>
+<p><strong>O problema</strong><br />
+A ausência de alternância no poder facilita a corrupção política.</p>
+<p><strong>O pressuposto</strong><br />
+A corrupção política, entendida como o abuso de funções públicas para benefício de interesses privados, constitui um óbice ao desenvolvimento económico e social dos países, ferindo a legitimidade democrática e a confiança dos cidadãos nos atores e instituições políticas.</p>
+<p>Robert Klitgaard (1988) sintetizara a raiz do problema na seguinte equação: corrupção = monopólio + discricionariedade – responsabilização. De acordo com as teorias da &#8220;escolha pública&#8221; quanto mais competitivas forem as estruturas políticas e económicas de um país, menor o nível de corrupção. Se à partida todos os eleitos e partidos tentam rentabilizar o seu mandato, valendo-se das suas próprias prerrogativas para mercadejar o poder, então quanto menor for a possibilidade de um partido governar em absoluto, isto é sem alternativas e alternância, menor será o risco de corrupção política. Como alertara o céptico Lord Acton (1887), se o poder corrompe, o poder absoluto corrompe absolutamente.</p>
+<p>Talvez seja exagerado pensar que todos os políticos andam na política com o intuito de enriquecer ou enriquecer os seus familiares e amigos. Contudo, não deixa de ser verdade, como refere Przeworski (1991, 1999) que um dos elementos distintivos de qualquer democracia desenvolvida é a possibilidade dos eleitos serem removidos de uma forma pacífica e sem colocar em risco a própria existência do regime.</p>
+<p>O pluralismo e alternância, não sendo um antídoto contra a corrupção, tem pelo menos o mérito de introduzir alguma incerteza quanto à perpetuação dos eleitos no poder, criando concorrência e contra-poderes, aumentando o escrutínio público, limitando a discricionariedade do detentor do cargo e portanto aumentando os custos morais associados a este tipo de transações ilícitas (Pizzorno 1992; Della Porta 1992; Ackerman 1978; Horowitz et al. 2009).</p>
+<p><strong>A solução</strong><br />
+As eleições são o mecanismo de predileção da democracia para produzir a rotação de elites no poder. Porém, em muitos contextos, não obstante existam condições formais para a realização de eleições livres e justas, não se verificam condições substantivas para a criação de alternativas de poder e consequentemente alternância. A limitação temporal de mandatos surge assim como uma tentativa de dar resposta a esta deficiência democrática, a par de outras medidas, tais como: a proibição de acumulação de mandatos, a segregação de funções, a existência de quotas, etc. Trata-se de uma medida preventiva do abuso de poder.</p>
+<p><strong>O alcance limitado da actual lei</strong><br />
+De acordo com a atual lei de limitação de mandatos, o presidente de Câmara Municipal e o presidente de Junta de Freguesia em exercício de funções encontram-se impedidos de se recandidatarem após três mandatos consecutivos.</p>
+<p>No que concerne os presidentes de Câmara em particular, tendo em conta que estes têm a faculdade de poder concentrar as principais funções executivas no seu cargo (art. 69º da lei 169/99 de 18 de setembro com as alterações da Lei n.º 5-A/2002, de 11 de janeiro), a limitação temporal faz sentido. Muito do clientelismo e corrupção política verificada ao nível autárquico está associado ao monopólio de poder e discricionariedade do cargo de presidente de Câmara.</p>
+<p>A lei nem se quer é demasiado restritiva, visto que o mesmo candidato pode permanecer no poder durante 12 anos (!) consecutivos e vir a recandidatar-se, caso não tenha renunciado prematuramente o cargo, findo o quadriénio imediatamente subsequente ao último mandato consecutivo permitido.</p>
+<p>O que a lei não acautelou:</p>
+<ul>
+<li>A atual lei coloca um limite no número de mandatos a um candidato num sistema eleitoral de listas fechadas. Por conseguinte, apenas o cabeça de lista em exercício de funções encontra-se impedido de se recandidatar após três mandatos sucessivos. Isto significa que a limitação atua sobre os riscos associados à permanência no poder do mesmo detentor do cargo e não os que possam advir da permanência do mesmo partido no poder;</li>
+<li>Se por um lado é o carisma e popularidade do presidente que leva o partido às vitórias consecutivas, por outro lado é o partido que propicia as condições do seu sucesso eleitoral, em particular quando o mesmo se encontra no poder quer ao nível autárquico como ao nível nacional, Isto leva a que a saída dos edis em “fim de época”, seja feita de uma forma concertada: o presidente de Câmara começa por delegar muitas das suas competências financeiras no seu vice-presidente e opta por antecipar a sua saída, permitindo algum tempo de preparação ao número dois da lista, de modo a que este consiga consolidar apoios, tranquilizar as clientelas e ganhar algum capital de imagem próprio antes do arranque da campanha eleitoral. O partido agradece e compromete-se a providenciar um para-quedas dourado ao edil em cessação de funções;</li>
+<li>A atual redação da lei de limitação de mandatos não só acaba por ter um impacto limitado na prevenção de abusos no exercício de funções e no desmantelamento de redes clientelares ao nível local, como também desvirtua a vontade popular transmitida pelo voto. As eleições autárquicas são de pendor presidencialista, não apenas pelo facto de os eleitores votarem na figura do cabeça de lista como futuro presidente, mas porque a própria lei que define o quadro de competências e regime jurídico deste órgão municipal assim o estipula: “É presidente da Câmara Municipal o primeiro candidato da lista mais votada” (art 57º da lei 169/99 de 18 de setembro com as alterações da Lei n.º 5-A/2002, de 11 de janeiro). Portanto, ao não determinar a obrigatoriedade de realização de eleições intercalares para este órgão, a limitação de mandatos, na sua atual configuração, está a contribuir para a sua deslegitimação. Esta questão não se levanta apenas nos casos em que os presidentes de câmara renunciaram o mandato em virtude da atual limitação temporal, mas para qualquer saída antecipada do exercício de funções.</li>
+</ul>
+<p><strong>A falta de vontade política&#8230;</strong><br />
+O problema deste tipo de mecanismos é o cosmetismo legislativo a que estão sujeitos, isto é, a tendência para o legislador invocar os benefícios da lei, sem que se empenhe em criar normas robustas para a sua efetiva implementação.</p>
+<p>Os dois maiores partidos não estão minimamente interessados em pluralismo político ou partilha de poder e muito menos em alternância. Portanto, a limitação de mandatos foi (é) uma causa perdida à nascença.</p>
+<p>Importa porém sublinhar que não obstante as suas limitações, a atual lei atinge 149 presidentes de Câmara em 2013, a maioria do PSD, com ou sem coligação. Ou seja, cerca de 50 por cento dos concelhos serão obrigados a mudar de rosto nas suas lideranças. Num contexto em que a capacidade de distribuição de “tachos” por parte do Governo encontra-se mais limitada e escrutinada, o saldo desta medida é bastante pesado para um partido de base de apoio autárquica como o PSD.</p>
+<p>Mais ainda, o PSD encontra-se a braços com uma reforma do poder local que não obstante seja pobre de conteúdo e alcance, não deixou de irritar as suas bases em vésperas de eleições autárquicas. Portanto, uma reforma no sentido de facilitar a vida de alguns barões do partido ao nível local, não é apenas um imperativo estratégico do partido, é também um ato tático de prudência da atual liderança.</p>
+<p>O PS, autor desta famigerada reforma em 2005, vem agora defender que o princípio da limitação de mandatos autárquicos aplica-se ao território e não à função, permitindo assim que um presidente de Câmara eleito por três vezes possa candidatar-se novamente a outro município.</p>
+<p>Independentemente do volte-face do partido sobre esta questão, o mais grave está na interpretação pouco informada dada ao princípio de limitação temporal de mandatos. Porque não também o argumento do posicionamento na lista? Ou a apresentação de candidatura por outro partido? A limitação de qualquer mandato incide sobre o exercício do cargo e nunca sobre o território onde esse é exercido. Mas se o PS está convencido de que essa é a interpretação justa da atual lei, então porque não avança com recandidaturas de presidentes de Câmara em fim de mandato e deixa a justiça seguir o seu curso quanto à validação das mesmas?</p>
+<p>Claramente, a atual lei tornou-se um incómodo para os dois maiores partidos. Portanto, se a lei não presta, mude-se a lei.</p>
+<p>O CDS, por sua vez, não sendo adepto de um poder local rosa e laranja, também não é contrário à alteração da lei&#8230; desde que ganhe com isso. Resignado à impossibilidade de vir a ganhar sozinho novas autarquias, joga pelo seguro e tenta negociar pelo menos algumas lideranças nos municípios onde existe atualmente uma coligação PSD-CDS.</p>
+<p>A reforma que se avizinha retira qualquer efeito prático à limitação de mandatos. Os seus defensores argumentam que o facto de o presidente de Câmara com três mandatos consecutivos ser forçado a candidatar-se noutro município, coloca alguma incerteza quanto à sua reeleição. O que eles não dizem é que muito raramente um candidato, são de mente, natural e com residência noutro concelho se atreveria a candidatar-se por um município onde não tivesse qualquer ligação pessoal e base de apoio. O primeiro entrave à sua candidatura começaria ao nível das próprias concelhias dos partidos.</p>
+<p>Sejamos claros: esta revisão tem como único objetivo a disputa do poder nas autarquias das grandes áreas metropolitanas de Lisboa e Porto, em que a transferência se verificaria em concelhos contíguos, onde operam as mesmas redes clientelares de apoio e onde as questões identitárias e territoriais não são particularmente estruturantes do voto. Nestes casos, a apresentação de um candidato do mesmo partido de uma localidade vizinha não causa mossa ao eleitorado e pode até ser determinada pela direção nacional do partido.</p>
+<p><strong>&#8230; e de responsabilização</strong><br />
+Os cidadãos parecem estar pouco mobilizados para o assunto: não só têm permanecido complacentes com a corrupção, colusão de interesses e clientelismo nas suas autarquias, como em muitos casos encaram a política local de uma forma clubística: o importante é que o partido que apoiam vença e vença sempre, certo ou errado, com boa ou má gestão. Portanto, bem vindas sejam as maiorias absolutas, os autarcas popularuscos e a permanência do mesmo partido no poder e fora dele. A mexicanização do poder local não é apenas produto de um mau desenho institucional, mas de uma cultura política pouco responsável e exigente. Infelizmente, esta reforma prosseguirá o seu caminho sem qualquer debate público informado e a democracia ficará mais pobre.</p>
+<p><em>Uma versão condensada deste artigo foi publicada a 30 de agosto de 2012 no jornal Público.</em>
+	</div>
+	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="https://transparencia.pt/tag/autarquias/" rel="tag">Autarquias</a><a href="https://transparencia.pt/tag/cds/" rel="tag">CDS</a><a href="https://transparencia.pt/tag/limitacao-de-mandatos/" rel="tag">Limitação de Mandatos</a><a href="https://transparencia.pt/tag/luis-de-sousa/" rel="tag">Luís de Sousa</a><a href="https://transparencia.pt/tag/ps/" rel="tag">PS</a><a href="https://transparencia.pt/tag/psd/" rel="tag">PSD</a><a href="https://transparencia.pt/tag/transparencia/" rel="tag">transparência</a></span></footer></article><!-- #post-## -->
+		</div><!-- #content -->
+	</section><!-- #primary -->
+
+<div id="secondary">
+	
+	
+	</div><!-- #secondary -->
+﻿
+
+
+
+
+<style type="text/css">
+	
+@media (max-width: 844px){
+	 
+	.col-sm-6{
+
+text-align: center;
+
+
+	}
+}
+@media (max-width: 844px){
+	 
+	.subscribeMe{
+
+margin-left: 13%;
+
+
+	}
+}
+@media (max-width: 1090px){
+	 
+	footer {
+
+/*text-align: center;*/
+
+
+	}
+}
+
+</style>
+
+<section id="connect">
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+      <div align="center">
+        <h3>SEGUE-NOS NAS REDES SOCIAIS</h3>
+        
+        <a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-single synved-social-provider-facebook nolightbox" data-provider="facebook" target="_blank" rel="nofollow" title="Follow us on Facebook" href="http://www.facebook.com/MyAvatarName" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="facebook" title="Follow us on Facebook" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://transparencia.pt/wp-content/plugins/social-media-feather/synved-social/image/social/regular/64x64/facebook.png?de23aa" /></a><a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-single synved-social-provider-twitter nolightbox" data-provider="twitter" target="_blank" rel="nofollow" title="Follow us on Twitter" href="http://twitter.com/MyAvatarName" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Follow us on Twitter" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://transparencia.pt/wp-content/plugins/social-media-feather/synved-social/image/social/regular/64x64/twitter.png?de23aa" /></a><a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-single synved-social-provider-google_plus nolightbox" data-provider="google_plus" target="_blank" rel="nofollow" title="Follow us on Google+" href="http://plus.google.com/needlessly_long_google_plus_id" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="google_plus" title="Follow us on Google+" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://transparencia.pt/wp-content/plugins/social-media-feather/synved-social/image/social/regular/64x64/google_plus.png?de23aa" /></a><a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-single synved-social-provider-linkedin nolightbox" data-provider="linkedin" target="_blank" rel="nofollow" title="Find us on Linkedin" href="http://www.linkedin.com/in/yourid" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Find us on Linkedin" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://transparencia.pt/wp-content/plugins/social-media-feather/synved-social/image/social/regular/64x64/linkedin.png?de23aa" /></a><a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-single synved-social-provider-youtube nolightbox" data-provider="youtube" target="_blank" rel="nofollow" title="Find us on YouTube" href="http://www.youtube.com/MyYouTubeName" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;"><img alt="youtube" title="Find us on YouTube" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://transparencia.pt/wp-content/plugins/social-media-feather/synved-social/image/social/regular/64x64/youtube.png?de23aa" /></a>        </div>
+      </div>
+     <div class="col-sm-6">
+        <h3>SUBSCREVE A NOSSA NEWSLETTER</h3>
+        <div align="center">
+        <form id="NewsletterForm" method="post">
+          <input width="30" type="text" class="subscribeMe" id="email" name="email" placeholder="Introduz o teu e-mail">
+          <button role="submit" name="submit" id="submit">SUBSCREVER </button>
+          <ul style="list-style-type: none;">
+          <!--<li class="col-sm-12 col-md-6">
+          <input type="checkbox" name="dcn" value="true" checked="checked"  width="20%"><label>Newsletter Semanal</label></li>
+          <li class="col-sm-12 col-md-6"><input type="checkbox" name="tipr" value="true" width="20%"><label>Newsletter Mensal</label></li>
+       -->
+          </ul>
+        </form>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+
+
+ 
+
+
+<footer style="background-color:#e0e0e0">
+    <div class="container site-map" style="text-align:center">
+    <div class="row">
+      <div class="col-md-3">
+        <h4>FAQ</h4>
+        <ul>
+       
+	    <li style="list-style: none;"><a href="https://transparencia.pt/faq/#corrupcao" class="fancybox">O que é a corrupção?</a></li>
+						<li style="list-style: none;"><a href="https://transparencia.pt/faq/#transparencia" class="fancybox">O que é a transparência?</a></li>
+						<li style="list-style: none;"><a href="https://transparencia.pt/faq/#custos" class="fancybox">Quais são os custos da corrupção?</a></li>
+						<li style="list-style: none;"><a href="https://transparencia.pt/faq/#quantificar" class="fancybox">É possível quantificar os custos da corrupção?</a></li>
+                        <li style="list-style: none;"><a href="https://transparencia.pt/faq/#niveis" class="fancybox">Em que contextos existem maiores níveis de corrupção?</a></li>
+                        <li style="list-style: none;"><a href="https://transparencia.pt/faq/#sociedades" class="fancybox">A corrupção não é uma prática normal ou tradicional em<br /> determinadas sociedades?</a></li>
+                        <li style="list-style: none;"><a href="https://transparencia.pt/faq/#democracia" class="fancybox">Democracia e corrupção: realidades (irre)conciliáveis?</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h4>FERRAMENTAS</h4>
+        <ul>
+	    <li style="list-style: none;"><a href="https://transparencia.pt/faq/#toolkit" class="fancybox">Toolkit de Combate à Corrupção</a></li>
+						<li style="list-style: none;"><a href="http://www.trust.org/?show=trustlawcorruption" target="_blank">Anti-Corruption Views</a></li>
+						<li style="list-style: none;"><a href="http://blog.transparency.org/" target="_blank">Space for Transparency</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h4>CONTACTOS</h4>
+        <ul>
+	    <li style="list-style: none;"><b>Endereço:</b><br><b style="color: #428bca;">Rua Leopoldo de Almeida,9B 
+1750-137 Lumiar,Lisboa</b></li>
+						<li style="list-style: none;"><b>Telefone:</b><br><b style="color: #428bca;">217522075</b></li>
+						<li style="list-style: none;"><b>Email:</b><br><a style="color: #1A497F;" href="mailto:secretariado&#64;transparencia&#46;pt?Subject=Comentário%20no%20site" target="_top"><b <b style="color: #428bca;">Contactar</b></a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h4 >LINKS</h4>
+        <ul>
+	    <li style="list-style: none;"><a href="http://ancorage-net.transparencia.pt" target="_blank">Ancorage-Net</a></li>
+						<li style="list-style: none;"><a href="http://corruptionresearchnetwork.org/" target="_blank">Anti-Corruption Research Network</a></li>
+						<li style="list-style: none;"><a href="http://www.business-anti-corruption.com/" target="_blank">Business Anti-Corruption Portal</a></li>
+						<li style="list-style: none;"><a href="http://www.oecd.org/corruption/oecdantibriberyconvention.htm" target="_blank">OECD Convention on Combating Bribery of Foreign Public Officials<br /> in International Business Transactions</a></li>
+                          <li style="list-style: none;"><a href="http://integridade.transparencia.pt/" target="_blank">Sistema Nacional de Integridade</a></li>
+                        <li style="list-style: none;"><a href="http://www.transparency.org/" target="_blank">Transparency International</a></li>
+                        <li style="list-style: none;"><a href="http://www.unodc.org/unodc/en/treaties/CAC/" target="_blank">United Nations Convention Against Corruption</a></li>
+                        <li style="list-style: none;"><a href="http://www.u4.no/helpdesk/" target="_blank">U4 Anti-Corruption Resource Centre</a></li>
+                       
+        </ul>
+      </div>
+     
+    </div>
+    </div>
+
+  </footer>
+
+<div class="container" align="center" style="margin-top:20px">
+		<b>&copy; 2010-2016</b> <a style="color:#0397d6;" href="https://transparencia.pt" target="_blank"><b>TIAC</b></a><b>. Todos os direitos reservados.
+	</div>
+
+</div>
+
+
+
+<script>window.jQuery || document.write('<script type="text/javascript" src="https://transparencia.pt/wp-content/cache/minify/000000/nYvRCYAwDAUXkjz9dJxWojTYRpuIdntRnMDPO-6AIOGiRXVZOWzJaNL8OqwpGmQ_uDYMNNLwAeVUSKzD_7WHn1y8zXpUZy4QQ1R18xq2J7oB.js"></script>
+<script src='https://www.google.com/recaptcha/api.js?hl=pt'></script>
+<script type="text/javascript" src="https://transparencia.pt/wp-content/cache/minify/000000/M9AvKU_NK6lMyy8tKklNzdNPLi7WzyrWL8kvTc5ITUtLTS4pBgA.js"></script>
+<script src="//transparencia.pt/wp-content/themes/twentyfourteen/css/js/modernizr-1.7.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+        $('.carousel').carousel({
+            interval: 5000,
+            cycle: true
+        });
+    });
+
+
+
+function projeto_desenvolvimento() {
+    alert("Projeto em desenvolvimento!");
+}
+
+
+var removeClass = true;
+$(".dropdown-toggle").click(function () {
+    $(".teste").toggleClass('opacidade');
+    removeClass = false;
+});
+
+
+
+$('.container,#semFade').click(function () {
+    if (removeClass) {
+        $(".teste").removeClass('opacidade');
+    }
+    removeClass = true;
+});
+
+
+
+
+
+
+
+
+
+
+    function showOrHide() 
+    {
+        var div = document.getElementById("showOrHideDiv");
+        if (div.style.display == "block") 
+        {
+            div.style.display = "none";
+        }
+        else 
+        {
+            div.style.display = "block";
+        }
+    } 
+     function showOrHide1() 
+    {
+        var div = document.getElementById("showOrHideDiv1");
+        if (div.style.display == "block") 
+        {
+            div.style.display = "none";
+        }
+        else 
+        {
+            div.style.display = "block";
+        }
+    } 
+     function showOrHide2() 
+    {
+        var div = document.getElementById("showOrHideDiv2");
+        if (div.style.display == "block") 
+        {
+            div.style.display = "none";
+        }
+        else 
+        {
+            div.style.display = "block";
+        }
+    } 
+     function showOrHide3() 
+    {
+        var div = document.getElementById("showOrHideDiv3");
+        if (div.style.display == "block") 
+        {
+            div.style.display = "none";
+        }
+        else 
+        {
+            div.style.display = "block";
+        }
+    } 
+     function showOrHide4() 
+    {
+        var div = document.getElementById("showOrHideDiv4");
+        if (div.style.display == "block") 
+        {
+            div.style.display = "none";
+        }
+        else 
+        {
+            div.style.display = "block";
+        }
+    } 
+     function showOrHide5() 
+    {
+        var div = document.getElementById("showOrHideDiv5");
+        if (div.style.display == "block") 
+        {
+            div.style.display = "none";
+        }
+        else 
+        {
+            div.style.display = "block";
+        }
+    } 
+
+ 
+
+function toggle() {
+  var ele = document.getElementById("toggleText");
+  var text = document.getElementById("displayText");
+  if(ele.style.display == "block") {
+        ele.style.display = "none";
+    text.innerHTML = "Mostrar";
+    }
+  else {
+    ele.style.display = "block";
+    text.innerHTML = "Esconder";
+  }
+} 
+
+  
+$(window).scroll(function(){
+  if($(document).scrollTop() > 380){//Here 200 may be not be exactly 200px
+    $('.a').hide();
+  }
+  
+   if($(document).scrollTop() < 380){//Here 200 may be not be exactly 200px
+    $('.a').show();
+  }
+  
+});
+
+
+
+
+
+  
+ $(document).ready(function () {
+  $(".navbar-nav li ul li a").click(function(event) {
+    $(".navbar-collapse").collapse('hide');
+  });
+});
+
+$(function() {
+  $('a[href*=#]:not([href=#myCarousel])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 900);
+        return false;
+      }
+    }
+  });
+});
+
+</script>
+
+
+ 
+
+
+</body>
+
+
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Object Caching 680/772 objects using disk
+
+ Served from: transparencia.pt @ 2016-02-04 11:31:59 by W3 Total Cache -->
+
+<!-- W3 Total Cache: Db cache debug info:
+Engine:             disk
+Total queries:      14
+Cached queries:     0
+Total query time:   0.0036
+SQL info:
+    # | Time (s) |    Caching (Reject reason)     |   Status   | Data size (b) | Query
+    1 |   0.0004 |            enabled             | not cached |           720 | SELECT wp_term_taxonomy.term_taxonomy_id
+					FROM wp_term_taxonomy
+					INNER JOIN wp_terms USING (term_id)
+					WHERE taxonomy = 'post_tag'
+					AND wp_terms.slug IN ('limitacao-de-mandatos')
+    2 |   0.0002 |            enabled             | not cached |          3512 | SELECT t.*, tt.* FROM wp_terms AS t INNER JOIN wp_term_taxonomy AS tt ON t.term_id = tt.term_id WHERE t.slug = 'limitacao-de-mandatos' AND tt.taxonomy = 'post_tag' LIMIT 1
+    3 |   0.0003 |        disabled (query)        | not cached |             0 | SELECT SQL_CALC_FOUND_ROWS  wp_posts.ID FROM wp_posts  INNER JOIN wp_term_relationships ON (wp_posts.ID = wp_term_relationships.object_id) WHERE 1=1  AND ( 
+  wp_term_relationships.term_taxonomy_id IN (285)
+) AND wp_posts.post_type = 'post' AND (wp_posts.post_status = 'publish') GROUP BY wp_posts.ID ORDER BY wp_posts.post_date DESC LIMIT 0, 10
+    4 |   0.0001 |        disabled (query)        | not cached |             0 | SELECT FOUND_ROWS()
+    5 |   0.0002 |            enabled             | not cached |         45362 | SELECT wp_posts.* FROM wp_posts WHERE ID IN (1497,1473,1441,1324,1170)
+    6 |   0.0008 |            enabled             | not cached |         12171 | SELECT t.*, tt.*, tr.object_id FROM wp_terms AS t INNER JOIN wp_term_taxonomy AS tt ON tt.term_id = t.term_id INNER JOIN wp_term_relationships AS tr ON tr.term_taxonomy_id = tt.term_taxonomy_id  WHERE tt.taxonomy IN ('category', 'post_tag', 'post_format') AND tr.object_id IN (1170, 1324, 1441, 1473, 1497) ORDER BY t.name ASC
+    7 |   0.0002 |            enabled             | not cached |          2182 | SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN (1170,1324,1441,1473,1497) ORDER BY meta_id ASC
+    8 |   0.0005 |            enabled             | not cached |          4759 | SELECT  t.*, tt.* FROM wp_terms AS t  INNER JOIN wp_term_taxonomy AS tt ON t.term_id = tt.term_id WHERE tt.taxonomy IN ('category') ORDER BY t.name ASC
+    9 |   0.0001 |            enabled             | not cached |          1159 | SELECT term_id, meta_key, meta_value FROM wp_termmeta WHERE term_id IN (5,8,6,1,10,374) ORDER BY meta_id ASC
+   10 |   0.0002 |            enabled             | not cached |          1148 | SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN (1498) ORDER BY meta_id ASC
+   11 |   0.0001 |            enabled             | not cached |          1147 | SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN (935) ORDER BY meta_id ASC
+   12 |   0.0001 |            enabled             | not cached |          1148 | SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN (1444) ORDER BY meta_id ASC
+   13 |   0.0002 |            enabled             | not cached |          1148 | SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN (1326) ORDER BY meta_id ASC
+   14 |   0.0002 |            enabled             | not cached |          1148 | SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN (1173) ORDER BY meta_id ASC
+-->
+
+<!-- W3 Total Cache: Minify debug info:
+Engine:             disk
+Theme:              60eac
+Template:           tag
+Errors:             JSMin: Unterminated String at byte 238: '<script type="text/javascript" src="https://transparencia.pt/wp-content/cache/minify/000000/nYvRCYAwDAUXkjz9dJxWojTYRpuIdntRnMDPO-6AIOGiRXVZOWzJaNL8OqwpGmQ_uDYMNNLwAeVUSKzD_7WHn1y8zXpUZy4QQ1R18xq2J7oB.js">
+
+Replaced CSS files:
+1. wp-content/themes/twentyfourteen/css/bootstrap.min.css
+2. wp-content/themes/twentyfourteen/css/style1.css
+3. wp-content/themes/twentyfourteen/css/common.css
+4. wp-content/themes/twentyfourteen/css/styles.css
+5. wp-content/themes/twentyfourteen/css/style.css
+6. wp-content/themes/twentyfourteen/js/modernizr.custom.72111.js
+
+Replaced JavaScript files:
+1. //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
+2. //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
+3. wp-content/themes/twentyfourteen/js/bootstrap.min.js
+4. wp-content/themes/twentyfourteen/css/js/toucheffects.js
+-->

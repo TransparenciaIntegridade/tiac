@@ -1,0 +1,235 @@
+Jan 22 05:38:28  [info] $Fatal Error Details = Array
+(
+    [message] => We can't load the requested web page. This page requires cookies to be enabled in your browser settings. Please check this setting and enable cookies (if they are not enabled). Then try again. If this error persists, contact the site adminstrator for assistance.&lt;br /&gt;&lt;br /&gt;Site Administrators: This error may indicate that users are accessing this page using a domain or URL other than the configured Base URL. EXAMPLE: Base URL is http://example.org, but some users are accessing the page via http://www.example.org or a domain alias like http://myotherexample.org.&lt;br /&gt;&lt;br /&gt;Error type: Could not find a valid session key.
+    [code] => 
+)
+
+
+Jan 22 05:38:28  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(364): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(857): CRM_Core_Error::fatal("We can't load the requested web page. This page requires cookies to be enable...")
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(879): CRM_Core_Controller->invalidKeyCommon()
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contribute/Form/ContributionBase.php(216): CRM_Core_Controller->invalidKeyRedirect()
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contribute/Form/Contribution/Main.php(73): CRM_Contribute_Form_ContributionBase->preProcess()
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(455): CRM_Contribute_Form_Contribution_Main->preProcess()
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Display.php(94): CRM_Core_Form->buildForm()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Display->perform(Object(CRM_Contribute_Form_Contribution_Main), "display")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Contribute_Form_Contribution_Main), "display")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(353): HTML_QuickForm_Page->handle("display")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(312): CRM_Core_Controller->run((Array:3), NULL)
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:15))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#14 [internal function](): CiviCRM_For_WordPress->invoke(Object(WP))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(601): call_user_func_array((Array:2), (Array:1))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/class-wp.php(692): do_action_ref_array("wp", (Array:1))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/functions.php(952): WP->main("")
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-blog-header.php(14): wp()
+#19 /var/www/vhosts/transparencia.pt/httpdocs/index.php(17): require("/var/www/vhosts/transparencia.pt/httpdocs/wp-blog-header.php")
+#20 {main}
+
+
+Jan 22 05:39:17  [info] $Fatal Error Details = Array
+(
+    [message] => We can't load the requested web page. This page requires cookies to be enabled in your browser settings. Please check this setting and enable cookies (if they are not enabled). Then try again. If this error persists, contact the site adminstrator for assistance.&lt;br /&gt;&lt;br /&gt;Site Administrators: This error may indicate that users are accessing this page using a domain or URL other than the configured Base URL. EXAMPLE: Base URL is http://example.org, but some users are accessing the page via http://www.example.org or a domain alias like http://myotherexample.org.&lt;br /&gt;&lt;br /&gt;Error type: Could not find a valid session key.
+    [code] => 
+)
+
+
+Jan 22 05:39:17  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(364): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(857): CRM_Core_Error::fatal("We can't load the requested web page. This page requires cookies to be enable...")
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(879): CRM_Core_Controller->invalidKeyCommon()
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contribute/Form/ContributionBase.php(216): CRM_Core_Controller->invalidKeyRedirect()
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contribute/Form/Contribution/Main.php(73): CRM_Contribute_Form_ContributionBase->preProcess()
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(455): CRM_Contribute_Form_Contribution_Main->preProcess()
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Display.php(94): CRM_Core_Form->buildForm()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Display->perform(Object(CRM_Contribute_Form_Contribution_Main), "display")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Contribute_Form_Contribution_Main), "display")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(353): HTML_QuickForm_Page->handle("display")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(312): CRM_Core_Controller->run((Array:3), NULL)
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:15))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#14 [internal function](): CiviCRM_For_WordPress->invoke(Object(WP))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(601): call_user_func_array((Array:2), (Array:1))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/class-wp.php(692): do_action_ref_array("wp", (Array:1))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/functions.php(952): WP->main("")
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-blog-header.php(14): wp()
+#19 /var/www/vhosts/transparencia.pt/httpdocs/index.php(17): require("/var/www/vhosts/transparencia.pt/httpdocs/wp-blog-header.php")
+#20 {main}
+
+
+Jan 23 05:44:09  [info] $Fatal Error Details = Array
+(
+    [message] => Petition id is not valid. (it needs a &quot;sid&quot; in the url).
+    [code] => 
+)
+
+
+Jan 23 05:44:09  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(364): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Campaign/Form/Petition/Signature.php(184): CRM_Core_Error::fatal("Petition id is not valid. (it needs a \"sid\" in the url).")
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(455): CRM_Campaign_Form_Petition_Signature->preProcess()
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Display.php(94): CRM_Core_Form->buildForm()
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Display->perform(Object(CRM_Campaign_Form_Petition_Signature), "display")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Campaign_Form_Petition_Signature), "display")
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(353): HTML_QuickForm_Page->handle("display")
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(115): CRM_Core_Controller->run()
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(286): CRM_Utils_Wrapper->run("CRM_Campaign_Form_Petition_Signature", "Sign Petition", NULL)
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:14))
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/includes/civicrm.basepage.php(134): CiviCRM_For_WordPress->invoke()
+#13 [internal function](): CiviCRM_For_WordPress_Basepage->basepage_handler(Object(WP))
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(601): call_user_func_array((Array:2), (Array:1))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/class-wp.php(692): do_action_ref_array("wp", (Array:1))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/functions.php(952): WP->main("")
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-blog-header.php(14): wp()
+#18 /var/www/vhosts/transparencia.pt/httpdocs/index.php(17): require("/var/www/vhosts/transparencia.pt/httpdocs/wp-blog-header.php")
+#19 {main}
+
+
+Jan 24 11:35:55  [info] $Fatal Error Details = Array
+(
+    [message] => We can't load the requested web page. This page requires cookies to be enabled in your browser settings. Please check this setting and enable cookies (if they are not enabled). Then try again. If this error persists, contact the site adminstrator for assistance.&lt;br /&gt;&lt;br /&gt;Site Administrators: This error may indicate that users are accessing this page using a domain or URL other than the configured Base URL. EXAMPLE: Base URL is http://example.org, but some users are accessing the page via http://www.example.org or a domain alias like http://myotherexample.org.&lt;br /&gt;&lt;br /&gt;Error type: Could not find a valid session key.
+    [code] => 
+)
+
+
+Jan 24 11:35:55  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(364): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(857): CRM_Core_Error::fatal("We can't load the requested web page. This page requires cookies to be enable...")
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(879): CRM_Core_Controller->invalidKeyCommon()
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contribute/Form/ContributionBase.php(216): CRM_Core_Controller->invalidKeyRedirect()
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contribute/Form/Contribution/Main.php(73): CRM_Contribute_Form_ContributionBase->preProcess()
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(455): CRM_Contribute_Form_Contribution_Main->preProcess()
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Display.php(94): CRM_Core_Form->buildForm()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Display->perform(Object(CRM_Contribute_Form_Contribution_Main), "display")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Contribute_Form_Contribution_Main), "display")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(353): HTML_QuickForm_Page->handle("display")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(312): CRM_Core_Controller->run((Array:3), NULL)
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:15))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#14 [internal function](): CiviCRM_For_WordPress->invoke(Object(WP))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(601): call_user_func_array((Array:2), (Array:1))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/class-wp.php(692): do_action_ref_array("wp", (Array:1))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/functions.php(952): WP->main("")
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-blog-header.php(14): wp()
+#19 /var/www/vhosts/transparencia.pt/httpdocs/index.php(17): require("/var/www/vhosts/transparencia.pt/httpdocs/wp-blog-header.php")
+#20 {main}
+
+
+Jan 25 22:59:05  [info] $Fatal Error Details = Array
+(
+    [message] => We can't load the requested web page. This page requires cookies to be enabled in your browser settings. Please check this setting and enable cookies (if they are not enabled). Then try again. If this error persists, contact the site adminstrator for assistance.&lt;br /&gt;&lt;br /&gt;Site Administrators: This error may indicate that users are accessing this page using a domain or URL other than the configured Base URL. EXAMPLE: Base URL is http://example.org, but some users are accessing the page via http://www.example.org or a domain alias like http://myotherexample.org.&lt;br /&gt;&lt;br /&gt;Error type: Could not find a valid session key.
+    [code] => 
+)
+
+
+Jan 25 22:59:05  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(364): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(857): CRM_Core_Error::fatal("We can't load the requested web page. This page requires cookies to be enable...")
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(879): CRM_Core_Controller->invalidKeyCommon()
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contribute/Form/ContributionBase.php(216): CRM_Core_Controller->invalidKeyRedirect()
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Contribute/Form/Contribution/Main.php(73): CRM_Contribute_Form_ContributionBase->preProcess()
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(455): CRM_Contribute_Form_Contribution_Main->preProcess()
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Display.php(94): CRM_Core_Form->buildForm()
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Display->perform(Object(CRM_Contribute_Form_Contribution_Main), "display")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Contribute_Form_Contribution_Main), "display")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(353): HTML_QuickForm_Page->handle("display")
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(312): CRM_Core_Controller->run((Array:3), NULL)
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:15))
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#14 [internal function](): CiviCRM_For_WordPress->invoke(Object(WP))
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(601): call_user_func_array((Array:2), (Array:1))
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/class-wp.php(692): do_action_ref_array("wp", (Array:1))
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/functions.php(952): WP->main("")
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-blog-header.php(14): wp()
+#19 /var/www/vhosts/transparencia.pt/httpdocs/index.php(17): require("/var/www/vhosts/transparencia.pt/httpdocs/wp-blog-header.php")
+#20 {main}
+
+
+Jan 27 12:25:27  [info] Contribution record updated successfully
+
+Jan 27 12:25:28  [info] Receipt sent
+
+Jan 27 12:25:28  [info] Success: Database updated
+
+Jan 27 12:29:09  [info] Contribution record updated successfully
+
+Jan 27 12:29:09  [info] Receipt sent
+
+Jan 27 12:29:09  [info] Success: Database updated
+
+Jan 27 19:12:23  [info] Contribution record updated successfully
+
+Jan 27 19:12:23  [info] Receipt sent
+
+Jan 27 19:12:23  [info] Success: Database updated
+
+Jan 28 00:38:51  [info] Contribution record updated successfully
+
+Jan 28 00:38:52  [info] Receipt sent
+
+Jan 28 00:38:52  [info] Success: Database updated
+
+Jan 28 07:58:06  [info] Ignoring exception thrown by nullHandler: , Validation failed for: =?utf-8?Q?Transpar=C3=AAncia_e_Integridade_-_Associa=C3=A7=C3=A3o_C?= =?utf-8?Q?=C3=ADvica?= <do-not-reply@>
+
+Jan 28 07:58:06  [info] $backTrace = #0 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(911): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::nullHandler(Object(PEAR_Error))
+#2 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(PEAR_Error))
+#3 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(566): PEAR_Error->PEAR_Error("Validation failed for: =?utf-8?Q?Transpar=C3=AAncia_e_Integridade_-_Associa=C...", NULL, 16, (Array:2), NULL)
+#4 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/RFC822.php(209): PEAR->raiseError("Validation failed for: =?utf-8?Q?Transpar=C3=AAncia_e_Integridade_-_Associa=C...")
+#5 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail.php(191): Mail_RFC822->parseAddressList("=?utf-8?Q?Transpar=C3=AAncia_e_Integridade_-_Associa=C3=A7=C3=A3o_C?=\n =?utf...", "localhost", FALSE)
+#6 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/Mail/smtp.php(266): Mail->prepareHeaders((Array:8))
+#7 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/Event/BAO/Unsubscribe.php(413): Mail_smtp->send("carlos.g.guedes@gmail.com", (Array:7), "--=_b30a8d694d508b10295f1c9f0bb07114\nContent-Transfer-Encoding: 8bit\nConten...")
+#8 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Mailing/Form/Optout.php(107): CRM_Mailing_Event_BAO_Unsubscribe::send_unsub_response("37071", NULL, TRUE, "785")
+#9 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Form.php(345): CRM_Mailing_Form_Optout->postProcess()
+#10 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/StateMachine.php(164): CRM_Core_Form->mainProcess()
+#11 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/QuickForm/Action/Next.php(61): CRM_Core_StateMachine->perform(Object(CRM_Mailing_Form_Optout), "next", "Next")
+#12 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Next->perform(Object(CRM_Mailing_Form_Optout), "next")
+#13 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Mailing_Form_Optout), "next")
+#14 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Controller.php(353): HTML_QuickForm_Page->handle("next")
+#15 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Utils/Wrapper.php(115): CRM_Core_Controller->run()
+#16 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(286): CRM_Utils_Wrapper->run("CRM_Mailing_Form_Optout", "Opt-out", NULL)
+#17 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(86): CRM_Core_Invoke::runItem((Array:15))
+#18 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(54): CRM_Core_Invoke::_invoke((Array:3))
+#19 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/civicrm.php(1189): CRM_Core_Invoke::invoke((Array:3))
+#20 /var/www/vhosts/transparencia.pt/httpdocs/wp-content/plugins/civicrm/includes/civicrm.basepage.php(134): CiviCRM_For_WordPress->invoke()
+#21 [internal function](): CiviCRM_For_WordPress_Basepage->basepage_handler(Object(WP))
+#22 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/plugin.php(601): call_user_func_array((Array:2), (Array:1))
+#23 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/class-wp.php(692): do_action_ref_array("wp", (Array:1))
+#24 /var/www/vhosts/transparencia.pt/httpdocs/wp-includes/functions.php(952): WP->main("")
+#25 /var/www/vhosts/transparencia.pt/httpdocs/wp-blog-header.php(14): wp()
+#26 /var/www/vhosts/transparencia.pt/httpdocs/index.php(17): require("/var/www/vhosts/transparencia.pt/httpdocs/wp-blog-header.php")
+#27 {main}
+
+
+Jan 28 11:19:45  [info] Contribution record updated successfully
+
+Jan 28 11:19:45  [info] Receipt sent
+
+Jan 28 11:19:45  [info] Success: Database updated
+
+Jan 28 17:40:21  [info] Contribution record updated successfully
+
+Jan 28 17:40:21  [info] Receipt sent
+
+Jan 28 17:40:21  [info] Success: Database updated
+
+Jan 28 21:05:55  [info] Contribution record updated successfully
+
+Jan 28 21:05:56  [info] Receipt sent
+
+Jan 28 21:05:56  [info] Success: Database updated
+
+Jan 29 06:47:29  [info] Contribution record updated successfully
+
+Jan 29 06:47:29  [info] Receipt sent
+
+Jan 29 06:47:29  [info] Success: Database updated
+
+Jan 30 09:35:04  [info] Contribution record updated successfully
+
+Jan 30 09:35:05  [info] Receipt sent
+
+Jan 30 09:35:05  [info] Success: Database updated
+

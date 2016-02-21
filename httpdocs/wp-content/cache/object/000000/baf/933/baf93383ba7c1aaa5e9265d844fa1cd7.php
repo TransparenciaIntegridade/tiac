@@ -1,0 +1,1 @@
+¥÷²V<?php exit; ?>a:1:{s:7:"content";a:5:{s:10:"_edit_last";a:1:{i:0;s:1:"1";}s:17:"_wp_page_template";a:1:{i:0;s:19:"associados-page.php";}s:10:"_edit_lock";a:1:{i:0;s:12:"1453763837:1";}s:27:"_wppcp_post_page_visibility";a:1:{i:0;s:3:"all";}s:22:"_wppcp_post_page_roles";a:1:{i:0;s:6:"a:0:{}";}}}
