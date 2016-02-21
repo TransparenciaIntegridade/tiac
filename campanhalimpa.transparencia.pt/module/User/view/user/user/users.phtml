@@ -1,0 +1,34 @@
+<?php
+// module/User/view/user/user/registo.phtml:
+?>
+
+<h1><?php echo $this->escapeHtml('Utilizadores Registados'); ?></h1>
+
+
+<?php if($identity != null && $identity->user_group == 1): ?>
+
+<table class="table">
+<tr>
+	<th>Id User</th>
+    <th>username</th>
+    <th>Password</th>
+
+    <th></th>
+</tr>
+<?php foreach ($users as $user):?>
+<tr>
+	
+    <td><?php echo $user->getIdUser()?></td>
+    <td><?php echo $user->getUsername();?></td>
+    <td><?php echo $user->getPassword();?></td>
+    
+    
+
+    	<td><a href="/post-cartaz/edit/<?php echo $user->getIdUser();?>">Editar</a></td>
+    	<td><a href="/post-cartaz/delete/<?php echo $user->getIdUser();?>">Apagar</a></td>
+   
+</tr>
+
+<?php endforeach;?>
+</table>
+<?php endif;?>

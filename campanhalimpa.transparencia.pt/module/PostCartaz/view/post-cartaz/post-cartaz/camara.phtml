@@ -1,0 +1,67 @@
+<?php // module/PostCartaz/view/post-cartaz/post-cartaz/camara.phtml:?>
+
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<h1><?php echo $this->escapeHtml('Cartazes do concelho '.$camara->getNome()); ?></h1>
+
+
+<div id="highroller"></div>
+<?php
+    $this->highroller->chart->renderTo = "highroller";
+    echo $this->headScript()->appendScript($this->highroller->renderChart());
+?>
+
+
+
+<select onchange="javascript:location.href='/post-cartaz/camara/'+this.options
+    [this.selectedIndex].value;">
+    <option selected="selected">Concelhos</option>
+    <?php foreach ($camaras as $cam):?>
+    <option value="<?php echo $cam->getIdCamara(); ?>">
+    <?php echo $cam->getNome();?></option>
+    <?php endforeach;?>
+</select>
+
+
+
+<table class="table">
+<tr>
+	<th>Distrito</th>
+    <th>Camara</th>
+    <th>Lista</th>
+    <th>Morada</th>
+    <th>Enviado por</th>
+    <th>&nbsp;</th>
+    <th></th>
+</tr>
+<?php foreach ($cartaz as $cam) : ?>
+<?php if($id == $cam->getIdLista()->getIdCamara()->getIdCamara()):?>
+<tr>
+	<td><?php echo $this->escapeHtml($cam->getIdLista()->getIdCamara()->getIdDistrito()->getNome());?></td>
+    <td><?php echo $this->escapeHtml($cam->getIdLista()->getIdCamara()->getNome());?></td>
+    <td><?php echo $this->escapeHtml($cam->getIdLista()->getNome());?></td>
+    <td><?php echo $cam->getMorada();?></td>
+    <td><?php echo $cam->getIdUser()->getUsername();?></td>
+    <td><a href = "/post-cartaz/cartaz/<?php echo $cam->getIdPost();?>" ><img width="256" alt="" src="/assets/cartaz/thumbs/<?php echo $cam->getImage();?>"></a></td>
+    
+    <?php if($identity != null && $identity->user_group == 1): ?>
+    	<td><a class="btn btn-custom " href="/post-cartaz/edit/<?php echo $cam->getIdPost();?>">Editar</a></td>
+    	<td><a class="btn btn-custom " href="/post-cartaz/delete/<?php echo $cam->getIdPost();?>">Apagar</a></td>
+    <?php endif;?>
+    
+    
+</tr>
+
+<?php
+endif;
+endforeach; ?>
+</table>
+
+<?php echo $this->paginationControl($this->cartaz,
+                                    'Sliding',
+                                    array('partial/paginator2.phtml','PostCartaz'), array('route' => 'paginatorcartaz3','id' => $id,)); ?>
+
+<p>
+    <a class="btn btn-custom" href="<?php echo $this->url('postcartaz', array('action'=>'distrito','id'=>$distrito));?>">Voltar as C&acirc;maras do Distrito</a>
+</p>

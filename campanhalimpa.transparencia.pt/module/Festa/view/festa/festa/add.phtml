@@ -1,0 +1,22 @@
+<?php // module/Festa/view/festa/festa/add.phtml:?>
+
+<h1><?php echo $this->escapeHtml(utf8_encode('Enviar Fotos (Ação de Campanha)')); ?></h1>
+<?php if($identity === null ): ?>
+<p>Para enviar um brinde, &eacute; necess&aacute;rio estar logado ou registado. 
+Por favor fa&ccedil;a 
+<a class="btn btn-custom" href="/user/login/">Login</a> ou 
+<a class="btn btn-custom" href="<?php echo $this->url('user',
+		array('action'=>'registo'));?>">Registe-se</a></p>
+<?php else :
+	$form = $this->form;
+	$form->setAttribute ( 'action', $this->url ( 'festa', array (
+			'action' => 'add','id'=>$id
+	) ) );
+	
+	$form->prepare ();
+	
+	echo $this->form ()->openTag ( $form );
+	echo $this->formCollection ( $form );
+	echo $this->form ()->closeTag ();
+	endif;
+?>

@@ -1,0 +1,87 @@
+<?php // module/Festa/view/festa/festa/moderate.phtml:?>
+
+
+
+<?php if(isset($festas)){$count=0?>
+
+<?php foreach ($festas as $cam) : ?> 
+<?php if($cam->getActive()==0||$cam->getNewimg()==1):?>
+
+<?php $count++;?>
+
+
+<table class="table">
+<tr>
+	<th>Distrito</th>
+<th>C&acirc;mara</th>
+<th>Partido</th>
+<th>Morada Inserida</th>
+<th>Morada Gmaps</th>
+<th>Nome</th>
+<th>Descri&ccedil;&atilde;o</th>
+<th>A&ccedil;&otilde;es</th>
+</tr>
+<tr>
+	<td><?php echo $cam->getIdLista()->getIdcamara()->getIdDistrito()->getNome()?></td>
+	<td><?php echo $cam->getIdLista()->getIdcamara()->getNome()?></td>
+	<td><?php echo $cam->getIdLista()->getNome();?></td>
+	<td><?php echo $cam->getMorada();?></td>
+    <td><?php echo $cam->getGmaps();?></td>
+    <td><?php echo $cam->getNome();?></td>
+    <td><?php echo $cam->getDescricao();?></td>
+    <td>
+    <?php if($cam->getactive()==0):?>
+    	<a class="btn btn-custom " href="/festa/activate/<?php echo $cam->getIdFesta()?>">Activar</a>
+    <?php elseif($cam->getNewimg()==1 && $cam->getactive()==0) :?>
+    	<a class="btn btn-custom " href="/festa/activate/<?php echo $cam->getIdFesta()?>">Activar</a>
+    <?php else:?>
+    	<a class="btn btn-custom " href="/festa/moderateimg/<?php echo $cam->getIdFesta()?>">Moderar imagens</a>
+    <?php endif;?>
+    <a class="btn btn-custom " href="/festa/edit/<?php echo $cam->getIdFesta()?>">Editar</a>
+    <a class="btn btn-custom " href="/festa/delete/<?php echo $cam->getIdFesta()?> " onclick="return confirm('Tem a certeza ?')">Apagar</a></td>
+	
+	
+
+</tr>
+</table>
+
+
+<table class="table">
+<tr>
+
+
+
+</tr>
+	<?php $i=0?>
+	<?php foreach ($images as $img):?>
+	<?php if($cam->getIdFesta()==$img->getIdFesta()->getIdFesta()):?>
+	<?php if($i==0):?>
+	<tr>
+	<td><img width="256" alt="" src="/assets/festa/thumbs/<?php echo $img->getImagem();?>"></td>
+	<?php $i++;?>
+	<?php elseif($i<4):?>
+	<td><img width="256" alt="" src="/assets/festa/thumbs/<?php echo $img->getImagem();?>"></td>
+	<?php 
+	$i++;
+	elseif($i==4):?>
+	</tr>
+	<tr>
+		<td><img width="256" alt="" src="/assets/festa/thumbs/<?php echo $img->getImagem();?>"></td>
+	
+	<?php 
+	$i=1;
+	endif;?>
+	<?php endif;?>
+	<?php endforeach;?>
+</tr>
+</table>
+<?php endif;?>
+<?php endforeach;} 
+
+if($count){
+
+ 	echo $this->paginationControl($this->festas,
+								  	  'Sliding',
+ array('partial/paginator.phtml','festa'),
+				  array('route' => 'festamoderate')); 
+}

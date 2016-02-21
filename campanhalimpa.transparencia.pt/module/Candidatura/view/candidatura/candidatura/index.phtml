@@ -1,0 +1,50 @@
+<?php
+// module/Candidatura/view/candidatura/candidatura/index.phtml:
+?>
+<h1><?php echo $this->escapeHtml('Candidaturas de '.$camera); ?></h1>
+
+
+
+<table class="table">
+<tr>
+    <th>Camara</th>
+    <th>Lista</th>
+    
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+</tr>
+<?php foreach ($candidatura as $cam) : ?>
+<tr>
+    <td><?php echo $this->escapeHtml($cam['camara']);?></td>
+    <td><?php echo $this->escapeHtml($cam['nome']);?></td>
+    
+    <td>
+    	<a class="btn btn-custom" href="<?php echo $this->url('postcartaz',
+            array('action'=>'add', 'id' => $cam['id']));?>">Adicionar cartaz</a>
+    </td>
+    
+    <td>
+        <a class="btn btn-custom" href="<?php echo $this->url('postbrinde',
+            array('action'=>'add', 'id' => $cam['id']));?>">Adicionar Brinde</a>
+    </td>
+    
+    <td>
+        <a class="btn btn-custom" href="<?php echo $this->url('festa',
+            array('action'=>'add', 'id' => $cam['id']));?>">Adicionar A&ccedil;&atilde;o de Campanha</a>
+    </td>
+    
+    <td>
+    <?php if($identity!=null){
+    	if($identity->user_group==1){?>    
+        <a class="btn btn-custom" href="<?php echo $this->url('candidatura',
+            array('action'=>'delete', 'id' => $cam['id']));?>">Apagar</a>
+    <?php }}?>
+    </td>
+</tr>
+
+<?php endforeach; ?>
+</table>
+<p>
+    <a class="btn btn-custom" href="<?php echo $this->url('candidatura', array('action'=>'distrito','id'=>$id));?>">Voltar as C&acirc;maras do Distrito</a>
+</p>

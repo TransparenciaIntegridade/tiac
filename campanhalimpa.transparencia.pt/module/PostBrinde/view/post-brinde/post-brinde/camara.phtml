@@ -1,0 +1,111 @@
+<?php // module/PostBrinde/view/post-brinde/post-brinde/camara.phtml:?>
+
+<?php if(count($flashMessages)) : ?>
+	<div class="alert alert-success fade in">
+    	<button type="button" class="close" data-dismiss="alert">x</button>
+    	<?php foreach ($flashMessages as $msg) : ?>
+    		<?php echo $msg; ?><br />
+    	<?php endforeach; ?>
+    	
+    </div>
+<?php endif; ?>
+
+
+
+<h1><?php echo $this->escapeHtml('Brindes no concelho '.$camara->getNome()); ?></h1>
+</br>
+</br>
+
+<select onchange="javascript:location.href='/post-brinde/camara/'+this.options
+    [this.selectedIndex].value;">
+        <option selected="selected">Concelhos</option>
+	<?php foreach ($camaras as $cam) : ?>
+	<option VALUE="<?php echo $cam->getIdCamara();?>">
+	<?php echo $cam->getNome();?></option>
+
+<?php endforeach; ?>
+
+</select>
+
+
+<table class="table">
+<tr>
+<th>Distrito</th>
+<th>C&acirc;mara</th>
+<th>Partido</th>
+<th>Enviado Por</th>
+<th></th>
+<th>Foto do Brinde</th>
+<?php if($identity != null){?>
+<th></th>
+<?php }?>
+<th>Votos</th>
+<?php if($identity != null){?>
+<th></th>
+<th></th>
+<?php }?>
+
+
+
+</tr>
+<?php if(isset($brinde)){?>
+<?php foreach ($brinde as $cam) : ?> 
+
+<?php $i=0; 
+foreach ($votes as $vote):
+if($vote->getIdBrinde()->getIdBrinde() == $cam->getIdBrinde())
+{
+	if($vote->getRating()==1):
+	$i++;
+	endif;
+}
+	
+endforeach;
+
+
+?>
+
+<tr>
+	<td><?php echo $cam->getIdLista()->getIdcamara()->getIdDistrito()->getNome()?></td>
+	<td><?php echo $cam->getIdLista()->getIdcamara()->getNome()?></td>
+	<td><?php echo $cam->getIdLista()->getNome();?></td>
+	<td><?php echo $cam->getIdUser()->getUsername();?></td>
+	<td><?php echo $cam->getNome();?></td>
+    <td><img width="256" alt="" src="/assets/brinde/thumbs/<?php echo $cam->getImage();?>">
+    <?php if($identity === null):?>
+    <p>Para votar, &eacute; necess&aacute;rio estar logado ou registado. Por favor fa&ccedil;a <a href="<?php echo '/user/login/2';?>">Login</a> ou <a href="<?php echo $this->url('user',
+		array('action'=>'registo'));?>">Registe-se</a></p></td>
+    <?php else:?>
+    </td>
+    <td style="padding-top:60px">
+    <a class="btn btn-custom" href="post-brinde/upvote/<?php echo $cam->getIdBrinde()?>">+</a>
+    <a class="btn btn-custom" href="post-brinde/downvote/<?php echo $cam->getIdBrinde()?>">-</a></td>
+    <?php endif; ?>
+    
+	<?php if($i == 1){ ?>
+	<td><?php  echo $i.' ';?> voto</td>
+	<?php } else {?>
+	<td><?php  echo $i.' ';?> votos</td>
+	<?php } ?>
+
+	
+	    <?php if($identity != null && $identity->user_group == 1): ?>
+    	<td><a class="btn btn-custom" href="/post-brinde/edit/<?php echo $cam->getIdBrinde();?>">Editar</a></td>
+    	<td><a class="btn btn-custom" href="/post-brinde/delete/<?php echo $cam->getIdBrinde();?>">Apagar</a></td>
+    <?php endif;?>
+</tr>
+<?php
+
+endforeach;}
+?>
+</table>
+
+<?php 	echo $this->paginationControl($this->brinde,
+								  	  'Sliding',
+ array('partial/paginator2.phtml','PostBrinde'),
+				  array('route' => 'paginatorbrinde3','id'=>$id,)); 
+
+?>
+<p>
+<a class="btn btn-custom" href="<?php echo $this->url('postbrinde', array('action'=>'distrito','id'=>$distrito));?>">Voltar a pagina anterior</a>
+</p>

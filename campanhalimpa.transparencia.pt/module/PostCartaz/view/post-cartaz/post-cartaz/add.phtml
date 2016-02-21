@@ -1,0 +1,39 @@
+<?php // module/PostCartaz/view/post-cartaz/post-cartaz/add.phtml:?>
+
+
+
+<?php if(count($flashError)) : ?>
+	<div class="alert alert-error fade in">
+    	<button type="button" class="close" data-dismiss="alert">x</button>
+    	<?php foreach ($flashError as $msg) : ?>
+    		<?php echo $msg; ?><br />
+    	<?php endforeach; ?>
+    	
+    </div>
+<?php endif; ?>
+
+<h1><?php echo $this->escapeHtml('Enviar Cartaz'); ?></h1>
+</br>
+</br>
+
+<?php if ($identity === null): ?>
+<p>Para enviar um cartaz, &eacute; necess&aacute;rio estar logado ou registado. Por favor fa&ccedil;a <a href="<?php echo $this->url('user',array('action'=>'login'));?>">Login</a> ou <a href="<?php echo $this->url('user',
+		array('action'=>'registo'));?>">Registe-se</a></p>
+<?php else: 
+	$form = $this->form;
+	$form->setAttribute ( 'action', $this->url ( 'postcartaz', array (
+			'action' => 'add','id'=>$id
+	) ) );
+	
+	$form->prepare ();
+	
+	echo $this->form ()->openTag ( $form );
+	echo $this->formCollection ( $form );
+	echo $this->form ()->closeTag ();
+	endif;
+?>
+<p>
+	<a  class="btn btn-custom"
+		href="<?php echo $this->url('candidatura', array('action'=>'index','id'=>$camara));?>">Voltar
+		as Candidaturas</a>
+</p>

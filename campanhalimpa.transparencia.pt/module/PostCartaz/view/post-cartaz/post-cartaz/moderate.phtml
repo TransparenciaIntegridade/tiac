@@ -1,0 +1,45 @@
+<table class="table">
+<tr>
+<th></th>
+<th>Distrito</th>
+<th>C&acirc;mara</th>
+<th>Partido</th>
+<th>Morada Inserida</th>
+<th>Morada Gmaps</th>
+<th></th>
+<th></th>
+
+</tr>
+<?php if(isset($cartaz)){?>
+<?php foreach ($cartaz as $cam) : ?> 
+
+<tr>
+	<td><img width="256" alt="" src="/assets/cartaz/thumbs/<?php echo $cam->getImage();?>"></td>
+	<td><?php echo $cam->getIdLista()->getIdcamara()->getIdDistrito()->getNome()?></td>
+	<td><?php echo $cam->getIdLista()->getIdcamara()->getNome()?></td>
+	<td><?php echo $cam->getIdLista()->getNome();?></td>
+	<td><?php echo $cam->getMorada();?></td>
+    <td><?php echo $this->GmapHelper($cam->getCorX(), $cam->getCorY());?></td>
+    <td><?php echo $cam->getIdUser()->getUsername();?></td>
+    <?php if($cam->getProximity()==1):?>
+    <td>Proximity Alert !!</td>
+    <?php else:?>
+    <td></td>
+    <?php endif;?>
+    <td>
+    <a class="btn btn-custom " href="/post-cartaz/edit/<?php echo $cam->getIdPost()?>">Editar</a>
+    <a class="btn btn-custom " href="/post-cartaz/activate/<?php echo $cam->getIdPost()?>">Activar</a>
+    <a class="btn btn-custom " href="/post-cartaz/delete/<?php echo $cam->getIdPost()?> " onclick="return confirm('Tem a certeza ?')">Apagar</a></td>
+	
+
+</tr>
+<?php endforeach;} ?>
+</table>
+
+<?php 	echo $this->paginationControl($this->cartaz,
+								  	  'Sliding',
+ array('partial/paginator.phtml','PostCartaz'),
+				  array('route' => 'postcartazmoderate')); 
+
+
+

@@ -1,0 +1,64 @@
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+
+<div id="container" style="height: 400px;"></div>
+ 
+
+		
+		
+
+<script>
+
+var chart;
+$(document).ready(function() {
+	chart = new Highcharts.Chart({
+		chart: {
+			renderTo: 'container',
+			backgroundColor: '#ffffff',
+			plotBorderWidth: null,
+			plotShadow: false
+			
+		},
+		title: {
+			text: 'gastos'
+		},
+		
+		tooltip: {
+			formatter: function() {
+				var y = this.y;
+				var p = Math.round(this.percentage*100)/100;
+				return '<b>'+ this.point.name +'</b>: ' + y + ' euros (' + p + '%)';
+			}
+		},
+		exporting: {
+	         enabled: false
+		},
+		plotOptions: {
+			pie: {
+				allowPointSelect: false,
+				
+				cursor: 'pointer',
+				dataLabels: {
+					enabled: false
+				},
+				showInLegend: true
+			}
+		},
+		series: [{
+			type: 'pie',
+			name: 'overall',
+			backgroundColor: '#cccccc',
+			point: {
+				
+			},
+			data: [
+				<?php echo $this->absGasto(); ?>
+				
+					
+				
+			]
+		}]
+	});
+});
+</script>

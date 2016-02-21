@@ -1,0 +1,44 @@
+<?php
+// module/Camara/view/camara/camara/index.phtml:
+
+$title = 'Candidaturas';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+<p>
+    <a href="<?php echo $this->url('distrito', array('action'=>'index','id'=>$id));?>">Voltar aos distritos</a>
+</p>
+
+
+
+<table class="table">
+<tr>
+    <th>Camara</th>
+    <th>Candidatura</th>
+    
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+</tr>
+<?php if(isset($camara)){?>
+<?php foreach ($camara as $cam) : ?> 
+<tr>
+    <td><?php echo $this->escapeHtml($cam['distrito']);?></td>
+    <td><?php echo $this->escapeHtml($cam['camara']);?></td>
+    <td>
+        <a href="<?php echo $this->url('candidatura', array('action'=>'index','id' => $cam['id']));?>">Ver Listas</a>
+    </td>
+    <td>
+    	<a href="<?php echo $this->url('postcartaz',
+            array('action'=>'camara', 'id' => $cam['id']));?>">Ver cartazes</a>
+    </td>
+    <td>
+        <a href="<?php echo $this->url('candidatura', array('action'=>'add','id' => $cam['id']));?>">Addicionar nova Candidatura</a>
+    </td>
+    <td>
+        <a href="<?php echo $this->url('candidatura', array('action'=>'independente','id'=>$cam['id']));?>">Addicionar nova Candidatura Independente</a>
+    </td>
+</tr>
+<?php //var_dump($cam);?>
+<?php endforeach;} ?>
+</table>

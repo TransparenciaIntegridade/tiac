@@ -1,0 +1,26 @@
+<?php // module/PostBrinde/view/post-brinde/post-brinde/add.phtml:?>
+
+
+<h1><?php echo $this->escapeHtml('Enviar Brinde'); ?></h1>
+<?php if($identity === null ): ?>
+<p>Para enviar um brinde, &eacute; necess&aacute;rio estar logado ou registado. Por favor fa&ccedil;a <a href="<?php echo $this->url('user',array('action'=>'login'));?>">Login</a> ou <a href="<?php echo $this->url('user',
+		array('action'=>'registo'));?>">Registe-se</a></p>
+<?php else :
+	$form = $this->form;
+	$form->setAttribute ( 'action', $this->url ( 'postbrinde', array (
+			'action' => 'add','id'=>$id
+	) ) );
+	
+	$form->prepare ();
+	
+	echo $this->form ()->openTag ( $form );
+	echo $this->formCollection ( $form );
+	echo $this->form ()->closeTag ();
+	endif;
+?>
+
+<p>
+	<a  class="btn btn-custom "
+		href="<?php echo $this->url('candidatura', array('action'=>'distrito','id'=>$camara));?>">Voltar
+		as Candidaturas</a>
+</p>
