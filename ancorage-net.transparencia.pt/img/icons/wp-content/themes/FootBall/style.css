@@ -1,0 +1,324 @@
+/*
+Theme Name: Light
+Description: Football Wordpress Theme is a three columns free wordpress theme with simple, clean look, Unique and modern style, having the classic combination of blue, white, black and red, Ideal for Autos, Cars, technology, and other niche.
+Version: 1.0
+Author: Themes.Rock-Kitty
+Author URI: http://themes.rock-kitty.net
+*/
+@font-face
+{
+font-family: PremierLeague;
+src: url(http://wp.tiac.webfactional.com/wp-content/themes/FootBall/fonts/futebol1.otf);
+}
+html { font-family:Arial, Helvetica, sans-serif; font-size:11px; }
+body { margin: 0px; /*no background tava top left*/
+padding: 0px;
+font-family: "Arial sans-serif";
+font-size: 11px;
+color: #6E6E6E;
+background: #fff url(images/body.gif) no-repeat center center fixed;
+height: 100%;
+background-size: cover;}
+
+.mainWrap { background:url(images/mW.png) no-repeat top center; height:100%; min-height:360px; padding:0 0 10px; }
+
+.clear { clear:both; }
+a { text-decoration:none; color:#212121; }
+a:hover { text-decoration:underline; color:#C42326; }
+a img { border:0px; }
+.text { width:515px; }
+.separator { height:6px; clear:both; }
+strong { color:#000000; }
+
+.wrapper { width:990px; margin:0px auto; }
+.header { height:176px; background:url(images/header.png) no-repeat center top; position:relative; }
+
+.header .logo { padding:10px 0 0; color:#fff; text-transform:uppercase; font-style:italic; }
+.header .logo .blogname { font-size:36px; display:inline-block; }
+.header .logo .blogdesc { font-size:10px; font-weight:bold; font-style:italic; }
+
+.navigation { padding:28px 0 0 20px; height:80px; text-transform:uppercase; display:inline-block }
+.navigation ul { list-style:none; margin:0; padding:0; }
+.navigation ul li { float:left; padding:0 2px 0 0; background:url(images/navigation-li.png) repeat-y right top; margin-top: -5px;}
+.navigation ul li a { display:block; color:#fff; padding:15px 20px; font-family:"PremierLeague"; font-size:24px;  }
+.navigation ul li a:hover { text-decoration:none; display:block; color:#C42326; }
+
+.mcWrap { background:url(images/rightcol.gif) repeat-y right top; }
+.lcontent { background:url(images/lcontent.png) no-repeat 14px bottom; padding:0 0 23px; }
+.content { /*background:url(images/content-bg.png) repeat-y center top;*/ background-color:#fff;  }
+.content-i { background:url(images/content-bg-i.png) no-repeat -25px bottom; }
+.content-h { min-height:1200px; }
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+.top-b-10 { background:url(images/layout/top-b-10.png); width:614px; /*688px*/ height:538px; position:absolute; left: 300px; top:295px; }
+.top-image { background:url(images/layout/wrap_picture_1.png) no-repeat top left; width:337px; height:308px; position:absolute; right: 130px; }
+.top-image-2 { background: url(images/layout/wrap_picture_2.png); width:539px; height:368px; position:absolute; left: 120px; }
+.lcWrap { background:url(images/layout/lcolWrap.png) no-repeat top left; width:390px; height:18px; position:absolute; right:7px; top:158px; z-index:-999999 }
+.lcRight { background:url(images/layout/rside.png) no-repeat top left; width:12px; height:447px; position:absolute; right:1px; top:162px; }
+.topBlock { background:url(images/layout/bc-wrap.png); width:484px; height:340px; position:absolute; left: 240px; top:378px; padding:120px 20px 0 30px; }
+.topBlock h3 { color:#B92025; text-transform:uppercase; font-size:20px; margin:0; }
+.topBlock p  { margin:15px 0 0; color:#F8F8F7; line-height:16px; font-weight:bold; }
+
+.loginbox { padding:0 0 20px 45px; background:url(images/login.gif) no-repeat left bottom; margin-bottom:10px; }
+.loginbox h3 { margin:0; font-weight:normal; text-transform:uppercase; font-style:italic; padding:0 0 0 30px; }
+.loginbox .inp { padding:20px 0 0; }
+.loginbox .inp .input, .loginbox .inp .password { background:url(images/login-bg.gif) no-repeat top left; border-width:0; padding:8px 0 8px 30px; width:130px; }
+.loginbox .inp .password { background-position:right top; margin:0 0 0 10px; }
+.loginbox .inplinks { padding:8px 0; font-size:10px; }
+.loginbox .inplinks a { color:#707070; }
+.rchek { width:150px; float:left; line-height:10px; }
+.rchek .cbk { float:left; }
+.rchek label { float:left; padding:4px 0 0 10px; }
+.rlink { width:150px; float:right; }
+.btns .bam { float:left; }
+.btns .sin { float:right; }
+
+.leftCol { width:490px; float:left; margin:665px 0 0 22px; padding:0 16px 16px; }
+.rightCol { width:378px; float:right; margin:0 12px 0 0; padding:0 16px 16px; }
+
+.rc2Cols { background:url(images/layout/2cols.gif) repeat-y center top; }
+.rc2Cols .rc2Cols1 { width:172px; float:left; }
+.rc2Cols .rc2Cols2 { width:172px; float:right; }
+
+
+.post .info_wrap .dateImage,
+.post .post_content .image,
+.widget .widget_heading .widget_image,
+.widget_recent_comments .widget_heading .widget_image,
+.widget_pages .widget_heading .widget_image,
+.widget_links .widget_heading .widget_image,
+.widget_categories ul li,
+.widget_archive ul li,
+.widget_links ul li,
+.widget_pages ul li,
+.widget_meta ul li,
+ul.listInfo li
+{ background:url(images/slots.gif) no-repeat; }
+
+
+.post { padding:0 0 25px; margin:0 0 20px; background:url(images/seprator.gif) no-repeat center bottom; }
+.post .info_wrap {  }
+.post .info_wrap .dateImage { background-position:-6px -5px; width:47px; height:54px; float:left; font-family:Georgia, "Times New Roman", Times, serif; text-align:center; color:#fff; font-size:11px; }
+.post .info_wrap .dateImage span.dt { font-size:28px; font-weight:bold; }
+.post .info_wrap h2, .post .info_wrap h1  { font-size:24px; color:#0B0B0B; margin:0; float:right; width:440px; font-weight:normal; }
+.post .info_wrap h2 a, .post .info_wrap h1 a { color:#0B0B0B; }
+.post .post_content { padding:15px 0 0; clear:both; }
+.post .post_content .imagearea { width:215px; float:left; padding: 0 10px 10px 0; }
+.post .post_content .image { width:190px; height:140px; padding:10px; background-position:-314px -152px; margin:0 0 10px; }
+.post .post_content p { color:#646464; font-size:11px; margin:0 0 10px; line-height:16px; }
+.post .post_content p a { color:#C42326; }
+
+/* Captions */
+.aligncenter, div.aligncenter { display: block;	margin-left: auto; margin-right: auto; }
+.wp-caption { border: 1px solid #ddd; text-align: center; background-color: #f3f3f3; padding-top: 4px; margin:10px 10px 0 0; -moz-border-radius: 3px; -khtml-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+.adsense_post { width:336px; height:280px; border: 1px solid #ddd; text-align: center; background-color: #f3f3f3; padding: 4px; margin:10px 10px 0 0; -moz-border-radius: 3px; -khtml-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+.wp-caption img { margin: 0; padding: 0; border: 0 none; }
+.wp-caption p.wp-caption-text { font-size: 11px; line-height: 17px; padding: 0 4px 5px; margin: 0; }
+/* End captions */
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+img.centered { display: block; margin-left: auto; margin-right: auto; }
+img.alignright { padding: 4px; margin: 0 0 2px 7px; display: inline; }
+img.alignleft { padding: 4px; margin: 0 7px 2px 0; display: inline; }
+.alignright { float: right; }
+.alignleft { float: left; }
+
+/* Begin Lists
+Special stylized non-IE bullets
+Do not work in Internet Explorer, which merely default to normal bullets. */
+
+.wp-pagenavi { padding:4px 0 0; }
+.wp-pagenavi a { background:#000!important; border-color:#EEE!important; color:#fff!important; }
+.wp-pagenavi a:hover { background:#DA4D15!important; border-color:#EEE!important; color:#fff!important; }
+.wp-pagenavi span.current { background: #DA4D15!important; border-color:#B4B4B4!important; color:#fff!important; }
+.wp-pagenavi span.pages, .wp-pagenavi span.extend { background:#F4F3F3!important; border-color:#EEE!important; color:#313131!important; }
+
+.categories {}
+.cat-item {}
+.current-cat-parent {}
+.pagenav {}
+
+.page_item {}
+.current_page_item {}
+.current_page_parent {}
+.widget {}
+.widget_text {}
+.blogroll {}
+.linkcat{}
+
+/* tables */
+
+/*.post table{   margin: .5em 0 1em; }
+
+.post .postdetail table td, .post .postdetail table th { text-align: left; border-right: 1px solid #E1E1E1; padding: .4em .8em; }
+.post .postdetail table th{ background:#000 !important; color: #fff; text-transform: uppercase; font-weight: normal; border-bottom: 1px solid #E1E1E1; }
+.post .postdetail table td{ background: #F8F1E7; }
+.post .postdetail table tr.even td{ background: #e1d9c3; }
+.post .postdetail table tr:hover td{ background: #EEF6F7; }*/
+
+
+/* forms */
+.post .postdetail input, .post .postdetail textarea, .post .postdetail select{ font-size: 100%; margin: .2em 0; }
+.post .postdetail input, .post textarea{ padding: .2em .4em; }
+.post .postdetail input.radio, .post .postdetail input.checkbox { background: #fff; padding: 2px; }
+.post .postdetail form label{ font-weight: normal; }
+.post .postdetail fieldset{ padding: .8em; border: 1px solid #d2c7af; }
+.post .postdetail legend{ padding: 2px 15px 10px 15px; text-transform: uppercase; font-style: italic; font-size: 115%; }
+
+
+/* lists */
+
+.post .postdetail ul, .post .postdetail ol{ margin: .4em 0 1em; line-height: 150%; }
+.post .postdetail ul li, .post .postdetail ol li{ list-style-position:outside; margin-left: 2px; }
+.post .postdetail dl{ padding: .3em 0 .8em; }
+.post .postdetail dt { float: left; clear: left; width: 9em; text-align: right; font-weight: bold; text-decoration: underline; }
+.post .postdetail dd { margin: 0 0 0 10em; padding: 0 0 0.5em 0; }
+
+
+/* other */
+.post .postdetail hr{ color: #b4aca1; background: #b4aca1; border-bottom: 1px solid #f6f4eb; }
+.post .postdetail small{ font-size: 80%; }
+.post .postdetail pre{ overflow: auto; white-space: pre-wrap;       /* css3 */ white-space: -moz-pre-wrap;  /* ff */ word-wrap: break-word;       /* ie */ font-size: 12px; font-family: "Courier New", Courier, "Lucida Console", Monaco, "DejaVu Sans Mono", "Nimbus Mono L", "Bitstream Vera Sans Mono"; background: #fff;padding: .4em; margin: 1em 0; }
+.post .postdetail blockquote { margin: 1em 12% 1em 0; padding: .2em .2em .2em 5em; font-style: italic; color: #937d68; background: #FAFAFA url(images/blockquote.gif) no-repeat 9px 4px; border:1px dotted #F7F7F7; }
+.post .postdetail blockquote p{ padding: 8px; margin: 2px; }`
+
+.widget_rss {}
+.widget_rss ul li { background:none!important; padding:3px!important; }
+
+.widget_calendar { }
+.widget_calendar table { width:100%; }
+.widget_calendar caption { background:#CB6D28; padding:2px 0; text-transform:uppercase; letter-spacing:2px; color:#FFF; }
+.widget_calendar table thead th { color:#CB6D28; }
+.widget_calendar table tbody td { text-align:center; color:#626262; }
+#prev a { color:#CB6D28; }
+#next a { color:#CB6D28; }
+
+.footerArea { background:url(images/header.gif) repeat top left; padding:10px 0 0; }
+.footerArea .fBor { border-top:1px solid #fff; background:#2C2C2C; padding:10px 0 0; }
+.footerArea .fBG  { background:#2C2C2C url(images/footer-area.gif) repeat top left; min-height:150px; }
+
+.page404 {  }
+.wrap404 { width:500px; margin:40px auto 0; background:#fff; padding:10px; border:1px solid #D4D4D4; }
+.image404 { text-align:center; padding:20px 0 0; text-align:center; font-size:70px; font-family:Georgia, "Times New Roman", Times, serif; }
+.desc404 { font-size:20px; color:#5F5F5F; padding:20px 0; }
+.search404 { margin:20px 0 0; background:url(images/search-bg.gif) no-repeat top left; width:491px; height:53px; }
+.search404 .sb { float:left; float:left; width:352px; padding:10px 0 0 0; }
+.search404 .sb input {  border:1px solid #D4D4D4; width:328px; color:#3F7FA0; font-weight:bold; padding:6px; }
+.search404 .sr { float:left; width:40px; height:29px; padding:10px 0 0 10px; }
+.search404 .sr input {  }
+
+ul.listInfo { list-style:none; padding:0; margin:0; font-size:10px; color:#646464; }
+ul.listInfo li { padding:4px 0 4px 24px; background-position:30px 30px; margin:0; }
+ul.listInfo li.written { background-position:-6px -164px; }
+ul.listInfo li.licomments { background-position:-6px -60px; }
+ul.listInfo li.liviews { background-position:-6px -84px; }
+ul.listInfo li.lirating { background-position:-6px -110px; }
+ul.listInfo li.readmore { background-position:-6px -110px; }
+ul.listInfo li a { color:#646464; }
+.listInfoFlt li { float:left; padding:4px 0 4px 18px!important; margin:0 0 0 10px!important; }
+.listInfoFlt li.readmore { float:right!important; padding:4px 20px 4px 18px!important; }
+
+.navigations { background:url(images/navigation.gif) repeat-x top left; height:25px; padding:6px 10px 7px; }
+.navigations .alignleft a, .navigations .alignright a { display:block; height:20px; line-height:20px; padding:0 8px; font-size:14px; font-weight:bold; color:#fff; border:1px solid #fff; text-decoration:none; }
+.navigations .alignleft a:hover, .navigations .alignright a:hover { text-decoration:none; }
+
+.widget { padding:10px 0 0px; }
+.widget .widget_heading { padding:0 0 10px; }
+.widget .widget_heading .widget_image { width:42px; height:29px; float:left; background-position:-236px -5px; }
+.widget .widget_heading h3 { width:122px; text-transform:uppercase; float:right; margin:6px 0 0; }
+.widget .widget_body { padding:14px 0; min-height:100px; clear:both; }
+.widget .widget_body p { margin:0 0 8px; }
+.widget ul { margin:0; padding:0; list-style:none; }
+.widget ul li { margin:0 0 5px; padding:3px 0 3px 0;  }
+.widget ul li a { color:#000; text-decoration:none; font-weight:bold; }
+.widget ul li a:hover { color:#646464; }
+.widget ul li.has-child { padding-bottom:0px; }
+.widget ul li.has-child li { border-width:0; }
+.widget ul.children { margin:6px 0 0; }
+
+
+.widget_categories .widget_heading .widget_image { background-position:-236px -48px; }
+.widget_categories ul li { padding-left:20px; border-bottom:1px solid #E1E1E0; padding-top:2px; background-position:-6px -188px; }
+
+.widget_archive ul li { padding-left:20px; border-bottom:1px solid #E1E1E0; padding-top:2px; background-position:-6px -188px; }
+
+.widget_links .widget_heading .widget_image { background-position:-236px -240px; height:36px; }
+.widget_links ul li { padding-left:20px; border-bottom:1px solid #E1E1E0; padding-top:2px; background-position:-6px -188px; }
+
+.widget_pages .widget_heading .widget_image { background-position:-236px -152px; height:36px; }
+.widget_pages ul li { padding-left:20px; border-bottom:1px solid #E1E1E0; padding-top:2px; background-position:-6px -188px; }
+
+.widget_meta ul li { padding-left:20px; border-bottom:1px solid #E1E1E0; padding-top:2px; background-position:-6px -188px; }
+
+.widget_recent_comments .widget_heading .widget_image { background-position:-236px -96px; height:36px; }
+.widget_recent_comments ul li { border-bottom:1px solid #E1E1E0; padding-top:2px; }
+
+
+
+ol.commentlist { list-style:none; margin:10px 5px 10px 10px; padding:10px 0px 0px 0px; text-indent:0; }
+ol.commentlist li { border:1px solid #ddd; height:1%; margin:0 0 10px; padding:5px 7px 5px 57px; position:relative; }
+ol.commentlist li.alt { }
+ol.commentlist li.bypostauthor {}
+ol.commentlist li.byuser {}
+ol.commentlist li.comment-author-admin {}
+ol.commentlist li.comment { }
+ol.commentlist li div.comment-author { padding:0 170px 0 0; }
+ol.commentlist li div.vcard { font:bold 14px/1.4 helvetica,arial,sans-serif; }
+ol.commentlist li div.vcard cite.fn { font-style:normal; }
+ol.commentlist li div.vcard cite.fn a.url { color:#2384C6; text-decoration:none; }
+ol.commentlist li div.vcard cite.fn a.url:hover { color:#000; }
+ol.commentlist li div.vcard img.avatar { border:4px solid #ddd; left:-4px; position:absolute; top:-5px; }
+ol.commentlist li div.vcard img.avatar-32 {}
+ol.commentlist li div.vcard img.photo {}
+ol.commentlist li div.vcard span.says {}
+ol.commentlist li div.commentmetadata {}
+ol.commentlist li div.comment-meta { font:bold 10px/1.4 helvetica,arial,sans-serif; position:absolute; right:10px; text-align:right; top:5px; }
+ol.commentlist li div.comment-meta a { color:#333; text-decoration:none; }
+ol.commentlist li div.comment-meta a:hover { color:#000; }
+ol.commentlist li p { font:normal 12px/1.4 helvetica,arial,sans-serif; margin:0 0 1em; }
+ol.commentlist li ul { font:normal 12px/1.4 helvetica,arial,sans-serif; list-style:square; margin:0 0 1em; padding:0; text-indent:0; }
+ol.commentlist li div.reply a { background:#999; border:2px solid #666; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; color:#fff; font:bold 9px/1 helvetica,arial,sans-serif; padding:5px 10px;  text-align:center; width:36px; }
+ol.commentlist li div.reply a:hover { background:#c30; border:2px solid #c00; }
+ol.commentlist li ul.children { list-style:none; margin:1em 0 0; text-indent:0; }
+ol.commentlist li ul.children li {  }
+ol.commentlist li ul.children li.alt {}
+ol.commentlist li ul.children li.bypostauthor {}
+ol.commentlist li ul.children li.byuser {}
+ol.commentlist li ul.children li.comment {}
+ol.commentlist li ul.children li.comment-author-admin {}
+ol.commentlist li ul.children li.depth-2 { margin:0 0 .25em; }
+ol.commentlist li ul.children li.depth-3 { margin:0 0 .25em; }
+ol.commentlist li ul.children li.depth-4 { margin:0 0 .25em; }
+ol.commentlist li ul.children li.depth-5 {}
+ol.commentlist li ul.children li.odd {}
+ol.commentlist li.even { background:#f7f7f7; }
+ol.commentlist li.odd { background:#fff; }
+ol.commentlist li.parent { }
+ol.commentlist li.pingback { }
+ol.commentlist li.pingback.parent { }
+ol.commentlist li.pingback div.vcard { padding:0 170px 0 0; }
+ol.commentlist li.thread-alt { }
+ol.commentlist li.thread-even {}
+ol.commentlist li.thread-odd {}
+
+#respond {  }
+#comment { width:98%; background:#fff; border:1px solid #ACACAC; color:#414141; }
+#comment2 { width:98%; background:#fff; border:1px solid #ACACAC; color:#414141; }
+#respond p { margin:2px 0px 2px; height:24px; }
+#respond p label { width:90px!important; display:block; float:left; }
+.adboxside { text-align:center;  width:120px; padding:6px; margin:0px auto; }
+#author, #email, #url {width:100%; background:#fff; border:1px solid #ACACAC; color:#414141; display:inline; }
+#url { margin-right:0px; }
+
+
+.footAdsense { width:728px; height:90px; margin:10px auto 0; background:#6A6A6A; }
+
+.copyright { color:#FFFFFF; font-size:11px; padding:10px 0 0; text-align:center; }
+.copyright a { color:#FFFFFF; }
