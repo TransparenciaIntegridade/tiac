@@ -1,0 +1,13 @@
+<?php
+return array(
+    'mvlabs-snappy' => array(
+        'pdf' => array(
+           'binary'  => '/home/tiac/usr/bin/wkhtmltopdf-amd64',
+           'options' => array(), 
+        ),   
+        'image' => array(
+            'binary'  => '/home/tiac/usr/bin/wkhtmltoimage-amd64',
+            'options' => array(),
+         )
+     )   
+);

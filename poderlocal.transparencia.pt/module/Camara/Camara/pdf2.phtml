@@ -1,0 +1,47 @@
+<?php
+
+require_once 'vendor/snappy-master/src/autoload.php';
+use Knp\Snappy\Pdf;
+$this->layout('layout/empty');
+$snappy = new Pdf('/home/tiac/usr/bin/wkhtmltopdf-amd64');
+
+//$snappy = new Pdf();
+//$snappy->setBinary('/home/tiac/usr/bin/wkhtmltopdf-amd64');
+
+// Display the resulting pdf in the browser
+// by setting the Content-type header to pdf
+//$snappy = new Pdf('/home/tiac/usr/bin/wkhtmltopdf-amd64');
+$snappy->setOption('redirect-delay', 2500);
+//header('Content-Type: application/pdf');
+//$snappy->setOption('disable-javascript', true);
+//$snappy->setOption('no-background', true);
+//$snappy->setOption('disable-javascript', true);
+//$snappy->setOption('no-background', false);
+//header('Content-Disposition: attachment; filename="teste5.pdf"');
+//echo $snappy->getOutput('http://itm.tiac.webfactional.com/camara/1');
+//echo $snappy->generateFromHtml('<h1>Bill</h1><p>You owe me money, dude.</p>', 'teste4.pdf');
+
+// .. or simply save the PDF to a file
+//$snappy = new Pdf('/home/tiac/usr/bin/wkhtmltopdf-amd64');
+//$snappy->generateFromHtml('<h1>Bill</h1><p>You owe me money, dude.</p>', 'teste-123.pdf');
+
+// Pass options to snappy
+// Type wkhtmltopdf -H to see the list of options
+//$snappy = new Pdf('/home/tiac/usr/bin/wkhtmltopdf-amd64');
+//$snappy->setOption('disable-javascript', false);
+//$snappy->setOption('no-background', true);
+//$snappy->setOption('allow', array('/path1', '/path2'));
+//$snappy->setOption('cookie', array('key' => 'value', 'key2' => 'value2'));
+//echo $snappy->getOutput('http://itm.tiac.webfactional.com');
+
+//$snappy->setOption('disable-javascript', true);
+$snappy->setOption('no-background', true);
+//$snappy->setOption('custom-header', false);
+header('Content-Type: application/pdf');
+//header('Content-Disposition: attachment; filename="teste5.pdf"');
+header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
+echo $snappy->getOutput('poderlocal.transparencia.pt/camara/pdf/'.$this->id,array('orientation' => 'Portrait'));
+?>
+
+

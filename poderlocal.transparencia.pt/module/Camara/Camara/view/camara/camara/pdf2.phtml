@@ -1,0 +1,74 @@
+<?php
+$this->layout('layout/empty');
+require_once 'vendor/snappy-master/src/autoload.php';
+use Knp\Snappy\Pdf;
+//$snappy = new Pdf('C://"Program Files (x86)"/wkhtmltopdf/wkhtmltopdf.exe');
+//$snappy = new Pdf('/home/tiac/usr/bin/wkhtmltopdf-amd64');
+$snappy = new Pdf();
+$snappy->setBinary('/home/tiac/usr/bin/wkhtmltopdf-amd64');
+
+// Display the resulting pdf in the browser
+// by setting the Content-type header to pdf
+//$snappy = new Pdf('/home/tiac/usr/bin/wkhtmltopdf-amd64');
+//$snappy->setOption('javascript-delay', 500);
+//header('Content-Type: application/pdf');
+//$snappy->setOption('disable-javascript', true);
+//$snappy->setOption('no-background', true);
+//$snappy->setOption('disable-javascript', true);
+$snappy->setOption('no-background', false);
+//header('Content-Disposition: attachment; filename="teste5.pdf"');
+//echo $snappy->getOutput('http://itm.tiac.webfactional.com/camara/1');
+//echo $snappy->generateFromHtml('<h1>Bill</h1><p>You owe me money, dude.</p>', 'teste4.pdf');
+
+// .. or simply save the PDF to a file
+//$snappy = new Pdf('/home/tiac/usr/bin/wkhtmltopdf-amd64');
+//$snappy->generateFromHtml('<h1>Bill</h1><p>You owe me money, dude.</p>', 'teste-123.pdf');
+
+// Pass options to snappy
+// Type wkhtmltopdf -H to see the list of options
+//$snappy = new Pdf('/home/tiac/usr/bin/wkhtmltopdf-amd64');
+//$snappy->setOption('disable-javascript', false);
+//$snappy->setOption('no-background', true);
+//$snappy->setOption('allow', array('/path1', '/path2'));
+//$snappy->setOption('cookie', array('key' => 'value', 'key2' => 'value2'));
+//echo $snappy->getOutput('http://itm.tiac.webfactional.com');
+
+//$snappy->setOption('disable-javascript', true);
+//$snappy = new Pdf();
+//$snappy->setBinary('/home/tiac/usr/bin/wkhtmltopdf-amd64');
+//$snappy->setOption('no-stop-slow-scripts', true);
+//$snappy->setOption('no-background', true);
+//exec ('/home/tiac/usr/bin/wkhtmltopdf-amd64 itm.tiac.webfactional.com/camara/pdf/'.$this->id.' output9.pdf');
+//$cmd = '/usr/bin/xvfb-run -H --outline --javascript-delay 4000 --no-stop-slow-scripts --server-args="-screen 0, 1920x1080x24" /home/tiac/usr/bin/wkhtmltopdf-amd64 itm.tiac.webfactional.com/camara/pdf/'.$this->id.'output11.pdf'; 
+//exec($cmd);
+/*$commandString = ('/home/tiac/usr/bin/wkhtmltopdf-amd64 itm.tiac.webfactional.com/camara/pdf/'.$this->id.' file3.pdf');
+$filename='file3.pdf';
+$output       = shell_exec($commandString);
+$allfile = file_get_contents("file3.pdf");
+ 		header('Content-Type: application/pdf');
+        /*header('Cache-Control: public, must-revalidate, max-age=0'); // HTTP/1.1
+        header('Pragma: public');
+        header('Expires: Sat, 26 Jul 1997 05:00:00 GMT'); // Date in the past
+        header('Last-Modified: ' . gmdate('D, d M Y H:i:s').' GMT');
+        header('Content-Length: ' . strlen($allfile));
+        header('Content-Disposition: inline; filename="' . $filename . '";');*/
+
+//header('Content-Disposition: attachment; filename="teste5.pdf"');
+//header('Cache-Control: no-cache, must-revalidate, max-age=0'); // HTTP/1.1
+//header('Pragma: public');
+//header('Expires: Sat, 26 Jul 2013 05:00:00 GMT'); // Date in the past
+//header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT'); 
+//header('Content-Disposition: inline; filename="hello.pdf";');
+//echo $snappy->getOutput('http://google.com');
+//echo $snappy->getOutput('itm.tiac.webfactional.com/camara2/'.$this->id,array('orientation' => 'Portrait'));
+$snappy->setOption('disable-smart-shrinking',true);
+header('Content-Type: application/pdf');
+header('Cache-Control: no-cache, must-revalidate, max-age=0'); 
+header('Pragma: public');
+header('Expires: Sat, 26 Jul 2013 05:00:00 GMT'); 
+header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');
+echo $snappy->getOutput('poderlocal.transparencia.pt/camara/pdf/'.$this->id,array('orientation' => 'Portrait'));
+
+?>
+
+

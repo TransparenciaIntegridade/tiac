@@ -1,0 +1,670 @@
+<?php //////////////////////////////////////         ?>
+ 
+
+
+  <style>
+.ui-autocomplete-loading {
+background: white url('/images/ui-anim_basic_16x16.gif') right center no-repeat;
+}
+</style>
+ 
+
+<script>
+
+var j=0;
+var camaras = new Array();
+var dimensaoA = new Array();
+var configA = new Array();
+var dimensaoB = new Array();
+var dimensaoC = new Array();
+var dimensaoD = new Array();
+var dimensaoE = new Array();
+var dimensaoF = new Array();
+var dimensaoG = new Array();
+var idCamaras = new Array();
+var all = new Array();
+  
+$(function() {
+		function log( message ) {
+		$( "<div>" ).text(message).prependTo( "#log" );
+		$( "#log" ).scrollTop( 0 );
+		document.getElementById("b1").innerHTML= "<button class="+'"'+'btn1 btn-default'+'"'+" style="+'"'+'background:#CC4400'+'"'+">X</button>";
+		}
+
+		function log2( message ) {
+			$( "<div>" ).text(message).prependTo( "#log2" );
+			$( "#log2" ).scrollTop( 0 );
+			document.getElementById("b2").innerHTML= "<button class="+'"'+'btn1 btn-default'+'"'+" style="+'"'+'background:#CC4400'+'"'+">X</button>";
+			}
+
+		function log3( message ) {
+			$( "<div>" ).text(message).prependTo( "#log3" );
+			$( "#log3" ).scrollTop( 0 );
+			document.getElementById("b3").innerHTML= "<button class="+'"'+'btn1 btn-default'+'"'+" style="+'"'+'background:#CC4400'+'"'+">X</button>";
+			}
+
+		function log4( message ) {
+			$( "<div>" ).text(message).prependTo( "#log4" );
+			$( "#log4" ).scrollTop( 0 );
+			document.getElementById("b4").innerHTML="<button class="+'"'+'btn1 btn-default'+'"'+" style="+'"'+'background:#CC4400'+'"'+">X</button>";
+			}
+
+
+		function log5( message ) {
+			$( "<div>" ).text(message).prependTo( "#log5" );
+			$( "#log5" ).scrollTop( 0 );
+			document.getElementById("b5").innerHTML="<button class="+'"'+'btn1 btn-default'+'"'+" style="+'"'+'background:#CC4400'+'"'+">X</button>";
+			}
+
+
+	
+$( "#city" ).autocomplete({
+	source: function (request, response) {
+        $.getJSON("ranking-rest?q=" + request.term, function (data) {
+            response($.map(data.city, function (item) {
+                return {
+                    label: item.label,
+                    value: item.value,    
+                    all:{
+                    	A: item.dimensaoA,
+                    	B: item.dimensaoB,
+                    	C: item.dimensaoC,
+                    	D: item.dimensaoD,
+                    	E: item.dimensaoE,
+                    	F: item.dimensaoF,
+                    	G: item.dimensaoG,
+                        state : item.label,
+                    },
+                    dimensaoA : {
+                        A: item.dimensaoA,
+                        name : item.label,
+                    },
+                    dimensaoB : {
+                        A: item.dimensaoB,
+                        name : item.label,
+                    },
+                    dimensaoC : {
+                        A: item.dimensaoC,
+                        name : item.label,
+                    },
+                    dimensaoD : {
+                        A: item.dimensaoD,
+                        name : item.label,
+                    },
+                    dimensaoE : {
+                        A: item.dimensaoE,
+                        name : item.label,
+                    },
+                    dimensaoF : {
+                        A: item.dimensaoF,
+                        name : item.label,
+                    },
+                    dimensaoG : {
+                        A: item.dimensaoG,
+                        name : item.label,
+                    },
+
+                    ranking : {
+						A: item.ranking,
+						name : item.label,
+                    }
+                    
+                    
+                };
+            }));
+        });
+    },
+    minLength: 2,
+
+select: function( event, ui ) {
+
+
+
+var flag = 0;
+for(var i=0;i<idCamaras.length;i++)
+	//console.log(ui.item.value,idCamaras[i]);
+	if(ui.item.value==idCamaras[i])
+	{
+		
+	 	flag=1;
+	}
+if(flag==0 && idCamaras.length<=4){
+
+
+if(idCamaras.length == 0 ){
+	log( ui.item.label);
+	console.log('1');
+	}
+	if(idCamaras.length == 1 ){
+	log2( ui.item.label);
+	console.log('2');
+	}
+	if(idCamaras.length == 2 ){
+	log3( ui.item.label);
+	console.log('3');
+	}
+	if(idCamaras.length == 3 ){
+	log4( ui.item.label);
+	console.log('4');
+	}
+	if(idCamaras.length == 4 ){
+		log5( ui.item.label);
+		console.log('5');
+	}
+	idCamaras.push(ui.item.value);
+	link = "";
+	for(var i =0;i<idCamaras.length;i++){
+	link+="/"+idCamaras[i];}
+
+
+camaras.push(ui.item.label);
+all.push(ui.item.all);
+}
+if(idCamaras.length>4){
+var x=document.getElementById("demo");
+x.innerHTML="<div style="+'"'+'margin-top:10px;color:#F00'+'"'+">Limite máximo 5 Municípios!";
+}
+
+
+
+
+
+
+
+<?php ///////////////////////////////////////////////////////////////////////////////////////////////////////?>
+
+
+		$(function(){
+
+	                $("#chartContainer").dxChart({
+	                     dataSource: all,
+	
+	equalBarWidth: false,
+    commonSeriesSettings: {
+        argumentField: "state",
+        type: "bar",
+		
+        hoverMode: "allArgumentPoints",
+        selectionMode: "allArgumentPoints",
+        label: {
+            visible: true,
+            format: "fixedPoint",
+            precision: 0
+        }
+        
+    },
+
+	                    series: [
+	                        { valueField: "A", name: "Organização, Composição <br/>e funcionamento" },
+	                        { valueField: "B", name: "Planos e Relatórios" },
+	                        { valueField: "C", name: "Taxas e Regulamentos" },
+	                        { valueField: "D", name: "Relação com a Sociedade" },
+	                        { valueField: "E", name: "Contratação Pública" },
+	                        { valueField: "F", name: "Informação Económico-Financeira" },
+	                        { valueField: "G", name: "Urbanismo" },
+	                    ],
+	                      equalBarWidth: {
+            width: 40
+        },
+	                    legend: {
+	                        verticalAlignment: "bottom",
+	                        horizontalAlignment: "center"
+	                    },
+
+
+
+
+
+
+valueAxis: {
+  
+			 label: {
+
+			 	customizeText: function (value) {
+
+			 	return value.value ;
+			 	}
+			 },
+			 visible: true,
+			    min: 0.00
+                    , max: 80.00
+                    , tickInterval: 0.1      
+			 },
+
+
+	                    
+	                     tooltip: {
+
+			 enabled: true,
+			 customizeText: function (e) {
+				 return e.valueText + ' Pontos ';
+				 }
+		},
+	                   // title: "Ranking Dimensões ITM"
+	                });
+
+
+	
+});
+
+
+		
+
+$('input#city').val("");
+return false;
+}
+});
+
+
+
+
+
+
+
+
+
+
+
+<?php ////////////////////////////////////// log1  //////////////////////////////////////////////////?>
+
+
+
+
+		$("#b1").click(function(){
+
+			document.getElementById("log").innerHTML="";
+			document.getElementById("log").innerHTML=document.getElementById("log2").innerHTML;
+			document.getElementById("log2").innerHTML=document.getElementById("log3").innerHTML;
+			document.getElementById("log3").innerHTML=document.getElementById("log4").innerHTML;
+			document.getElementById("log4").innerHTML=document.getElementById("log5").innerHTML;
+			document.getElementById("log5").innerHTML="";	
+			document.getElementById("demo").innerHTML="";
+
+			if(document.getElementById("log").innerHTML== "")
+				document.getElementById("b1").innerHTML= "";			
+				if(document.getElementById("log2").innerHTML== "")
+					document.getElementById("b2").innerHTML= "";
+					if(document.getElementById("log3").innerHTML== "")
+						document.getElementById("b3").innerHTML= "";
+						if(document.getElementById("log4").innerHTML== "")
+							document.getElementById("b4").innerHTML= "";
+							if(document.getElementById("log5").innerHTML== "")
+								document.getElementById("b5").innerHTML= "";
+
+				
+			document.getElementById("demo").innerHTML="";
+			console.log('log1');
+			camaras.splice(0,1);
+			all.splice(0,1);			
+			idCamaras.splice(0,1);
+			console.log(idCamaras);
+
+			$("#chartContainer").dxChart({
+                dataSource: all,
+                
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar"
+					
+                },
+                
+                tooltip: {
+					 enabled: true,
+					 customizeText: function (e) {
+						 return e.valueText + ' Pontos ';
+						 }
+					},
+                series: [
+                    { valueField: "A", name: "Informação sobre a organização<br/> composição social <br/>e funcionamento do Município" },
+                    { valueField: "B", name: "Planos e Relatórios<br/> [2 anos anteriores]" },
+                    { valueField: "C", name: "Impostos, Taxas,<br/> Tarifas, Preços e Regulamentos" },
+                    { valueField: "D", name: "Relação com a Sociedade" },
+                    { valueField: "E", name: "Contratação Pública" },
+                    { valueField: "F", name: "Transparência Económico-Financeira" },
+                    { valueField: "G", name: "Transparência na<br/> área do Urbanismo" },
+                ],
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                title: "Ranking Dimensões ITM"
+            });
+
+
+
+
+});
+
+<?php ////////////////////////////////////// log2  //////////////////////////////////////////////////?>
+
+
+
+
+		$("#b2").click(function(){
+
+			document.getElementById("log2").innerHTML="";			
+			document.getElementById("log2").innerHTML=document.getElementById("log3").innerHTML;
+			document.getElementById("log3").innerHTML=document.getElementById("log4").innerHTML;
+			document.getElementById("log4").innerHTML=document.getElementById("log5").innerHTML;
+			document.getElementById("log5").innerHTML="";	
+			
+
+					
+				if(document.getElementById("log2").innerHTML== "")
+					document.getElementById("b2").innerHTML= "";
+					if(document.getElementById("log3").innerHTML== "")
+						document.getElementById("b3").innerHTML= "";
+						if(document.getElementById("log4").innerHTML== "")
+							document.getElementById("b4").innerHTML= "";
+							if(document.getElementById("log5").innerHTML== "")
+								document.getElementById("b5").innerHTML= "";
+
+				
+			document.getElementById("demo").innerHTML="";
+			
+			camaras.splice(1,1);
+			all.splice(1,1);			
+			idCamaras.splice(1,1);
+			console.log(idCamaras);
+
+			$("#chartContainer").dxChart({
+                dataSource: all,
+                
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar"
+					
+                },
+                
+                tooltip: {
+					 enabled: true,
+					 customizeText: function (e) {
+						 return e.valueText + ' Pontos ';
+						 }
+					},
+                series: [
+                    { valueField: "A", name: "Informação sobre a organização<br/> composição social <br/>e funcionamento do Município" },
+                    { valueField: "B", name: "Planos e Relatórios<br/> [2 anos anteriores]" },
+                    { valueField: "C", name: "Impostos, Taxas,<br/> Tarifas, Preços e Regulamentos" },
+                    { valueField: "D", name: "Relação com a Sociedade" },
+                    { valueField: "E", name: "Contratação Pública" },
+                    { valueField: "F", name: "Transparência Económico-Financeira" },
+                    { valueField: "G", name: "Transparência na<br/> área do Urbanismo" },
+                ],
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                title: "Ranking Dimensões ITM"
+            });
+
+
+
+
+});
+
+
+
+
+<?php ////////////////////////////////////// log3  //////////////////////////////////////////////////?>
+
+
+
+
+		$("#b3").click(function(){
+
+			document.getElementById("log3").innerHTML="";
+			document.getElementById("log3").innerHTML=document.getElementById("log4").innerHTML;
+			document.getElementById("log4").innerHTML=document.getElementById("log5").innerHTML;
+			document.getElementById("log5").innerHTML="";
+			
+
+					
+				
+					if(document.getElementById("log3").innerHTML== "")
+						document.getElementById("b3").innerHTML= "";
+						if(document.getElementById("log4").innerHTML== "")
+							document.getElementById("b4").innerHTML= "";
+							if(document.getElementById("log5").innerHTML== "")
+								document.getElementById("b5").innerHTML= "";
+
+				
+			document.getElementById("demo").innerHTML="";
+			
+			camaras.splice(2,1);
+			all.splice(2,1);			
+			idCamaras.splice(2,1);
+			console.log(idCamaras);
+
+			$("#chartContainer").dxChart({
+                dataSource: all,
+                
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar"
+					
+                },
+                
+                tooltip: {
+					 enabled: true,
+					 customizeText: function (e) {
+						 return e.valueText + ' Pontos ';
+						 }
+					},
+                series: [
+                    { valueField: "A", name: "Informação sobre a organização<br/> composição social <br/>e funcionamento do Município" },
+                    { valueField: "B", name: "Planos e Relatórios<br/> [2 anos anteriores]" },
+                    { valueField: "C", name: "Impostos, Taxas,<br/> Tarifas, Preços e Regulamentos" },
+                    { valueField: "D", name: "Relação com a Sociedade" },
+                    { valueField: "E", name: "Contratação Pública" },
+                    { valueField: "F", name: "Transparência Económico-Financeira" },
+                    { valueField: "G", name: "Transparência na<br/> área do Urbanismo" },
+                ],
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                title: "Ranking Dimensões ITM"
+            });
+
+
+
+
+});
+		
+
+
+
+<?php ////////////////////////////////////// log4  //////////////////////////////////////////////////?>
+
+
+
+
+		$("#b4").click(function(){
+
+			document.getElementById("log4").innerHTML="";
+			document.getElementById("log4").innerHTML=document.getElementById("log5").innerHTML;
+			document.getElementById("log5").innerHTML="";	
+			
+
+					
+				
+					
+						if(document.getElementById("log4").innerHTML== "")
+							document.getElementById("b4").innerHTML= "";
+							if(document.getElementById("log5").innerHTML== "")
+								document.getElementById("b5").innerHTML= "";
+
+				
+			document.getElementById("demo").innerHTML="";
+			
+			camaras.splice(3,1);
+			all.splice(3,1);			
+			idCamaras.splice(3,1);
+			console.log(idCamaras);
+
+			$("#chartContainer").dxChart({
+                dataSource: all,
+                
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar"
+					
+                },
+                
+                tooltip: {
+					 enabled: true,
+					 customizeText: function (e) {
+						 return e.valueText + ' Pontos ';
+						 }
+					},
+                series: [
+                    { valueField: "A", name: "Informação sobre a organização<br/> composição social <br/>e funcionamento do Município" },
+                    { valueField: "B", name: "Planos e Relatórios<br/> [2 anos anteriores]" },
+                    { valueField: "C", name: "Impostos, Taxas,<br/> Tarifas, Preços e Regulamentos" },
+                    { valueField: "D", name: "Relação com a Sociedade" },
+                    { valueField: "E", name: "Contratação Pública" },
+                    { valueField: "F", name: "Transparência Económico-Financeira" },
+                    { valueField: "G", name: "Transparência na<br/> área do Urbanismo" },
+                ],
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                title: "Ranking Dimensões ITM"
+            });
+
+
+
+
+});
+
+
+
+
+
+<?php ////////////////////////////////////// log5  //////////////////////////////////////////////////?>
+
+
+
+
+		$("#b5").click(function(){
+
+			document.getElementById("log5").innerHTML="";			
+					
+						
+							if(document.getElementById("log5").innerHTML== "")
+								document.getElementById("b5").innerHTML= "";
+
+				
+			document.getElementById("demo").innerHTML="";
+			
+			camaras.splice(3,1);
+			all.splice(3,1);			
+			idCamaras.splice(3,1);
+			console.log(idCamaras);
+
+			$("#chartContainer").dxChart({
+                dataSource: all,
+                
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar"
+					
+                },
+                
+                tooltip: {
+					 enabled: true,
+					 customizeText: function (e) {
+						 return e.valueText + ' Pontos ';
+						 }
+					},
+                series: [
+                    { valueField: "A", name: "Informação sobre a organização<br/> composição social <br/>e funcionamento do Município" },
+                    { valueField: "B", name: "Planos e Relatórios<br/> [2 anos anteriores]" },
+                    { valueField: "C", name: "Impostos, Taxas,<br/> Tarifas, Preços e Regulamentos" },
+                    { valueField: "D", name: "Relação com a Sociedade" },
+                    { valueField: "E", name: "Contratação Pública" },
+                    { valueField: "F", name: "Transparência Económico-Financeira" },
+                    { valueField: "G", name: "Transparência na<br/> área do Urbanismo" },
+                ],
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                title: "Ranking Dimensões ITM"
+            });
+
+
+
+
+});
+
+
+$("#link").click(function()
+		  
+		{			
+			window.open("/ranking2/pdf2"+link);
+		});
+
+		
+});
+		              
+
+
+</script>
+
+
+
+
+<div class="ui-widget">
+<label for="city">Adicione os Municípios: </label>
+<input id="city" />
+
+</div>
+<div class="ui-widget" style="margin-top: 2em;">
+<div style="margin-bottom:20px;" >Municípios adicionados:</div>
+<div style="height: 200px; width: 300px; overflow: auto; box-shadow:
+  0 0 0 1px #FFF,
+  0 0 0 2px #888,
+  0 0 0 3px #444,
+  0 0 0 4px #00AADD;
+-moz-box-shadow:
+  0 0 0 1px #FFF,
+  0 0 0 2px #888,
+  0 0 0 3px #444,
+  0 0 0 4px #00AADD;
+-webkit-shadow:
+  0 0 0 1px #FFF,
+  0 0 0 2px #888,
+  0 0 0 3px #444,
+  0 0 0 4px #00AADD;">
+<div>
+<div id="log" style="height: auto; width: 300px; overflow: auto;margin-top:20px;"></div><div id="b1" style="margin-left:205px;margin-top:-22px;width:15px;height:15px;"></div></div>
+<div>
+<div id="log2" style="height: auto; width: 300px; overflow: auto;margin-top:20px;"></div><div id="b2" style="margin-left:205px;margin-top:-22px;width:15px;height:15px;"></div></div>
+<div>
+<div id="log3" style="height: auto; width: 300px; overflow: auto;margin-top:20px;"></div><div id="b3" style="margin-left:205px;margin-top:-22px;width:15px;height:15px;"></div></div>
+<div>
+<div id="log4" style="height: auto; width: 300px; overflow: auto;margin-top:20px;"></div><div id="b4" style="margin-left:205px;margin-top:-22px;width:15px;height:15px;"></div></div>
+<div>
+<div id="log5" style="height: auto; width: 300px; overflow: auto;margin-top:20px;"></div><div id="b5" style="margin-left:205px;margin-top:-22px;width:15px;height:15px;"></div></div>
+</div>
+</div>
+
+<p id="demo"></p>
+
+		
+		
+		<div class="row" style="margin-right:0px;">
+        	<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+			<div class="pane" style=" width:auto; height :auto;background:none;border:hidden;">
+            <h3 style="text-align:center;">Ranking Dimensões ITM:</h3>
+				<div id="chartContainer" style="width: 100%; height: 600px;"></div>			
+				
+			</div>
+            </div>
+		</div>
+<div id="rslt"></div>
+<button id="link" class="btn btn-default"> Exportar PDF</button>
+

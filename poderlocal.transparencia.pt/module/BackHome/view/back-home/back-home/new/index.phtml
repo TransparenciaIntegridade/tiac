@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  
+<!-- Change keywords, description and title -->
+  <meta name="keywords" content="web design, web development, web tutorials">
+  <meta name="description" content="Web Creator Box focus on web design, tutorials, and web related news.">
+  <title>Coming Soon</title>
+  
+<!-- External Files -->
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Philosopher:700' rel='stylesheet' type='text/css'>
+ <?php echo $this->headScript()
+  ->appendFile('/js/countdown.js')?>
+
+
+
+<?php echo $this->headLink()
+                    ->appendStylesheet($this->basePath() . '/css/teste/style.css')
+                    
+                    ?>
+
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+<!-- Countdown Timer -->  
+  
+</head>
+
+<body>
+<div id="wrapper">
+  <header>
+    <h1>Índice de Transparência Municipal</h1>　<!-- Change title or add logo image -->
+    <h2>ITM 2014</h2>
+    <p>Estamos prestes a publicar o ranking dos municípios mais e menos transparentes de 2014. Fique ligado!</p>
+  </header>
+  
+  <section >
+    <p style="text-align:center;color:#fff">Tempo estimado para apresentação:</p>
+    <div align="center" style="margin-top:50px;"> <script type="text/javascript">
+ var Countdown1 = new Countdown({
+                  /*time: 86400 * 3, // 86400 seconds = 1 day
+                  width:500, 
+                  height:130,  
+                  rangeHi:"day",
+                  style:"flip"  // <- no comma on last item!*/
+
+year  : 2014,       // (optional) The target date's year
+  month : 11,        // (optional) The target date's month
+  day   : 7,        // (optional) The target date's day
+  hour  : 10,        // (optional) The target date's hour
+  ampm  : "am",       // (optional) Is the hour refeing to AM (early/day) or PM (late/night)?
+  minute  : 00,        // (optional) The target date's minutes
+  second  : 0,        // (optional) The target date's seconds 
+
+
+
+
+
+                  });
+  </script></div>
+  </section>
+  
+<!-- What kind of website it would be? Remove this if you don't need -->
+  <p  style="margin-top:50px;text-align:center;">
+    Saiba mais em <a href="http://transparencia.pt">transparencia.pt.</a>
+   <p style="text-align:center;">Acompanhe-nos também no Facebook <a href="http://facebook.com/transparenciapt">Facebook</a> </p>
+  </p>
+  
+  <footer>
+    <p>
+      
+    </p>
+  </footer>
+  
+</div><!-- /#wrapper -->
+</body>
+</html>

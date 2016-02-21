@@ -1,0 +1,12 @@
+<?php
+// module/User/view/user/user/registo.phtml:
+?>
+<h1><?php echo $this->escapeHtml('Registo'); ?></h1>
+<?php 
+$form = $this->form;
+$form->setAttribute('action', $this->url('user', array('action' => 'registo')));
+$form->prepare();
+echo $this->form()->openTag($form);
+echo $this->formCollection($form);
+echo $this->form()->closeTag();
+ 

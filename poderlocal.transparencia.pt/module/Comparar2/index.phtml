@@ -1,0 +1,342 @@
+
+
+
+
+<script>
+
+
+
+
+
+
+$(function(){
+
+	var all = new Array(); 
+	var id = <?php echo json_encode($id);?>;
+	var id2 = <?php echo json_encode($id2);?>;
+	var id3 = <?php echo json_encode($id3);?>;
+	var id4 = <?php echo json_encode($id4);?>;
+	var id5 = <?php echo json_encode($id5);?>;
+	
+
+$.getJSON("/ranking-rest/" + id, function (data) {
+	if(id>0){
+	all.push(data);
+}
+
+	console.log(all);
+	$.getJSON("/ranking-rest/" + id2, function (data) {
+		if(id2>0){
+		all.push(data);
+		}	
+		$.getJSON("/ranking-rest/" + id3, function (data) {
+			if(id3>0){
+				all.push(data);
+				}
+		
+			$.getJSON("/ranking-rest/" + id4, function (data) {
+				if(id4>0){
+					all.push(data);
+					}
+				
+				$.getJSON("/ranking-rest/" + id5, function (data) {
+					if(id5>0){
+						all.push(data);
+						}
+				
+
+				console.log(all);
+		
+
+	                $("#chartContainer").dxChart({
+	                	dataSource: all,
+	                	animation:false,
+	                	commonSeriesSettings: {
+	                      argumentField: "state",
+	                      type: "bar",
+	                      hoverMode: "allArgumentPoints",
+	                      selectionMode: "allArgumentPoints",
+	                      
+	                  },
+	                  valueAxis: {
+	         			 label: {
+	         			 	customizeText: function (value) {
+	         			 	return value.value + ' Indivíduos';
+	         			 	}
+	         			 },
+	         			 visible: true,
+	         			 },
+	                  tooltip: {
+		   					 enabled: true,
+		   					 customizeText: function (e) {
+		   						 return e.valueText + ' Indivíduos ';
+		   						 }
+		   					},
+	                    series: [
+	                        
+	                        { valueField: "A", name: "População" },
+	                        { valueField: "B", name: "Nº de eleitores" },
+	                        { valueField: "C", name: " População com <br/>ensino superior" }
+	                        
+	                        
+	                    ],
+	                    title: "Ranking Dimensões ITM:",
+	                	
+	                		 tooltip: {
+	                			 enabled: true,
+	                			 customizeText: function (e) {
+	                				 return e.valueText + ' Pontos ';
+	                				 }
+	                		},
+	                    legend: {
+	                        verticalAlignment: "bottom",
+	                        horizontalAlignment: "center"
+	                    },
+	                    valueAxis: {
+			 label: {
+			 	customizeText: function (value) {
+			 	return value.value ;
+			 	}
+			 },
+			 visible: true,
+			  max: 95,
+			 },
+	                	
+	                    pointClick: function (point) {
+	                        this.select();
+	                    }
+	                });
+$("#chartContainer1").dxChart({
+	                	dataSource: all,
+	                	animation:false,
+	                	//equalBarWidth: false,
+	                    commonSeriesSettings: {
+	                        argumentField: "state",
+	                        type: "bar",
+	                		
+	                        hoverMode: "allArgumentPoints",
+	                        selectionMode: "allArgumentPoints",
+	                        
+	                        
+	                    },
+	                    series: [
+	                        { valueField: "A", name: " Organização,Composição  <br/>e Funcionamento" },
+	                        { valueField: "B", name: "Planos e Relatórios<br/> [2 anos anteriores]" },
+	                        
+	                    ],
+	                    title: "Ranking Dimensões ITM:",
+	                	
+	                		 tooltip: {
+	                			 enabled: true,
+	                			 customizeText: function (e) {
+	                				 return e.valueText + ' Pontos ';
+	                				 }
+	                		},
+	                    legend: {
+	                        verticalAlignment: "bottom",
+	                        horizontalAlignment: "center"
+	                    },
+	                    valueAxis: {
+			 label: {
+			 	customizeText: function (value) {
+			 	return value.value ;
+			 	}
+			 },
+			 visible: true,
+			  max: 95,
+			 },
+	                	
+	                    pointClick: function (point) {
+	                        this.select();
+	                    }
+	                });
+$("#chartContainer2").dxChart({
+	                	dataSource: all,
+	                	animation:false,
+	                	//equalBarWidth: false,
+	                    commonSeriesSettings: {
+	                        argumentField: "state",
+	                        type: "bar",
+	                		
+	                        hoverMode: "allArgumentPoints",
+	                        selectionMode: "allArgumentPoints",
+	                        
+	                        
+	                    },
+	                    series: [
+	                        { valueField: "A", name: " Organização,Composição  <br/>e Funcionamento" },
+	                        { valueField: "B", name: "Planos e Relatórios<br/> [2 anos anteriores]" },
+	                        
+	                    ],
+	                    title: "Ranking Dimensões ITM:",
+	                	
+	                		 tooltip: {
+	                			 enabled: true,
+	                			 customizeText: function (e) {
+	                				 return e.valueText + ' Pontos ';
+	                				 }
+	                		},
+	                    legend: {
+	                        verticalAlignment: "bottom",
+	                        horizontalAlignment: "center"
+	                    },
+	                    valueAxis: {
+			 label: {
+			 	customizeText: function (value) {
+			 	return value.value ;
+			 	}
+			 },
+			 visible: true,
+			  max: 95,
+			 },
+	                	
+	                    pointClick: function (point) {
+	                        this.select();
+	                    }
+	                });
+$("#chartContainer3").dxChart({
+	                	dataSource: all,
+	                	animation:false,
+	                	//equalBarWidth: false,
+	                    commonSeriesSettings: {
+	                        argumentField: "state",
+	                        type: "bar",
+	                		
+	                        hoverMode: "allArgumentPoints",
+	                        selectionMode: "allArgumentPoints",
+	                        
+	                        
+	                    },
+	                    series: [
+	                        { valueField: "A", name: " Organização,Composição  <br/>e Funcionamento" },
+	                        { valueField: "B", name: "Planos e Relatórios<br/> [2 anos anteriores]" },
+	                        
+	                    ],
+	                    title: "Ranking Dimensões ITM:",
+	                	
+	                		 tooltip: {
+	                			 enabled: true,
+	                			 customizeText: function (e) {
+	                				 return e.valueText + ' Pontos ';
+	                				 }
+	                		},
+	                    legend: {
+	                        verticalAlignment: "bottom",
+	                        horizontalAlignment: "center"
+	                    },
+	                    valueAxis: {
+			 label: {
+			 	customizeText: function (value) {
+			 	return value.value ;
+			 	}
+			 },
+			 visible: true,
+			  max: 95,
+			 },
+	                	
+	                    pointClick: function (point) {
+	                        this.select();
+	                    }
+	                });
+$("#chartContainer4").dxChart({
+	                	dataSource: all,
+	                	animation:false,
+	                	//equalBarWidth: false,
+	                    commonSeriesSettings: {
+	                        argumentField: "state",
+	                        type: "bar",
+	                		
+	                        hoverMode: "allArgumentPoints",
+	                        selectionMode: "allArgumentPoints",
+	                        
+	                        
+	                    },
+	                    series: [
+	                        { valueField: "A", name: " Organização,Composição  <br/>e Funcionamento" },
+	                        { valueField: "B", name: "Planos e Relatórios<br/> [2 anos anteriores]" },
+	                        
+	                    ],
+	                    title: "Ranking Dimensões ITM:",
+	                	
+	                		 tooltip: {
+	                			 enabled: true,
+	                			 customizeText: function (e) {
+	                				 return e.valueText + ' Pontos ';
+	                				 }
+	                		},
+	                    legend: {
+	                        verticalAlignment: "bottom",
+	                        horizontalAlignment: "center"
+	                    },
+	                    valueAxis: {
+			 label: {
+			 	customizeText: function (value) {
+			 	return value.value ;
+			 	}
+			 },
+			 visible: true,
+			  max: 95,
+			 },
+	                	
+	                    pointClick: function (point) {
+	                        this.select();
+	                    }
+	                });
+
+	});
+
+});
+
+});
+
+
+});
+		
+
+});
+		              
+
+});
+</script>
+
+
+
+
+
+
+
+
+		<div class="hero">
+        	<div class="col-xs-12">
+				<div id="chartContainer" style="width: 1000px; height: 600px;"></div>			
+				
+			</div>
+		</div>
+		<div class="hero">
+        	<div class="col-xs-12">
+				<div id="chartContainer1" style="width: 1000px; height: 600px;"></div>			
+				
+			</div>
+		</div>
+		<div class="hero">
+        	<div class="col-xs-12">
+				<div id="chartContainer2" style="width: 1000px; height: 600px;"></div>			
+				
+			</div>
+		</div>
+		div class="hero">
+        	<div class="col-xs-12">
+				<div id="chartContainer3" style="width: 1000px; height: 600px;"></div>			
+				
+			</div>
+		</div>
+		<div class="hero">
+        	<div class="col-xs-12">
+				<div id="chartContainer4" style="width: 1000px; height: 600px;"></div>			
+				
+			</div>
+		</div>
+
+
+
+

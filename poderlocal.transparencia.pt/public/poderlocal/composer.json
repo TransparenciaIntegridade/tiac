@@ -1,0 +1,10 @@
+{
+"name" : "ZF2 Tutorial",
+"require" : {
+"zendframework/zendframework" : "2.3.*"
+},
+"repositories" : [ {
+"type" : "composer",
+"url" : "https://packagist.org/"
+}]
+}

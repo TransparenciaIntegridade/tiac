@@ -1,0 +1,387 @@
+
+ 
+
+
+ 
+<script>
+
+$(function(){
+
+ 	var pessoas = new Array();
+ 	var percent = new Array();
+ 	var dinheiro = new Array();
+ 	var dias = new Array();
+	var id = <?php echo json_encode($id);?>;
+	var id2 = <?php echo json_encode($id2);?>;
+	var id3 = <?php echo json_encode($id3);?>;
+	var id4 = <?php echo json_encode($id4);?>;
+	var id5 = <?php echo json_encode($id5);?>;
+	
+
+
+  
+$.getJSON("/stat-rest/" + id, function (data) {
+	if(id>0){
+	pessoas.push(data.pessoas);
+	percent.push(data.percent);
+	dinheiro.push(data.dinheiro);
+	dias.push(data.dias);
+	
+}
+
+	$.getJSON("/stat-rest/" + id2, function (data) {
+		if(id2>0){
+		pessoas.push(data.pessoas);
+		percent.push(data.percent);
+		dinheiro.push(data.dinheiro);
+		dias.push(data.dias);
+		
+	}
+
+
+		$.getJSON("/stat-rest/" + id3, function (data) {
+			if(id3>0){
+			pessoas.push(data.pessoas);
+			percent.push(data.percent);
+			dinheiro.push(data.dinheiro);
+			dias.push(data.dias);
+			
+		}
+
+			$.getJSON("/stat-rest/" + id4, function (data) {
+				if(id4>0){
+				pessoas.push(data.pessoas);
+				percent.push(data.percent);
+				dinheiro.push(data.dinheiro);
+				dias.push(data.dias);
+				;
+			}
+
+				$.getJSON("/stat-rest/" + id5, function (data) {
+					if(id5>0){
+					pessoas.push(data.pessoas);
+					percent.push(data.percent);
+					dinheiro.push(data.dinheiro);
+					dias.push(data.dias);
+					
+				}
+
+
+
+
+
+					$("#chartContainer").dxChart({
+		                  dataSource: pessoas,
+		                  animation:false,
+		                  commonSeriesSettings: {
+		                      argumentField: "state",
+		                      
+		                      type: "bar",
+		                      hoverMode: "allArgumentPoints",
+		                      selectionMode: "allArgumentPoints",
+		                      
+		                  },
+		                  valueAxis: {
+		         			 label: {
+		         			 	customizeText: function (value) {
+		         			 	return value.value + ' Indivíduos';
+		         			 	}
+		         			 },
+		         			 visible: true,
+		         			 },
+		                  tooltip: {
+			   					 enabled: true,
+			   					 customizeText: function (e) {
+			   						 return e.valueText + ' Indivíduos ';
+			   						 }
+			   					},
+		                  series: [
+		                    	{ valueField: "population", name: "População" },
+						{ valueField: "eleitores", name: " Nº de eleitores" },
+	                      { valueField: "ensino", name: " População com <br/>ensino superior" }
+		                  ],
+		                 title: "População-Eleitores-Escolaridade:",
+		                  legend: {
+		                      verticalAlignment: "bottom",
+		                      horizontalAlignment: "center"
+		                  },
+		                  pointClick: function (point) {
+		                      this.select();
+		                  }
+		              });
+
+
+
+
+
+
+	$("#chartContainer2A").dxChart({
+        dataSource: percent,
+        animation:false,
+        commonSeriesSettings: {
+            argumentField: "state",            
+            type: "bar",
+            hoverMode: "allArgumentPoints",
+            selectionMode: "allArgumentPoints",
+            
+        },
+        valueAxis: {
+			 label: {
+			 	customizeText: function (value) {
+			 	return value.value + ' %';
+			 	}
+			 },
+			 visible: true,
+			 },
+        tooltip: {
+					 enabled: true,
+					 customizeText: function (e) {
+						 return e.valueText + ' % ';
+						 }
+					},
+        series: [
+               { valueField: "desemprego", name: "Desemprego" },
+						{ valueField: "qualidade", name: " Poder de compra<br/> <i>per cápita</i>" },
+	                      { valueField: "envelhecimento", name: "Envelhecimento" },
+	                       
+	                      
+	                  ],
+	                  title: "Desemprego-Poder de Compra-Envelhecimento:",
+        legend: {
+            verticalAlignment: "bottom",
+            horizontalAlignment: "center"
+        },
+        pointClick: function (point) {
+            this.select();
+        }
+    });
+
+
+    $("#chartContainer2B").dxChart({
+        dataSource: percent,
+        animation:false,
+        commonSeriesSettings: {
+            argumentField: "state",            
+            type: "bar",
+            hoverMode: "allArgumentPoints",
+            selectionMode: "allArgumentPoints",
+            
+        },
+        valueAxis: {
+			 label: {
+			 	customizeText: function (value) {
+			 	return value.value + ' %';
+			 	}
+			 },
+			 visible: true,
+			 },
+        tooltip: {
+					 enabled: true,
+					 customizeText: function (e) {
+						 return e.valueText + ' % ';
+						 }
+					},
+        series: [
+             
+             { valueField: "a2010", name: "Independencia financeira <br/> em 2010" },
+            { valueField: "a2011", name: "Independencia financeira <br/> em 2011" },
+            { valueField: "a2012", name: "Independencia financeira <br/> em 2012" }
+            
+        ],
+        title: "Independência financeira do Município:",
+        legend: {
+            verticalAlignment: "bottom",
+            horizontalAlignment: "center"
+        },
+        pointClick: function (point) {
+            this.select();
+        }
+    });
+
+    $("#chartContainer3A").dxChart({
+        dataSource: dinheiro,
+        animation:false,
+        commonSeriesSettings: {
+            argumentField: "state",            
+            type: "bar",
+            hoverMode: "allArgumentPoints",
+            selectionMode: "allArgumentPoints",
+            
+        },
+        valueAxis: {
+			 label: {
+			 	customizeText: function (value) {
+			 	return value.value + ' &euro;';
+			 	}
+			 },
+			 visible: true,
+			 },
+        tooltip: {
+					 enabled: true,
+					 customizeText: function (e) {
+						 return e.valueText + ' &euro; ';
+						 }
+					},
+        series: [
+            { valueField: "a2010", name: "Endividamento<br/> em 2010" },	
+            { valueField: "a2011", name: "Endividamento<br/> em 2011" },
+            { valueField: "a2012", name: "Endividamento<br/> em 2012" },                      
+            
+            
+            
+        ],
+        title: "Endividamento Líquido do Município:",
+        legend: {
+            verticalAlignment: "bottom",
+            horizontalAlignment: "center"
+        },
+        pointClick: function (point) {
+            this.select();
+        }
+    });
+
+
+    $("#chartContainer3B").dxChart({
+        dataSource: dinheiro,
+        animation:false,
+        commonSeriesSettings: {
+            argumentField: "state",            
+            type: "bar",
+            hoverMode: "allArgumentPoints",
+            selectionMode: "allArgumentPoints",
+            
+        },
+        valueAxis: {
+			 label: {
+			 	customizeText: function (value) {
+			 	return value.value + ' &euro;';
+			 	}
+			 },
+			 visible: true,
+			 },
+        tooltip: {
+					 enabled: true,
+					 customizeText: function (e) {
+						 return e.valueText + ' &euro; ';
+						 }
+					},
+        series: [	                      
+			   { valueField: "b2010", name: "Passivo exigível<br /> em 2010" },              
+	                      { valueField: "b2011", name: "Passivo exigível<br/> em 2011" },
+	                      { valueField: "b2012", name: "Passivo exigível<br/> em 2012" },
+	                      
+	                      
+	                  ],
+	                  title: "Passivo Exigível  do Município:",
+        legend: {
+            verticalAlignment: "bottom",
+            horizontalAlignment: "center"
+        },
+        pointClick: function (point) {
+            this.select();
+        }
+    });
+
+
+
+    
+
+
+    $("#chartContainer4").dxChart({
+        dataSource: dias,
+        animation:false,
+        commonSeriesSettings: {
+            argumentField: "state",            
+            type: "bar",
+            hoverMode: "allArgumentPoints",
+            selectionMode: "allArgumentPoints",
+            
+        },	                  
+        equalBarWidth: {
+            width: 40
+        },
+        valueAxis: {
+			 label: {
+			 	customizeText: function (value) {
+			 	return value.value + ' dias';
+			 	}
+			 },
+			 visible: true,
+			 },
+        tooltip: {
+					 enabled: true,
+					 customizeText: function (e) {
+						 return e.valueText + ' dias';
+						 }
+					},
+        series: [
+				{ valueField: "a2010", name: "Prazo médio de<br/> pagamentos em 2010" },
+							{ valueField: "a2011", name: "Prazo médio de<br/> pagamentos em 2011" },
+							{ valueField: "a2012", name: "Prazo médio de <br/>pagamentos em 2012" },
+	                      
+	                      
+	                  ],
+	                   title: "Prazo Médio de Pagamentos:",
+        legend: {
+            verticalAlignment: "bottom",
+            horizontalAlignment: "center"
+        },
+        pointClick: function (point) {
+            this.select();
+        }
+    });
+
+<?php ///////////////////////////////////////////////////////////////////////////////////////////////////////?>
+
+
+
+
+});
+});
+});
+});
+});
+});
+
+
+
+
+</script>
+
+
+
+		<div class="content">
+			<div class="pane" style=" width:auto; height :auto;background:none;border:hidden;">
+				<div id="chartContainer" style="width: 100%; height: auto;"></div>			
+				
+			</div>
+		</div>
+		<div class="content">
+			<div class="pane" style=" width:auto; height :auto;background:none;border:hidden;">
+				<div id="chartContainer2A" style="width: 100%; height: auto;"></div>
+                
+                </div>
+		</div>
+                <div class="content">
+			<div class="pane" style=" width:auto; height :auto;background:none;border:hidden;">
+				<div id="chartContainer2B" style="width: auto; height:600px;"></div>				
+				
+			</div>
+		</div>
+		<div class="content">
+			<div class="pane" style=" width:auto; height :auto;background:none;border:hidden;">
+				<div id="chartContainer3A" style="width: 100%; height: auto;"></div>
+                </div>
+		</div>			
+           <div class="content">
+			<div class="pane" style=" width:auto; height :auto;background:none;border:hidden;">
+				<div id="chartContainer3B" style="width: 100%; height: auto;"></div>
+				
+			</div>
+		</div>
+		<div class="content" >
+			<div class="pane" style=" width:auto; height :auto;background:none;border:hidden;">
+				<div id="chartContainer4" style="width: 100%; height: auto;"></div>			
+				
+			</div>
+		</div>

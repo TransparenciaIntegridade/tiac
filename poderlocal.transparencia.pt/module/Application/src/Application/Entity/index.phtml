@@ -1,0 +1,195 @@
+<head>    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Infografia Municipal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" >
+    <link rel="stylesheet" href="/css/responsive.css" type="text/css" media="all" >
+   <link href="/css/ie.css" rel='stylesheet' type='text/css'>
+ <style>
+		.ui-autocomplete-loading {
+		background: white url('/images/ui-anim_basic_16x16.gif') right center no-repeat;
+		}
+		#report { border-collapse:collapse;margin-left:300px;margin-right:
+		auto;}
+        #report h4 { margin:0px; padding:0px;}
+        #report img { float:left; margin-top:-10px}
+        #report ul { margin:10px 0 10px 40px; padding:0px;}
+        #report th { background:#7CB8E2 url(/images/header_bkg.png) repeat-x scroll center left; color:#fff; padding:7px 15px; text-align:left;}
+        #report td { background:#C7DDEE none repeat-x scroll center left; color:#000; padding:12px 25px;text-align:left; }
+        #report tr.odd td { background:#fff url(/images/row_bkg.png) repeat-x scroll center left; cursor:pointer; }
+        #report div.arrow { background:transparent url(/images/arrows.png) no-repeat scroll 0px -16px; width:16px; height:16px; display:block;}
+        #report div.up { background-position:0px 0px;}
+		#report1 { border-collapse:collapse;margin-left:300px;margin-right:
+		auto;}
+        #report1 h4 { margin:0px; padding:0px;}
+        #report1 img { float:left; margin-top:-10px}
+        #report1 ul { margin:10px 0 10px 40px; padding:0px;}
+        #report1 th { background:#7CB8E2 url(/images/header_bkg.png) repeat-x scroll center left; color:#fff; padding:7px 15px; text-align:left;}
+        #report1 td { background:#C7DDEE none repeat-x scroll center left; color:#000; padding:12px 25px;text-align:left; }
+        #report1 tr.odd td { background:#fff url(/images/row_bkg.png) repeat-x scroll center left; cursor:pointer; }
+        #report1 div.arrow { background:transparent url(/images/arrows.png) no-repeat scroll 0px -16px; width:16px; height:16px; display:block;}
+        #report1 div.up { background-position:0px 0px;}
+</style>
+    <script type="text/javascript">  
+        $(document).ready(function(){
+            $("#report tr:odd").addClass("odd");
+            $("#report tr:not(.odd)").hide();
+            $("#report tr:first-child").show();
+            
+            $("#report tr.odd").click(function(){
+                $(this).next("tr").toggle();
+                $(this).find(".arrow").toggleClass("up");
+            });
+            //$("#report").jExpand();
+        });
+    </script> 
+<script type="text/javascript">
+var j=0;
+var idCamaras = new Array();
+
+$(function() {
+function log( message ) {
+$( "<div>" ).text( message ).prependTo( "#log" );
+$( "#log" ).scrollTop( 0 );
+}
+$( "#city" ).autocomplete({
+	source: function (request, response) {
+        $.getJSON("/ranking-rest?q=" + request.term, function (data) {
+            response($.map(data.city, function (item) {
+                return {
+                    label: item.label,
+                    value: item.value,
+                    itm_2014 : item.itm_2014,
+                    ranking_2014 : item.ranking_2014,
+                    icone : item.icone,
+                    url : item.url,
+                };
+            }));
+        });
+    },
+    minLength: 2,
+
+select: function( event, ui ) {
+	
+var flag = 0;
+for(var i=0;i<idCamaras.length;i++)
+	console.log(ui.item.value);
+	if(ui.item.value==idCamaras[i])
+	{
+		
+	 	flag=1;
+	}
+if(flag==0 && j<=4){
+j++;
+var tt=parseFloat(ui.item.itm);
+console.log(tt);
+
+if (tt < 0 || ui.item.itm =='-0,48' ||ui.item.itm =='-0,49')
+{
+	var cor ='<td style="font-weight:bold;color:#F00;">';
+	
+	
+	}
+	
+	else{
+		var cor ='<td style="font-weight:bold;color:#093;">';
+		}
+
+function rowBuilder() {
+    return '<div class="container">'
+          + '<div class="hero">' 
+          + '<h4 style="font-size:2em;text-align:center">Resultado da pesquisa:</h4>'
+          + '<table id="report">'
+          +'<tr style="display:table-row;">'    
+          +'<th>Brasões</th>'
+          +'<th>Municípios</th>'
+          +'<th style="text-align:center">ITM</th>'
+          + '<th>Ranking</th>'
+          + '<th></th>'
+          +'</tr>'
+          +'<tr class="odd">'
+          +'<td><img style="margin-left:0px;" src="/images/icones/'+ui.item.icone+'" alt="'+ui.item.label+'" width="40" height="40" /></td>'
+	      +'<td>'+ui.item.label+'</td>'
+	      +cor+ui.item.itm+'</td>'
+	      +'<td style="text-align:center">'+ui.item.ranking_2014+'º</td>'
+	      +'<td><div class="arrow"></div></td>'  
+          +'</tr>'
+          +'<tr>'
+          +'<td colspan="5">'
+          +'<img src="/images/brasoes/'+ui.item.icone+'" alt="'+ui.item.label+'" />'
+          +'<div style="margin-left:300px;margin-top:100px;">'
+          +'<h4 style="margin-left:40px;">Informação Adicional:</h4>'
+          +'<ul>'
+          +'<li><a href="'+ui.item.url+'" target="_blank">'+ui.item.label+' na Wikipédia</a></li>'
+		  +'<li><a href="/camara/'+ui.item.value+'">Infografia do Município</a></li>'           
+          +'</ul>' 
+          +'</div>' 
+          +'</td>'
+          +'</tr>'
+          + '</table>'
+          + '</div>'
+          + '</div>';
+    
+}
+
+$("#log").append(rowBuilder(this));
+$("#ranking-global").hide();
+
+}
+$('input#city').val("");
+return false;
+}
+});
+});
+</script>
+</head>
+<div class="ui-widget">
+<div>Pesquisar um município:</div>
+<label for="city"></label>
+<input id="city" />
+</div>
+<div id="log"></div>
+<p id="demo"></p>
+<div id="ranking-global"> 
+	<div class="container"> 
+ 		<div class="hero">
+   			<h3 style="font-size:2em;text-align:center">Ranking Global</h3>
+     <table id="report" >   
+        <tr>   
+            <th>Brasões</th>
+            <th>Municípios</th>
+            <th style="text-align:center">ITM</th>
+            <th>Ranking</th>
+            <th></th>
+        </tr>   
+        <?php foreach ($ranking as $rkg): ?>
+        <tr>
+        <td><img style="margin-left:0px;" src="/images/icones/<?php echo $rkg->geticone();?>" alt="<?php echo $rkg->getmunicipios();?>" width="40" height="40" /></td>
+	        <td><?php echo $rkg->getmunicipios(); ?></td>
+	        <?php if ($rkg->getitm_2014() < 0 || $rkg->getitm_2014() == '-0,48' || $rkg->getitm_2014() == '-0,49') {?>
+	        <td style="font-weight:bold; color:#F00;"><?php echo $rkg->getitm_2014();?></td>
+	        <?php } else {?>
+	        <td style="font-weight:bold; color:#093;"><?php echo $rkg->getitm_2014();?></td>
+	        <?php } ?>
+	        <td style="text-align:center"><?php echo $rkg->getranking_2014();?>º</td>
+	        <td><div class="arrow"></div></td>  
+        </tr>
+         <tr>
+            <td colspan="5">
+                <img src="/images/brasoes/<?php echo $rkg->geticone();?>" alt="<?php echo $rkg->getmunicipios();?>" />
+                <div style="margin-left:300px;margin-top:100px;">
+                <h4 style="margin-left:40px;">Informação Adicional:</h4>
+                <ul>
+                    <li><a href="<?php echo $rkg->geturl();?>" target="_blank"><?php echo $rkg->getmunicipios();?> na Wikipédia</a></li>
+                    <li><a href="/camara/<?php echo $rkg->getidCamara();?>">Infografia do Município</a></li>           
+                 </ul>  
+                 </div> 
+            </td>
+        </tr>	
+   		<?php endforeach;?>
+   			</table>
+ 		</div>
+	</div>
+	<?php echo $this->paginationControl($this->ranking,'Sliding',array('partial/paginator.phtml','RankingGlobal'),array('route' => 'rankingindex')); ?>
+</div>

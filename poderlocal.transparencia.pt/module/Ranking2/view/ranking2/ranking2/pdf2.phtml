@@ -1,0 +1,53 @@
+<?php
+$this->layout('layout/empty');
+require_once 'vendor/snappy-master/src/autoload.php';
+use Knp\Snappy\Pdf;
+//$snappy = new Pdf('C://"Program Files (x86)"/wkhtmltopdf/wkhtmltopdf.exe');
+
+$snappy = new Pdf();
+$snappy->setBinary('/usr/local/bin/wkhtmltopdf-amd64');
+
+// Display the resulting pdf in the browser
+// by setting the Content-type header to pdf
+//$snappy = new Pdf('/home/tiac/usr/bin/wkhtmltopdf-amd64');
+//$snappy->setOption('javascript-delay', 500);
+//header('Content-Type: application/pdf');
+//$snappy->setOption('disable-javascript', true);
+//$snappy->setOption('no-background', true);
+//$snappy->setOption('disable-javascript', true);
+//$snappy->setOption('no-background', false);
+//header('Content-Disposition: attachment; filename="teste5.pdf"');
+//echo $snappy->getOutput('http://itm.tiac.webfactional.com/camara/1');
+//echo $snappy->generateFromHtml('<h1>Bill</h1><p>You owe me money, dude.</p>', 'teste4.pdf');
+
+// .. or simply save the PDF to a file
+//$snappy = new Pdf('/home/tiac/usr/bin/wkhtmltopdf-amd64');
+//$snappy->generateFromHtml('<h1>Bill</h1><p>You owe me money, dude.</p>', 'teste-123.pdf');
+
+// Pass options to snappy
+// Type wkhtmltopdf -H to see the list of options
+//$snappy = new Pdf('/home/tiac/usr/bin/wkhtmltopdf-amd64');
+//$snappy->setOption('disable-javascript', false);
+//$snappy->setOption('no-background', true);
+//$snappy->setOption('allow', array('/path1', '/path2'));
+//$snappy->setOption('cookie', array('key' => 'value', 'key2' => 'value2'));
+//echo $snappy->getOutput('http://itm.tiac.webfactional.com');
+
+//$snappy->setOption('disable-javascript', true);
+$snappy->setOption('no-background', true);
+$snappy->setOption('disable-smart-shrinking',true);
+
+//$snappy->setOption('custom-header', false);
+header('Content-Type: application/pdf');
+//header('Content-Disposition: attachment; filename="teste5.pdf"');
+header('Cache-Control: no-cache, must-revalidate, max-age=0'); // HTTP/1.1
+header('Pragma: public');
+header('Expires: Sat, 26 Jul 2013 05:00:00 GMT'); // Date in the past
+header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT'); 
+//header('Content-Disposition: inline; filename="hello.pdf";');
+//echo $snappy->getOutput('http://google.com');
+
+echo $snappy->getOutput('poderlocal.transparencia.pt/ranking2/'.$this->id.'/'.$this->id2.'/'.$this->id3.'/'.$this->id4.'/'.$this->id5,array('orientation' => 'Landscape'));
+?>
+
+

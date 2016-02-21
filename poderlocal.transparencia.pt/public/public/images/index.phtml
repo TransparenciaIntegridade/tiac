@@ -1,0 +1,358 @@
+<?php
+	$arr=array();
+	for($i=0;$i<7;$i++){
+		$arr[$i]="./images/".$i.".png"; //assigning the image location to the array $arr.
+	}
+	$random=rand(0,30); //generating a random number
+	//echo "<img src=".$arr[$random].">";
+//printing the image
+
+?>
+
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html style="margin-top: 0 !important" class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html style="margin-top: 0 !important" class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html style="margin-top: 0 !important" class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <!--<![endif]-->
+<html style="margin-top: 0 !important" lang="en-US"> <!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Argo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" >
+    <link rel="stylesheet" href="/css/responsive.css" type="text/css" media="all" >
+    
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+   	<script src="/js/jquery.min.js"></script>
+    
+
+
+       <link href="/css/ie.css" rel='stylesheet' type='text/css'>
+    <![endif]-->
+    
+    <!--[if IE 7]>
+		<link rel="stylesheet" href="/css/font-awesome-ie7.min.css">
+	<![endif]-->
+</head>
+<body data-spy="scroll" data-target=".navbar">
+<header id="header">
+	<div class="header-holder">
+		<div class="container hidden-phone">
+			<div class="brow">
+				<div class="brick1 logo_container">
+					<a href="#" class="nav-item clearfix">
+						<div class="nav-hover"></div>
+						<h1 class="logo"><img src="/images/logo2.png" alt=""></h1>
+					</a>
+				</div>
+				<div class="brick1 transparent"></div>
+			</div>
+			<div class="brow">
+				<div class="slogan brick3 boffset1 transparent text-right">
+					<div class="inner">
+						<h1>ÍNDICE DE TRANSPARÊNCIA MUNICIPAL</h1>
+					<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt <br> ut
+dolore magna aliqua. <br>
+Ut enim ad minim veniam, quis nostrud .</p>	
+					</div>
+					
+				</div>
+				<div class="brick1 odd">
+					<a href="#sobre" class="nav-item">
+						<div class="nav-hover"></div>
+						<i class="li_bulb"></i>
+						<span>SOBRE</span>
+					</a>
+				</div>
+				<div class="brick1 thumb">
+					<div class="nav-item flipX">
+                    <img  class="img1"src="<?php echo $arr[$random]; ?>"
+						
+					<img class="img2"src="<?php echo $arr[$random]; ?>"
+                      
+					</div>
+				</div>
+			</div>
+			<div class="brow">
+				<div class="brick1 thumb">
+					<div class="nav-item flipX">
+                   
+	
+	
+   
+						<img class="img1" src="/images/amarante.png" alt="">
+						<img class="img2" src="/images/cascais.png" alt="">
+					</div>
+				</div>
+				<div class="brick1 odd">
+					<a href="#indice" class="nav-item">
+						<div class="nav-hover"></div>
+						<i class="icon-bar-chart"></i>
+						<span>ÍNDICE</span>
+					</a>
+				</div>
+				<div class="brick1">
+					<a href="#sil" class="nav-item">
+						<div class="nav-hover"></div>
+						<i class="icon-puzzle-piece"></i>
+						<span>SIL</span>
+					</a>
+				</div>
+				<div class="brick1 thumb">
+					<div class="nav-item flipY">
+						<img class="img1" src="/images/faro.png" alt="">
+						<img class="img2" src="/images/meda.png" alt="">
+					</div>
+				</div>
+				<div class="brick1 thumb">
+					<div class="nav-item flipX">
+					<?php echo "<img src=".$arr[$random].">";?>
+						<img class="img2" src="/images/coimbra.png" alt="">
+					</div>
+				</div>
+				<div class="brick1">
+					<a href="#documentos" class="nav-item">
+						<div class="nav-hover"></div>
+						<i class="icon-folder-open"></i>
+						<span>DOCUMENTOS</span>
+					</a>
+				</div>
+			</div>
+			<div class="brow">
+				<div class="brick1 boffset2 thumb">
+					<div class="nav-item flipY">
+						<img class="img1" src="/images/porto.png" alt="">
+						<img class="img2" src="/images/guimaraes.png" alt="">
+					</div>
+				</div>
+				<div class="brick1 thumb">
+					<div class="nav-item flipY">
+						<img class="img1" src="/images/funchal.png" alt="">
+						<img class="img2" src="/images/braga.png" alt="">
+					</div>
+				</div>
+				<div class="brick1 odd">
+					<a href="#opiniao" class="nav-item">
+						<div class="nav-hover"></div>
+						<i class="icon-comments-alt"></i>
+						<span>OPINIÃO</span>
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container visible-phone">
+			<div class="brick1 logo_container">
+					<a href="#" class="nav-item clearfix">
+						<div class="nav-hover"></div>
+						<h1 class="logo">Argo</h1>
+					</a>
+				</div>
+				<div class="brick1 odd">
+					<a href="#services" class="nav-item">
+						<div class="nav-hover"></div>
+						<i class="li_bulb"></i>
+						<span>Services</span>
+					</a>
+				</div>
+				<div class="brick1 odd">
+					<a href="#portfolio" class="nav-item">
+						<div class="nav-hover"></div>
+						<i class="li_photo"></i>
+						<span>Portfolio</span>
+					</a>
+				</div>
+				<div class="brick1">
+					<a href="#about-us" class="nav-item">
+						<div class="nav-hover"></div>
+						<i class="li_bubble"></i>
+						<span>About us</span>
+					</a>
+				</div>
+				<div class="brick1">
+					<a href="#blog" class="nav-item">
+						<div class="nav-hover"></div>
+						<i class="li_note"></i>
+						<span>Blog</span>
+					</a>
+				</div>
+				<div class="brick1 odd">
+					<a href="#contact" class="nav-item">
+						<div class="nav-hover"></div>
+						<i class="li_paperplane"></i>
+						<span>Contact us</span>
+					</a>
+				</div>
+		</div>
+	</div>
+</header> <!-- End header -->
+
+<div id="sobre" class="section" >
+	<div class="container">
+		<div class="hero">
+			<h1 style="margin-top:30px;">SOBRE</h1>
+            <div >            
+	
+   </div>
+            
+            
+			<p>A lei atribui aos partidos políticos e os movimentos de cidadãos subvenções públicas para financiar as suas campanhas eleitorais.
+O artigo 51.º da Constituição da República Portuguesa obriga a que os partidos se façam reger “pelos princípios da transparência, da organização e da gestão democráticas e da participação de todos os seus membros”. Para isso, a “lei estabelece as regras de financiamento dos partidos políticos, nomeadamente quanto aos requisitos e limites do financiamento público, bem como às exigências de publicidade do seu património e das suas contas.”
+A lei que regula o financiamento político já leva 20 anos de existência. Muitas alterações foram feitas desde 1993, mas os problemas de fundo persistem: não contenção de despesas eleitorais; propensão para a informalidade/ilegalidade (pagamento de despesas por terceiros); ausência de consolidação financeira interna dos partidos (sobretudo no que toca às contas das estruturas descentralizadas); incapacidade dos partidos em gerir os financiamentos privados com probidade e forte dependência dos partidos face ao financiamento público, direto e indireto.
+Mesmo com um pano de fundo de falta de transparência, pouca prestação de contas e descontrolo das despesas eleitorais, as subvenções públicas têm vindo a subir ao longo das últimas duas décadas. O financiamento dos contribuintes à vida partidária é desproporcional em relação a outras fontes próprias de receita, e o dinheiro público tem sido desbaratado em campanhas folclóricas e estapafúrdias, em vez de se investir em informar o eleitorado sobre os programas políticos ou aproximar os partidos dos cidadãos.
+A Entidade das Contas e Financiamentos Políticos do Tribunal Constitucional é o órgão responsável por fiscalizar os gastos dos partidos, mas as suas competências e recursos são bastante limitados e não chegam para monitorizar de perto as informalidades recorrentes nas campanhas eleitorais.
+Torna-se assim fundamental abrir a possibilidade de os cidadãos participarem no processo de monitorização dos gastos eleitorais, dando um contributo para requalificar a democracia.
+A Campanha Limpa foi desenvolvida por um grupo de jovens informáticos dedicados à causa pública, sob iniciativa da TIAC – Transparência e Integridade, Associação Cívica. Está aberta ao teu contributo, para que nos ajudes a criar uma democracia mais transparente e saudável.
+Porque é que é importa monitorizar o financiamento político?
+    Para controlar a influência indevida do dinheiro na vida política e salvaguardar a credibilidade dos candidatos e dos partidos em particular e a legitimidade do sistema político em geral;
+
+   Para tornar transparente a relação entre os financiadores das campanhas e os partidos/candidatos, de modo a promover a confiança dos cidadãos no funcionamento das instituições representativas, actores políticos e processos de decisão;
+
+   Para garantir as condições necessárias para o pluralismo de ideias, nivelando o campo de batalha e o acesso a recursos que determinam a disputa pelo poder entre as várias forças partidárias.</p>
+		</div>
+		
+			
+			
+		</div>
+	</div>
+</div>
+
+
+<div id="indice" class="section">
+	<div class="container">
+		<div class="hero">
+			<h1 style="margin-top:30px;">Índice</h1>
+			<p>A lei atribui aos partidos políticos e os movimentos de cidadãos subvenções públicas para financiar as suas campanhas eleitorais.
+O artigo 51.º da Constituição da República Portuguesa obriga a que os partidos se façam reger “pelos princípios da transparência, da organização e da gestão democráticas e da participação de todos os seus membros”. Para isso, a “lei estabelece as regras de financiamento dos partidos políticos, nomeadamente quanto aos requisitos e limites do financiamento público, bem como às exigências de publicidade do seu património e das suas contas.”
+A lei que regula o financiamento político já leva 20 anos de existência. Muitas alterações foram feitas desde 1993, mas os problemas de fundo persistem: não contenção de despesas eleitorais; propensão para a informalidade/ilegalidade (pagamento de despesas por terceiros); ausência de consolidação financeira interna dos partidos (sobretudo no que toca às contas das estruturas descentralizadas); incapacidade dos partidos em gerir os financiamentos privados com probidade e forte dependência dos partidos face ao financiamento público, direto e indireto.
+Mesmo com um pano de fundo de falta de transparência, pouca prestação de contas e descontrolo das despesas eleitorais, as subvenções públicas têm vindo a subir ao longo das últimas duas décadas. O financiamento dos contribuintes à vida partidária é desproporcional em relação a outras fontes próprias de receita, e o dinheiro público tem sido desbaratado em campanhas folclóricas e estapafúrdias, em vez de se investir em informar o eleitorado sobre os programas políticos ou aproximar os partidos dos cidadãos.
+A Entidade das Contas e Financiamentos Políticos do Tribunal Constitucional é o órgão responsável por fiscalizar os gastos dos partidos, mas as suas competências e recursos são bastante limitados e não chegam para monitorizar de perto as informalidades recorrentes nas campanhas eleitorais.
+Torna-se assim fundamental abrir a possibilidade de os cidadãos participarem no processo de monitorização dos gastos eleitorais, dando um contributo para requalificar a democracia.
+A Campanha Limpa foi desenvolvida por um grupo de jovens informáticos dedicados à causa pública, sob iniciativa da TIAC – Transparência e Integridade, Associação Cívica. Está aberta ao teu contributo, para que nos ajudes a criar uma democracia mais transparente e saudável.
+Porque é que é importa monitorizar o financiamento político?
+    Para controlar a influência indevida do dinheiro na vida política e salvaguardar a credibilidade dos candidatos e dos partidos em particular e a legitimidade do sistema político em geral;
+
+   Para tornar transparente a relação entre os financiadores das campanhas e os partidos/candidatos, de modo a promover a confiança dos cidadãos no funcionamento das instituições representativas, actores políticos e processos de decisão;
+
+   Para garantir as condições necessárias para o pluralismo de ideias, nivelando o campo de batalha e o acesso a recursos que determinam a disputa pelo poder entre as várias forças partidárias.</p>
+		</div>
+		
+	</div>
+</div>
+<div id="sil" class="section">
+	
+		<div class="container">
+			<div class="hero">
+				<h1 style="margin-top:30px;">FICHA TÉCNICA</h1>
+				<p>A lei atribui aos partidos políticos e os movimentos de cidadãos subvenções públicas para financiar as suas campanhas eleitorais.
+O artigo 51.º da Constituição da República Portuguesa obriga a que os partidos se façam reger “pelos princípios da transparência, da organização e da gestão democráticas e da participação de todos os seus membros”. Para isso, a “lei estabelece as regras de financiamento dos partidos políticos, nomeadamente quanto aos requisitos e limites do financiamento público, bem como às exigências de publicidade do seu património e das suas contas.”
+A lei que regula o financiamento político já leva 20 anos de existência. Muitas alterações foram feitas desde 1993, mas os problemas de fundo persistem: não contenção de despesas eleitorais; propensão para a informalidade/ilegalidade (pagamento de despesas por terceiros); ausência de consolidação financeira interna dos partidos (sobretudo no que toca às contas das estruturas descentralizadas); incapacidade dos partidos em gerir os financiamentos privados com probidade e forte dependência dos partidos face ao financiamento público, direto e indireto.
+Mesmo com um pano de fundo de falta de transparência, pouca prestação de contas e descontrolo das despesas eleitorais, as subvenções públicas têm vindo a subir ao longo das últimas duas décadas. O financiamento dos contribuintes à vida partidária é desproporcional em relação a outras fontes próprias de receita, e o dinheiro público tem sido desbaratado em campanhas folclóricas e estapafúrdias, em vez de se investir em informar o eleitorado sobre os programas políticos ou aproximar os partidos dos cidadãos.
+A Entidade das Contas e Financiamentos Políticos do Tribunal Constitucional é o órgão responsável por fiscalizar os gastos dos partidos, mas as suas competências e recursos são bastante limitados e não chegam para monitorizar de perto as informalidades recorrentes nas campanhas eleitorais.
+Torna-se assim fundamental abrir a possibilidade de os cidadãos participarem no processo de monitorização dos gastos eleitorais, dando um contributo para requalificar a democracia.
+A Campanha Limpa foi desenvolvida por um grupo de jovens informáticos dedicados à causa pública, sob iniciativa da TIAC – Transparência e Integridade, Associação Cívica. Está aberta ao teu contributo, para que nos ajudes a criar uma democracia mais transparente e saudável.
+Porque é que é importa monitorizar o financiamento político?
+    Para controlar a influência indevida do dinheiro na vida política e salvaguardar a credibilidade dos candidatos e dos partidos em particular e a legitimidade do sistema político em geral;
+
+   Para tornar transparente a relação entre os financiadores das campanhas e os partidos/candidatos, de modo a promover a confiança dos cidadãos no funcionamento das instituições representativas, actores políticos e processos de decisão;
+
+   Para garantir as condições necessárias para o pluralismo de ideias, nivelando o campo de batalha e o acesso a recursos que determinam a disputa pelo poder entre as várias forças partidárias.
+					
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+<div id="documentos" class="section">
+	<div class="container">
+		<div class="hero">
+			<h1 style="margin-top:30px;">SIL</h1>
+			<p>A lei atribui aos partidos políticos e os movimentos de cidadãos subvenções públicas para financiar as suas campanhas eleitorais.
+O artigo 51.º da Constituição da República Portuguesa obriga a que os partidos se façam reger “pelos princípios da transparência, da organização e da gestão democráticas e da participação de todos os seus membros”. Para isso, a “lei estabelece as regras de financiamento dos partidos políticos, nomeadamente quanto aos requisitos e limites do financiamento público, bem como às exigências de publicidade do seu património e das suas contas.”
+A lei que regula o financiamento político já leva 20 anos de existência. Muitas alterações foram feitas desde 1993, mas os problemas de fundo persistem: não contenção de despesas eleitorais; propensão para a informalidade/ilegalidade (pagamento de despesas por terceiros); ausência de consolidação financeira interna dos partidos (sobretudo no que toca às contas das estruturas descentralizadas); incapacidade dos partidos em gerir os financiamentos privados com probidade e forte dependência dos partidos face ao financiamento público, direto e indireto.
+Mesmo com um pano de fundo de falta de transparência, pouca prestação de contas e descontrolo das despesas eleitorais, as subvenções públicas têm vindo a subir ao longo das últimas duas décadas. O financiamento dos contribuintes à vida partidária é desproporcional em relação a outras fontes próprias de receita, e o dinheiro público tem sido desbaratado em campanhas folclóricas e estapafúrdias, em vez de se investir em informar o eleitorado sobre os programas políticos ou aproximar os partidos dos cidadãos.
+A Entidade das Contas e Financiamentos Políticos do Tribunal Constitucional é o órgão responsável por fiscalizar os gastos dos partidos, mas as suas competências e recursos são bastante limitados e não chegam para monitorizar de perto as informalidades recorrentes nas campanhas eleitorais.
+Torna-se assim fundamental abrir a possibilidade de os cidadãos participarem no processo de monitorização dos gastos eleitorais, dando um contributo para requalificar a democracia.
+A Campanha Limpa foi desenvolvida por um grupo de jovens informáticos dedicados à causa pública, sob iniciativa da TIAC – Transparência e Integridade, Associação Cívica. Está aberta ao teu contributo, para que nos ajudes a criar uma democracia mais transparente e saudável.
+Porque é que é importa monitorizar o financiamento político?
+    Para controlar a influência indevida do dinheiro na vida política e salvaguardar a credibilidade dos candidatos e dos partidos em particular e a legitimidade do sistema político em geral;
+
+   Para tornar transparente a relação entre os financiadores das campanhas e os partidos/candidatos, de modo a promover a confiança dos cidadãos no funcionamento das instituições representativas, actores políticos e processos de decisão;
+
+   Para garantir as condições necessárias para o pluralismo de ideias, nivelando o campo de batalha e o acesso a recursos que determinam a disputa pelo poder entre as várias forças partidárias.</p>
+		</div>
+		
+	</div>
+</div>	<!-- end Blog -->
+<div id="opiniao" class="section">
+	<div class="container">
+		<div class="hero">
+			<h1 >OPINIÃO</h1>
+			<p>A lei atribui aos partidos políticos e os movimentos de cidadãos subvenções públicas para financiar as suas campanhas eleitorais.
+O artigo 51.º da Constituição da República Portuguesa obriga a que os partidos se façam reger “pelos princípios da transparência, da organização e da gestão democráticas e da participação de todos os seus membros”. Para isso, a “lei estabelece as regras de financiamento dos partidos políticos, nomeadamente quanto aos requisitos e limites do financiamento público, bem como às exigências de publicidade do seu património e das suas contas.”
+A lei que regula o financiamento político já leva 20 anos de existência. Muitas alterações foram feitas desde 1993, mas os problemas de fundo persistem: não contenção de despesas eleitorais; propensão para a informalidade/ilegalidade (pagamento de despesas por terceiros); ausência de consolidação financeira interna dos partidos (sobretudo no que toca às contas das estruturas descentralizadas); incapacidade dos partidos em gerir os financiamentos privados com probidade e forte dependência dos partidos face ao financiamento público, direto e indireto.
+Mesmo com um pano de fundo de falta de transparência, pouca prestação de contas e descontrolo das despesas eleitorais, as subvenções públicas têm vindo a subir ao longo das últimas duas décadas. O financiamento dos contribuintes à vida partidária é desproporcional em relação a outras fontes próprias de receita, e o dinheiro público tem sido desbaratado em campanhas folclóricas e estapafúrdias, em vez de se investir em informar o eleitorado sobre os programas políticos ou aproximar os partidos dos cidadãos.
+A Entidade das Contas e Financiamentos Políticos do Tribunal Constitucional é o órgão responsável por fiscalizar os gastos dos partidos, mas as suas competências e recursos são bastante limitados e não chegam para monitorizar de perto as informalidades recorrentes nas campanhas eleitorais.
+Torna-se assim fundamental abrir a possibilidade de os cidadãos participarem no processo de monitorização dos gastos eleitorais, dando um contributo para requalificar a democracia.
+A Campanha Limpa foi desenvolvida por um grupo de jovens informáticos dedicados à causa pública, sob iniciativa da TIAC – Transparência e Integridade, Associação Cívica. Está aberta ao teu contributo, para que nos ajudes a criar uma democracia mais transparente e saudável.
+Porque é que é importa monitorizar o financiamento político?
+    Para controlar a influência indevida do dinheiro na vida política e salvaguardar a credibilidade dos candidatos e dos partidos em particular e a legitimidade do sistema político em geral;
+
+   Para tornar transparente a relação entre os financiadores das campanhas e os partidos/candidatos, de modo a promover a confiança dos cidadãos no funcionamento das instituições representativas, actores políticos e processos de decisão;
+
+   Para garantir as condições necessárias para o pluralismo de ideias, nivelando o campo de batalha e o acesso a recursos que determinam a disputa pelo poder entre as várias forças partidárias.</p>
+		</div>
+		
+	</div>
+</div>	<!-- end Blog -->
+
+<div id="ficha_tecnica" class="section">
+	<div class="container">
+		<div class="hero">
+			<h1 >FICHA TÉCNICA</h1>
+			<p>A lei atribui aos partidos políticos e os movimentos de cidadãos subvenções públicas para financiar as suas campanhas eleitorais.
+O artigo 51.º da Constituição da República Portuguesa obriga a que os partidos se façam reger “pelos princípios da transparência, da organização e da gestão democráticas e da participação de todos os seus membros”. Para isso, a “lei estabelece as regras de financiamento dos partidos políticos, nomeadamente quanto aos requisitos e limites do financiamento público, bem como às exigências de publicidade do seu património e das suas contas.”
+A lei que regula o financiamento político já leva 20 anos de existência. Muitas alterações foram feitas desde 1993, mas os problemas de fundo persistem: não contenção de despesas eleitorais; propensão para a informalidade/ilegalidade (pagamento de despesas por terceiros); ausência de consolidação financeira interna dos partidos (sobretudo no que toca às contas das estruturas descentralizadas); incapacidade dos partidos em gerir os financiamentos privados com probidade e forte dependência dos partidos face ao financiamento público, direto e indireto.
+Mesmo com um pano de fundo de falta de transparência, pouca prestação de contas e descontrolo das despesas eleitorais, as subvenções públicas têm vindo a subir ao longo das últimas duas décadas. O financiamento dos contribuintes à vida partidária é desproporcional em relação a outras fontes próprias de receita, e o dinheiro público tem sido desbaratado em campanhas folclóricas e estapafúrdias, em vez de se investir em informar o eleitorado sobre os programas políticos ou aproximar os partidos dos cidadãos.
+A Entidade das Contas e Financiamentos Políticos do Tribunal Constitucional é o órgão responsável por fiscalizar os gastos dos partidos, mas as suas competências e recursos são bastante limitados e não chegam para monitorizar de perto as informalidades recorrentes nas campanhas eleitorais.
+Torna-se assim fundamental abrir a possibilidade de os cidadãos participarem no processo de monitorização dos gastos eleitorais, dando um contributo para requalificar a democracia.
+A Campanha Limpa foi desenvolvida por um grupo de jovens informáticos dedicados à causa pública, sob iniciativa da TIAC – Transparência e Integridade, Associação Cívica. Está aberta ao teu contributo, para que nos ajudes a criar uma democracia mais transparente e saudável.
+Porque é que é importa monitorizar o financiamento político?
+    Para controlar a influência indevida do dinheiro na vida política e salvaguardar a credibilidade dos candidatos e dos partidos em particular e a legitimidade do sistema político em geral;
+
+   Para tornar transparente a relação entre os financiadores das campanhas e os partidos/candidatos, de modo a promover a confiança dos cidadãos no funcionamento das instituições representativas, actores políticos e processos de decisão;
+
+   Para garantir as condições necessárias para o pluralismo de ideias, nivelando o campo de batalha e o acesso a recursos que determinam a disputa pelo poder entre as várias forças partidárias.</p>
+		</div>
+		
+	</div>
+</div>	<!-- end Blog -->
+
+
+
+
+
+	
+
+<!-- Bootstrap js -->
+<script src="/js/bootstrap-transition.js"></script>
+<script src="/js/bootstrap-modal.js"></script>
+<script src="/js/bootstrap-dropdown.js"></script>
+<script src="/js/bootstrap-carousel.js"></script>
+<script src="/js/bootstrap-collapse.js"></script>
+<script src="/js/bootstrap-scrollspy.js"></script>
+
+<script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="/js/jquery.mousewheel.min.js"></script>
+<script src="/js/jquery.hoverdir.js"></script>
+<script src="/js/jquery.isotope.min.js"></script>
+<script src="/js/main.js"></script>
+
+</body>
+</html>

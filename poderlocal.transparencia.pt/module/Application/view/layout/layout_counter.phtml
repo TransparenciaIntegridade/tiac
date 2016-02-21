@@ -1,0 +1,248 @@
+<?php echo $this->doctype(); ?>
+
+<html lang=pt>
+  <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <?php echo $this->headTitle('Poder Local')?>
+
+    <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+
+    <!-- Le styles -->
+    <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/images/favicon.ico'))
+                    ->appendStylesheet($this->basePath() . '/css/bootstrap.css')
+					->appendStylesheet($this->basePath() . '/css/style.css')
+					->appendStylesheet($this->basePath() . '/css/responsive.css')					
+					 ->appendStylesheet($this->basePath() . '/css/pro_drop_1.css')
+					  ->appendStylesheet($this->basePath() . '/css/font-awesome/css/font-awesome.min.css')
+                    ->appendStylesheet($this->basePath() .'/fancybox/source/jquery.fancybox.css?v=2.1.5')
+                    ->appendStylesheet($this->basePath() .'/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5')
+                    ->appendStylesheet($this->basePath() .'/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7')
+                    ->appendStylesheet($this->basePath() . '/css/custom.css')
+                    ->appendStylesheet($this->basePath() . '/css/jquery-ui-1.10.3.custom.css')
+                   ->appendStylesheet($this->basePath() . '/css/bootstrap-responsive.css') 
+					 ->appendStylesheet($this->basePath() . '/css/style_menu.css')
+					 ->appendStylesheet($this->basePath() . '/css/styles.css')
+					 ->appendStylesheet($this->basePath() . '/css/responsive-tables.css')
+					 
+					 ?>
+                    
+
+    <!-- Scripts -->
+    
+	<?php echo $this->headScript()
+	->appendFile('/js/jquery-1.10.2.min.js')
+	 ->appendFile('/js/jquery-ui-1.10.3.custom.js')
+	
+                                 
+                                 ->appendFile($this->basePath() . '/js/bootstrap.min.js')
+								->appendFile($this->basePath() . '/js/smoothscroll.js')
+								->appendFile($this->basePath() . '/js/script.js') 
+								->appendFile($this->basePath() . '/js/main.js')
+								->appendFile($this->basePath() . '/js/stuHover.js')
+								->appendFile($this->basePath() . '/js/jExpand.js')
+								->appendFile($this->basePath() . '/js/dx.chartjs.js')
+								->appendFile($this->basePath() . '/js/globalize.min.js')
+								->appendFile($this->basePath() . '/js/knockout-2.2.1.js')
+                                ->appendFile($this->basePath() . '/js/bootstrap-transition.js')
+								->appendFile($this->basePath() . '/js/bootstrap-modal.js')
+								->appendFile($this->basePath() . '/js/bootstrap-dropdown.js')
+								->appendFile($this->basePath() . '/js/bootstrap-carousel.js')
+								->appendFile($this->basePath() . '/js/bootstrap-collapse.js')
+								->appendFile($this->basePath() . '/js/responsive-tables.js')
+								
+								
+								
+    ?>
+ <style>
+		.ui-autocomplete-loading {
+		background: white url('/images/ui-anim_basic_16x16.gif') right center no-repeat;
+		}
+</style>
+ 
+ <script >
+
+ 
+ 
+ 
+var j=0;
+var idCamaras = new Array();
+$(function() {
+function log( message ) {
+$( "<div>" ).text( message ).prependTo( "#logs" );
+$( "#logs" ).scrollTop( 0 );
+}
+$( "#cidades" ).autocomplete({
+	source: function (request, response) {
+        $.getJSON("/ranking-rest?q=" + request.term, function (data) {
+            response($.map(data.city, function (item) {
+                return {
+                    label: item.label,
+                    value: item.value,
+                    itm : item.itm,
+                    ranking : item.ranking,
+                    icone : item.icone,
+                    url : item.url,
+                };
+            }));
+        });
+    },
+    minLength: 2,
+
+select: function( event, ui ) {
+	
+var flag = 0;
+for(var i=0;i<idCamaras.length;i++)
+	console.log(ui.item.value);
+	if(ui.item.value==idCamaras[i])
+	{
+		
+	 	flag=1;
+	}
+if(flag==0 && j<=4){
+j++;
+window.location = "/camara/" +ui.item.value;
+
+}
+$('input#cidades').val("");
+return false;
+}
+});
+});
+ </script>
+ <script >
+
+ 
+ 
+ 
+var j=0;
+var idCamaras = new Array();
+$(function() {
+function log( message ) {
+$( "<div>" ).text( message ).prependTo( "#logs" );
+$( "#logs" ).scrollTop( 0 );
+}
+$( "#cidades_tlm" ).autocomplete({
+	source: function (request, response) {
+        $.getJSON("/ranking-rest?q=" + request.term, function (data) {
+            response($.map(data.city, function (item) {
+                return {
+                    label: item.label,
+                    value: item.value,
+                    itm : item.itm,
+                    ranking : item.ranking,
+                    icone : item.icone,
+                    url : item.url,
+                };
+            }));
+        });
+    },
+    minLength: 2,
+
+select: function( event, ui ) {
+	
+var flag = 0;
+for(var i=0;i<idCamaras.length;i++)
+	console.log(ui.item.value);
+	if(ui.item.value==idCamaras[i])
+	{
+		
+	 	flag=1;
+	}
+if(flag==0 && j<=4){
+j++;
+window.location = "/camara/" +ui.item.value;
+
+}
+$('input#cidades_tlm').val("");
+return false;
+}
+});
+});
+ </script>
+</head>
+<body>
+ <!--  <div class="container visible-phone">
+ <div class="navbar navbar-fixed-top" > 
+  		<div class="navbar-inner">
+    		<div class="container">   		  		  		
+     			<button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+      			</button>
+      			<a href="/" class="brand"><img src="/images/logoc.png" height="60" width="200" alt=""></a>
+      				<div class="nav-collapse collapse">
+        				 <ul class="nav">
+            			<ul class="nav">
+			     
+			              <li><a href="/#sobre" class="smoothScroll" ><i class="icon-lightbulb"></i><span >SOBRE</span></a></li>
+			              
+			                     
+			              <li><a href="/#indice" class="smoothScroll" ><i class="icon-bar-chart"></i><span style="margin-left:15px">ITM</span></a></li>
+                          
+			              <li><a href="/#sil" class="smoothScroll" ><i class="icon-puzzle-piece"></i><span style="margin-left:15px" >SIL</span></a></li>
+                          <li ><a href="/#documentos" class="smoothScroll"><i class="icon-folder-open"></i><span style="margin-left:-23px">DOCUMENTOS</span></a></li>
+			             <li style="margin-left:-20px;""><a href="/#pesquisa" class="smoothScroll" ><i class="icon-search"></i><span>PESQUISAR</span></a></li>	 
+            		   </ul>
+          		   </div>
+           	  </div>
+      	 </div>
+    </div>       
+ </div>-->
+ 
+ 
+ 
+ </div>
+ 
+   
+<div class="container-fluid"><!--container starts -->
+
+<div class="row-fluid"><!--second row starts -->
+	<?php echo $this->content;?>
+   <div class="push">&nbsp;</div>
+	</div>
+</div>
+	
+	<div class="span12" style="width:100%;border:1px solid #d4d4d4;border-left:none;border-right:none;margin-bottom:80px;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;-webkit-box-shadow:0 1px 4px #000000;-moz-box-shadow:0 1px 4px #000000;box-shadow:0 1px 4px #000000;background:url(/images/header-bg.png) no-repeat center bottom transparent;background-size:cover;filter:none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+     margin:0px;">
+   
+
+<hr align="center">
+
+
+<footer class="footer" style="text-align:center"><b>&copy; 2013-<?php echo date("Y")?></b> <a style="color:#0397d6;" href="https://transparencia.pt" target="_blank"><b>TIAC</b></a><b>. Todos os direitos reservados.
+</footer>
+</div>
+
+
+
+    
+
+                   
+                    
+             
+               
+               
+                
+
+	
+
+ 
+
+<!-- Bootstrap js -->
+
+
+	
+    
+
+
+
+
+
+  </body>
+</html>

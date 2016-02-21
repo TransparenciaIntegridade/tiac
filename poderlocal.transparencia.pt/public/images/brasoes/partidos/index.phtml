@@ -1,0 +1,796 @@
+<?php //////////////////////////////////////         ?>
+<script>
+var id = <?php echo json_encode($id);?>;
+
+var listas = new Array();
+var datas = new Array();
+var datas2 = new Array();
+var cores = new Array();
+var dimension = new Array();
+var camara = new Array();
+var i = 0;
+$.getJSON("/response/" + id, function (data) {
+
+
+
+  
+
+    	
+    	
+ 
+
+	
+			
+			$(function ()  
+				{
+					
+   $("#chartContainer9").dxLinearGauge({
+	scale: {
+		startValue: 1976,
+		endValue: 2013,
+		majorTick: {
+			showCalculatedTicks: false,
+			customTickValues: [1976, 1979, 1982, 1985, 1989, 1993, 1997,
+			2001, 2005,2009,2013]
+		}
+	},
+	
+	rangeContainer: {
+		backgroundColor: "none",
+		ranges: data.range,
+	},
+	  tooltip: {
+			 enabled: true,
+			 customizeText: function (e) {
+				 return e.valueText + ' Pontos ';
+				 }
+		},
+		
+needles: [{ value: 1995 }],
+	
+	markers: [{ value: 1976 }, { value: 2013 }],
+	
+	rangeBars: [{ value: 2013, color:'#ccc' }],
+	 title: "Histórico de partidos no poder",
+	 commonMarkerSettings: {
+                    text: {
+                        customizeText: function () {
+                            var result;
+                            switch (this.value) {
+                               
+							   case 1976:
+                                    result = '1976';
+                                    break;
+                                
+                                case 2013:
+                                    result = '2013';
+                                    break;
+                            }
+                            return result;
+                        }
+                    }
+                }
+	
+		
+});
+}
+
+			);
+
+
+
+
+
+$("#chartContainer9").dxChart({
+    dataSource: data.ranking,
+    commonSeriesSettings: {
+        argumentField: "state",
+        type: "bar",
+        hoverMode: "allArgumentPoints",
+        selectionMode: "allArgumentPoints",
+        label: {
+            visible: true,
+            format: "fixedPoint",
+            precision: 0
+        }
+        
+    },
+    series: [
+        { valueField: "value", name: "Informação sobre a organização<br/> composição social <br/>e funcionamento do Município" },
+        { valueField: "value1", name: "Planos e Relatórios<br/> [2 anos anteriores]" },
+        { valueField: "value2", name: "Impostos, Taxas,<br/> Tarifas, Preços e Regulamentos" },
+		{ valueField: "value3", name: "Relação com a Sociedade" },
+		{ valueField: "value4", name: "Contratação Pública" },
+		{ valueField: "value5", name: "Transparência Económico-Financeira" },
+		{ valueField: "value6", name: "Transparência na<br/> área do Urbanismo" }
+    ],
+    title: "Ranking Dimensões ITM",
+	
+		 tooltip: {
+			 enabled: true,
+			 customizeText: function (e) {
+				 return e.valueText + ' Pontos ';
+				 }
+		},
+    legend: {
+        verticalAlignment: "bottom",
+        horizontalAlignment: "center"
+    },
+	
+    pointClick: function (point) {
+        this.select();
+    }
+});
+
+
+
+
+
+$(function ()  {
+
+	$("#chartContainer3").dxChart({
+	    dataSource: data.data,
+	 
+	    series: {
+	        argumentField: "state",
+	        valueField: "value",
+	        name: "estatisticas",
+	        type: "bar",
+	        color: '#ccc'
+	    },
+	    valueAxis: {
+			 label: {
+			 	customizeText: function (value) {
+			 	return value.value + ' Pessoas';
+			 	}
+			 },
+			 visible: true,
+			 },
+			 tooltip: {
+				 enabled: true,
+				 customizeText: function (e) {
+					 return e.valueText + ' Pessoas ';
+					 }
+			},
+	});
+
+	$("#chartContainer4").dxChart({
+	    dataSource: data.data2,
+	 
+	    series: {
+	        argumentField: "state",
+	        valueField: "value",
+	        name: "estatisticas",
+	        type: "bar",
+	        color: '#ccc'
+	    },
+	    valueAxis: {
+			 label: {
+			 	customizeText: function (value) {
+			 	return value.value + ' %';
+			 	}
+			 },
+			 visible: true,
+			 },
+			 tooltip: {
+				 enabled: true,
+				 customizeText: function (e) {
+					 return e.valueText + ' % ';
+					 }
+			},
+	});
+	
+	$("#chartContainer5").dxChart({
+	    dataSource: data.data3,
+	 
+	    series: {
+	        argumentField: "state",
+	        valueField: "value",
+	        name: "estatisticas2",
+	        type: "bar",
+	        color: '#ccc'
+	    },
+	    valueAxis: {
+			 label: {
+			 	customizeText: function (value) {
+			 	return value.value + ' &euro;';
+			 	}
+			 },
+			 visible: true,
+			 },
+			 tooltip: {
+				 enabled: true,
+				 customizeText: function (e) {
+					 return e.valueText + ' &euro; ';
+					 }
+			},
+	});
+	
+	$("#chartContainer6").dxCircularGauge({
+		scale: {
+			startValue: 0,
+			endValue: 2500,
+			majorTick: {
+				tickInterval: 10
+			}
+		},
+		title: 'Prazo medio de Pagamento ' ,
+		subtitle : '(dias)',
+		rangeContainer: {
+			backgroundColor: "none",
+			ranges: [
+				{
+					startValue: 0,
+					endValue: 100,
+					color: "#A6C567"
+				},
+				{
+					startValue: 100,
+					endValue: 250,
+					color: "#FCBB69"
+				},
+				{
+					startValue: 250,
+					endValue: 1000,
+					color: "#E19094"
+				},
+				{
+					startValue: 1000,
+					endValue: 2500,
+					color: "#000000"
+				}
+				
+			]
+		},
+
+		needles: data.data4,
+
+		markers: data.data4,
+	});
+
+});
+
+
+
+});
+
+
+</script>
+        
+<style>
+.ui-autocomplete-loading {
+background: white url('images/ui-anim_basic_16x16.gif') right left no-repeat;
+}
+
+
+/*Container*/
+.box h3{
+	text-align:left;
+	position:relative;
+	top:80px;
+}
+.box1 h3{
+	text-align:left;
+	position:relative;
+	top:40px;
+}
+.box {
+	width:100%;
+	height:600px;
+	background:#FFF;
+	margin:40px auto;
+	
+}
+.box1 {
+	width:100%;
+	height:600px;
+	background:#FFF;
+	margin:40px auto;
+}
+/*==================================================
+ * Effect 1
+ * ===============================================*/
+.effect1{
+	-webkit-box-shadow: 0 10px 6px -6px #777;
+	   -moz-box-shadow: 0 10px 6px -6px #777;
+	        box-shadow: 0 10px 6px -6px #777;
+}
+
+/*==================================================
+ * Effect 2
+ * ===============================================*/
+.effect2
+{
+  position: relative;
+}
+.effect2:before, .effect2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.effect2:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+/*==================================================
+ * Effect 3
+ * ===============================================*/
+.effect3
+{
+  position: relative;
+}
+.effect3:before
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+/*==================================================
+ * Effect 4
+ * ===============================================*/
+.effect4
+{
+  position: relative;
+}
+.effect4:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  right: 10px;
+  left: auto;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+}  
+
+/*==================================================
+ * Effect 5
+ * ===============================================*/
+.effect5
+{
+  position: relative;
+}
+.effect5:before, .effect5:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 35px 20px #777;
+  -moz-box-shadow: 0 35px 20px #777;
+  box-shadow: 0 35px 20px #777;
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+.effect5:after
+{
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+}
+
+/*==================================================
+ * Effect 6
+ * ===============================================*/
+.effect6
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect6:before, .effect6:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+.effect6:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+
+/*==================================================
+ * Effect 7
+ * ===============================================*/
+.effect7
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect7:before, .effect7:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+.effect7:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+
+/*==================================================
+ * Effect 8
+ * ===============================================*/
+.effect8
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+.effect8:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}  
+
+/*Headers*/
+h1 , h1 a, h1 a:hover{ color:#FFF;	font-family: Arial; margin:10px;}
+article h1, article h1 a, article h1 a:hover, h2, h3, h4, h5, h6 { line-height: 1.1em; color:#444;font-family: 'PT Sans Narrow', Calibri, 'Myriad Pro', Tahoma, Arial; padding: 10px 0; margin:0;}
+article h1, article h1 a, h2 { font-size: 30px; letter-spacing: -1px;}
+h3 { font-size: 30px; }
+h4 { font-size: 22px;  font-weight: normal;  padding-bottom: 10px;}
+h5 { font-size: 14px;}
+h6 {}
+</style>
+ 
+
+
+
+
+		
+		
+
+<div class="line"></div>		
+		<div class="title">
+		
+		</div>
+		<div class="content">
+			<div class="pane" style=" height :auto;">
+				
+				<div id="chartContainer9" style="width: 100%; height: auto;"></div>
+				<div id="legend"> <?php foreach($partidos as $logoP)
+			{
+                 if($logoP->getnome()=='PSD')
+				 {
+				 
+			  //echo $info->getbrasao(); 
+			  echo '<img style="margin-top:15px;" src=/images/brasoes/partidos/psd.png alt= '.$logoP->getnome().'/>';
+			}
+			 if($logoP->getnome()=='CDU')
+				 {
+				 
+			  //echo $info->getbrasao(); 
+			  echo '<img style="margin-top:15px;" src=/images/brasoes/partidos/cdu.png alt= '.$logoP->getnome().'/>';
+			}
+			 if($logoP->getnome()=='CDS-PP')
+				 {
+				 
+			  //echo $info->getbrasao(); 
+			  echo '<img style="margin-top:15px;" src=/images/brasoes/partidos/cds.png alt= '.$logoP->getnome().'/>';
+			}
+			if($logoP->getnome()=='BE')
+				 {
+				 
+			  //echo $info->getbrasao(); 
+			  echo '<img style="margin-top:15px;" src=/images/brasoes/partidos/be.png alt= '.$logoP->getnome().'/>';
+			}
+			}
+			?></div>
+				
+			</div>
+		</div>
+		
+		
+		<div class="line"></div>		
+		<div class="title">
+			<h1>Estatisticas</h1>
+		</div>
+		<div class="content">
+			<div class="pane" style=" height :auto;">
+				
+				<div id="chartContainer3" style="width: 100%; height: 400px;"></div>
+				
+			</div>
+		</div>
+		
+		<div class="line"></div>		
+		<div class="title">
+			<h1>Estatisticas</h1>
+		</div>
+		<div class="content">
+			<div class="pane" style=" height :auto;">
+				
+				<div id="chartContainer4" style="width: 100%; height: 400px;"></div>
+				
+			</div>
+		</div>
+		
+		<div class="line"></div>		
+		<div class="title">
+			<h1>Estatisticas</h1>
+		</div>
+		<div class="content">
+			<div class="pane" style=" height :auto;">
+				
+				<div id="chartContainer5" style="width: 100%; height: 400px;"></div>
+				
+			</div>
+		</div>
+		
+		<div class="line"></div>		
+		<div class="title">
+			<h1>Estatisticas</h1>
+		</div>
+		<div class="content">
+			<div class="pane" style=" height :auto;">
+				
+				<div id="chartContainer6" style="width: 100%; height: 400px;"></div>
+				
+			</div>
+		</div>
+		
+		
+
+
+
+<section class="container">
+
+	
+	<div class="box1 effect2" style="box-shadow:inset 0px 0px 85px rgba(0,0,0,.5);
+-webkit-box-shadow:inset 0px 0px 85px rgba(0,0,0,.5);
+-moz-box-shadow:inset 0px 0px 85px rgba(0,0,0,.5);">
+
+		<table border="0" bordercolor="transparent" style="background-color:transparent" width="100%" cellpadding="3" cellspacing="3">
+	<tr>
+		<td colspan="3" style="text-align:center">  <?php foreach($infografia as $info)
+			{
+				
+			  //echo $info->getbrasao(); 
+			  echo '<h2 style="color:#000" > Município de &nbsp'.$info->getnome().'</h2>';
+			}
+		
+       ?></td>
+		
+	</tr>
+	<tr>
+		<td rowspan="6"><?php foreach($infografia as $info)
+			{
+				 
+			  //echo $info->getbrasao(); 
+			  echo '<img style="margin-top:15px;" src=/images/brasoes/'.$info->getbrasao().' alt= '.$info->getnome().'/>';
+			}
+       ?></td>
+		<td style="text-align:left"><h4>População:</h4></td>
+		<td style="text-align:left"><?php foreach($populacao as $pop)
+			{
+				
+			  //echo $info->getbrasao(); 
+			  echo '<h4>'.$pop->getano2012().'</h4>';
+			}
+		
+       ?></td>
+	</tr>
+	<tr>
+		
+		<td style="text-align:left"><h4>Presidente da Câmara:</h4></td>
+		<td style="text-align:left">
+        <?php foreach($infografia as $nomePres)
+			{
+				
+			  //echo $info->getbrasao(); 
+			  echo '<h4>'.$nomePres->getnomePresidente().'</h4>';
+			}
+		
+       ?>
+		</td>
+	</tr>
+	<tr>
+	
+		<td style="text-align:left"><h4>Partido político no poder:</h4></td>
+		<td style="text-align:left"> <?php foreach($partidos as $logoP)
+			{
+				if($logoP->getnome()=='CDU'){
+				 
+			  //echo $info->getbrasao(); 
+			  echo '<img style="margin-top:15px;" src=/images/brasoes/partidos/cdu.png alt= '.$logoP->getnome().'/>';
+			}
+		
+			if($logoP->getnome()=='PSD'){
+				 
+			  //echo $info->getbrasao(); 
+			  echo '<img style="margin-top:15px;" src=/images/brasoes/partidos/psd.png alt= '.$logoP->getnome().'/>';
+			}
+			if($logoP->getnome()=='PS'){
+				 
+			  //echo $info->getbrasao(); 
+			  echo '<img style="margin-top:15px;" src=/images/brasoes/partidos/ps.png alt= '.$logoP->getnome().'/>';
+			}
+			if($logoP->getnome()=='BE'){
+				 
+			  //echo $info->getbrasao(); 
+			  echo '<img style="margin-top:15px;" src=/images/brasoes/partidos/be.png alt= '.$logoP->getnome().'/>';
+			}
+			if($logoP->getnome()=='CDS-PP'){
+				 
+			  //echo $info->getbrasao(); 
+			  echo '<img style="margin-top:15px;" src=/images/brasoes/partidos/cds.png alt= '.$logoP->getnome().'/>';
+			}
+			if($logoP->getnome()=='PSD/CDS-PP'){
+				 
+			  //echo $info->getbrasao(); 
+			  echo '<img style="margin-top:15px;" src=/images/brasoes/partidos/coligacao.png alt= '.$logoP->getnome().'/>';
+			}
+			if($logoP->getnome()=='INDEPENDENTE'){
+				 
+			  //echo $info->getbrasao(); 
+			  echo '<img style="margin-top:15px;" src=/images/brasoes/partidos/independente.png alt= '.$logoP->getnome().'/>';
+			}
+			}
+			
+       ?></td>
+	</tr>
+	<tr>
+		
+		<td style="text-align:left"><h4>Eleitores inscritos:</h4></td>
+		<td style="text-align:left"> <?php foreach($infografia as $eleitores)
+			{
+				
+			  //echo $info->getbrasao(); 
+			  echo '<h4 >'.$eleitores->getnumeroEleitores().'</h4>';
+			}
+		
+       ?></td>
+	</tr>
+	<tr>
+	
+		<td style="text-align:left"><h4>Taxa de desemprego:</h4></td>
+		<td style="text-align:left"> <?php foreach($infografia as $desemprego)
+			{
+				
+			  //echo $info->getbrasao(); 
+			  echo '<h4 >'.$eleitores->gettaxaDesemprego().' &nbsp %</h4>';
+			}
+		
+       ?></td>
+	</tr>
+	<tr>
+	
+		<td style="text-align:left"><h4>Proporção de poder de compra:</h4></td>
+		<td style="text-align:left"><?php foreach($qualidade_vida as $Qvida)
+			{
+				
+			  //echo $info->getbrasao(); 
+			  echo '<h4 >'.$Qvida->getano2009().' &nbsp %</h4>';
+			}
+		
+       ?>
+       </td>
+	</tr>
+</table>
+        
+	</div>
+	
+</section>
+
+
+
+
+
+ 
+ 
+
+

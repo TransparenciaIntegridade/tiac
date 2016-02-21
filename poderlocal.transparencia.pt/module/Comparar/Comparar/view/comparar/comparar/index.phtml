@@ -1,0 +1,2046 @@
+<?php //////////////////////////////////////         ?>
+<?php echo $this->headScript()
+->appendFile('/js/jspdf.js')
+->appendFile('/js/jspdf.plugin.addimage.js') 
+->appendFile('/js/jspdf.plugin.cell.js')
+->appendFile('/js/jspdf.plugin.from_html.js')
+->appendFile('/js/jspdf.plugin.ie_below_9_shim.js')
+->appendFile('/js/jspdf.plugin.javascript.js')
+->appendFile('/js/jspdf.plugin.standard_fonts_metrics.js')
+?>
+
+  <style>
+  .hidden { display: none; }
+  .hidden1 { display: none; }
+.ui-autocomplete-loading {
+background: white url('/images/ui-anim_basic_16x16.gif') right center no-repeat;
+}
+</style>
+ 
+
+<script>
+
+
+	
+
+
+
+
+function myFunction()
+{
+	location.reload(); 
+	
+}
+
+
+
+
+</script> 
+ 
+<script>
+var link = "";
+var j=0;
+var divClone = $("#log").clone();
+var pessoas = new Array();
+var percent = new Array();
+var camaras = new Array();
+var dinheiro = new Array();
+var eleitores = new Array();
+var desemprego = new Array();
+var ensino = new Array();
+var population = new Array();
+var endividamento = new Array();
+var envelhecimento = new Array();
+var independencia = new Array();
+var passivo = new Array();
+var prazo = new Array();
+var idCamaras = new Array();
+  
+$(function() {
+function log( message ) {
+$( "<div>" ).text(message).prependTo( "#log" );
+$( "#log" ).scrollTop( 0 );
+document.getElementById("b1").innerHTML= "<button class="+'"'+'btn1 btn-default'+'"'+" style="+'"'+'background:#CC4400'+'"'+">X</button>";
+}
+
+function log2( message ) {
+	$( "<div>" ).text(message).prependTo( "#log2" );
+	$( "#log2" ).scrollTop( 0 );
+	document.getElementById("b2").innerHTML= "<button class="+'"'+'btn1 btn-default'+'"'+" style="+'"'+'background:#CC4400'+'"'+">X</button>";
+	}
+
+function log3( message ) {
+	$( "<div>" ).text(message).prependTo( "#log3" );
+	$( "#log3" ).scrollTop( 0 );
+	document.getElementById("b3").innerHTML= "<button class="+'"'+'btn1 btn-default'+'"'+" style="+'"'+'background:#CC4400'+'"'+">X</button>";
+	}
+
+function log4( message ) {
+	$( "<div>" ).text(message).prependTo( "#log4" );
+	$( "#log4" ).scrollTop( 0 );
+	document.getElementById("b4").innerHTML= "<button class="+'"'+'btn1 btn-default'+'"'+" style="+'"'+'background:#CC4400'+'"'+">X</button>";
+	}
+
+
+function log5( message ) {
+	$( "<div>" ).text(message).prependTo( "#log5" );
+	$( "#log5" ).scrollTop( 0 );
+	document.getElementById("b5").innerHTML= "<button class="+'"'+'btn1 btn-default'+'"'+" style="+'"'+'background:#CC4400'+'"'+">X</button>";
+	}
+	
+$( "#city" ).autocomplete({
+	source: function (request, response) {
+        $.getJSON("stat-rest?q=" + request.term, function (data) {
+            response($.map(data.city, function (item) {
+                return {
+                    label: item.label,
+                    value: item.value,
+                    pessoas:{
+                    	eleitores : item.eleitores,
+                    	population : item.population,
+                    	ensino : item.ensino,
+                    	state:item.label,
+                    },
+                    percent : {
+                    	state:item.label,
+                    	desemprego : item.desemprego,
+                        envelhecimento : item.envelhecimento,
+                        qualidade: item.qualidade,
+                       // a2010 : item.independencia.ano2010,
+                        a2011 : item.independencia.ano2011,
+                        a2012 : item.independencia.ano2012,
+                    },
+                    dinheiro :{
+						state:item.label,
+						//a2010:item.endividamento.ano2010,
+						a2011:item.endividamento.ano2011,
+						a2012:item.endividamento.ano2012,
+						//b2010:item.passivo.ano2010,
+						b2011:item.passivo.ano2011,
+						b2012:item.passivo.ano2012,
+						
+                    },
+                    prazo:{ 
+                        //a2010:item.prazo.ano2010,
+                        a2011:item.prazo.ano2011,
+                        a2012:item.prazo.ano2012,
+                    	state:item.label
+                    }
+                    
+                    
+                    
+                    
+                    
+                   // prazo : item.prazo,
+                };
+            }));
+        });
+    },
+    minLength: 2,
+
+select: function( event, ui ) {
+
+$(function () {
+     $('#teste').removeClass('hidden');
+	  $('#teste1').removeClass('hidden1');
+ });
+
+
+
+var flag = 0;
+for(var i=0;i<idCamaras.length;i++)
+	//console.log(ui.item.value,idCamaras[i]);
+	if(ui.item.value==idCamaras[i])
+	{
+		
+	 	flag=1;
+	}
+if(flag==0 && idCamaras.length<=4){
+j++;
+if(idCamaras.length == 0 )
+log( ui.item.label);
+
+if(idCamaras.length == 1 )
+log2( ui.item.label);
+
+if(idCamaras.length == 2 )
+log3( ui.item.label);
+
+if(idCamaras.length == 3 )
+log4( ui.item.label);
+
+if(idCamaras.length == 4 )
+	log5( ui.item.label);
+
+idCamaras.push(ui.item.value);
+link = "";
+for(var i =0;i<idCamaras.length;i++){
+link+="/"+idCamaras[i];}
+camaras.push(ui.item.label);
+pessoas.push(ui.item.pessoas);
+percent.push(ui.item.percent);
+dinheiro.push(ui.item.dinheiro);
+prazo.push(ui.item.prazo);
+
+}
+if(idCamaras.length>4){
+var x=document.getElementById("demo");
+x.innerHTML="<div style="+'"'+'margin-top:10px;color:#F00'+'"'+">Limite máximo 5 Municípios!";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+console.log(camaras);
+		
+
+
+$(function(){
+
+
+
+	
+
+	              $("#chartContainer").dxChart({
+	                  dataSource: pessoas,
+	                  commonSeriesSettings: {
+	                      argumentField: "state",
+	                      type: "bar",
+	                      hoverMode: "allArgumentPoints",
+	                      selectionMode: "allArgumentPoints",
+	                      
+	                  },
+	                  valueAxis: {
+	         			 label: {
+	         			 	customizeText: function (value) {
+	         			 	return value.value + ' Indivíduos';
+	         			 	}
+	         			 },
+	         			 visible: true,
+	         			 },
+	                  tooltip: {
+		   					 enabled: true,
+		   					 customizeText: function (e) {
+		   						 return e.valueText + ' Indivíduos ';
+		   						 }
+		   					},
+	                  series: [
+	                    	{ valueField: "population", name: "População" },
+						{ valueField: "eleitores", name: " Nº de eleitores" },
+	                      { valueField: "ensino", name: " População com <br/>ensino superior" }
+	                  ],
+	                title: "População-Eleitores-Escolaridade:",
+	                  legend: {
+	                      verticalAlignment: "bottom",
+	                      horizontalAlignment: "center"
+	                  },
+	                  pointClick: function (point) {
+	                      this.select();
+	                  }
+	              });
+
+
+	              $("#chartContainer2A").dxChart({
+	                  dataSource: percent,
+	                  commonSeriesSettings: {
+	                      argumentField: "state",
+	                      type: "bar",
+	                      hoverMode: "allArgumentPoints",
+	                      selectionMode: "allArgumentPoints",
+	                      
+	                  },
+	                  valueAxis: {
+	         			 label: {
+	         			 	customizeText: function (value) {
+	         			 	return value.value + ' %';
+	         			 	}
+	         			 },
+	         			 visible: true,
+	         			 },
+	                  tooltip: {
+		   					 enabled: true,
+		   					 customizeText: function (e) {
+		   						 return e.valueText + ' % ';
+		   						 }
+		   					},
+	                  series: [
+	                       { valueField: "desemprego", name: "Desemprego" },
+						{ valueField: "qualidade", name: " Poder de compra<br/><i> per capita</i>" },
+	                      { valueField: "envelhecimento", name: "Envelhecimento" },
+	                       
+	                      
+	                  ],
+	                  title: "Desemprego-Poder de Compra-Envelhecimento:",
+	                  legend: {
+	                      verticalAlignment: "bottom",
+	                      horizontalAlignment: "center"
+	                  },
+	                  pointClick: function (point) {
+	                      this.select();
+	                  }
+	              });
+
+
+	              $("#chartContainer2B").dxChart({
+	                  dataSource: percent,
+	                  commonSeriesSettings: {
+	                      argumentField: "state",
+	                      type: "bar",
+	                      hoverMode: "allArgumentPoints",
+	                      selectionMode: "allArgumentPoints",
+	                      
+	                  },
+	                  valueAxis: {
+	         			 label: {
+	         			 	customizeText: function (value) {
+	         			 	return value.value + ' %';
+	         			 	}
+	         			 },
+	         			 visible: true,
+	         			 },
+	                  tooltip: {
+		   					 enabled: true,
+		   					 customizeText: function (e) {
+		   						 return e.valueText + ' % ';
+		   						 }
+		   					},
+	                  series: [
+	                       
+	                       { valueField: "a2010", name: "Independencia financeira <br/> em 2010" },
+	                      { valueField: "a2011", name: "Independencia financeira <br/> em 2011" },
+	                      { valueField: "a2012", name: "Independencia financeira <br/> em 2012" }
+	                      
+	                  ],
+	                  title: "Independência financeira do Município:",
+	                  legend: {
+	                      verticalAlignment: "bottom",
+	                      horizontalAlignment: "center"
+	                  },
+	                  pointClick: function (point) {
+	                      this.select();
+	                  }
+	              });
+
+	              $("#chartContainer3A").dxChart({
+	                  dataSource: dinheiro,
+	                  commonSeriesSettings: {
+	                      argumentField: "state",
+	                      type: "bar",
+	                      hoverMode: "allArgumentPoints",
+	                      selectionMode: "allArgumentPoints",
+	                      
+	                  },
+	                  valueAxis: {
+	         			 label: {
+	         			 	customizeText: function (value) {
+	         			 	return value.value + ' &euro;';
+	         			 	}
+	         			 },
+	         			 visible: true,
+	         			 },
+	                  tooltip: {
+		   					 enabled: true,
+		   					 customizeText: function (e) {
+		   						 return e.valueText + ' &euro; ';
+		   						 }
+		   					},
+	                  series: [
+	                      { valueField: "a2010", name: "Endividamento<br/> em 2010" },	
+	                      { valueField: "a2011", name: "Endividamento<br/> em 2011" },
+	                      { valueField: "a2012", name: "Endividamento<br/> em 2012" },                      
+	                      
+	                      
+	                      
+	                  ],
+	                  title: "Endividamento Líquido do Município:",
+	                  legend: {
+	                      verticalAlignment: "bottom",
+	                      horizontalAlignment: "center"
+	                  },
+	                  pointClick: function (point) {
+	                      this.select();
+	                  }
+	              });
+
+
+	              $("#chartContainer3B").dxChart({
+	                  dataSource: dinheiro,
+	                  commonSeriesSettings: {
+	                      argumentField: "state",
+	                      type: "bar",
+	                      hoverMode: "allArgumentPoints",
+	                      selectionMode: "allArgumentPoints",
+	                      
+	                  },
+	                  valueAxis: {
+	         			 label: {
+	         			 	customizeText: function (value) {
+	         			 	return value.value + ' &euro;';
+	         			 	}
+	         			 },
+	         			 visible: true,
+	         			 },
+	                  tooltip: {
+		   					 enabled: true,
+		   					 customizeText: function (e) {
+		   						 return e.valueText + ' &euro; ';
+		   						 }
+		   					},
+	                  series: [	                      
+						  { valueField: "b2010", name: "Passivo exigível<br/> em 2010" },              
+	                      { valueField: "b2011", name: "Passivo exigível<br/> em 2011" },
+	                      { valueField: "b2012", name: "Passivo exigível<br/> em 2012" },
+	                      
+	                      
+	                  ],
+	                  title: "Passivo Exigível  do Município:",
+	                  legend: {
+	                      verticalAlignment: "bottom",
+	                      horizontalAlignment: "center"
+	                  },
+	                  pointClick: function (point) {
+	                      this.select();
+	                  }
+	              });
+
+
+
+	              
+
+
+	              $("#chartContainer4").dxChart({
+	                  dataSource: prazo,
+	                  commonSeriesSettings: {
+	                      argumentField: "state",
+	                      type: "bar",
+	                      hoverMode: "allArgumentPoints",
+	                      selectionMode: "allArgumentPoints",
+	                      
+	                  },	                  
+	                  equalBarWidth: {
+	                      width: 40
+	                  },
+	                  valueAxis: {
+	         			 label: {
+	         			 	customizeText: function (value) {
+	         			 	return value.value + ' dias';
+	         			 	}
+	         			 },
+	         			 visible: true,
+	         			 },
+	                  tooltip: {
+		   					 enabled: true,
+		   					 customizeText: function (e) {
+		   						 return e.valueText + ' dias';
+		   						 }
+		   					},
+	                  series: [
+							{ valueField: "a2010", name: "Prazo médio de<br/> pagamentos em 2010" },
+							{ valueField: "a2011", name: "Prazo médio de<br/> pagamentos em 2011" },
+							{ valueField: "a2012", name: "Prazo médio de <br/>pagamentos em 2012" },
+	                      
+	                      
+	                  ],
+	                   title: "Prazo Médio de Pagamentos:",
+	                  legend: {
+	                      verticalAlignment: "bottom",
+	                      horizontalAlignment: "center"
+	                  },
+	                  pointClick: function (point) {
+	                      this.select();
+	                  }
+	              });
+	
+});
+
+    
+
+
+
+
+
+$('input#city').val("");
+return false;
+}
+
+});
+
+
+<?php ////////////////////////////////////// log  //////////////////////////////////////////////////?>
+
+
+
+
+		$("#b1").click(function(){
+
+				document.getElementById("log").innerHTML="";
+			document.getElementById("log").innerHTML=document.getElementById("log2").innerHTML;
+			document.getElementById("log2").innerHTML=document.getElementById("log3").innerHTML;
+			document.getElementById("log3").innerHTML=document.getElementById("log4").innerHTML;
+			document.getElementById("log4").innerHTML=document.getElementById("log5").innerHTML;
+			document.getElementById("log5").innerHTML="";	
+			document.getElementById("demo").innerHTML="";
+
+			if(document.getElementById("log").innerHTML== "")
+				document.getElementById("b1").innerHTML= "";			
+				if(document.getElementById("log2").innerHTML== "")
+					document.getElementById("b2").innerHTML= "";
+					if(document.getElementById("log3").innerHTML== "")
+						document.getElementById("b3").innerHTML= "";
+						if(document.getElementById("log4").innerHTML== "")
+							document.getElementById("b4").innerHTML= "";
+							if(document.getElementById("log5").innerHTML== "")
+								document.getElementById("b5").innerHTML= "";
+			document.getElementById("demo").innerHTML="";
+			console.log('log1');
+			camaras.splice(0,1);
+			pessoas.splice(0,1);
+			percent.splice(0,1);
+			dinheiro.splice(0,1);
+			prazo.splice(0,1);
+			idCamaras.splice(0,1);
+			
+			$("#chartContainer").dxChart({
+		        dataSource: pessoas,
+		        commonSeriesSettings: {
+		            argumentField: "state",
+		            type: "bar",
+		            hoverMode: "allArgumentPoints",
+		            selectionMode: "allArgumentPoints",
+		            
+		        },
+		        valueAxis: {
+					 label: {
+					 	customizeText: function (value) {
+					 	return value.value + ' Pessoas';
+					 	}
+					 },
+					 visible: true,
+					 },
+		        tooltip: {
+							 enabled: true,
+							 customizeText: function (e) {
+								 return e.valueText + ' Pessoas ';
+								 }
+							},
+		        series: [
+		            { valueField: "ensino", name: "Ensino superior" },
+		            { valueField: "population", name: "Popula&ccedil;&atilde;o" },
+		            { valueField: "eleitores", name: "Eleitores" }
+		        ],
+		        //title: "Great Lakes Gross State Product",
+		        legend: {
+		            verticalAlignment: "bottom",
+		            horizontalAlignment: "center"
+		        },
+		        pointClick: function (point) {
+		            this.select();
+		        }
+		    });
+
+
+
+			$("#chartContainer2A").dxChart({
+                dataSource: percent,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' %';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' % ';
+	   						 }
+	   					},
+                series: [
+                     { valueField: "desemprego", name: "Taxa de desemprego" },
+					{ valueField: "qualidade", name: "Proporção de poder<br/> de compra" },
+                    { valueField: "envelhecimento", name: "Taxa de envelhecimento" },
+                     
+                    
+                ],
+                title: "Variáveis de caraterização II:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+
+
+            $("#chartContainer2B").dxChart({
+                dataSource: percent,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' %';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' % ';
+	   						 }
+	   					},
+                series: [
+                     
+                     { valueField: "a2010", name: "Independencia financeira <br/> em 2010" },
+                    { valueField: "a2011", name: "Independencia financeira <br/> em 2011" },
+                    { valueField: "a2012", name: "Independencia financeira <br/> em 2012" }
+                    
+                ],
+                title: "Independência financeira do Município:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+
+            $("#chartContainer3A").dxChart({
+                dataSource: dinheiro,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' &euro;';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' &euro; ';
+	   						 }
+	   					},
+                series: [
+                    { valueField: "a2010", name: "Endividamento<br/> em 2010" },	
+                    { valueField: "a2011", name: "Endividamento<br/> em 2011" },
+                    { valueField: "a2012", name: "Endividamento<br/> em 2012" },                      
+                    
+                    
+                    
+                ],
+                title: "Endividamento líquido do Município:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+
+
+            $("#chartContainer3B").dxChart({
+                dataSource: dinheiro,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' &euro;';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' &euro; ';
+	   						 }
+	   					},
+                series: [	                      
+					  { valueField: "b2010", name: "Passivo<br/> em 2010" },              
+                    { valueField: "b2011", name: "Passivo<br/> em 2011" },
+                    { valueField: "b2012", name: "Passivo<br/> em 2012" },
+                    
+                    
+                ],
+                title: "Variáveis de caraterização V:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+
+
+
+            
+
+
+            $("#chartContainer4").dxChart({
+                dataSource: prazo,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },	                  
+                equalBarWidth: {
+                    width: 40
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' dias';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' dias';
+	   						 }
+	   					},
+                series: [
+						{ valueField: "a2010", name: "Prazo medio de pagamento<br/> em 2010" },
+						{ valueField: "a2011", name: "Prazo medio de pagamento<br/> em 2011" },
+						{ valueField: "a2012", name: "Prazo medio de pagamento<br/> em 2012" },
+                    
+                    
+                ],
+                 title: "Variáveis de caraterização VI:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+		    
+			
+		});
+
+
+
+
+
+<?php ////////////////////////////////////////     log2                /////////////////////////////////?>
+
+
+
+
+
+		$("#b2").click(function(){
+
+			document.getElementById("log2").innerHTML="";			
+			document.getElementById("log2").innerHTML=document.getElementById("log3").innerHTML;
+			document.getElementById("log3").innerHTML=document.getElementById("log4").innerHTML;
+			document.getElementById("log4").innerHTML=document.getElementById("log5").innerHTML;
+			document.getElementById("log5").innerHTML="";	
+			
+
+					
+				if(document.getElementById("log2").innerHTML== "")
+					document.getElementById("b2").innerHTML= "";
+					if(document.getElementById("log3").innerHTML== "")
+						document.getElementById("b3").innerHTML= "";
+						if(document.getElementById("log4").innerHTML== "")
+							document.getElementById("b4").innerHTML= "";
+							if(document.getElementById("log5").innerHTML== "")
+								document.getElementById("b5").innerHTML= "";
+			document.getElementById("demo").innerHTML="";
+			console.log('log2');
+			camaras.splice(1,1);
+			pessoas.splice(1,1);
+			percent.splice(1,1);
+			dinheiro.splice(1,1);
+			prazo.splice(1,1);
+			idCamaras.splice(1,1);
+
+
+			
+			$("#chartContainer").dxChart({
+		        dataSource: pessoas,
+		        commonSeriesSettings: {
+		            argumentField: "state",
+		            type: "bar",
+		            hoverMode: "allArgumentPoints",
+		            selectionMode: "allArgumentPoints",
+		            
+		        },
+		        valueAxis: {
+					 label: {
+					 	customizeText: function (value) {
+					 	return value.value + ' Pessoas';
+					 	}
+					 },
+					 visible: true,
+					 },
+		        tooltip: {
+							 enabled: true,
+							 customizeText: function (e) {
+								 return e.valueText + ' Pessoas ';
+								 }
+							},
+		        series: [
+		            { valueField: "ensino", name: "Ensino superior" },
+		            { valueField: "population", name: "Popula&ccedil;&atilde;o" },
+		            { valueField: "eleitores", name: "Eleitores" }
+		        ],
+		        //title: "Great Lakes Gross State Product",
+		        legend: {
+		            verticalAlignment: "bottom",
+		            horizontalAlignment: "center"
+		        },
+		        pointClick: function (point) {
+		            this.select();
+		        }
+		    });
+
+
+
+			$("#chartContainer2A").dxChart({
+                dataSource: percent,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' %';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' % ';
+	   						 }
+	   					},
+                series: [
+                     { valueField: "desemprego", name: "Taxa de desemprego" },
+					{ valueField: "qualidade", name: "Proporção de poder<br/> de compra" },
+                    { valueField: "envelhecimento", name: "Taxa de envelhecimento" },
+                     
+                    
+                ],
+                title: "Variáveis de caraterização II:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+
+
+            $("#chartContainer2B").dxChart({
+                dataSource: percent,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' %';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' % ';
+	   						 }
+	   					},
+                series: [
+                     
+                     { valueField: "a2010", name: "Independencia financeira <br/> em 2010" },
+                    { valueField: "a2011", name: "Independencia financeira <br/> em 2011" },
+                    { valueField: "a2012", name: "Independencia financeira <br/> em 2012" }
+                    
+                ],
+                title: "Variáveis de caraterização III:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+
+            $("#chartContainer3A").dxChart({
+                dataSource: dinheiro,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' &euro;';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' &euro; ';
+	   						 }
+	   					},
+                series: [
+                    { valueField: "a2010", name: "Endividamento<br/> em 2010" },	
+                    { valueField: "a2011", name: "Endividamento<br/> em 2011" },
+                    { valueField: "a2012", name: "Endividamento<br/> em 2012" },                      
+                    
+                    
+                    
+                ],
+                title: "Endividamento líquido do Município:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+
+
+            $("#chartContainer3B").dxChart({
+                dataSource: dinheiro,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' &euro;';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' &euro; ';
+	   						 }
+	   					},
+                series: [	                      
+					  { valueField: "b2010", name: "Passivo<br/> em 2010" },              
+                    { valueField: "b2011", name: "Passivo<br/> em 2011" },
+                    { valueField: "b2012", name: "Passivo<br/> em 2012" },
+                    
+                    
+                ],
+                title: "Variáveis de caraterização V:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+
+
+
+            
+
+
+            $("#chartContainer4").dxChart({
+                dataSource: prazo,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },	                  
+                equalBarWidth: {
+                    width: 40
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' dias';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' dias';
+	   						 }
+	   					},
+                series: [
+						{ valueField: "a2010", name: "Prazo medio de pagamento<br/> em 2010" },
+						{ valueField: "a2011", name: "Prazo medio de pagamento<br/> em 2011" },
+						{ valueField: "a2012", name: "Prazo medio de pagamento<br/> em 2012" },
+                    
+                    
+                ],
+                 title: "Variáveis de caraterização VI:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+		    
+			
+		});
+
+
+
+
+
+
+
+<?php ///////////////////////////////////////      log3                    ///////////////////////////////?>
+					
+
+
+
+
+		$("#b3").click(function(){
+
+			document.getElementById("log3").innerHTML="";
+			document.getElementById("log3").innerHTML=document.getElementById("log4").innerHTML;
+			document.getElementById("log4").innerHTML=document.getElementById("log5").innerHTML;
+			document.getElementById("log5").innerHTML="";
+			
+
+					
+				
+					if(document.getElementById("log3").innerHTML== "")
+						document.getElementById("b3").innerHTML= "";
+						if(document.getElementById("log4").innerHTML== "")
+							document.getElementById("b4").innerHTML= "";
+							if(document.getElementById("log5").innerHTML== "")
+								document.getElementById("b5").innerHTML= "";
+			document.getElementById("demo").innerHTML="";
+
+			console.log('log3');
+			
+			camaras.splice(2,1);
+			pessoas.splice(2,1);
+			percent.splice(2,1);
+			dinheiro.splice(2,1);
+			prazo.splice(2,1);
+			idCamaras.splice(2,1);
+			console.log(camaras);
+			$("#chartContainer").dxChart({
+		        dataSource: pessoas,
+		        commonSeriesSettings: {
+		            argumentField: "state",
+		            type: "bar",
+		            hoverMode: "allArgumentPoints",
+		            selectionMode: "allArgumentPoints",
+		            
+		        },
+		        valueAxis: {
+					 label: {
+					 	customizeText: function (value) {
+					 	return value.value + ' Pessoas';
+					 	}
+					 },
+					 visible: true,
+					 },
+		        tooltip: {
+							 enabled: true,
+							 customizeText: function (e) {
+								 return e.valueText + ' Pessoas ';
+								 }
+							},
+		        series: [
+		            { valueField: "ensino", name: "Ensino superior" },
+		            { valueField: "population", name: "Popula&ccedil;&atilde;o" },
+		            { valueField: "eleitores", name: "Eleitores" }
+		        ],
+		        //title: "Great Lakes Gross State Product",
+		        legend: {
+		            verticalAlignment: "bottom",
+		            horizontalAlignment: "center"
+		        },
+		        pointClick: function (point) {
+		            this.select();
+		        }
+		    });
+
+
+
+			$("#chartContainer2A").dxChart({
+                dataSource: percent,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' %';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' % ';
+	   						 }
+	   					},
+                series: [
+                     { valueField: "desemprego", name: "Taxa de desemprego" },
+					{ valueField: "qualidade", name: "Proporção de poder<br/> de compra" },
+                    { valueField: "envelhecimento", name: "Taxa de envelhecimento" },
+                     
+                    
+                ],
+                title: "Variáveis de caraterização II:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+
+
+            $("#chartContainer2B").dxChart({
+                dataSource: percent,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' %';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' % ';
+	   						 }
+	   					},
+                series: [
+                     
+                     { valueField: "a2010", name: "Independencia financeira <br/> em 2010" },
+                    { valueField: "a2011", name: "Independencia financeira <br/> em 2011" },
+                    { valueField: "a2012", name: "Independencia financeira <br/> em 2012" }
+                    
+                ],
+                title: "Variáveis de caraterização III:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+
+            $("#chartContainer3A").dxChart({
+                dataSource: dinheiro,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' &euro;';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' &euro; ';
+	   						 }
+	   					},
+                series: [
+                    { valueField: "a2010", name: "Endividamento<br/> em 2010" },	
+                    { valueField: "a2011", name: "Endividamento<br/> em 2011" },
+                    { valueField: "a2012", name: "Endividamento<br/> em 2012" },                      
+                    
+                    
+                    
+                ],
+                title: "Endividamento líquido do Município:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+
+
+            $("#chartContainer3B").dxChart({
+                dataSource: dinheiro,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' &euro;';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' &euro; ';
+	   						 }
+	   					},
+                series: [	                      
+					  { valueField: "b2010", name: "Passivo<br/> em 2010" },              
+                    { valueField: "b2011", name: "Passivo<br/> em 2011" },
+                    { valueField: "b2012", name: "Passivo<br/> em 2012" },
+                    
+                    
+                ],
+                title: "Variáveis de caraterização V:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+
+
+
+            
+
+
+            $("#chartContainer4").dxChart({
+                dataSource: prazo,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },	                  
+                equalBarWidth: {
+                    width: 40
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' dias';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' dias';
+	   						 }
+	   					},
+                series: [
+						{ valueField: "a2010", name: "Prazo medio de pagamento<br/> em 2010" },
+						{ valueField: "a2011", name: "Prazo medio de pagamento<br/> em 2011" },
+						{ valueField: "a2012", name: "Prazo medio de pagamento<br/> em 2012" },
+                    
+                    
+                ],
+                 title: "Variáveis de caraterização VI:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+		    
+			
+		});
+
+
+
+
+
+
+
+
+<?php /////////////////////////////////////////      log4                       ///////////////////////////?>
+
+
+
+
+
+
+		$("#b4").click(function(){
+
+			document.getElementById("log4").innerHTML="";
+			document.getElementById("log4").innerHTML=document.getElementById("log5").innerHTML;
+			document.getElementById("log5").innerHTML="";	
+			
+
+					
+				
+					
+						if(document.getElementById("log4").innerHTML== "")
+							document.getElementById("b4").innerHTML= "";
+							if(document.getElementById("log5").innerHTML== "")
+								document.getElementById("b5").innerHTML= "";
+			document.getElementById("demo").innerHTML="";
+
+			console.log('log4');
+			
+			camaras.splice(3,1);
+			pessoas.splice(3,1);
+			percent.splice(3,1);
+			dinheiro.splice(3,1);
+			prazo.splice(3,1);
+			idCamaras.splice(3,1);
+			
+			$("#chartContainer").dxChart({
+		        dataSource: pessoas,
+		        commonSeriesSettings: {
+		            argumentField: "state",
+		            type: "bar",
+		            hoverMode: "allArgumentPoints",
+		            selectionMode: "allArgumentPoints",
+		            
+		        },
+		        valueAxis: {
+					 label: {
+					 	customizeText: function (value) {
+					 	return value.value + ' Pessoas';
+					 	}
+					 },
+					 visible: true,
+					 },
+		        tooltip: {
+							 enabled: true,
+							 customizeText: function (e) {
+								 return e.valueText + ' Pessoas ';
+								 }
+							},
+		        series: [
+		            { valueField: "ensino", name: "Ensino superior" },
+		            { valueField: "population", name: "Popula&ccedil;&atilde;o" },
+		            { valueField: "eleitores", name: "Eleitores" }
+		        ],
+		        //title: "Great Lakes Gross State Product",
+		        legend: {
+		            verticalAlignment: "bottom",
+		            horizontalAlignment: "center"
+		        },
+		        pointClick: function (point) {
+		            this.select();
+		        }
+		    });
+
+
+
+			$("#chartContainer2A").dxChart({
+                dataSource: percent,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' %';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' % ';
+	   						 }
+	   					},
+                series: [
+                     { valueField: "desemprego", name: "Taxa de desemprego" },
+					{ valueField: "qualidade", name: "Proporção de poder<br/> de compra" },
+                    { valueField: "envelhecimento", name: "Taxa de envelhecimento" },
+                     
+                    
+                ],
+                title: "Variáveis de caraterização II:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+
+
+            $("#chartContainer2B").dxChart({
+                dataSource: percent,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' %';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' % ';
+	   						 }
+	   					},
+                series: [
+                     
+                     { valueField: "a2010", name: "Independencia financeira <br/> em 2010" },
+                    { valueField: "a2011", name: "Independencia financeira <br/> em 2011" },
+                    { valueField: "a2012", name: "Independencia financeira <br/> em 2012" }
+                    
+                ],
+                title: "Variáveis de caraterização III:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+
+            $("#chartContainer3A").dxChart({
+                dataSource: dinheiro,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' &euro;';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' &euro; ';
+	   						 }
+	   					},
+                series: [
+                    { valueField: "a2010", name: "Endividamento<br/> em 2010" },	
+                    { valueField: "a2011", name: "Endividamento<br/> em 2011" },
+                    { valueField: "a2012", name: "Endividamento<br/> em 2012" },                      
+                    
+                    
+                    
+                ],
+                title: "Endividamento líquido do Município:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+
+
+            $("#chartContainer3B").dxChart({
+                dataSource: dinheiro,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' &euro;';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' &euro; ';
+	   						 }
+	   					},
+                series: [	                      
+					  { valueField: "b2010", name: "Passivo<br/> em 2010" },              
+                    { valueField: "b2011", name: "Passivo<br/> em 2011" },
+                    { valueField: "b2012", name: "Passivo<br/> em 2012" },
+                    
+                    
+                ],
+                title: "Variáveis de caraterização V:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+
+
+
+            
+
+
+            $("#chartContainer4").dxChart({
+                dataSource: prazo,
+                commonSeriesSettings: {
+                    argumentField: "state",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    
+                },	                  
+                equalBarWidth: {
+                    width: 40
+                },
+                valueAxis: {
+       			 label: {
+       			 	customizeText: function (value) {
+       			 	return value.value + ' dias';
+       			 	}
+       			 },
+       			 visible: true,
+       			 },
+                tooltip: {
+	   					 enabled: true,
+	   					 customizeText: function (e) {
+	   						 return e.valueText + ' dias';
+	   						 }
+	   					},
+                series: [
+						{ valueField: "a2010", name: "Prazo medio de pagamento<br/> em 2010" },
+						{ valueField: "a2011", name: "Prazo medio de pagamento<br/> em 2011" },
+						{ valueField: "a2012", name: "Prazo medio de pagamento<br/> em 2012" },
+                    
+                    
+                ],
+                 title: "Variáveis de caraterização VI:",
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+		    
+			
+		});
+
+
+
+
+
+
+
+<?php /////////////////////////////////////////        log5                        //////////////////////?>
+
+
+
+				$("#b5").click(function(){
+
+					document.getElementById("log5").innerHTML="";						
+					if(document.getElementById("log5").innerHTML== "")
+						document.getElementById("b5").innerHTML= "";
+					document.getElementById("demo").innerHTML="";
+					
+					console.log('log5');
+					
+					camaras.splice(4,1);
+					pessoas.splice(4,1);
+					percent.splice(4,1);
+					dinheiro.splice(4,1);
+					prazo.splice(4,1);
+					idCamaras.splice(4,1);
+					
+					$("#chartContainer").dxChart({
+				        dataSource: pessoas,
+				        commonSeriesSettings: {
+				            argumentField: "state",
+				            type: "bar",
+				            hoverMode: "allArgumentPoints",
+				            selectionMode: "allArgumentPoints",
+				            
+				        },
+				        valueAxis: {
+							 label: {
+							 	customizeText: function (value) {
+							 	return value.value + ' Pessoas';
+							 	}
+							 },
+							 visible: true,
+							 },
+				        tooltip: {
+									 enabled: true,
+									 customizeText: function (e) {
+										 return e.valueText + ' Pessoas ';
+										 }
+									},
+				        series: [
+				            { valueField: "ensino", name: "Ensino superior" },
+				            { valueField: "population", name: "Popula&ccedil;&atilde;o" },
+				            { valueField: "eleitores", name: "Eleitores" }
+				        ],
+				        //title: "Great Lakes Gross State Product",
+				        legend: {
+				            verticalAlignment: "bottom",
+				            horizontalAlignment: "center"
+				        },
+				        pointClick: function (point) {
+				            this.select();
+				        }
+				    });
+
+
+
+					$("#chartContainer2A").dxChart({
+		                  dataSource: percent,
+		                  commonSeriesSettings: {
+		                      argumentField: "state",
+		                      type: "bar",
+		                      hoverMode: "allArgumentPoints",
+		                      selectionMode: "allArgumentPoints",
+		                      
+		                  },
+		                  valueAxis: {
+		         			 label: {
+		         			 	customizeText: function (value) {
+		         			 	return value.value + ' %';
+		         			 	}
+		         			 },
+		         			 visible: true,
+		         			 },
+		                  tooltip: {
+			   					 enabled: true,
+			   					 customizeText: function (e) {
+			   						 return e.valueText + ' % ';
+			   						 }
+			   					},
+		                  series: [
+		                       { valueField: "desemprego", name: "Taxa de desemprego" },
+							{ valueField: "qualidade", name: "Proporção de poder<br/> de compra" },
+		                      { valueField: "envelhecimento", name: "Taxa de envelhecimento" },
+		                       
+		                      
+		                  ],
+		                  title: "Variáveis de caraterização II:",
+		                  legend: {
+		                      verticalAlignment: "bottom",
+		                      horizontalAlignment: "center"
+		                  },
+		                  pointClick: function (point) {
+		                      this.select();
+		                  }
+		              });
+
+
+		              $("#chartContainer2B").dxChart({
+		                  dataSource: percent,
+		                  commonSeriesSettings: {
+		                      argumentField: "state",
+		                      type: "bar",
+		                      hoverMode: "allArgumentPoints",
+		                      selectionMode: "allArgumentPoints",
+		                      
+		                  },
+		                  valueAxis: {
+		         			 label: {
+		         			 	customizeText: function (value) {
+		         			 	return value.value + ' %';
+		         			 	}
+		         			 },
+		         			 visible: true,
+		         			 },
+		                  tooltip: {
+			   					 enabled: true,
+			   					 customizeText: function (e) {
+			   						 return e.valueText + ' % ';
+			   						 }
+			   					},
+		                  series: [
+		                       
+		                       { valueField: "a2010", name: "Independencia financeira <br/> em 2010" },
+		                      { valueField: "a2011", name: "Independencia financeira <br/> em 2011" },
+		                      { valueField: "a2012", name: "Independencia financeira <br/> em 2012" }
+		                      
+		                  ],
+		                  title: "Variáveis de caraterização III:",
+		                  legend: {
+		                      verticalAlignment: "bottom",
+		                      horizontalAlignment: "center"
+		                  },
+		                  pointClick: function (point) {
+		                      this.select();
+		                  }
+		              });
+
+		              $("#chartContainer3A").dxChart({
+		                  dataSource: dinheiro,
+		                  commonSeriesSettings: {
+		                      argumentField: "state",
+		                      type: "bar",
+		                      hoverMode: "allArgumentPoints",
+		                      selectionMode: "allArgumentPoints",
+		                      
+		                  },
+		                  valueAxis: {
+		         			 label: {
+		         			 	customizeText: function (value) {
+		         			 	return value.value + ' &euro;';
+		         			 	}
+		         			 },
+		         			 visible: true,
+		         			 },
+		                  tooltip: {
+			   					 enabled: true,
+			   					 customizeText: function (e) {
+			   						 return e.valueText + ' &euro; ';
+			   						 }
+			   					},
+		                  series: [
+		                      { valueField: "a2010", name: "Endividamento<br/> em 2010" },	
+		                      { valueField: "a2011", name: "Endividamento<br/> em 2011" },
+		                      { valueField: "a2012", name: "Endividamento<br/> em 2012" },                      
+		                      
+		                      
+		                      
+		                  ],
+		                   title: "Endividamento líquido do Município:",
+		                  legend: {
+		                      verticalAlignment: "bottom",
+		                      horizontalAlignment: "center"
+		                  },
+		                  pointClick: function (point) {
+		                      this.select();
+		                  }
+		              });
+
+
+		              $("#chartContainer3B").dxChart({
+		                  dataSource: dinheiro,
+		                  commonSeriesSettings: {
+		                      argumentField: "state",
+		                      type: "bar",
+		                      hoverMode: "allArgumentPoints",
+		                      selectionMode: "allArgumentPoints",
+		                      
+		                  },
+		                  valueAxis: {
+		         			 label: {
+		         			 	customizeText: function (value) {
+		         			 	return value.value + ' &euro;';
+		         			 	}
+		         			 },
+		         			 visible: true,
+		         			 },
+		                  tooltip: {
+			   					 enabled: true,
+			   					 customizeText: function (e) {
+			   						 return e.valueText + ' &euro; ';
+			   						 }
+			   					},
+		                  series: [	                      
+							  { valueField: "b2010", name: "Passivo<br/> em 2010" },              
+		                      { valueField: "b2011", name: "Passivo<br/> em 2011" },
+		                      { valueField: "b2012", name: "Passivo<br/> em 2012" },
+		                      
+		                      
+		                  ],
+		                  title: "Variáveis de caraterização V:",
+		                  legend: {
+		                      verticalAlignment: "bottom",
+		                      horizontalAlignment: "center"
+		                  },
+		                  pointClick: function (point) {
+		                      this.select();
+		                  }
+		              });
+
+
+
+		              
+
+
+		              $("#chartContainer4").dxChart({
+		                  dataSource: prazo,
+		                  commonSeriesSettings: {
+		                      argumentField: "state",
+		                      type: "bar",
+		                      hoverMode: "allArgumentPoints",
+		                      selectionMode: "allArgumentPoints",
+		                      
+		                  },	                  
+		                  equalBarWidth: {
+		                      width: 40
+		                  },
+		                  valueAxis: {
+		         			 label: {
+		         			 	customizeText: function (value) {
+		         			 	return value.value + ' dias';
+		         			 	}
+		         			 },
+		         			 visible: true,
+		         			 },
+		                  tooltip: {
+			   					 enabled: true,
+			   					 customizeText: function (e) {
+			   						 return e.valueText + ' dias';
+			   						 }
+			   					},
+		                  series: [
+								{ valueField: "a2010", name: "Prazo medio de pagamento<br/> em 2010" },
+								{ valueField: "a2011", name: "Prazo medio de pagamento<br/> em 2011" },
+								{ valueField: "a2012", name: "Prazo medio de pagamento<br/> em 2012" },
+		                      
+		                      
+		                  ],
+		                   title: "Variáveis de caraterização VI:",
+		                  legend: {
+		                      verticalAlignment: "bottom",
+		                      horizontalAlignment: "center"
+		                  },
+		                  pointClick: function (point) {
+		                      this.select();
+		                  }
+		              });
+				    
+					
+				});
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+$("#link").click(function()
+		  
+		{			
+			window.open("/comparar2/pdf2"+link);
+		});
+
+
+
+		
+});
+
+
+
+
+
+
+
+
+<?php ///////////////////////////////////////////////////////////////////////////////////////////////////////?>
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+<div class="ui-widget">
+<div>Adicione os Municípios:</div>
+<label for="city"> </label>
+<input id="city" />
+
+</div>
+<div class="ui-widget" style="margin-top: 2em;">
+<div style="margin-bottom:20px;" >Municípios adicionados:</div>
+<div style="height: 200px; width: 300px; overflow: auto; box-shadow:
+  0 0 0 1px #FFF,
+  0 0 0 2px #888,
+  0 0 0 3px #444,
+  0 0 0 4px #00AADD;
+-moz-box-shadow:
+  0 0 0 1px #FFF,
+  0 0 0 2px #888,
+  0 0 0 3px #444,
+  0 0 0 4px #00AADD;
+-webkit-shadow:
+  0 0 0 1px #FFF,
+  0 0 0 2px #888,
+  0 0 0 3px #444,
+  0 0 0 4px #00AADD;">
+<div>
+<div id="log" style="height: auto; width: 300px; overflow: auto;margin-top:20px;"></div><div id="b1" style="margin-left:205px;margin-top:-22px;width:15px;height:15px;"></div></div>
+<div>
+<div id="log2" style="height: auto; width: 300px; overflow: auto;margin-top:20px;"></div><div id="b2" style="margin-left:205px;margin-top:-22px;width:15px;height:15px;"></div></div>
+<div>
+<div id="log3" style="height: auto; width: 300px; overflow: auto;margin-top:20px;"></div><div id="b3" style="margin-left:205px;margin-top:-22px;width:15px;height:15px;"></div></div>
+<div>
+<div id="log4" style="height: auto; width: 300px; overflow: auto;margin-top:20px;"></div><div id="b4" style="margin-left:205px;margin-top:-22px;width:15px;height:15px;"></div></div>
+<div>
+<div id="log5" style="height: auto; width: 300px; overflow: auto;margin-top:20px;"></div><div id="b5" style="margin-left:205px;margin-top:-22px;width:15px;height:15px;"></div></div>
+</div>
+</div>
+
+<p id="demo"></p>
+
+		<div class="content">
+			<div class="pane" style=" width:auto; height :auto;background:none;border:hidden;">
+				<div id="chartContainer" style="width: 100%; height: auto;"></div>			
+				<div id="teste" class="hidden" style="text-align:left">Fontes/Entidades: INE, PORDATA</div>
+			</div>
+           
+		</div>
+		<div class="content">
+			<div class="pane" style=" width:auto; height :auto;background:none;border:hidden;">
+				<div id="chartContainer2A" style="width: 100%; height: auto;"></div>
+                 <div id="teste1" class="hidden1" style="text-align:left">Fontes/Entidades: INE, PORDATA</div>
+               
+                </div>
+		</div>
+                <div class="content">
+			<div class="pane" style=" width:auto; height :auto;background:none;border:hidden;">
+				<div id="chartContainer2B" style="width: auto; height:600px;"></div>				
+				<div id="teste" class="hidden" style="text-align:left">Fontes/Entidades: INE, PORDATA</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="pane" style=" width:auto; height :auto;background:none;border:hidden;">
+				<div id="chartContainer3A" style="width: 100%; height: auto;"></div>
+                </div>
+		</div>			
+           <div class="content">
+			<div class="pane" style=" width:auto; height :auto;background:none;border:hidden;">
+				<div id="chartContainer3B" style="width: 100%; height: auto;"></div>
+				
+			</div>
+		</div>
+		<div class="content" >
+			<div class="pane" style=" width:auto; height :auto;background:none;border:hidden;">
+				<div id="chartContainer4" style="width: 100%; height: auto;"></div>			
+				
+			</div>
+		</div>
+<button id="link" class="btn btn-default"> Exportar PDF</button>

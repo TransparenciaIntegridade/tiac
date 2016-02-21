@@ -1,0 +1,39 @@
+<?php echo $this->doctype(); ?>
+
+<html lang=pt>
+  <head>
+    <meta charset="UTF-8">
+    <?php echo $this->headTitle('PDF')?>
+
+    <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+
+    <!-- Le styles -->
+    <?php echo $this->headLink()
+                    ->appendStylesheet($this->basePath() . '/css/bootstrap.css')
+                    ->appendStylesheet($this->basePath() . '/css/custom.css')
+                    ?>
+
+    <!-- Scripts -->
+	<?php echo $this->headScript()
+	->appendFile('/js/jquery-1.10.2.min.js')
+	
+	
+                                 
+                                 
+								
+						
+								->appendFile($this->basePath() . '/js/stuHover.js')
+								->appendFile($this->basePath() . '/js/jExpand.js')
+								->appendFile($this->basePath() . '/js/dx.chartjs.js')
+								->appendFile($this->basePath() . '/js/globalize.min.js')
+								->appendFile($this->basePath() . '/js/knockout-2.2.1.js')
+
+    ?>
+  </head>
+  <body style="background-color: #FFFFFF;">
+  
+  <?php echo $this->content;?>
+  
+  </body>
+  </html>
+  

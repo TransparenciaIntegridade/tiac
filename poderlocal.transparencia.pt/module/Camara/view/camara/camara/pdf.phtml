@@ -1,0 +1,1156 @@
+ <?php $this->layout('layout/empty');?>
+ 
+
+ 
+<script>
+var id = <?php echo json_encode($id);?>;
+
+var listas = new Array();
+var datas = new Array();
+var datas2 = new Array();
+var cores = new Array();
+var dimension = new Array();
+var camara = new Array();
+var i = 0;
+$.getJSON("/response/" + id, function (data) {
+  var dimensaoA = data.ranking[0].value;
+var dimensaoB = data.ranking[1].value1;
+var dimensaoC = data.ranking[2].value2;
+var dimensaoD = data.ranking[3].value3;
+var dimensaoE = data.ranking[4].value4;
+var dimensaoF = data.ranking[5].value5;
+var dimensaoG = data.ranking[6].value6;
+var dimensaoA_2014 = data.ranking[7].value7;
+var dimensaoB_2014 = data.ranking[8].value8;
+var dimensaoC_2014 = data.ranking[9].value9;
+var dimensaoD_2014 = data.ranking[10].value10;
+var dimensaoE_2014 = data.ranking[11].value11;
+var dimensaoF_2014 = data.ranking[12].value12;
+var dimensaoG_2014 = data.ranking[13].value13;
+var dimensaoA_2015 = data.ranking[14].value14;
+var dimensaoB_2015 = data.ranking[15].value15;
+var dimensaoC_2015 = data.ranking[16].value16;
+var dimensaoD_2015 = data.ranking[17].value17;
+var dimensaoE_2015 = data.ranking[18].value18;
+var dimensaoF_2015 = data.ranking[19].value19;
+var dimensaoG_2015 = data.ranking[20].value20;
+
+
+
+ var dataSource = [
+    { state: "Organização,<br/> Composição <br/>e funcionamento", ano2013: dimensaoA, ano2014: dimensaoA_2014, ano2015: dimensaoA_2015},
+   { state: "Planos e<br/> Relatórios<br/> [2 anos anteriores]", ano2013: dimensaoB, ano2014: dimensaoB_2014 , ano2015: dimensaoB_2015},
+    { state: "Taxas e<br/> Regulamentos", ano2013: dimensaoC, ano2014: dimensaoC_2014 , ano2015: dimensaoC_2015},
+    { state: "Relação <br/>com a Sociedade", ano2013: dimensaoD, ano2014: dimensaoD_2014 , ano2015: dimensaoD_2015},
+    { state: "Contratação Pública", ano2013: dimensaoE, ano2014: dimensaoE_2014 , ano2015: dimensaoE_2015},
+    { state: "Informação <br/>Económico-Financeira", ano2013: dimensaoF, ano2014: dimensaoF_2014 , ano2015: dimensaoF_2015},
+    { state: "Urbanismo", ano2013: dimensaoG, ano2014: dimensaoG_2014 , ano2015: dimensaoG_2015}
+];
+
+
+ $("#chartContainer90").dxChart({
+
+
+   dataSource: dataSource,
+animation:false,
+    commonSeriesSettings: {
+        argumentField: "state",
+        type: "bar",
+        hoverMode: "allArgumentPoints",
+        selectionMode: "allArgumentPoints",
+        label: {
+            visible: true,
+            format: "fixedPoint",
+            precision: 0
+        }
+    },
+
+  series: [
+       { valueField: "ano2013", name: "2013", color:  '#b2b2ff' },
+        { valueField: "ano2014", name: "2014" , color: '#00BFFF' },
+        { valueField: "ano2015", name: "2015" , color: '#00688B' }
+        
+    ],
+   
+ 
+    title: "Comparativo de dimensões ITM:",
+    legend: {
+        verticalAlignment: "bottom",
+        horizontalAlignment: "center"
+    },
+    valueAxis: {
+       label: {
+        customizeText: function (value) {
+        return value.value ;
+        }
+       },
+       visible: true,
+        max: 80,
+       },
+    tooltip:{
+        enabled: true
+    },
+    pointClick: function (point) {
+        this.select();
+    }
+});
+
+    	
+    	
+ 
+
+	
+			
+			$(function ()  
+				{
+					
+    		$("#chartContainer9").dxLinearGauge({
+	   animationEnabled:false,
+	   redrawOnResize:false,
+	scale: {
+		startValue: 1976,
+		endValue: 2017,
+		majorTick: {
+			showCalculatedTicks: false,
+			customTickValues: [1976, 1979, 1982, 1985, 1989, 1993, 1997,
+			2001, 2005,2009,2013,2017]
+		}
+	},
+	
+	rangeContainer: {
+		backgroundColor: "none",
+		
+		ranges: data.range,
+	},
+	  tooltip: {
+			 enabled: true,
+			 customizeText: function (e) {
+				 return e.valueText + ' Pontos ';
+				 }
+		},
+		
+
+	
+	markers: [{ value: 1976 }, { value: 2017 }],
+	
+	//rangeBars: [{ value: 2017, color:'#ccc' }],
+	 title: "Histórico de partidos no poder:",
+	 commonMarkerSettings: {
+                    text: {
+                        customizeText: function () {
+                            var result;
+                            switch (this.value) {
+                               
+							   case 1976:
+                                    result = '1976';
+                                    break;
+                                
+                                case 2017:
+                                    result = '2017';
+                                    break;
+                            }
+                            return result;
+                        }
+                    }
+                }
+	
+		
+});
+}
+
+			);
+
+
+			$(function ()  {
+
+$("#chartContainer0").dxChart({
+	
+    dataSource: data.ranking,
+	animation:false,
+	equalBarWidth: false,
+    commonSeriesSettings: {
+        argumentField: "state",
+        type: "bar",
+		
+        hoverMode: "allArgumentPoints",
+        selectionMode: "allArgumentPoints",
+        label: {
+            visible: true,
+            format: "fixedPoint",
+            precision: 0
+        }
+        
+    },
+    series: [
+        { valueField: "value14", name: "Organização, Composição <br/>e funcionamento" },
+                          { valueField: "value15", name: "Planos e Relatórios<br/> [2 anos anteriores]" },
+                          { valueField: "value16", name: "Taxas e Regulamentos" },
+                          { valueField: "value17", name: "Relação com a Sociedade" },
+                          { valueField: "value18", name: "Contratação Pública" },
+                          { valueField: "value19", name: "Informação Económico-Financeira" },
+                          { valueField: "value20", name: "Urbanismo" }
+    ],
+    equalBarWidth: {
+           width: 60,
+                spacing: 70
+        },
+    title: "Ranking Dimensões ITM:",
+	
+		 tooltip: {
+			 enabled: true,
+			 customizeText: function (e) {
+				 return e.valueText + ' Pontos ';
+				 }
+		},
+    legend: {
+        verticalAlignment: "bottom",
+        horizontalAlignment: "center"
+    },
+    valueAxis: {
+       label: {
+        customizeText: function (value) {
+        return value.value ;
+        }
+       },
+       visible: true,
+        max: 80,
+       },
+	
+    pointClick: function (point) {
+        this.select();
+    }
+});
+
+
+			});
+
+
+$(function ()  {
+
+	$("#chartContainer3").dxChart({
+	    dataSource: data.data,
+		animation:false,
+		equalBarWidth: false,
+	  commonSeriesSettings: {
+        argumentField: "state",
+        type: "bar",
+        hoverMode: "allArgumentPoints",
+        selectionMode: "allArgumentPoints",
+        label: {
+            visible: true,
+            format: "fixedPoint",
+            precision: 0
+		}
+        },
+	     series: [
+		        { valueField: "value2", name: "População" },
+        { valueField: "value", name: "Nº eleitores" },
+        { valueField: "value1", name: " População com <br/>ensino superior" }
+        
+		
+    ],
+
+     equalBarWidth: {
+            width: 40,
+                spacing: 10
+        },
+	title: "População-Eleitores-Escolaridade:",
+	    valueAxis: {
+			 label: {
+			 	customizeText: function (value) {
+			 	return value.value ;
+			 	}
+			 },
+			 visible: true,
+			 },
+			
+	
+		 tooltip: {
+			 enabled: true,
+			 customizeText: function (e) {
+				 return e.valueText + ' Pessoas ';
+				 }
+		},
+    legend: {
+        verticalAlignment: "bottom",
+        horizontalAlignment: "center"
+    },
+	
+    pointClick: function (point) {
+        this.select();
+    }
+	});
+
+	$("#chartContainer4").dxChart({
+	    dataSource: data.data2,
+		animation:false,
+		equalBarWidth: false,
+	  commonSeriesSettings: {
+        argumentField: "state",
+        type: "bar",
+        hoverMode: "allArgumentPoints",
+        selectionMode: "allArgumentPoints",
+        label: {
+            visible: true,
+            format: "fixedPoint",
+            precision: 0
+		}
+        },
+	     series: [
+		  { valueField: "value2", name: "Desemprego" },
+       { valueField: "value", name: "Poder de compra<br/> <i>per capita</i>", color:'#4372AA' },
+        { valueField: "value1", name: "Envelhecimento", color:'#4169E1' }
+      
+		
+    ],
+    equalBarWidth: {
+            width: 40,
+                spacing: 10
+        },
+	 title: "Desemprego-Poder de Compra-Envelhecimento:",
+	    valueAxis: {
+			 label: {
+			 	customizeText: function (value) {
+			 	return value.value+'%' ;
+			 	}
+			 },
+			 visible: true,
+			 },
+			
+	
+		 tooltip: {
+			 enabled: true,
+			 customizeText: function (e) {
+				 return e.valueText + '% ';
+				 }
+		},
+    legend: {
+        verticalAlignment: "bottom",
+        horizontalAlignment: "center"
+    },
+	
+    pointClick: function (point) {
+        this.select();
+    }
+	});
+	
+	$("#chartContainer5").dxChart({
+	    dataSource: data.data3,
+		animation:false,
+		equalBarWidth: false,
+	  commonSeriesSettings: {
+        argumentField: "state",
+        type: "bar",
+        hoverMode: "allArgumentPoints",
+        selectionMode: "allArgumentPoints",
+        label: {
+            visible: true,
+            format: "fixedPoint",
+            precision: 0
+		}
+        },
+	     series: [
+         { valueField: "value", name: "Endividamento líquido" },
+        { valueField: "value1", name: "Passivo exígivel" }
+        
+		
+    ],
+    equalBarWidth: {
+            width: 40,
+                spacing: 30
+        },
+		title: "Endividamento Líquido-Passivo Exígivel do Município:",
+	    valueAxis: {
+			 label: {
+			 	customizeText: function (value) {
+			 	return value.value +'€' ;
+			 	}
+			 },
+			 visible: true,
+			 },
+			
+	
+		 tooltip: {
+			 enabled: true,
+			 customizeText: function (e) {
+				 return e.valueText + ' € ';
+				 }
+		},
+    legend: {
+        verticalAlignment: "bottom",
+        horizontalAlignment: "center"
+    },
+	
+    pointClick: function (point) {
+        this.select();
+    }
+	});
+	
+	$("#chartContainer6").dxCircularGauge({
+		 animationEnabled:false,
+		scale: {
+		
+			startValue: 0,
+			endValue: 100,
+			majorTick: {
+				tickInterval: 5
+			}
+		},
+		
+		title: 'Taxa de Desemprego' ,
+		subtitle : 'em(%)',
+		rangeContainer: {
+			backgroundColor: "none",
+			ranges: [
+				{
+					startValue: 0,
+					endValue: 7,
+					color: "#A6C567"
+				},
+				{
+					startValue: 7,
+					endValue: 12,
+					color: "#FFFF33"
+				},
+				{
+					startValue: 12,
+					endValue: 50,
+					color: "#DD9933"
+				},
+				{
+					startValue: 50,
+					endValue: 100,
+					color: "#FF1133"
+				}
+				
+			]
+		},
+
+		needles: data.data4,
+
+		markers: data.data4,
+	});
+
+});
+
+
+
+});
+
+
+</script>
+
+
+
+     
+<style>
+
+
+
+
+
+
+/*Container*/
+.box h3{
+	text-align:left;
+	position:relative;
+	top:80px;
+}
+.box1 h3{
+	text-align:left;
+	position:relative;
+	top:40px;
+}
+.box {
+	width:100%;
+	height:880px;
+	background:#FFF;
+	margin:40px auto;
+	
+}
+.box1 {
+	width:900px;
+	height:900px;
+	background:#FFF;
+	margin:40px auto;
+}
+ 
+
+
+body .container{height:auto;background-color:#FFF;}
+body{height:auto;background-color:#FFF;padding-left:30px;}
+
+/*==================================================
+ * Effect 1
+ * ===============================================*/
+.effect1{
+	-webkit-box-shadow: 0 10px 6px -6px #777;
+	   -moz-box-shadow: 0 10px 6px -6px #777;
+	        box-shadow: 0 10px 6px -6px #777;
+}
+
+/*==================================================
+ * Effect 2
+ * ===============================================*/
+.effect2
+{
+  position: relative;
+}
+.effect2:before, .effect2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.effect2:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+/*==================================================
+ * Effect 3
+ * ===============================================*/
+.effect3
+{
+  position: relative;
+}
+.effect3:before
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+/*==================================================
+ * Effect 4
+ * ===============================================*/
+.effect4
+{
+  position: relative;
+}
+.effect4:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  right: 10px;
+  left: auto;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+}  
+
+/*==================================================
+ * Effect 5
+ * ===============================================*/
+.effect5
+{
+  position: relative;
+}
+.effect5:before, .effect5:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 35px 20px #777;
+  -moz-box-shadow: 0 35px 20px #777;
+  box-shadow: 0 35px 20px #777;
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+.effect5:after
+{
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+}
+
+/*==================================================
+ * Effect 6
+ * ===============================================*/
+.effect6
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect6:before, .effect6:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+.effect6:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+
+/*==================================================
+ * Effect 7
+ * ===============================================*/
+.effect7
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect7:before, .effect7:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+.effect7:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+
+/*==================================================
+ * Effect 8
+ * ===============================================*/
+.effect8
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+.effect8:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+
+</style>
+ 
+    
+   
+  
+    
+ <div class="container box1" id="infografia" style="background-color:#FFF;margin-top:0;">    
+	 
+	 
+    <div class="row" style="text-align:center;">
+        <div class="col-xs-12">
+             <?php foreach($infografia as $info)
+                {							  
+                  echo '<h1 style="color:#436EEE"> Município de '.$info->getnome().'</h1>';
+                }
+            
+             ?>
+        </div>
+    </div>
+	
+	<div class="row" style="text-align:center;"><!-- row Brasão -->
+        <div class="col-xs-12 col-sm-4 col-md-4 ">
+            <?php foreach($infografia as $info)
+                {
+                  echo '<img class="img-responsive" style="margin: 20px auto;" src=/images/brasoes/'
+				  .$info->getbrasao().' alt= '.$info->getnome().'/>';
+                }
+            ?>
+        </div>      
+    
+        
+        	<div class="col-xs-5 col-sm-4 col-md-4 col-xs-offset-2 col-sm-offset-0 col-md-offset-0" >
+            	<h3 style="text-align:center;color:#436EEE">Ranking ITM:</h3>
+        	</div>
+        
+            <div class="col-xs-5 col-sm-4 col-md-3 " >
+                <?php foreach($itm as $posicao)
+                    {							  
+                      echo '<h3 style="text-align:center;"><b style="text-align:center;">'.$posicao->getranking_2015().'º</b></h3>';
+                    }
+                
+               ?>
+            </div>        
+    	
+        	<div class="col-xs-5 col-sm-4 col-md-4 col-xs-offset-2 col-sm-offset-0 col-md-offset-0 ">
+            	<h3 style="text-align:center;color:#436EEE">Pontuação ITM:</h3>
+        	</div>
+        
+            <div class="col-xs-5 col-sm-4 col-md-3 ">
+                <?php foreach($itm as $score)
+				{
+					if($score->getitm()<0){			  	
+			  			echo '<h3 style="color:#ef5151;text-align:center;"><b>'.$score->getitm_2015().' </b></h3>';
+					}
+					else{
+					 	echo '<h3 style="color:#35b164;text-align:center;"><b>'.$score->getitm_2015().'  </b></h3>';
+					}
+				}?>
+            </div>
+            
+            <div class="col-xs-5 col-sm-4 col-md-4 col-xs-offset-2 col-sm-offset-0 col-md-offset-0 ">
+            	<h3 style="text-align:center;color:#436EEE; margin-bottom:20px;">Partido político no poder:</h3>
+        	</div>
+        
+            <div class="col-xs-5 col-sm-4 col-md-3 " >
+                       
+            <?php foreach($partidos as $logoP)
+			{
+				if($logoP->getnome()=='CDU'){
+         
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-top:15px;" src=/images/brasoes/partidos/cdu.png alt= '.$logoP->getnome().'/>';
+      }
+    
+      if($logoP->getnome()=='PSD'){
+         
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-top:15px;" src=/images/brasoes/partidos/psd.png alt= '.$logoP->getnome().'/>';
+      }
+      if($logoP->getnome()=='PS'){
+         
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-top:15px;" src=/images/brasoes/partidos/ps.png alt= '.$logoP->getnome().'/>';
+      }
+      if($logoP->getnome()=='BE'){
+         
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-top:15px;" src=/images/brasoes/partidos/be.png alt= '.$logoP->getnome().'/>';
+      }
+      if($logoP->getnome()=='CDS-PP'){
+         
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-top:15px;" src=/images/brasoes/partidos/cds.png alt= '.$logoP->getnome().'/>';
+      }
+      if($logoP->getnome()=='PSD/CDS-PP'){
+         
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-top:15px;" src=/images/brasoes/partidos/coligacao.png alt= '.$logoP->getnome().'/>';
+      }
+      if($logoP->getnome()=='INDEPENDENTE'){
+         
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-top:15px;" class="img-responsive" src=/images/brasoes/partidos/independente.png alt= '.$logoP->getnome().'/>';
+
+      }
+
+
+if($logoP->getnome()=='PSD/CDS-PP/PPM'){
+         
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-top:15px;" class="img-responsive" src=/images/brasoes/partidos/psd_cds_ppm.png alt= '.$logoP->getnome().'/>';
+
+      }
+      if($logoP->getnome()=='PSD/CDS-PP/PPM/MPT'){
+         
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-top:15px;" class="img-responsive" src=/images/brasoes/partidos/coligacao4.png alt= '.$logoP->getnome().'/>';
+
+      }
+      if($logoP->getnome()=='PS/UEDS'){
+         
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-top:15px;" class="img-responsive" src=/images/brasoes/legenda/ps_ueds.png alt= '.$logoP->getnome().'/>';
+
+      }
+      if($logoP->getnome()=='PS/CDU/PSR/UDP'){
+         
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-top:15px;" class="img-responsive" src=/images/brasoes/legenda/ps_cdu_psr_udp.png alt= '.$logoP->getnome().'/>';
+
+      }
+
+
+      }
+      
+       ?>
+            
+    	</div>
+        
+        <div class="col-xs-5 col-sm-4 col-md-4 col-xs-offset-2 col-sm-offset-0 col-md-offset-0" 
+        style ="margin-top:-30px;">
+            <h3 style="text-align:center;color:#436EEE">Presidente da Camara:</h3>
+        </div>
+        
+        <div class="col-xs-5 col-sm-4 col-md-3 " >
+        	<?php foreach($infografia as $nomePres)
+				{	  
+			    	echo '<h3 style="text-align:center;">'.$nomePres->getnomePresidente().'</h3>';
+				}		
+       		?>
+        </div>
+        
+        <div class="col-xs-5 col-sm-4 col-md-4 col-xs-offset-2 col-sm-offset-0 col-md-offset-0 ">
+            <h3 style="text-align:center;color:#436EEE">Total população:</h3>
+        </div>
+        
+        <div class="col-xs-5 col-sm-4 col-md-3 ">
+            <?php foreach($populacao as $pop)
+				{			  
+			  		echo '<h3 style="text-align:center;">'.$pop->getano2012().'</h3>';
+				}		
+       		?>
+        </div>
+            
+        <div class="col-xs-5 col-sm-4 col-md-4 col-xs-offset-2 col-sm-offset-0 col-md-offset-0">
+            <h3 style="text-align:center;color:#436EEE">Número de eleitores inscritos:</h3>
+        </div>
+        
+        <div class="col-xs-5 col-sm-4 col-md-3 ">
+            <?php foreach($infografia as $eleitores)
+				{		 
+			  		echo '<h3 style="margin-bottom:40px;text-align:center;">'.$eleitores->getnumeroEleitores().'</h3>';
+				}
+		
+       		?>
+        </div>
+  		
+	</div><!-- end row Brasão -->
+	
+         
+    
+     
+     <div class="row" style="text-align:center;">
+    	<div class="col-xs-12">	
+     		<div id="chartContainer9" style="width: 100%; height: 90%;margin-top:100px"></div>
+     	</div>
+     </div>
+
+     
+     <div class="row">
+     	<div class="col-xs-12" style="text-align:center;">
+        
+        		  <?php foreach($partidosM as $logoP)
+      
+             {        
+                 if($logoP=='PSD')
+         {
+  
+       
+        echo '<img  style="margin-left:30px;width:auto;max-width: 60px; 
+height: auto; 
+max-height:40px;"  src=/images/brasoes/partidos/legenda/psd.png alt= "PSD"  title="PSD"/>';
+      }
+    
+           
+      
+       
+            
+    
+    
+       if($logoP=='PSD/CDS-PP')
+         {
+         
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-left:30px;width:auto;max-width: 60px; 
+height: auto; 
+max-height:40px;"  src=/images/brasoes/partidos/legenda/coligacao.png alt= "PSD" title="Coligação PSD/CDS-PP"/>';
+      }
+      
+    
+           
+           
+           
+      
+       if($logoP=='CDS-PP')
+         {
+         
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-left:30px;width:auto;max-width: 60px; 
+height: auto; 
+max-height:40px;" src=/images/brasoes/partidos/legenda/cds.png alt= "PSD" title="CDS-PP"/>';
+      }
+       
+  if($logoP=='PS/CDS')
+         {
+         
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-left:30px;width:auto;max-width: 60px; 
+height: auto; 
+max-height:40px;"  src=/images/brasoes/partidos/legenda/ps_cds.png alt= "PSD"  title="Coligação PS/CDS"/>';
+      }
+           
+           
+      
+            
+      if($logoP=='BE')
+         {
+         
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-left:30px;width:auto;max-width: 60px; 
+height: auto; 
+max-height:40px;"  src=/images/brasoes/partidos/legenda/be.png alt= "PSD" title="BE"/>';
+      }
+      
+            
+    
+           
+          
+       if($logoP=='PS')
+         {          
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-left:30px;width:auto;max-width: 60px; 
+height: auto; 
+max-height:40px;" src=/images/brasoes/partidos/legenda/ps.png alt= "PSD"title="PS"/>';
+      }
+       if($logoP=='CDU')
+         {          
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-left:30px;width:auto;max-width: 60px; 
+height: auto; 
+max-height:40px;"  src=/images/brasoes/partidos/legenda/cdu.png alt= "PSD"title="CDU"/>';
+      }
+       if($logoP=='INDEPENDENTE')
+         {          
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-left:30px;width:auto;max-width: 60px; 
+height: auto; 
+max-height:40px;" src=/images/brasoes/partidos/legenda/independente.png alt= "PSD"title="Independente"/>';
+      }
+       if($logoP=='PS/UEDS')
+         {          
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-left:30px;width:auto;max-width: 60px; 
+height: auto; 
+max-height:40px;"  src=/images/brasoes/partidos/legenda/ps_ueds.png alt= "PSD" title="Coligação PS/UEDS"/>';
+      }
+       if($logoP=='PS/CDU/PSR/UDP')
+         {          
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-left:30px;width:auto;max-width: 60px; 
+height: auto; 
+max-height:40px;" src=/images/brasoes/partidos/legenda/ps_cdu_psr_udp.png alt= "PSD" title="Coligação PS/CDU/PSR/UDP"/>';
+      }
+       if($logoP=='PSD/CDS-PP/PPM')
+         {          
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-left:30px;width:auto;max-width: 60px; 
+height: auto; 
+max-height:40px;" src=/images/brasoes/partidos/legenda/psd-cds-ppm.png alt= "PSD" title="Coligação PSD/CDS-PP/PPM"/>';
+      }
+       if($logoP=='PCP/PEV')
+         {          
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-left:30px;width:auto;max-width: 60px; 
+height: auto; 
+max-height:40px;" src=/images/brasoes/partidos/legenda/pcp-pev.png alt= "PSD" title="Coligação PCP/PEV"/>';
+      }
+      if($logoP=='PSD/CDS-PP/PPM/MPT')
+         {          
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-left:30px;width:auto;max-width: 60px; 
+height: auto; 
+max-height:40px;"  src=/images/brasoes/partidos/legenda/psd_cds_ppm_mpt.png alt= "PSD" title="Coligação PSD/CDS-PP/PPM/MPT"/>';
+      }
+    
+       if($logoP=='APU')
+         {          
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-left:30px;width:auto;max-width: 60px; 
+height: auto; 
+max-height:40px;" src=/images/brasoes/partidos/legenda/apu.png alt= "PSD" title="Aliança Povo Únido"/>';
+      }
+       if($logoP=='AD')
+         {          
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-left:30px;width:auto;max-width: 60px; 
+height: auto; 
+max-height:40px;"  style="margin-left:30px;"src=/images/brasoes/partidos/legenda/ad.png alt= "PSD" title="Aliança Democrática"/>';
+      }
+       if($logoP=='FEPU')
+         {          
+        //echo $info->getbrasao(); 
+        echo '<img style="margin-left:30px;width:auto;max-width: 60px; 
+height: auto; 
+max-height:40px;" src=/images/brasoes/partidos/legenda/fepu.png alt= "PSD" title="Frente Eleitoral Povo Únido"/>';
+      }
+        
+      }
+      ?>
+      	</div>
+      </div>
+
+
+
+
+       <div class="row" >
+    <div class="col-xs-12"> 
+        <div style="text-align:center;margin-top:50px;">Fontes/Entidades: Publíco, Autárquicas 2013</div>
+      </div>
+        
+    </div>
+<div class="row">
+		<div class="col-xs-3 col-xs-offset-7">
+        	<div id="chartContainer6" style="width:100%;text-align:center; height: 100%;margin-top:30px;">
+            
+            </div>
+            </div>
+        </div>
+<div class="row" >
+    <div class="col-xs-12"> 
+        <div style="text-align:center">Fontes/Entidades: INE, PORDATA</div>
+      </div>
+        
+    </div>
+     
+</div>
+
+	  
+      <div class="row">
+      	  	<div class="col-xs-10 col-xs-offset-1 "> 
+            	<div id="chartContainer0" style="width: 1000px; height: 600px;margin-top:250px"></div>				
+			</div>
+       </div>
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 "> 
+              <div id="chartContainer90" style="width: 1000px; height: 600px;margin-top:100px"></div>       
+      </div>
+       </div>
+       
+     
+      <div class="row" style="margin-top:50px;">
+      	  	<div class="col-xs-10 col-xs-offset-1"> 
+            	<div id="chartContainer3" style="width: 1000px; height: 600px;margin-top:100px"></div>	
+                			
+			</div>
+      </div>
+        <div class="row" >
+    <div class="col-xs-12"> 
+        <div style="text-align:center">Fontes/Entidades: INE, PORDATA</div>
+      </div>
+        
+    </div>
+      
+      
+      <div class="row">
+      	  	<div class="col-xs-10 col-xs-offset-1"> 
+            	<div id="chartContainer4" style="width: 1000px; height: 600px;margin-top:100px"></div>
+                			
+			</div>
+       <div class="row" >
+    <div class="col-xs-12"> 
+        <div style="text-align:center">Fontes/Entidades: INE, PORDATA</div>
+      </div>
+        
+    </div>
+      </div>
+
+      
+      
+      <div class="row" style="margin-top:50px;">
+      	  	<div class="col-xs-10 col-xs-offset-1"> 
+            	<div id="chartContainer5" style="width: 1000px; height: 600px;margin-top:100px"></div>
+                					
+			</div>
+      </div>
+      <div class="row" >
+    <div class="col-xs-12"> 
+ <div ><img style="text-align:center" src="/images/logoc.png"/></div>
+</div>
+</div>
+</div>        
+
+
+
